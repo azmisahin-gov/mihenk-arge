@@ -1,87 +1,48 @@
 # Test Stratejisi
 
-> **Durum:** Görev bazlı kurallar, rapor üretimi ve UYAP biçim uyumu eklendi  
+> **Durum:** Görev Profili, modül mimarisi ve belge biçim testleriyle güncellendi  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Test katmanları
 
 1. **Mevzuat/resmî şablon:** Görev kapsamı, süre, rapor alanları ve şablonlar kaynak madde/sürümle doğrulanır.
-2. **Görev belgesi okuma:** Farklı tutanaklardan kapsam, sorular, süre, teslim materyali, nüsha ve format alanları çıkarılır; düşük güven/çelişki doğru biçimde istisnaya yükseltilir.
-3. **Birim testleri:** Görev durumu, tarih hesabı, materyal sayımı, metadata, hash, kopya ilişkisi, soru/cevap alanları ve rapor üretimi.
-4. **Entegrasyon:** Çoklu dosya içe alma, transkripsiyon kuyruğu, ses-metni eşleştirme, rapor ve ek dışa aktarma.
-5. **Güvenlik:** Path traversal, kötü amaçlı medya, decoder sınırı, shell injection, yedek sızıntısı, ağ trafiği ve imzalı güncelleme.
-6. **Kurtarma:** Çökme, elektrik kesintisi, veri tabanı bozulması, kısmi çıktı, tekrar başlatma ve yedek/geri yükleme.
-7. **Kullanılabilirlik/insan faktörü:** İlk kurulum, görev açma, dinleme, tekrar, düzeltme, rapor hazırlığı ve son kontrol süresi.
-8. **UYAP belge uyumu:** UDF, PDF ve diğer portalın kabul ettiği biçimlerin ilgili evrak türünde açılma, görüntülenme, imza ve gönderim davranışı.
-9. **Uzman kabulü:** Sentetik/açık lisanslı test verisi ile bilirkişi iş akışı doğrulaması.
+2. **Görev belgesi okuma:** Farklı tutanaklardan kapsam, sorular, süre, teslim materyali, nüsha ve format alanları çıkarılır; düşük güven/çelişki istisnaya yükseltilir.
+3. **Birim testleri:** Görev durumu, tarih hesabı, materyal sayımı, metadata, hash, kopya ilişkisi, soru/cevap ve rapor üretimi.
+4. **Bütünleşik modül:** Modül manifesti, girdi/çıktı sözleşmesi, izin, sürüm ve ortak çekirdek uyumluluğu.
+5. **Güvenlik:** Path traversal, kötü amaçlı medya, ZIP/XML bombası, decoder sınırı, shell injection, yedek sızıntısı, ağ erişimi ve imzalı güncelleme.
+6. **Kurtarma:** Çökme, elektrik kesintisi, veri tabanı bozulması, kısmi çıktı, devam, yedek/geri yükleme ve rollback.
+7. **Kullanılabilirlik/insan faktörü:** İlk kurulum, görev açma, uzmanlık araçlarının aynı arayüzde kullanımı, inceleme ve rapor süresi.
+8. **Belge/format:** DOCX/ODT/PDF/UDF içe/dışa aktarma, Türkçe karakter, tablo, görsel, dipnot, sayfa düzeni, yazı tipi ve imza durumu.
+9. **UYAP uyumu:** UDF çıktılarının güncel resmî Doküman Editörü'nde açılması, yeniden kaydedilmesi ve portalda ilgili evrak türü için test edilmesi.
+10. **Uzman kabulü:** Sentetik/açık lisanslı test verisi ile gerçek bilirkişi iş akışı doğrulaması.
 
-## Göreve özgü kural testleri
+## Belge motoru kabul testleri
 
-- 30 günlük süre verilen bir test tutanağı doğru görev için 30 gün olarak kaydediliyor mu?
-- Başka tutanakta farklı süre varsa önceki görevden 30 gün taşınıyor mu? Taşınmamalı.
-- Süre başlangıç olayı belirtilmiyorsa yazılım varsayım yapmadan uyarı veriyor mu?
-- Tutanakta taraf sayısı + 1 suret yazıyorsa bu koşul yalnızca ilgili göreve mi uygulanıyor?
-- Tutanakta nüsha sayısı yoksa yazılım evrensel adet uyduruyor mu? Uydurmamalı.
-- Bir görevde sekiz ses dosyası, başka bir görevde farklı sayıda veya farklı materyal varsa envanter gerçek içeriğe göre kuruluyor mu?
-- Görevlendirme soruları değiştiğinde rapor bölümleri ve kalite listesi de göreve göre değişiyor mu?
-- Eksik/çelişkili kapsam veya şablon alanında sistem doğru adımı istisna listesine alıyor mu?
+- Aynı rapor modeli DOCX, ODT, PDF ve UDF adaptörlerine aktarılabiliyor mu?
+- Türkçe karakterler (I/İ/ı/ğ/ş/ü/ö/ç) ve seçilen fontlar korunuyor mu?
+- Başlıklar, tablolar, birleştirilmiş hücreler, liste girintileri, üstbilgi/altbilgi, sayfa numarası, dipnot, resim ve ekler doğru mu?
+- Belge UYAP Doküman Editörü'nde açıldığında sayfa sayısı ve yerleşim beklenen sonuçla karşılaşıyor mu?
+- İmzalı UDF/PDF içeriği değiştirilmeden korunuyor mu; değişiklik yapılırsa imza uyarısı ve yeniden imza adımı gösteriliyor mu?
+- Bozuk, aşırı büyük veya kötü amaçlı ZIP/XML/PDF girdileri güvenli biçimde reddediliyor mu?
+- UDF → DOCX/PDF ve DOCX/ODT → UDF dönüşümlerinde içerik/biçim kaybı test ediliyor mu?
+- Her test sentetik belge ve sabitlenmiş checksum ile tekrar üretilebiliyor mu?
 
-## Raporun görevler arasında yalıtımı
+## Modül güvenlik ve dağıtım testleri
 
-Her rapor yeni bir görev verisi ve sürümlü şablondan üretilir. Önceki raporun kopyalanması temel yaklaşım değildir.
+- İmzasız veya bütünlüğü bozuk modül yüklenmiyor mu?
+- Modül manifesti izin vermiyorsa internet, kamera, mikrofon, GPU veya diğer görev dosyalarına erişemiyor mu?
+- Bir modül çökünce görev durumu ve orijinal materyal etkilenmiyor mu?
+- İşlem kaydı modül/araç/model sürümünü ve parametreleri tutuyor mu?
+- Güncelleme yarıda kesilirse son çalışan sürüme dönülebiliyor mu?
+- Ağ kapalıyken yerel modüller işleyebiliyor mu?
+- Lisans envanteri ve SBOM sürüme göre saklanıyor mu?
 
-Otomatik testlerde:
-- Test A raporuna yalnızca A görev bilgileri,
-- Test B raporuna yalnızca B görev bilgileri eklenir.
-- A görevine özel sentetik “işaretleyici” ad, tarih ve dosya kodları B raporunda aratılır.
-- Eski görevden alan, ek, görsel, açıklama, metadata veya gizli belge parçası taşınmadığı doğrulanır.
-- Aynı rapor şablonu tekrar kullanılsa bile oluşturulan belge içeriği ve görev verisi yalıtılmış olmalıdır.
+## Görevler arası veri yalıtımı
 
-## 56.12 özel otomatik testleri
-
-- Sekiz ses dosyası içeren örnek görevde içe alınan/işlenen/rapora bağlanan dosya sayıları eşleşiyor mu? Sekiz yalnızca bu senaryonun fixture değeridir; genel sınır değildir.
-- Aynı adlı farklı klasör dosyaları üzerine yazılıyor mu?
-- Eksik/bozuk/codec desteklenmeyen dosya uyarılıyor mu?
-- Orijinal hash işlem boyunca değişmeden kalıyor mu?
-- Transkript, zaman damgası ve kaynak ses dosyasına geri bağlanıyor mu?
-- Belirsiz/fısıltılı/örtüşen bölüm tahminle gizlenmek yerine işaretleniyor mu?
-- Konuşmacı etiketleri nötr mü, gerçek kişi kimliği iddiası üretmiyor mu?
-- Alıntılar kaynak dosya ve zaman aralığıyla eşleşiyor mu?
-
-## UDF ve imza uyumluluk testleri
-
-- UYAP Doküman Editörü'nün güncel sürümü test ortamında belirlenir.
-- MİHENK'in ürettiği temiz rapor, doğrulanmış içe alma/dönüştürme yoluyla UYAP Editörü'nde açılabilir mi?
-- Editörde UDF olarak kaydedilen dosya yeniden açıldığında metin, tablo ve ek referansları korunuyor mu?
-- UDF, PDF ve DOCX için portalın ilgili evrak türünde kabul davranışı ayrı test edilir; portalın genel kabul ettiği format listesi her evrak türüne genellenmez.
-- E-imza/m-imza doğrulaması yalnızca test sertifikası/izinli ortam ile sınanır; özel anahtar ve PIN hiçbir zaman otomasyon test verisine konmaz.
-- Heyet halinde görevlendirmede gereken imza koşulları test edilir.
-- MİHENK, imza uygulanmış belgeyi değiştirerek imzayı geçersizleştirmez.
+Her rapor yeni görev kaydı ve sürümlü şablondan üretilir. Test A'nın sentetik benzersiz işaretleyicileri Test B raporu, ekleri, metadata'sı ve çıktı paketinde bulunmamalıdır.
 
 ## Test verisi ilkeleri
 
-- Önce sentetik Türkçe diyalog ve kullanım koşulları doğrulanmış açık lisanslı veriler kullan.
-- Sekiz dosyalı örnek görev, çoklu materyal testi olarak korunur; ayrıca 1, 2, farklı çoklu ve sıfır/eksik dosya senaryoları test edilir.
-- Her örnek için kaynak, sürüm, lisans, checksum ve kullanım amacı kaydedilir.
-- Gerçek dava kaydı, UYAP ekran görüntüsü veya kişisel veri public CI, fixture veya log'a giremez.
-
-## Kabul kapısı
-
-- 0 açık kritik güvenlik bulgusu.
-- Yedek/geri yükleme testi geçer.
-- Orijinal materyal değişmezliği ve kopya izlenebilirliği doğrulanır.
-- Tüm içe alınan materyaller envanterde görünür.
-- Göreve özgü süre, kapsam, soru, nüsha ve format bilgisi başka görevlere sızmaz.
-- Her rapor yalnızca kendi görev verisiyle üretilir.
-- Resmî teslimi yanlış gösteren otomatik durum yoktur.
-- E-imza/m-imza ve resmî gönderim kullanıcı kontrolündedir.
-- Uzman görüşü ile AI/ASR taslağı ayrıdır.
-
-## Kaynaklar
-
-- [Bilirkişilik Yönetmeliği](https://rayp.adalet.gov.tr/resimler/494/dosya/bilirkisilik-yonetmeligi16-06-20254-49-pm.pdf)
-- [6100 sayılı HMK](https://mevzuat.adalet.gov.tr/mevzuat/103103)
-- [5271 sayılı CMK](https://mevzuat.adalet.gov.tr/mevzuat/102946)
-- [UYAP Doküman Editörü — Resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
-- [UYAP Bilirkişi Portal Kullanım Rehberi](https://rayp.adalet.gov.tr/resimler/489/dosya/portal-kullanimi21-09-202210-21-am.pdf)
-- [NISTIR 8387](https://www.nist.gov/publications/digital-evidence-preservation-considerations-evidence-handlers)
+- Önce sentetik Türkçe belge/ses ve kullanım koşulları doğrulanmış açık lisanslı veriler kullanılır.
+- Gerçek dava kaydı, UYAP ekran görüntüsü, taraf bilgisi veya kişisel veri public CI, fixture veya log'a giremez.
+- Açık kaynak proje deposundaki gerçek dosya örnekleri izin ve gizlilik incelemesi olmadan kopyalanmaz.

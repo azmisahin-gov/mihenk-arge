@@ -1,11 +1,11 @@
 # İşlevsel Gereksinimler
 
-> **Durum:** Görev Profili yaklaşımıyla güncellendi — geliştirme kararı değildir  
+> **Durum:** Görev Profili ve bütünleşik uzmanlık modülleriyle güncellendi — geliştirme kararı değildir  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Ortak çekirdek işlevler
 
-- Görevlendirme yazısı/tutanağı ve ilgili teslim belgelerini kullanıcı tarafından güvenli yerel çalışma alanına içe alma.
+- Görevlendirme yazısı/tutanağı ve ilgili teslim belgelerini güvenli yerel çalışma alanına içe alma.
 - Kaynak belgeyi koruma; metin çıkarımı/OCR sonucu ve kaynak sayfa/metin bağlantısını saklama.
 - Belgeden görev kapsamı, sınırlar, cevaplanacak sorular, ücret, rapor süresi ve teslim koşullarını aday alanlara çıkarma.
 - Her görevlendirme için ayrı Görev Profili açma.
@@ -21,6 +21,16 @@
 - Teslim öncesi biçim/tamlık kontrolü ve resmî teslimin kullanıcı tarafından kaydedilmesi.
 - Yerel yedekleme/geri yükleme ve veri yaşam döngüsü.
 
+## Bütünleşik uzmanlık araçları
+
+- Bilirkişi, ilgili uzmanlık işlemlerini aynı MİHENK uygulama arayüzünden başlatır, izler ve sonuçlarını rapora bağlar.
+- Kullanıcıdan her uzmanlık aracı için ayrı masaüstü uygulaması kurması, komut satırında çalıştırması veya üçüncü taraf sitede dosya yüklemesi istenmez.
+- Araçlar MİHENK tarafından doğrulanmış yerleşik kütüphane, paketlenmiş yerel motor veya izole worker olarak dağıtılabilir. Arka planda ayrı süreç kullanılması, kullanıcı deneyiminin ayrı uygulamaya bölünmesi anlamına gelmez.
+- Ortak çekirdek dosya içe alma, iş kuyruğu, görev verisi erişimi, denetim kaydı, rapor motoru ve kalite kapısı sağlar.
+- Her uzmanlık modülü kendine özgü araç, yöntem, veri alanı, çıktı ve kalite testlerine sahiptir.
+- Modül kataloğu yalnızca imzalı, lisansı ve güvenliği incelenmiş paketleri sunar; rastgele üçüncü taraf eklentiler varsayılan olarak yüklenemez.
+- Modül güncellemeleri imza/hash, uyumluluk kontrolü, sürüm kaydı ve geri alma ile yönetilir.
+
 ## Görev Profili çıkarım davranışı
 
 - Belge metni varsa doğrudan metin çıkarımı; taranmışsa OCR gibi yöntemler seçenek olarak değerlendirilir.
@@ -30,26 +40,30 @@
 - Kullanıcıya tüm görev profilini yeniden doldurtmak yerine yalnızca çözülemeyen alan sorulur.
 - Otomatik çıkarım, bilirkişinin görevi kabul/ret, yetkinlik, çekinme veya teknik kanaat kararını vermez.
 
-## Uzmanlık modülü işlevleri
+## Belge ve rapor işleme
 
-Modül işlevleri ilgili uzmanlık akışı ve mesleki sınır doğrulandıktan sonra eklenir. 56.12 için çoklu ses içe alma, metadata, otomatik transkripsiyon taslağı, ses/metin eşleme ve insan düzeltmesi araştırılabilir. Bu, tüm MİHENK görevlerinin aynı dosya türü veya işlem adımlarını kullanacağı anlamına gelmez.
+- Rapor içeriği UDF/DOCX/ODT/PDF'den bağımsız bir belge modelinde tutulur.
+- MİHENK içindeki belge düzenleme arayüzü, incelenen ve seçilen açık kaynak belge motoruyla tek uygulamanın parçası olarak sunulur.
+- Türkçe karakter, tablolar, üstbilgi/altbilgi, sayfa numarası, dipnot, ek, görsel ve şablon biçimi korunması için format regresyon testleri yapılır.
+- UDF adaptörü resmî UYAP Editörü ile karşılaştırmalı doğrulanmadan üretim çıktısı olarak kabul edilmez.
+- İmzalı belgenin içeriği değişirse imza geçerliliği kaybolabileceğinden imza, içerik ve kalite kontrollerinin sonrasında ele alınır.
 
-## UYAP ve belge çıktısı sınırı
+## UYAP ve resmî imza sınırı
 
 - MİHENK görev, rapor ve ek hazırlığını otomatikleştirebilir.
-- UYAP hesabına giriş, resmî kabul, e-imza/m-imza ve rapor gönderimi için yetkili entegrasyon doğrulanmadan otomatik işlem yapılmaz.
-- UDF, UYAP Doküman Editörü'nün varsayılan belge biçimidir; MİHENK'in doğrudan UDF üretmesi henüz teknik karar değildir.
-- UYAP Editörü ve ilgili portal evrak türü ile biçim/imza uyumluluğu gerçek test ortamında doğrulanmalıdır.
-- E-imza özel anahtarı/PIN'i MİHENK tarafından saklanmaz veya kullanılmaz.
+- UYAP hesabına giriş, resmî kabul ve rapor gönderimi için yetkili entegrasyon doğrulanmadan otomatik işlem yapılmaz.
+- E-imza/m-imza özel anahtarı veya PIN'i MİHENK tarafından saklanmaz.
+- Resmî imza son aşamada, yetkili UYAP/Adalet e-İmza akışında uygulanır. Belgelenmiş ve yetkilendirilmiş entegrasyon olursa ayrıca değerlendirilir.
 
 ## Bilinçli olarak yapılmayacaklar
 
+- Kullanıcıya uzmanlık araçları arasında elle dosya taşıtmak veya komut satırı yönetmek.
+- Lisansı/güvenliği doğrulanmamış eklenti veya çalıştırılabilir paket yüklemek.
 - UYAP'ta izinsiz otomatik giriş ve form gönderme.
 - Resmî rapor imzası veya elektronik imza üretme/taklit etme.
 - Otomatik bilirkişi görevlendirme, görev kabul/ret veya çekinme kararı.
 - AI tarafından nihai teknik kanaat veya hukukî değerlendirme yazılması.
 - Konuşmacı etiketi üzerinden kişi kimliği, suçluluk, yaş veya cinsiyet çıkarımı.
-- Ses transkripsiyonunu ses özgünlüğü/manipülasyon incelemesiyle aynı kabul etme.
 - Önceki davanın raporunu kopyalayarak yeni rapor oluşturma.
 
 ## Kaynaklar
