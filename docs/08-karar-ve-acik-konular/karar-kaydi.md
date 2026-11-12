@@ -21,5 +21,8 @@
 | ADR-015 | 13.11.2026 | Her rapor yeni görev kaydı ve onaylı şablondan temiz biçimde üretilir | Önceki raporu kopyalama yerine görev verisi yalıtımı ve çapraz-görev testleri | Kabul edildi |
 | ADR-016 | 13.11.2026 | UDF, UYAP Doküman Editörü'nün yerel belge biçimi/iş akışı olarak ele alınır; doğrudan üretim ve kabul koşulu ayrıca test edilir | Resmî yardım UDF varsayılan kaydetme biçimini ve başka dışa aktarma biçimlerini açıklar; portalın genel biçim listesi evrak türüne özgü kabulü tek başına kanıtlamaz | Araştırma sürüyor |
 | ADR-017 | 13.11.2026 | MİHENK kullanıcı dokümantasyonu, README, PR ve commit metinlerinin dili Türkçedir | Proje sahibi Türkçe çalışma standardını açıkça belirtti | Kabul edildi |
+| ADR-018 | 13.11.2026 | Her görevlendirme belgesi ayrı bir Görev Profili üretir; çıkarılan alanların kaynak izi korunur | Yönetmelik m.51'deki göreve özgü kapsam, sorular, ücret ve süre; materyal tesliminin izlenebilirliği | Kabul edildi |
+| ADR-019 | 13.11.2026 | Güvenli ve tekrarlı işlemler varsayılan olarak otomatik yürür; yalnızca belirsizlik, çelişki, risk veya mesleki karar gereken nokta kullanıcıya çıkar | Gereksiz onayların ve manuel iş yükünün azaltılması hedefi | Kabul edildi |
+| ADR-020 | 13.11.2026 | Görev Profili ve belge çıkarımı ilk aşamada yalnızca sentetik test belgeleriyle doğrulanır | Public depolarda gerçek görev verisi bulunamaz; gerçek veriyle pilot için ayrı izin/hukuk/güvenlik kapıları gerekir | Kabul edildi |
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.

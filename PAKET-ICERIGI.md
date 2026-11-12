@@ -1,7 +1,7 @@
 # MİHENK belge paketi
 
 Son güncelleme: 13 Kasım 2026  
-Manifest: `manifest.json` — 66 dosya, 63 Markdown belgesi.
+Manifest: `manifest.json` — 67 dosya, 64 Markdown belgesi.
 
 ## Paket kapsamı
 
@@ -11,7 +11,7 @@ Manifest: `manifest.json` — 66 dosya, 63 Markdown belgesi.
 - Uzmanlık: henüz seçilmemiş alanlara ilişkin araştırma notları; 56.12 yalnızca örnek test senaryosu.
 - Mimari: teknoloji bağımsız alan modeli, kaynak izi ve veri yaşam döngüsü.
 - Güvenlik: materyal kabulü, hash sınırları, delil bütünlüğü, kişisel veri, tehdit modeli ve yedekleme.
-- Doğrulama: sentetik Görev Profili testleri, kullanıcı görüşmesi, UDF uyumluluğu ve pilot karar kapıları.
+- Doğrulama: sentetik görevlendirme belgeleri, Görev Profili testleri, kullanıcı görüşmesi, UDF uyumluluğu ve pilot karar kapıları.
 - Yönetişim: depo ayrımı, public depo güvenliği, Türkçe yazım standardı, changelog ve karar kayıtları.
 - Şablonlar: araştırma, kaynak, gereksinim, görüşme/görev gözlemi, karar ve risk kayıtları.
 

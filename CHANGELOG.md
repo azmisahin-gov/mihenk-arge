@@ -1,5 +1,11 @@
 # Değişiklik Kaydı
 
+## 0.6.1 — 13.11.2026
+
+- İki tamamen kurgusal görevlendirme metni ve beklenen Görev Profili sonuçları eklendi.
+- Materyal sayısı, görev süresi, tebliğ tarihi, teslim kanalı ve rapor formatının görevler arasında değişebildiği sentetik testle gösterildi.
+- Görev Profili, kaynak izi ve istisna yönetimi kararları ADR-018–020 olarak kaydedildi.
+
 ## 0.6.0 — 13.11.2026
 
 - Görevlendirme belgesinden her dava için ayrı Görev Profili oluşturma yaklaşımı tanımlandı.
@@ -29,14 +35,3 @@
 - Konuşmacı sırası ile gerçek kişi kimliği; transkripsiyon ile ses özgünlüğü/manipülasyon incelemesi ayrıştırıldı.
 - Eski uygulamalarla test planı kaldırıldı; MİHENK'in clean-room ve sentetik/açık lisanslı veriyle test edilmesi belgelendi.
 - Görüşme notu şablonu, serbest anlatımı zorunlu forma dönüştürmeden görev gözlemini yapılandıracak şekilde yenilendi.
-
-## 0.3.0 — 13.11.2026
-
-- Araştırma deposunun `mihenk-arge`, ayrılmış uygulama deposunun `mihenk` olduğu kaydedildi.
-- Uygulama deposunun public ve boş olduğu; ürün/teknoloji/lisans kararı olmadan kod geliştirmeye başlanmadığı belgelendi.
-- İlk uzmanla yapılan görev denemesinin genelleştirilmiş saha sentezi eklendi.
-- Ortak görev çalışma alanı hipotezi ile 56.12'ye özgü ses/metin ihtiyaçları ayrıştırıldı.
-- UYAP ekran görüntülerinden görülen menü/iş akışı öğeleri, tek kullanıcı gözlemi olarak belgelendi.
-- UYAP için yetkili API doğrulanmadan ekran otomasyonu yapılmaması kararı korundu.
-- Orijinal materyal, hash, çalışma kopyası, rapor kalite kapısı ve insan onayı ilkeleri netleştirildi.
-- Public depolarda gerçek vaka/kişisel veri ve ham ekran görüntüsü tutulmaması kuralı güçlendirildi.
