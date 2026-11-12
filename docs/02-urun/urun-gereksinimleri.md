@@ -1,35 +1,43 @@
 # Ürün Gereksinimleri
 
-> **Durum:** TASLAK  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Görev Profili yaklaşımıyla güncellendi — MVP kararı değil  
+> **Güncelleme:** 13 Kasım 2026
 
 ## Gereksinim kayıt formatı
 
-Her gereksinim `REQ-*` kimliği, kaynak, tip, gerekçe, öncelik, doğrulama, bağımlılık ve güven seviyesi taşır. Bu listedeki maddeler öneridir; hukukî zorunluluk ifadesi olarak okunmamalıdır.
+Her gereksinim `REQ-*` kimliği, kaynak, tip, gerekçe, öncelik, doğrulama, bağımlılık ve güven seviyesi taşır. Bu listedeki maddeler ürün önerisidir; ayrıca mevzuat dayanağı açıkça belirtilmedikçe hukukî zorunluluk olarak okunmamalıdır.
+
+## Gereksinimler
 
 | ID | İhtiyaç | Kaynak türü | Öncelik | Kabul ölçütü | Durum |
 |---|---|---|---|---|---|
-| REQ-CORE-001 | Görev kapsamı ve soruları kullanıcı tarafından elle kaydedilebilmeli | Hukuki iş akışından ürün önerisi | P0 | Her soru için açık cevap/inceleme durumu | Taslak |
-| REQ-CORE-002 | Resmî işlem ve uygulama içi hazırlık görsel olarak ayrılmalı | Ürün güvenlik ilkesi | P0 | UYAP teslimi otomatik başarı sayılmıyor | Taslak |
-| REQ-CORE-003 | Orijinal materyal ile çalışma kopyası ayrı saklanmalı | Teknik iyi uygulama | P0 | Orijinal dosya değişmez, türev metadata tutar | Taslak |
-| REQ-CORE-004 | Görev, materyal ve rapor eylemleri denetim kaydı oluşturmalı | Ürün önerisi | P1 | Olay, zaman, uygulama sürümü, önce/sonra kaydı | Taslak |
-| REQ-CORE-005 | Süre ve kullanıcı tanımlı hatırlatıcılar olmalı | Kullanıcı hipotezi | P1 | Tarih ve saat dilimi doğru | Görüşme bekliyor |
-| REQ-SEC-001 | Yerel veri erişim kontrolü ve şifreleme planı olmalı | Teknik/hukuki | P0 | Tehdit modeli ve sızma testleri | Taslak |
-| REQ-SEC-002 | Gerçek vaka verisi test ve telemetry için kullanılmamalı | Gizlilik ilkesi | P0 | CI sentetik fixture dışında vaka verisi içermiyor | Taslak |
-| REQ-REPORT-001 | Rapor taslağı resmi görev sorularını eşleyebilmeli | HMK/CMK + ürün önerisi | P1 | Soru başına yanıt kontrolü | Hukukçu bekliyor |
-| REQ-REPORT-002 | Uzman kanaati otomatik oluşturulmamalı | 6754 m.3 ve ürün sınırı | P0 | AI kapalı; sadece boş şablon/biçim kontrolü | Taslak |
-| REQ-AUDIO-001 | Otomatik transkript ve uzman düzeltmesi ayrı tutulmalı | Mevcut repo/teknik öneri | P1 | Otomatik metin silinemez; farklar görünür | Pilot bekliyor |
+| REQ-TASK-001 | Her görevlendirme için ayrı Görev Profili oluşturulmalı | Yönetmelik m.51 + ürün tasarımı | P0 | Görev kapsamı, sınırlar, sorular, ücret ve süre ayrı alanlarda | Taslak |
+| REQ-TASK-002 | Görevlendirme belgesindeki açık alanlar otomatik çıkarılmalı | Ürün otomasyonu | P0 | Kaynak sayfa/metin ve çıkarım izi tutulur | Taslak |
+| REQ-TASK-003 | Belirsiz/çelişkili alanlar yalnızca istisnaya çıkarılmalı | Güvenilirlik ilkesi | P0 | Sistem tahminî değeri kesinleştirmez; diğer alanlarda ilerler | Taslak |
+| REQ-TASK-004 | Her görevde cevaplanacak sorular ayrı kaydedilmeli | Yönetmelik m.51 | P0 | Soru sırası/özgün ifade korunur ve rapor alanına bağlanır | Taslak |
+| REQ-TASK-005 | Süre miktarı, başlangıç olayı ve son tarih ayrı yönetilmeli | Yönetmelik m.51–52 | P0 | Başlangıç belirsizse son tarih uydurulmaz | Taslak |
+| REQ-TASK-006 | Materyal teslim yolu UYAP/fiziki/diğer olarak göreve göre belirlenmeli | Yönetmelik m.51/2 + saha gözlemi | P0 | Fiziki teslim ile UYAP erişimi farklı akışta izlenir | Taslak |
+| REQ-TASK-007 | Suret, format, imza ve iade talimatları görev bazında tutulmalı | Görev belgesi + ürün tasarımı | P0 | Açık talimat başka görevlere varsayılan olmaz | Taslak |
+| REQ-TASK-008 | Çıkarılan alanlar kaynak belge/sayfa ile ilişkilendirilmeli | İzlenebilirlik ilkesi | P0 | Her alanın kaynağına geri gidilebilir | Taslak |
+| REQ-CORE-001 | Resmî işlem ve uygulama içi hazırlık görsel olarak ayrılmalı | Ürün güvenlik ilkesi | P0 | UYAP teslimi kullanıcı doğrulaması olmadan başarı sayılmaz | Taslak |
+| REQ-CORE-002 | Orijinal materyal ile çalışma kopyası ayrı saklanmalı | Teknik iyi uygulama | P0 | Orijinal dosya değişmez; türev metadata tutar | Taslak |
+| REQ-CORE-003 | Görev, materyal ve rapor eylemleri denetim kaydı oluşturmalı | Ürün önerisi | P1 | Olay, zaman, uygulama sürümü, önce/sonra kaydı | Taslak |
+| REQ-SEC-001 | Yerel veri erişim kontrolü ve şifreleme planı olmalı | Teknik/hukuki | P0 | Tehdit modeli ve güvenlik testleri | Taslak |
+| REQ-SEC-002 | Gerçek vaka verisi test ve telemetri için kullanılmamalı | Gizlilik ilkesi | P0 | CI sentetik fixture dışında vaka verisi içermez | Taslak |
+| REQ-REPORT-001 | Rapor taslağı görev sorularını ve kaynakları eşleyebilmeli | Yönetmelik m.55 + ürün önerisi | P0 | Soru başına yanıt alanı ve kaynak/ek bağlantısı | Taslak |
+| REQ-REPORT-002 | Nihai teknik kanaat otomatik üretilmemeli | Bilirkişilik görev sınırı | P0 | Sistem uzman adına teknik kanaat veya hukukî değerlendirme yazmaz | Taslak |
+| REQ-REPORT-003 | Her görev için yeni, yalıtılmış rapor oluşturulmalı | Veri yalıtımı ilkesi | P0 | Önceki görevden içerik/ek/metadata sızıntısı testi geçer | Taslak |
+| REQ-REPORT-004 | Uygun resmî şablon görev koşullarına göre seçilmeli | Resmî şablon kataloğu + ürün tasarımı | P0 | Şablon kaynağı/sürümü tutulur; belirsiz eşleşme istisnadır | Taslak |
+| REQ-REPORT-005 | UDF ve diğer çıktı biçimleri gerçek UYAP akışında doğrulanmalı | UYAP Editör resmî yardımı | P1 | Her evrak türü/format kombinasyonu ayrı test edilir | Araştırma |
+| REQ-AUDIO-001 | Otomatik transkript ile uzman düzeltmesi ayrı tutulmalı | 56.12 ilk görev gözlemi | P1 | Taslak, revizyon ve uzman kabulü ayrı sürümlenir | Araştırma |
 | REQ-OPS-001 | Yedekleme ve geri yükleme akışı test edilmeli | Güvenilirlik gereksinimi | P0 | Tam geri yükleme ve bütünlük doğrulama | Taslak |
 
 ## Öncelik anlamı
 
-P0: Güvenlik, veri kaybı veya hukuki sınır nedeniyle olmadan pilot yapılmamalı. P1: İlk kontrollü sürümde önemli. P2: kullanıcı kanıtıyla sonraki faz. P3: ileri fikir. Öncelikler bu aşamada geçicidir.
+P0: Güvenlik, veri kaybı veya resmî görev sınırı açısından ilk kontrollü sürümde gerekli. P1: İlk kontrollü sürüm için önemli fakat kapsam kararı bekliyor. P2/P3: Sonraki kullanıcı kanıtıyla değerlendirilecek. Öncelikler geçicidir.
 
 ## Kaynaklar
 
-- [6754 sayılı Bilirkişilik Kanunu — Adalet Bakanlığı Mevzuat ve İçtihat Programı](https://mevzuat.adalet.gov.tr/mevzuat/104136)
-- [6100 sayılı Hukuk Muhakemeleri Kanunu — Adalet Bakanlığı Mevzuat ve İçtihat Programı](https://mevzuat.adalet.gov.tr/mevzuat/103103)
-- [5271 sayılı Ceza Muhakemesi Kanunu — resmî PDF](https://aile.gov.tr/uploads/chgm/uploads/pages/kanunlar/5271-sayili-ceza-muhakemesi-kanunu.pdf)
-- [forensic-transcriber GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber)
-- [forensic-transcriber-next GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber-next)
+- [Bilirkişilik Yönetmeliği — özellikle m.51–52](https://www.lexpera.com.tr/mevzuat/yonetmelikler/bilirkisilik-yonetmeligi-2)
+- [UYAP Doküman Editörü — resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
+- [Bilirkişi Rapor Şablonları — Bilirkişilik Daire Başkanlığı](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
