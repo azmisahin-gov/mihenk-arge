@@ -1,0 +1,25 @@
+# Case data and potentially sensitive material
+/data/
+/cases/
+/evidence/
+/exports/
+/backups/
+*.db
+*.sqlite
+*.sqlite3
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.mp4
+*.mov
+*.pdf
+*.p12
+*.pfx
+*.key
+*.pem
+.env
+.env.*
+.DS_Store
+Thumbs.db
