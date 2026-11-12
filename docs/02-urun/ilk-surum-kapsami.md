@@ -1,44 +1,34 @@
 # İlk Sürüm Kapsamı
 
-> **Durum:** KARAR BEKLİYOR  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Henüz belirlenmedi — kullanıcı keşfi bekleniyor  
+> **Güncelleme:** 12 Kasım 2026
 
-## Bu aşamadaki ilk sürüm önerisi
+## Bu aşamadaki karar
 
-Üretim platformu değil, **araştırma prototipi / pilot harness** önerilir. İlk sürüm, gerçek dosyaları işlemeye yönelik yaygın dağıtımdan önce iş akışı ve güvenilirlik kanıtı üretmelidir.
+Henüz MVP veya pilot uygulama kapsamı seçilmedi. Önce bilirkişilerin mevcut işlerini, UYAP dışındaki tekrar eden işleri ve otomasyona açık ihtiyaçları anlamamız gerekiyor.
 
-### Dahil
+## Araştırılacak olası kapsam kümeleri
 
-- Sentetik demo görevleri.
-- Manuel görev kartı, sorular ve checklist.
-- Sentetik materyal importu ve hash doğrulama.
-- Orijinal/çalışma kopyası ayrımı.
-- Yöntem ve araç sürümü kaydı.
-- Rapor iskeleti ve ek kontrolü.
-- Yedekleme/geri yükleme demo testi.
-- Kullanıcı eylemlerinin denetim kaydı.
+- Görev ve süre yönetimi.
+- Dosya/materyal envanteri ve teslim/iade kayıtları.
+- İnceleme yöntemi ve çalışma günlüğü.
+- Rapor taslağı, ekler ve kalite kontrol.
+- Ücret/gider ve görev kapanışı.
+- Uzmanlık bazlı teknik modüller.
 
-### Koşullu modül
+Bunlar kesin gereksinim değildir. Kullanıcı görüşmeleri sonucunda bazıları kapsam dışı kalabilir.
 
-56.12 ses akışı, yalnızca hukuk/uzman görüşmesi ve veri kümesi kurgusu tamamlandıktan sonra, mevcut `forensic-transcriber-next` pilot nesnesi üzerinden değerlendirilsin. MİHENK ortak çekirdeğine entegre edilecek diye varsayılmasın.
+## Açıkça kapsam dışı tutulanlar
 
-### Dahil değil
-
-- UYAP entegrasyonu.
-- Bulut senkronizasyonu.
-- Kurul/çok kiracılı işbirliği.
-- Mobil uygulama.
+- UYAP entegrasyonu veya resmî sisteme izinsiz otomasyon.
 - Otomatik kanaat veya hukuki yorum.
-- 56.11 veya başka uzmanlık için analiz modülleri.
-- Ücret tahakkuku/ödeme başlatma.
+- Eski transkripsiyon projelerinden kod, mimari veya bağımlılık kullanımı.
+- Kanıtlanmamış uzmanlık modülünü ilk sürüm ilan etmek.
 
-## Çıkış şartı
+## MVP çıkış şartı
 
-Kullanıcıların aynı görev üzerinde en az 3 kez tekrar eden somut sorun yaşadığı gösterilmeden MVP kapsamı genişletilmemelidir.
-
-## Kaynaklar
-
-- [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
-- [forensic-transcriber GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber)
-- [forensic-transcriber-next GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber-next)
+- En az birkaç gerçek kullanıcı aynı problemi bağımsız biçimde tarif etmiş olmalı.
+- Sorunun sıklığı ve etkisi kaydedilmiş olmalı.
+- Bugünkü araçlar/portalın sorunu çözmediği anlaşılmalı.
+- Kullanıcı kabul ölçütü ve güvenli test yolu tanımlanmalı.
+- Proje sahibi kapsam kararını onaylamalı.
