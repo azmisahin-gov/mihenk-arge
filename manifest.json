@@ -1,7 +1,8 @@
 {
   "created": "12 Kasım 2026",
-  "markdown_count": 58,
-  "file_count": 61,
+  "updated": "12 Kasım 2026",
+  "markdown_count": 60,
+  "file_count": 63,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -18,6 +19,8 @@
     "docs/00-yonetim/belge-yazim-kurallari.md",
     "docs/00-yonetim/proje-amaci-ve-kapsam.md",
     "docs/00-yonetim/terimler-sozlugu.md",
+    "docs/00-yonetim/proje-yonetimi-ve-rol-dagilimi.md",
+    "docs/00-yonetim/proje-sahibinden-ilk-girdiler.md",
     "docs/01-arastirma/bilirkisi-olma-yolculugu.md",
     "docs/01-arastirma/gorev-yasam-dongusu.md",
     "docs/01-arastirma/ilk-pilot-secimi.md",

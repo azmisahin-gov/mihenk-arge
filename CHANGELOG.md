@@ -1,8 +1,13 @@
 # Değişiklik Kaydı
 
-> **Durum:** DOĞRULANDI  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+## 0.2.0 — 12.11.2026
+
+- Proje sahibi ile çalışma modeli ve sorumluluklar belgelendi.
+- Eski Forensic Transcriber depolarının yalnızca referans olduğu, hiçbir kod/altyapı taşınmayacağı karara bağlandı.
+- Dokümantasyon deposu ile gelecekteki uygulama kodu deposu ayrıldı.
+- İlk uzmanlık/pilot seçiminin kullanıcı görüşmeleri tamamlanana kadar açık kalması sağlandı.
+- Proje sahibinden istenecek ilk girdiler ve bilirkişi görüşme rehberi eklendi.
+- Önceki taslaklarda örnek projelerin pilot olarak kullanılacağı izlenimi veren ifadeler düzeltildi.
 
 ## 0.1.0 — 12.11.2026
 

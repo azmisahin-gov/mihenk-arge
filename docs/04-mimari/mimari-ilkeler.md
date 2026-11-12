@@ -1,35 +1,38 @@
-# Mimari İlkeler
+# Mimari İlkeler ve Teknoloji Seçim Süreci
 
-> **Durum:** TASLAK  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Teknoloji seçimi yapılmadı  
+> **Güncelleme:** 12 Kasım 2026
 
-## Önerilen ilke seti
+## Sıfırdan karar ilkesi
 
-1. **Önce yerel çalışma:** Yargı dosyalarının gizliliği ve ağsız çalışma ihtimali nedeniyle yerel-first seçenek ilk prototipte öncelikli değerlendirilmeli.
-2. **Modüler monolit:** Ölçek ve çok kiracılık kanıtlanmadığı için mikro hizmet/dağıtık mimari seçilmemeli.
-3. **Katman ayrımı:** Domain ve uygulama kuralları arayüz/altyapıdan bağımsız tutulmalı.
-4. **Uzmanlık eklentileri:** Modül kendi veri ve yöntem modelini taşımalı; ortak çekirdeğe zorla sığdırılmamalı.
-5. **Güvenli dış işlem:** Harici araçlar argument array ile, shell kullanılmadan çalıştırılmalı.
-6. **Veri tabanı:** Yerel tek kullanıcılı pilot için SQLite düşünülebilir; eşzamanlı çok kullanıcı ihtiyacı kanıtlanırsa PostgreSQL/servis değerlendirilmeli.
-7. **Güncelleme güveni:** Kod imzalama, paket imza doğrulaması ve anahtar yönetimi release şartı olmalı.
-8. **Kurtarma:** Yedekleme, restore ve hata sonrası toparlama MVP güvenilirliğinin parçası olmalı.
+MİHENK'in dili, framework'ü, istemci tipi, veri tabanı, bulut/yerel yaklaşımı veya dağıtım modeli henüz seçilmemiştir. Önceki transkripsiyon örneklerindeki teknoloji ve mimariler MİHENK için başlangıç varsayımı olmayacaktır.
 
-## Teknoloji karşılaştırması
+## Teknoloji seçmeden önce cevaplanacak sorular
 
-| Seçenek | Güçlü yön | Sınırlama | Şimdiki öneri |
-|---|---|---|---|
-| Electron | Mevcut klasik uygulamada olgun JS araçları; hızlı prototipleme | Bellek, büyük tek JS dosyaları/IPC sınırı iyi yönetilmezse karmaşıklık | Yeni ortak ürün için varsayılan değil |
-| Tauri + Rust + React | Yerel çekirdek, UI ayrımı, kontrollü IPC, mevcut Next deneyimi | Rust öğrenme/bakım ve Windows/WebView paketleme gereksinimi | 56.12 pilot teknik aday, nihai karar değil |
-| C#/.NET Windows | Windows kurumsal desteği ve yerel entegrasyon | Çoklu platform hedefinde sınırlı olabilir | Gerçek kullanıcı ortamı sorulmalı |
-| Web uygulaması | Dağıtım kolaylığı/merkezi güncelleme | Hassas dosyaların sunucuya gitmesi, offline sınırlaması | İlk pilot için tercih edilmez |
-| Bulut | Ekip/erişim kolaylığı | Veri yerleşimi, sır, erişim, aktarım ve hukuk riski | Yazılı onay ve ihtiyaç kanıtı olmadan kapsam dışı |
+- Kullanıcıların cihazları ve işletim sistemleri nelerdir?
+- Bilirkişiler masaüstü mü, web mi, tablet/telefon mu kullanıyor?
+- İnternet kesildiğinde hangi işlevler çalışmalı?
+- Dosyalar cihazda mı kalmalı; kurum/kurul paylaşımı gerekli mi?
+- Tek kullanıcı mı, ekip/kurul veya çok cihazlı çalışma mı gerekiyor?
+- Hangi dosya türleri, boyutlar ve işlem süreleri bekleniyor?
+- Güncelleme, kurulum ve teknik destek kim tarafından yürütülecek?
+- Güvenlik, yedekleme ve saklama için hangi zorunluluklar var?
 
-Mevcut `forensic-transcriber-next` tasarımı Tauri + Rust + React + SQLite katmanlı bir örnek sunuyor; bu bir nihai karar gerekçesi değildir.
+## Mimari ilkeler (hedef; henüz teknoloji kararı değil)
 
-## Kaynaklar
+1. İş kuralları arayüzden bağımsız tanımlanmalı.
+2. Uzmanlık modülleri ortak çekirdeği gereksiz alanlarla şişirmemeli.
+3. Orijinal materyal, çalışma kopyası ve üretilen çıktı ayrı modellenmeli.
+4. Otomatik hazırlanan içerik ile uzmanın doğruladığı içerik ayrılmalı.
+5. Kullanıcı yetkisi ve onayı olmadan resmî sistemlerde işlem yapılmamalı.
+6. Yedek/geri yükleme ve hata sonrası kurtarma ilk sürüm tasarımına dahil olmalı.
+7. Gereksiz ağ çağrısı ve veri aktarımı olmamalı.
+8. Güvenlik, erişilebilirlik, bakım maliyeti ve lisanslar teknoloji seçiminin parçası olmalı.
 
-- [forensic-transcriber GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber)
-- [forensic-transcriber-next GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber-next)
-- [KVKK — Özel Nitelikli Kişisel Verilerin İşlenmesine İlişkin Rehber](https://www.kvkk.gov.tr/Icerik/8184/Ozel-Nitelikli-Kisisel-Verilerin-Islenmesine-Iliskin-Rehber)
-- [NISTIR 8387 — Digital Evidence Preservation: Considerations for Evidence Handlers (08.09.2022)](https://www.nist.gov/publications/digital-evidence-preservation-considerations-evidence-handlers)
+## Mimari karar kapısı
+
+Kullanıcı görüşmeleri ve ürün kapsamı netleşmeden framework karşılaştırmasında kazanan ilan edilmeyecektir. Uygulama yapılacaksa en az iki alternatif; geliştirme maliyeti, güvenlik, performans, platform desteği, bakım, lisans, dağıtım ve test kolaylığı bakımından karşılaştırılacaktır.
+
+## Depo ayrımı
+
+Araştırma deposu `azmisahin-gov/mihenk` olarak kalacaktır. Uygulama kodu ayrı bir yeni depoda sıfırdan başlatılacaktır. Uygulama deposu açılmadan önce ad, görünürlük, lisans, CI, güvenlik ve release kararları kayda alınacaktır.

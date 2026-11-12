@@ -1,41 +1,43 @@
 # Kullanıcı Araştırması Planı
 
-> **Durum:** KULLANICI DOĞRULAMASI BEKLİYOR  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Aktif keşif — ilk 2–3 görüşme bekleniyor  
+> **Güncelleme:** 12 Kasım 2026
 
-## Hedef katılımcılar
+## İlk tur
 
-- 3–4 aktif ve düzenli görevlendirme alan bilirkişi.
-- 2 yeni/sicile yeni kabul edilmiş bilirkişi.
-- 1–2 birden çok uzmanlık alanına sahip bilirkişi.
-- 1 kurul görevi deneyimi olan bilirkişi.
-- 1 farklı yargı kolunda (idari/ceza/hukuk) görev deneyimi olan katılımcı.
-- Uygun olursa 1–2 bilirkişi eğitmeni veya bölge kurulu deneyimli hukukçu.
+Önce 2–3 bilirkişiyle keşif görüşmesi yap. Farklı deneyim düzeylerinden veya mümkünse farklı uzmanlık alanlarından kişiler seç. Bu turda ürün/özellik onayı isteme; son görevlerini baştan sona anlattır.
 
 ## Görüşme soruları
 
-1. Son görevinizi nasıl aldınız ve ilk 30 dakikada ne yaptınız?
-2. Görev kapsamı/soru belirsizliğinde ne yaptınız?
-3. Materyal nasıl teslim edildi, neleri kaydettiniz?
-4. Görev sırasında kullandığınız sistem ve araçlar neler?
-5. UYAP hangi işleri çözdü; dışında ne yaptınız?
-6. En sık tekrarladığınız manuel işler hangileri?
-7. Rapor hazırlama ve ekler hangi aşamada zor?
-8. Teslimden sonra hangi işlemler sürüyor?
-9. En büyük veri güvenliği/kayıp/yanlış dosya riski ne?
-10. Bir yazılımda kesinlikle olmaması gereken özellik nedir?
+1. Bir görevlendirme geldiğinde ilk yaptığınız işlemler nelerdir?
+2. Görev kabulünden raporu teslim edene kadar hangi aşamalardan geçiyorsunuz?
+3. UYAP dışında hangi program, dosya, tablo, not veya fiziksel araçları kullanıyorsunuz?
+4. En çok zaman kaybettiren üç iş nedir?
+5. En sık hata, unutma, tekrar iş veya veri kaybı riski nerede oluşuyor?
+6. Hangi işleri yazılımın otomatik yapmasını istersiniz?
+7. Hangi kararlar mutlaka bilirkişinin kontrolünde kalmalı?
+8. Bugün kullandığınız araçlarda en sevdiğiniz ve en sevmediğiniz şey nedir?
+9. Böyle bir uygulama bilgisayarda mı, tarayıcıda mı, telefonda mı daha yararlı olur? Neden?
+10. Uygulamanın kesinlikle yapmaması gereken şey nedir?
 
-## Etik ve veri işleme
+## Not alma ve veri güvenliği
 
-Gerçek dosya, ses, kimlik, dosya numarası, ekran görüntüsü veya gizli evrak istenmez. Katılımcı gönüllülüğü, anonim not, amaç sınırlaması ve saklama politikası önceden belirlenir. Görüşme notları GitHub'a isim/kurum bilgisi içerecek şekilde konmaz.
+- Katılımcı kodu kullan; isim/kurum kaydetme.
+- Gerçek dosya, ses kaydı, kimlik, dosya numarası, UYAP ekran görüntüsü veya gizli evrak isteme.
+- Katılımcı ifadesini araştırmacı yorumundan ayır.
+- İhtiyaç ifadesini doğrudan özellik talebine çevirmeden önce kök problemi belirle.
+- Çelişkili ve olumsuz görüşleri de kaydet.
 
-## Çıktı
+## Her görüşmeden çıkarılacak sonuç
 
-Sorunların sıklığı, etki düzeyi, bugün kullanılan geçici çözüm ve yazılımın olası etkisiyle bir problem kanıt tablosu hazırlanır. Katılımcı sayısı nitel araştırma için keşif amaçlıdır; bütün bilirkişileri temsil ettiği iddia edilmez.
+İş akışı adımları; sorunlar ve mevcut geçici çözümler; tekrar sıklığı ve etkisi; istenen otomasyonlar; insan kontrolü gerektiren kararlar; kullanılan cihaz/sistemler; açık sorular.
+
+## Daha geniş örneklem
+
+İlk turdan sonra görüşme rehberi güncellenir. Sonraki aşamada 8–12 katılımcıya genişlemek mümkündür; bu sayı tüm bilirkişileri temsil eden istatistiksel örneklem sayılmaz.
 
 ## Kaynaklar
 
-- [6754 sayılı Bilirkişilik Kanunu — Adalet Bakanlığı Mevzuat ve İçtihat Programı](https://mevzuat.adalet.gov.tr/mevzuat/104136)
+- [6754 sayılı Bilirkişilik Kanunu](https://mevzuat.adalet.gov.tr/mevzuat/104136)
 - [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
 - [KVKK — Özel Nitelikli Kişisel Verilerin İşlenmesine İlişkin Rehber](https://www.kvkk.gov.tr/Icerik/8184/Ozel-Nitelikli-Kisisel-Verilerin-Islenmesine-Iliskin-Rehber)
