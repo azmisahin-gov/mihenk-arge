@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 63,
-  "file_count": 66,
+  "markdown_count": 64,
+  "file_count": 67,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -55,6 +55,7 @@
     "docs/05-guvenlik-ve-mevzuat/tehdit-modeli.md",
     "docs/05-guvenlik-ve-mevzuat/veri-koruma.md",
     "docs/05-guvenlik-ve-mevzuat/yedekleme-ve-kurtarma.md",
+    "docs/06-dogrulama/fixtures/gorevlendirme-belgesi-sentetik-ornekleri.md",
     "docs/06-dogrulama/gorev-profili-test-senaryolari.md",
     "docs/06-dogrulama/kullanici-arastirmasi-plani.md",
     "docs/06-dogrulama/pilot-plani.md",
