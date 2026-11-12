@@ -1,64 +1,61 @@
 # 56.12 İçin Örnek İş Akışı Araştırması
 
-> **Durum:** İlk görev anlatımıyla güncellendi — modül/MVP kararı değildir  
+> **Durum:** İlk görev anlatımı + görev bazlı koşul yaklaşımı eklendi  
 > **Güncelleme:** 13 Kasım 2026
 
-## Bu belgenin amacı
+## Bu belgenin amacı ve sınırı
 
-56.12 ilk görev testinde kullanılan örnek uzmanlık alanıdır. Önceki transkripsiyon depoları MİHENK'in kod tabanı veya pilot uygulaması olarak kullanılmayacaktır. Bu belge, alanın olası iş akışını ve genel ürünün karşılaması gereken sınırları araştırır.
+56.12, tek kullanıcının ilk örnek görev testinde kullanılan uzmanlık alanıdır. Bu belge bütün MİHENK görevlerini tanımlamaz. Önceki transkripsiyon depoları yalnızca geçmiş deneyim referansıdır; kod, mimari, veri modeli veya bağımlılık taşınmayacaktır.
+
+İlk örnekte sekiz ses dosyası ve yaklaşık 160 dakika kayıt bulunuyordu. Bu sayı yalnızca örnek görevin materyal bilgisidir. MİHENK sekiz dosyayı varsayılan kabul etmeyecek; her görevin gerçek envanterini kullanacaktır.
 
 ## 56.12 kapsam sınırı
 
-Resmî 2026 listesi 56.12'yi “Ses Kayıtlarının Metin Haline Dönüştürülmesi” olarak tanımlar ve yargı mercilerince ses ve görüntü bilişim sisteminin kullanılmasına ilişkin istisna içerir. 56.11 ise adli ses ve görüntü inceleme/çözümlemeleridir. İki alan karıştırılmamalıdır.
+2026 resmî uzmanlık listesi 56.12'yi ses kayıtlarının metin hâline dönüştürülmesi olarak tanımlar ve yargı mercilerince ses/görüntü bilişim sistemi kullanılmasına ilişkin istisna içerir. 56.11 adli ses ve görüntü inceleme/çözümlemeleridir; iki alan karıştırılmamalıdır.
 
-## İlk kullanıcı anlatımından çıkarılan ayrıntılı iş akışı hipotezi
+## Her göreve özgü koşullar önce belirlenir
+
+Bilirkişilik Yönetmeliği m.51 uyarınca görevlendirme yazısı inceleme konusunu, kapsam/sınırları, cevaplanacak soruları ve rapor süresini bildirir. Bu nedenle 56.12'de bile tüm görevlerde aynı rapor soruları, dosya sayısı, süre veya ekler bulunacağı varsayılmaz.
+
+MİHENK her dosyada görevlendirme belgesinden şunları çıkarır:
+- Görevlendiren merci ve görev/dosya referansı.
+- İnceleme konusu ve sınırları.
+- Cevaplanacak sorular.
+- Rapor teslim süresi ve başlangıç olayı.
+- Teslim edilen materyal ve varsa dizi pusulası.
+- Kullanılacak rapor şablonu, içerik/ek şartları.
+- Elektronik/fiziki teslim, imza ve istenmişse nüsha koşulları.
+- Fiziki materyal iadesi.
+
+Bu koşulları her görev için ayrı bir profil olarak saklar. Sekiz ses dosyası, 30 gün veya taraf sayısından fazla suret gibi tek bir örneğe ait değerler başka davalara kopyalanmaz.
+
+## İlk kullanıcı anlatımından çıkarılan örnek akış
 
 1. **Görevlendirme:** Bilirkişi görevi UYAP'ta görür ve portalda kabul eder.
-2. **Fiziki teslim çağrısı:** İlgili mahkeme telefonla arayarak dosyanın alınması için bilgilendirebilir. Bu adım tek testte gözlenmiştir; tüm dosyalar için genel kural değildir.
-3. **Dosya teslimi:** Fiziki dosya, ekleri ve USB gibi dijital medya imza karşılığı teslim alınabilir. Mevcut tutanak ve materyal listesi kaydedilmelidir.
-4. **Ön inceleme:** Görevlendirme yazısı/talep ve cevaplanması istenen sorular belirlenir. Kapsam dışı konu, eksik bilgi veya materyal ihtiyacı varsa merciye bildirme ihtiyacı doğabilir.
-5. **Materyal envanteri:** Fiziki dosyadaki belgeler, ekler, zarf/taşıyıcı ve dijital ortam ayrı listelenir. Her materyalin görev açısından durumu belirtilir. Her belgeyi tümüyle okumak zorunlu varsayılmaz; ancak teslim alınan ve incelemeye esas olan materyalin listesi ve kapsamı bilinmelidir.
-6. **Dijital içe alma:** USB/medya içeriği listelenir; dosya sayısı, ad, tür, boyut, süre ve hash bilgisi alınır. Orijinal korunur ve yalnızca çalışma kopyası üzerinde işlem yapılır.
-7. **Ön kontrol:** Eksik, bozuk, okunamayan, desteklenmeyen veya beklenmeyen dosyalar işaretlenir. Beklenen/alınan/aktarılmış materyal eşleşmesi kontrol edilir.
-8. **Ses işleme ve transkripsiyon taslağı:** Kullanılan motor, model, sürüm, parametre ve dönüşüm adımları kaydedilerek makine taslağı oluşturulur.
-9. **Uzman dinleme ve düzeltme:** Metin sesle eşzamanlı sunulur. Uzman bölüm döngüleme, zaman konumuna atlama ve belirsiz/fısıltılı/örtüşen konuşma işaretleriyle metni doğrular.
-10. **Konuşmacı etiketleri:** Yalnızca ayırt edilebilen konuşmacı sıraları için nötr etiketler (ör. Konuşmacı 1/2) kullanılması değerlendirilebilir. Bu etiket kişi kimliği, yaş veya cinsiyet tespiti değildir. Belirsiz veya üst üste konuşmalar açıkça işaretlenir.
-11. **Önemli bölüm seçimi:** Uzman, önemli gördüğü zaman aralıklarını rapor için işaretler. Her alıntı kaynak dosyaya ve zaman aralığına geri bağlanmalıdır.
-12. **Rapor oluşturma:** Görev/merci türüne uygun resmî rapor şablonu seçilir. Görev soruları, yöntem, materyal listesi, inceleme bulguları, belirsizlikler ve ekler ilişkilendirilir.
-13. **Otomatik tamlık kontrolü:** Sistem boş alan, cevaplanmamış görev sorusu, eksik dosya durumu, ek eşleşmesi, hatalı referans, kalan yer tutucu ve başka görevden kalmış veri kontrolü yapar.
-14. **Uzman son kontrolü:** İçerik, teknik değerlendirme, alıntı bağlamı ve nihai kanaat bilirkişi tarafından onaylanır. Otomatik kontroller bu onayın yerini almaz.
-15. **Dışa aktarma ve resmî teslim:** MİHENK rapor ve ek paketini hazırlar. Bilirkişi dosyayı UYAP'a kendisi yükler, imzalar ve teslimi portalda doğrular.
-16. **Materyal iadesi ve kapanış:** Fiziken alınan dosya ve ekler envanterle karşılaştırılır, merciye iade adımı kullanıcı tarafından kaydedilir. Uygulama resmî iade işlemini yapmış gibi göstermez.
+2. **Fiziki teslim çağrısı:** Mahkeme telefonla arayarak dosyanın alınması için bilgi verebilir; tek örnekte görülmüştür.
+3. **Dosya teslimi:** Fiziki dosya, ekleri ve USB gibi dijital medya imza karşılığı teslim alınır; mevcut tutanak/dizi pusulası kaydedilir.
+4. **Görev kapsamı:** Görevlendirme yazısındaki inceleme konusu, sınırlar ve sorular çıkarılır. Uzmanlık dışı, eksik veya çelişkili talimat sistem tarafından işaretlenir.
+5. **Materyal envanteri:** Fiziki dosya, ekler, zarf/taşıyıcı ve dijital medya ayrı envanterlenir. Her belgenin okunması varsayılmaz; teslim edilen materyal ve inceleme kapsamı bilinmelidir.
+6. **Dijital içe alma:** Medya içeriği listelenir; dosya sayısı, ad, tür, boyut, süre ve hash alınır; orijinal ile çalışma kopyası ayrılır.
+7. **Ön kontrol:** Beklenen/alınan/aktarılmış/işlenmiş dosyalar karşılaştırılır; eksik/bozuk dosyalar işaretlenir.
+8. **Transkripsiyon:** Kullanılan motor/model/sürüm/parametreler kaydedilerek makine taslağı üretilir.
+9. **Uzman dinleme ve düzeltme:** Metin sesle eşzamanlı sunulur; zaman atlama, döngüde dinleme ve belirsiz/fısıltılı/örtüşen bölüm işaretleri kullanılır.
+10. **Konuşmacı sıralama:** Ayırt edilebilen konuşma sıraları nötr etiketlenebilir; kimlik/yaş/cinsiyet tespiti olarak sunulmaz.
+11. **Önemli bölüm seçimi:** Uzman önemli gördüğü aralıkları kaynak dosya ve zaman konumuyla işaretler.
+12. **Rapor:** Her görev için yeni ve izole bir rapor oluşturulur; doğru merci şablonu, görev soruları, yöntem, bulgular, belirsizlikler ve ekler kullanılır.
+13. **Otomatik kalite kapısı:** Boş alan, cevaplanmamış soru, eksik materyal, ek eşleşmesi, yanlış referans, yer tutucu ve önceki görevden veri sızıntısı kontrol edilir.
+14. **Uzman onayı:** Teknik değerlendirme, bağlam, sonuç ve raporun meslekî onayı bilirkişiye aittir.
+15. **Dışa aktarma ve imza:** Görev için doğrulanmış UYAP format akışı kullanılır. E-imza/m-imza resmî araçta bilirkişi tarafından uygulanır.
+16. **Resmî teslim ve iade:** Rapor UYAP'a bilirkişi tarafından gönderilir; fiziki dosya/eklerin iadesi envanterle karşılaştırılıp kaydedilir.
 
-Bu sıra tek bir senaryo üzerinden oluşmuş araştırma hipotezidir. Gerçek görev türü, yargı birimi, teslim şekli ve güncel rapor şablonuyla bilirkişi tarafından doğrulanmalıdır.
+## Otomasyon yaklaşımı
 
-## Ortak çekirdek ve alana özgü işlev
-
-**Ortak çekirdek adayı:** görev kaydı, süre/aşama, fiziki ve dijital materyal envanteri, teslim/iade kaydı, orijinal-kopya ayrımı, kontrol listesi, işlem geçmişi, rapor şablonu ve teslim öncesi tamlık kontrolü.
-
-**56.12'ye özgü aday:** ses oynatma, metin-ses senkronizasyonu, zaman damgası, transkripsiyon taslağı, bölüm tekrar dinleme, belirsiz alan işaretleme, nötr konuşmacı sıralama ve çoklu ses dosyası takibi.
-
-## Rapor şablonu ve kontrol listesi
-
-Bilirkişilik Daire Başkanlığının yayımladığı rapor şablonları merci/yargı türlerine göre ayrıdır. MİHENK'in göreve özgü şablon seçimini kullanıcıya doğrulatması ve şablon sürümünü kaydetmesi gerekir. Resmî bilirkişi kontrol listesindeki materyal envanteri, görev soruları, rapor biçimi ve fiziki iade başlıkları otomatik kontrol kapısına dönüştürülebilecek adaylardır.
-
-## Kapsam dışında tutulması gereken ayrımlar
-
-Konuşmacı kimliği, ses karşılaştırması, sesin özgünlüğü, montaj/sahtecilik değerlendirmesi veya görüntü incelemesi otomatik olarak 56.12 transkripsiyon özelliği sayılmamalıdır. Bu işler ayrı uzmanlık ve yöntem doğrulaması gerektirir. Hash/metadata kontrolleri tek başına kaydın sahte olmadığını veya geçmişte değiştirilmediğini kanıtlamaz.
-
-## Otomasyon sınırı
-
-- Dosya envanteri, hash, biçim/okunabilirlik, zorunlu alan ve ek eşleşmesi gibi belirlenmiş kontroller otomatik yapılabilir.
-- Transkripsiyon makine yardımıyla taslak üretir; nihai metin olarak etiketlenmez.
-- Belirsiz bölümler, yanlış güven vermeden uzmanın incelemesine sunulmalıdır.
-- Konuşmacı sıralaması bir öneri olabilir; kimlik doğrulaması değildir.
-- Ses özgünlüğü/manipülasyonu hakkında sonuç, bu modülün otomatik çıktısı olamaz.
-- Nihai teknik kanaat, delil yorumu, rapor onayı ve resmî sunum otomatikleştirilmemelidir.
+Rutin dosya sayımı, metadata, hash, transkripsiyon taslağı, kontrol listesi, rapor üretimi ve biçim denetimleri varsayılan otomasyondur. Sistem sadece düşük güven, eksik materyal, çelişkili talimat, uzmanlık sınırı veya insan kararı gerektiren aşamada müdahale ister. Nihai teknik kanaat, e-imza ve resmî gönderim otomatikleştirilmez.
 
 ## Kaynaklar
 
-- [2026 Temel ve Alt Uzmanlık Alanları](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260122151908585Bilirkişilik%20Temel%20ve%20Alt%20Uzmanlık%20Alanları%20ile%20Bilirkişilerde%20Aranan%20Nitelikler.pdf)
-- [Bilirkişiler İçin Kontrol Listesi — Resmî PDF](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20için%20Kontrol%20Listesi.pdf)
-- [Bilirkişi Rapor Şablonları — Daire Başkanlığı](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
+- [Bilirkişilik Yönetmeliği m.51–55](https://rayp.adalet.gov.tr/resimler/494/dosya/bilirkisilik-yonetmeligi16-06-20254-49-pm.pdf)
+- [Bilirkişiler İçin Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20için%20Kontrol%20Listesi.pdf)
+- [Bilirkişi Rapor Şablonları](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
+- [UYAP Doküman Editörü — Resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
 - [SWGDE Best Practices for Forensic Audio, v2.5](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
-- [SWGDE Best Practices for Digital Audio Authentication](https://www.swgde.org/documents/published-complete-listing/15-a-001-swgde-best-practices-for-digital-audio-authentication/)
