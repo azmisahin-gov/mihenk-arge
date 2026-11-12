@@ -1,5 +1,15 @@
 # Değişiklik Kaydı
 
+## 0.7.0 — 13.11.2026
+
+- MİHENK'in uzmanlık araçlarını tek kullanıcı arayüzünde sunan bütünleşik platform hedefi karara bağlandı.
+- Modül/araç paketleri için manifest, imza, izin, lisans/SBOM, sandbox, güncelleme ve geri alma ilkeleri eklendi.
+- LibreOffice/UNO, ONLYOFFICE, Collabora Online ve Apache OpenOffice seçenekleri lisans, offline, gömme ve format açısından karşılaştırıldı.
+- UDF topluluk araçları incelendi; Apache 2.0 lisanslı `udfpdf` yalnızca okuma/dönüştürme PoC adayı, lisanssız veya ticari entegrasyonu yasaklı projeler kapsam dışı olarak kaydedildi.
+- PDF.js, PDFBox, OCRmyPDF ve Tesseract adayları incelendi.
+- Tek rapor modeli ve DOCX/ODT/PDF/UDF çıktı adaptörleri yaklaşımı tasarlandı; teknoloji kararı verilmedi.
+- Belge motoru ve modül güvenliği için test stratejisi güncellendi.
+
 ## 0.6.1 — 13.11.2026
 
 - İki tamamen kurgusal görevlendirme metni ve beklenen Görev Profili sonuçları eklendi.
@@ -15,23 +25,3 @@
 - 12 sentetik Görev Profili test senaryosu eklendi; gerçek vaka verisi kullanılmadı.
 - UDF, güncel UYAP Editörü ve 2026 e-imza güncellemesi araştırma belgesine işlendi.
 - Ürün gereksinimleri, işlevsel gereksinimler, alan modeli ve yol haritası güncellendi.
-
-## 0.5.0 — 13.11.2026
-
-- Görevlendirme tutanağındaki inceleme kapsamı, sorular, süre, teslim, materyal ve rapor koşullarının her görev için ayrı yapılandırılması karara bağlandı.
-- 30 günlük sürenin tekil görevlendirme talimatı olduğu; mevzuattaki süre çerçevesinden ayrılması belgelendi.
-- Taraf sayısının bir fazlası kadar suret talimatının görev özelinde tutulacağı, genel ve otomatik nüsha kuralına dönüştürülmeyeceği açıklandı.
-- UDF biçiminin UYAP Doküman Editörü ve imza akışındaki yeri resmî kaynaklarla araştırıldı; evrak türüne özgü biçim uyumu açık konu olarak bırakıldı.
-- Her dava için önceki rapor kopyalanmadan temiz belge üretilmesi ve görevler arası veri sızıntısı testleri eklendi.
-- Otomasyon varsayılan, insan müdahalesi belirsizlik/istisna ve mesleki onay noktalarıyla sınırlı olacak şekilde güncellendi.
-- Araştırma ve uygulama deposundaki kullanıcı dokümantasyonu/README/PR/commit dili Türkçe standardına bağlandı.
-
-## 0.4.0 — 13.11.2026
-
-- İlk görev anlatımı; görevlendirme, imza karşılığı fiziki teslim, USB içe alma, sekiz ses dosyası, dinleme ve rapor hazırlama adımlarıyla genişletildi.
-- Resmî bilirkişi kontrol listesi ve merci bazlı rapor şablonlarıyla materyal envanteri/rapor kontrolü eşleştirildi.
-- Materyal kabulü, fiziki/dijital envanter, kaynak-kopya ilişkisi ve iade izlenebilirliği ürün hipotezlerine eklendi.
-- Uzun kayıt dinleme yükü, zaman damgası/tekrar dinleme ve rapor eski-veri sızıntısı kalite testlerine eklendi.
-- Konuşmacı sırası ile gerçek kişi kimliği; transkripsiyon ile ses özgünlüğü/manipülasyon incelemesi ayrıştırıldı.
-- Eski uygulamalarla test planı kaldırıldı; MİHENK'in clean-room ve sentetik/açık lisanslı veriyle test edilmesi belgelendi.
-- Görüşme notu şablonu, serbest anlatımı zorunlu forma dönüştürmeden görev gözlemini yapılandıracak şekilde yenilendi.

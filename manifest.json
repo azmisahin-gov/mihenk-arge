@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 64,
-  "file_count": 67,
+  "markdown_count": 66,
+  "file_count": 69,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -21,6 +21,7 @@
     "docs/00-yonetim/terimler-sozlugu.md",
     "docs/00-yonetim/proje-yonetimi-ve-rol-dagilimi.md",
     "docs/00-yonetim/proje-sahibinden-ilk-girdiler.md",
+    "docs/01-arastirma/acik-kaynak-belge-ve-pdf-araclari.md",
     "docs/01-arastirma/bilirkisi-olma-yolculugu.md",
     "docs/01-arastirma/gorev-yasam-dongusu.md",
     "docs/01-arastirma/ilk-pilot-secimi.md",
@@ -46,6 +47,7 @@
     "docs/03-uzmanlik-modulleri/ilk-pilot/kalite-plani.md",
     "docs/03-uzmanlik-modulleri/modul-secim-analizi.md",
     "docs/04-mimari/alan-modeli.md",
+    "docs/04-mimari/butunlesik-uzmanlik-modul-mimarisi.md",
     "docs/04-mimari/mimari-ilkeler.md",
     "docs/04-mimari/modul-sinirlari.md",
     "docs/04-mimari/sistem-baglam-diyagrami.md",

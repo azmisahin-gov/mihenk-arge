@@ -24,5 +24,9 @@
 | ADR-018 | 13.11.2026 | Her görevlendirme belgesi ayrı bir Görev Profili üretir; çıkarılan alanların kaynak izi korunur | Yönetmelik m.51'deki göreve özgü kapsam, sorular, ücret ve süre; materyal tesliminin izlenebilirliği | Kabul edildi |
 | ADR-019 | 13.11.2026 | Güvenli ve tekrarlı işlemler varsayılan olarak otomatik yürür; yalnızca belirsizlik, çelişki, risk veya mesleki karar gereken nokta kullanıcıya çıkar | Gereksiz onayların ve manuel iş yükünün azaltılması hedefi | Kabul edildi |
 | ADR-020 | 13.11.2026 | Görev Profili ve belge çıkarımı ilk aşamada yalnızca sentetik test belgeleriyle doğrulanır | Public depolarda gerçek görev verisi bulunamaz; gerçek veriyle pilot için ayrı izin/hukuk/güvenlik kapıları gerekir | Kabul edildi |
+| ADR-021 | 13.11.2026 | MİHENK tek uygulama deneyimi sunan bütünleşik uzmanlık platformu olacaktır | Kullanıcı uzmanlık araçları için ayrı programlar arasında dosya taşımak istemiyor; araçlar uzmanlık modülleriyle MİHENK içinde yönetilecek | Kabul edildi |
+| ADR-022 | 13.11.2026 | Belge motoru ve uzmanlık araçlarında açık kaynak önceliklidir; lisans/güvenlik/biçim doğruluğu geçmeden bağımlılık eklenmez | Kullanıcı açık kaynak alternatiflerini önceliklendirdi; public GitHub deposu lisans incelemesi gerektirir | Kabul edildi |
+| ADR-023 | 13.11.2026 | UDF ve e-imza son aşaması resmî UYAP/Adalet akışıyla uyumluluk testinden geçmelidir | UDF resmî format; topluluk kütüphaneleri reverse-engineered ve imza/portal kabulünü tek başına garanti etmez | Araştırma sürüyor |
+| ADR-024 | 13.11.2026 | Uzmanlık modülleri imzalı, sürümlü, izinleri sınırlı ve geri alınabilir paketler olmalıdır | Modül kapsamı büyüdükçe tedarik zinciri ve veri erişimi riski artar | Taslak |
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.
