@@ -1,38 +1,59 @@
 # İşlevsel Gereksinimler
 
-> **Durum:** TASLAK  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Görev Profili yaklaşımıyla güncellendi — geliştirme kararı değildir  
+> **Güncelleme:** 13 Kasım 2026
 
-## Çekirdek işlevler
+## Ortak çekirdek işlevler
 
-- Kullanıcının yerel bir çalışma alanı oluşturması.
-- Görev kaydı, resmi merci, görev tarihi, son tarih, sorular ve uzmanlık kodunun manuel kaydı.
-- Çıkar çatışması/uzmanlık/kapsam kontrol listesi.
-- Materyal kayıt kartı: kaynak, teslim tarihi, teslim eden, ortam, dosya adı, boyut, hash ve durum.
-- Orijinal/çalışma kopyası ayrımı ve türev üretim kaydı.
-- İnceleme günlüğü: yöntem, araç/sürüm, parametre, tarih, operatör girişi ve bulgu referansı.
-- Rapor iskeleti ve ek envanteri.
-- Teslim öncesi kontrol listesi; resmî teslim portalda yapılır.
-- İade, ücret/gider ve kapanış checklist'i.
-- Yerel yedekleme/geri yükleme.
+- Görevlendirme yazısı/tutanağı ve ilgili teslim belgelerini kullanıcı tarafından güvenli yerel çalışma alanına içe alma.
+- Kaynak belgeyi koruma; metin çıkarımı/OCR sonucu ve kaynak sayfa/metin bağlantısını saklama.
+- Belgeden görev kapsamı, sınırlar, cevaplanacak sorular, ücret, rapor süresi ve teslim koşullarını aday alanlara çıkarma.
+- Her görevlendirme için ayrı Görev Profili açma.
+- Açık ve güvenilir alanlarda otomatik ilerleme; belirsiz veya çelişkili alanları istisna listesine alma.
+- Her soruyu ayrı görev nesnesi olarak kaydetme; rapor yanıt alanıyla ilişkilendirme.
+- Süre miktarı, başlangıç olayı, tarih, son tarih ve ek süreyi ayrı izleme.
+- Fiziki teslim, UYAP dosya erişimi ve diğer izinli materyal edinim biçimlerini ayırma.
+- Dizi pusulası, fiziki ekler, dijital medya ve materyal iadesi için envanter.
+- Beklenen/alınan/aktarılmış/incelenmiş/iade edilmiş materyal durumlarını izleme.
+- Orijinal/çalışma kopyası/türetilmiş çıktı ayrımı.
+- Göreve göre oluşturulan kontrol listesi ve rapor iskeleti.
+- Her görev için sıfırdan ve yalıtılmış rapor oluşturma.
+- Teslim öncesi biçim/tamlık kontrolü ve resmî teslimin kullanıcı tarafından kaydedilmesi.
+- Yerel yedekleme/geri yükleme ve veri yaşam döngüsü.
 
-## Uzmanlık modül işlevleri
+## Görev Profili çıkarım davranışı
 
-Modül işlevleri ancak ilgili uzmanlık akışı ve yetki sınırı uzmanlarca doğrulandıktan sonra eklenir. 56.12 için ses import, üstveri, otomatik transkripsiyon, ses/metin eşleme ve insan düzeltmesi pilotta incelenebilir. Konuşmacı kimlik tespiti, ses karşılaştırması ve özgünlük/sahtecilik değerlendirmesi 56.12 transkripsiyon özelliği olarak eklenmemelidir.
+- Belge metni varsa doğrudan metin çıkarımı; taranmışsa OCR gibi yöntemler seçenek olarak değerlendirilir.
+- Her alanın kaynak belge ve metin konumu saklanır.
+- Alanın açıkça yazılı olması ile modelin yorumlayarak çıkarması ayrı işaretlenir.
+- Düşük güvenli/çelişkili alanlar istisnadır; diğer işlemler mümkün olduğu ölçüde devam eder.
+- Kullanıcıya tüm görev profilini yeniden doldurtmak yerine yalnızca çözülemeyen alan sorulur.
+- Otomatik çıkarım, bilirkişinin görevi kabul/ret, yetkinlik, çekinme veya teknik kanaat kararını vermez.
+
+## Uzmanlık modülü işlevleri
+
+Modül işlevleri ilgili uzmanlık akışı ve mesleki sınır doğrulandıktan sonra eklenir. 56.12 için çoklu ses içe alma, metadata, otomatik transkripsiyon taslağı, ses/metin eşleme ve insan düzeltmesi araştırılabilir. Bu, tüm MİHENK görevlerinin aynı dosya türü veya işlem adımlarını kullanacağı anlamına gelmez.
+
+## UYAP ve belge çıktısı sınırı
+
+- MİHENK görev, rapor ve ek hazırlığını otomatikleştirebilir.
+- UYAP hesabına giriş, resmî kabul, e-imza/m-imza ve rapor gönderimi için yetkili entegrasyon doğrulanmadan otomatik işlem yapılmaz.
+- UDF, UYAP Doküman Editörü'nün varsayılan belge biçimidir; MİHENK'in doğrudan UDF üretmesi henüz teknik karar değildir.
+- UYAP Editörü ve ilgili portal evrak türü ile biçim/imza uyumluluğu gerçek test ortamında doğrulanmalıdır.
+- E-imza özel anahtarı/PIN'i MİHENK tarafından saklanmaz veya kullanılmaz.
 
 ## Bilinçli olarak yapılmayacaklar
 
-- UYAP'ta kullanıcı adına otomatik giriş ve form gönderme.
+- UYAP'ta izinsiz otomatik giriş ve form gönderme.
 - Resmî rapor imzası veya elektronik imza üretme/taklit etme.
-- Otomatik bilirkişi seçimi, görev kabulü veya ret kararı.
-- AI tarafından sonuç/kanaat cümlesi yazılması.
-- Kişi kimliği veya suçluluk çıkarımı.
+- Otomatik bilirkişi görevlendirme, görev kabul/ret veya çekinme kararı.
+- AI tarafından nihai teknik kanaat veya hukukî değerlendirme yazılması.
+- Konuşmacı etiketi üzerinden kişi kimliği, suçluluk, yaş veya cinsiyet çıkarımı.
+- Ses transkripsiyonunu ses özgünlüğü/manipülasyon incelemesiyle aynı kabul etme.
+- Önceki davanın raporunu kopyalayarak yeni rapor oluşturma.
 
 ## Kaynaklar
 
-- [6754 sayılı Bilirkişilik Kanunu — Adalet Bakanlığı Mevzuat ve İçtihat Programı](https://mevzuat.adalet.gov.tr/mevzuat/104136)
-- [Temel ve Alt Uzmanlık Alanları ve Aranan Nitelikler — 22.01.2026 PDF](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260122151908585Bilirkişilik%20Temel%20ve%20Alt%20Uzmanlık%20Alanları%20ile%20Bilirkişilerde%20Aranan%20Nitelikler.pdf)
+- [Bilirkişilik Yönetmeliği — m.51–52](https://www.lexpera.com.tr/mevzuat/yonetmelikler/bilirkisilik-yonetmeligi-2)
 - [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
-- [forensic-transcriber GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber)
-- [forensic-transcriber-next GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber-next)
+- [UYAP Doküman Editörü — resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)

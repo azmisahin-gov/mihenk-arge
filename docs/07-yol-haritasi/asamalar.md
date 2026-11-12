@@ -1,54 +1,54 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** Keşif aşaması  
-> **Güncelleme:** 12 Kasım 2026
+> **Durum:** Keşif aşaması — Görev Profili tanımı üzerinde çalışılıyor  
+> **Güncelleme:** 13 Kasım 2026
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
 
-- Araştırma deposu ve çalışma kuralları kuruldu.
-- Önceki iki transkripsiyon projesinin yalnızca referans olduğu karara bağlandı.
-- Dokümantasyon ile uygulama kodu ayrımı belirlendi.
+- Araştırma ve uygulama depoları ayrıldı.
+- Önceki transkripsiyon projelerinin yalnızca deneyim referansı olduğu; kod/altyapı taşınmayacağı karara bağlandı.
+- Türkçe belge ve GitHub iletişim standardı belirlendi.
 
 ## Aşama 1 — Kullanıcı ve problem keşfi
 
-- Bilirkişi rollerini ve uzmanlık kümelerini belirle.
-- En az 5, tercihen farklı uzmanlık ve deneyim düzeylerinden 8–12 görüşme yap.
-- Görev yaşam döngüsünü gerçek görev anlatımlarıyla haritala.
-- Tekrarlanan sorunları, etkilerini ve mevcut çözüm yollarını kaydet.
-- UYAP'ın karşıladığı işler ile UYAP dışında kalan işleri ayır.
+- İlk tek kullanıcıyla görevlendirme, fiziki materyal kabulü, inceleme ve rapor hazırlığı akışı gözlemlendi.
+- Bulgular ortak çekirdek ve 56.12'ye özgü hipotezlere ayrıldı.
+- Farklı uzmanlık/deneyimlerde kullanıcılarla tekrar eden ihtiyaçların doğrulanması sürüyor.
 
-## Aşama 2 — Hukuk ve resmî süreç doğrulama
+## Aşama 2 — Görevlendirme ve resmî süreç doğrulama
 
-- Yönetmeliğin konsolide metni ve 2025 değişikliği.
-- 2026 başvuru esasları ve uzmanlık listesinin tamamı.
-- Yetkili kullanıcıyla UYAP içi iş akışlarının teyidi.
-- Veri koruma, saklama, imza ve resmî teslim sınırları.
+- Yönetmelik m.51–52'nin Görev Profili alanlarına dönüştürülmesi.
+- Görevlendirme belgesindeki kapsam, sorular, süre, ücret, materyal ve teslim koşullarının belirlenmesi.
+- Fiziki teslim ile UYAP elektronik erişim yollarının ayrılması.
+- Resmî rapor şablonu kataloğu, UDF ve e-imza akışının güncel sürümde doğrulanması.
+- Sentetik görevlendirme belgeleriyle otomatik çıkarım ve istisna testleri.
+- Farklı görev türleri ve bilirkişi alanlarıyla ortak modelin sınanması.
 
 ## Aşama 3 — Ürün tanımı
 
 - Problem tanımı ve hedef kullanıcı.
-- Fonksiyonel/fonksiyonel olmayan gereksinimler.
-- İlk sürüm kapsamı ve kapsam dışı işler.
-- Otomasyona uygun işler ile insan kararlarının ayrımı.
-- Ürün başarısı ve kabul kriterleri.
+- Görev Profili ve ortak çekirdek gereksinimleri.
+- Uzmanlık modülleri ile göreve özel iş akışlarının ayrımı.
+- Otomatik yürütülecek işler, istisna yönetimi ve insan karar sınırları.
+- Rapor üretimi, kalite kapısı ve çıktı formatı kabul kriterleri.
 
 ## Aşama 4 — Sıfırdan mimari ve teknoloji kararı
 
 - En az iki teknoloji/mimari alternatifini karşılaştır.
-- Yerel/web/mobil, çevrimdışı çalışma, güvenlik, veri modeli ve dağıtımı kararlaştır.
+- Yerel/web/mobil, çevrimdışı çalışma, belge işleme, güvenlik ve veri modelini kararlaştır.
 - Lisans ve üçüncü taraf bağımlılık politikasını belirle.
-- Ayrı uygulama deposunu oluştur; CI, test ve release iskeletini kur.
+- Uygulama deposunda CI, test ve release iskeletini kur.
 
 ## Aşama 5 — Uygulama geliştirme
 
-Ancak önceki karar kapıları geçildiğinde başlanır. İşler küçük dikey dilimlere ayrılır; her özellik gereksinim, test ve kullanıcı kabul ölçütüne bağlanır.
+Önceki karar kapıları geçildiğinde başlanır. İlk dikey dilim, onaylanmış sentetik görevlendirme belgesini alıp Görev Profili ve görev bazlı kontrol listesini otomatik oluşturmalıdır. Ardından materyal envanteri, uzmanlık işlemi ve rapor üretimi eklenir.
 
 ## Aşama 6 — Pilot ve doğrulama
 
-- Sentetik veya yetkili/izinli veri kullan.
-- Gerçek kullanıcılarla görev tamamlama ve hata senaryolarını dene.
+- Sentetik veya açık lisansı doğrulanmış veri kullan.
+- Gerçek kullanıcılarla görev tamamlama, hata ve manuel müdahale senaryolarını ölç.
 - Güvenlik, yedek/geri yükleme, performans ve erişilebilirliği doğrula.
-- Pilot çıktısına göre kapsamı daralt veya genişlet.
+- Pilot sonucuna göre kapsamı daralt veya genişlet.
 
 ## Aşama 7 — Bağımsız eleştiri ve yayın hazırlığı
 

@@ -1,35 +1,40 @@
 # Açık Sorular
 
-> **Durum:** KARAR BEKLİYOR  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Araştırma ve ürün keşfi  
+> **Güncelleme:** 13 Kasım 2026
 
-## Hukuk ve resmî süreç
+## Görevlendirme ve resmî süreç
 
-1. 2025 Yönetmelik değişikliğinin tam konsolide metni ve yürürlük/geçiş hükümleri nelerdir?
-2. 02.10.2026 için planlanan bölge listeleri hangi tarihte ve hangi resmî sayfada yayımlandı?
-3. Sicile kayıt, bölge listesi, yemin ve UYAP kullanıcı tanımı adımları nasıl ilişkilidir?
-4. UYAP Portal'da kabul/ret, ek süre, ön rapor, rapor formatı, ücret ve kurul iletişim menülerinin güncel davranışı nedir?
-5. Üçüncü taraf yazılım entegrasyonu için resmî API veya yazılı izin süreci var mı?
-6. Görev materyalinin saklama süresi ve görev sonrası silme yükümlülüğü nedir?
-7. 56.12 alanının alt uzmanlık özelinde 56 grubu yeterlilik koşullarına uygulaması nasıl yorumlanıyor?
+1. Görevlendirme belgesinde alanların hangi biçimlerde yer aldığı (PDF metni, tarama, UDF veya karma ekler) hangi oranlarda görülüyor?
+2. Görev başlangıç tarihi ve rapor süresinin hesabında hangi olay/tarih esas alınıyor; tutanaklarda belirsizlik olduğunda merci nasıl açıklama yapıyor?
+3. Farklı merci/yargı türlerinde rapor şablonu ve zorunlu ekler hangi ölçüde değişiyor?
+4. Rapor ve ekler için UYAP Portal'da kabul edilen biçimler, evrak türüne ve güncel sürüme göre nasıl değişiyor?
+5. UDF dosyasının MİHENK'ten üretilmesi mi, yoksa başka biçimde üretilip güncel UYAP Editörü'nde açılarak UDF kaydedilmesi mi güvenilir ve destekli yol?
+6. Fizikî dosya/dizi pusulası/ekler için iade ve saklama uygulaması dosya türüne göre nasıl farklılaşıyor?
+7. Heyet görevlendirmesinde rapor, ekler ve imza akışı nasıl ilerliyor?
+8. Üçüncü taraf yazılım entegrasyonu için yetkili UYAP API veya yazılı izin süreci var mı?
+
+## Görev Profili doğrulaması
+
+9. B-01 ile incelenen görevlendirme örneğinde Görev Profili'ne çıkaracağımız alanlar gerçek iş akışıyla uyumlu mu?
+10. Bilirkişi hangi görevlendirme alanlarının sistemce çıkarılmasını, hangilerinin kendisine sorulmasını istiyor?
+11. Belirsiz/çelişkili görevlendirme metninde hangi durumlarda merciye açıklama sorusu gönderiliyor?
+12. Uzmanlık alanı ve görev kapsamı arasındaki uyumsuzluk nasıl ele alınıyor?
 
 ## Kullanıcı ve ürün
 
-8. Bilirkişiler en fazla zaman kaybettikleri işi nasıl tanımlıyor?
-9. UYAP dışı süreçler kaç farklı dosya/klasör/tablo arasında bölünüyor?
-10. Aday rehberi için ödeme/ürün talebi var mı?
-11. Kurul çalışma özelliği gerçekten gerekli mi?
-12. 56.12 transkripsiyon çıktısı rapora nasıl ekleniyor ve hangi doğrulama gerekiyor?
+13. Farklı uzmanlık alanlarında ortak görev profili ve envanter ihtiyaçları aynı mı?
+14. Bilirkişiler en çok hangi manuel kontrolü ve rapor işini tekrar ediyor?
+15. İlk kurulum ve güncellemede hangi işletim sistemi/izin/kurum kısıtları var?
 
-## Teknik
+## Güvenlik ve teknik
 
-13. Kullanıcı ortamları çoğunlukla Windows mu; dosya aktarım/taşınabilir cihaz kısıtları neler?
-14. Tam disk/uygulama veri tabanı şifreleme, anahtar yedekleme ve restore kabul kriteri nedir?
-15. Next repo'nun tüm runtime bağımlılık ve lisans listesi güncel mi?
-16. `forensic-transcriber-next` test sayıları ve CI release doğrulaması hangi committe sabitlenmeli?
+16. Gerçek görev verisinin cihazda saklanma ve görev sonrası iade/silme yükümlülükleri nelerdir?
+17. Belge çıkarımı/OCR ve model çalışması yerelde mi, haricî hizmette mi yapılmalı; bunun hukukî ve güvenlik koşulları nedir?
+18. UDF/format uyumluluk testini yapabileceğimiz izinli ve sentetik bir test ortamı mevcut mu?
+19. Şifreleme, yedek, geri yükleme ve kurtarma kabul ölçütleri nelerdir?
 
 ## Bağımsız doğrulama
 
-17. İkinci araştırmacı tüm önemli hukuk ve ürün iddialarını hangi kaynakla doğrulayacak?
-18. Gerçek kullanıcı görüşmeleri sonrası hangi varsayımlar iptal edilecek?
+20. İkinci bilirkişi veya farklı uzmanlık alanı ile ortak çekirdek gereksinimleri nasıl doğrulayacağız?
+21. Hukuk, meslekî uygulama ve teknik güvenlik bulgularını kim/hangi kaynakla bağımsız doğrulayacak?

@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 61,
-  "file_count": 64,
+  "markdown_count": 63,
+  "file_count": 66,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -31,6 +31,7 @@
     "docs/01-arastirma/uluslararasi-ornekler.md",
     "docs/01-arastirma/uyap-is-akisi.md",
     "docs/01-arastirma/uzmanlik-alanlari.md",
+    "docs/02-urun/gorevlendirme-belgesi-ve-gorev-profili.md",
     "docs/02-urun/ilk-surum-kapsami.md",
     "docs/02-urun/islevsel-gereksinimler.md",
     "docs/02-urun/islevsel-olmayan-gereksinimler.md",
@@ -54,6 +55,7 @@
     "docs/05-guvenlik-ve-mevzuat/tehdit-modeli.md",
     "docs/05-guvenlik-ve-mevzuat/veri-koruma.md",
     "docs/05-guvenlik-ve-mevzuat/yedekleme-ve-kurtarma.md",
+    "docs/06-dogrulama/gorev-profili-test-senaryolari.md",
     "docs/06-dogrulama/kullanici-arastirmasi-plani.md",
     "docs/06-dogrulama/pilot-plani.md",
     "docs/06-dogrulama/test-stratejisi.md",
