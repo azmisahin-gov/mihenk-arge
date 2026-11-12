@@ -1,5 +1,16 @@
 # Değişiklik Kaydı
 
+## 0.3.0 — 13.11.2026
+
+- Araştırma deposunun `mihenk-arge`, ayrılmış uygulama deposunun `mihenk` olduğu kaydedildi.
+- Uygulama deposunun public ve boş olduğu; ürün/teknoloji/lisans kararı olmadan kod geliştirmeye başlanmadığı belgelendi.
+- İlk uzmanla yapılan görev denemesinin genelleştirilmiş saha sentezi eklendi.
+- Ortak görev çalışma alanı hipotezi ile 56.12'ye özgü ses/metin ihtiyaçları ayrıştırıldı.
+- UYAP ekran görüntülerinden görülen menü/iş akışı öğeleri, tek kullanıcı gözlemi olarak belgelendi.
+- UYAP için yetkili API doğrulanmadan ekran otomasyonu yapılmaması kararı korundu.
+- Orijinal materyal, hash, çalışma kopyası, rapor kalite kapısı ve insan onayı ilkeleri netleştirildi.
+- Public depolarda gerçek vaka/kişisel veri ve ham ekran görüntüsü tutulmaması kuralı güçlendirildi.
+
 ## 0.2.0 — 12.11.2026
 
 - Proje sahibi ile çalışma modeli ve sorumluluklar belgelendi.

@@ -1,43 +1,65 @@
 # UYAP ve Resmî İş Akışları
 
-> **Durum:** KULLANICI DOĞRULAMASI BEKLİYOR  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Kullanıcı ekran gözlemi eklendi — yetkili süreç doğrulaması bekliyor  
+> **Güncelleme:** 13 Kasım 2026
 
-## Resmî portalda açıkça tanıtılan işlevler
+## Resmî portalın yeri
 
-UYAP Bilirkişi Portalının kamuya açık açıklamalarında bilirkişinin adliyeye gitmeden dosya işlemlerini takip edebilmesi, dosyaları elektronik ortamda incelemesi, rapor ve ek rapor göndermesi, ön rapor ve çoklu bilirkişi iletişim/iş birliği, görevlendirmeden çekilme ve ücret bilgilerini görüntüleme gibi işlevler açıklanmaktadır. Portalın gerçek menüleri, yetki seviyeleri ve sürüm farkları giriş yapılarak test edilmedi. Daire Başkanlığı ayrıca hukuk/idari-vergi, ceza mahkemesi, Cumhuriyet başsavcılığı ve icra müdürlükleri için ayrı rapor şablonları yayımlamıştır; bu şablonların güncel sürümü her görev türü için ayrı seçilmelidir.
+UYAP Bilirkişi Portalı resmî görevlendirme, dosya işlemleri ve rapor sunumu için kullanılan sistemdir. MİHENK portalın yerine geçmez; resmî kaydı veya resmî teslimi kendi içinde gerçekleşmiş gibi göstermemelidir.
 
-| İşlem | Açık kaynakta durum | Yeni yazılımın rolü | Belirsizlik |
+UYAP'ın kamuya açık sayfası, portalı bilirkişilerin adliyeye gitmeden dosyalarıyla ilgili işlemlerini takip edebildiği hizmet olarak tanıtır. Erişim ve yetki koşulları portalın resmî açıklamasına tabidir.
+
+## 12 Kasım 2026 tarihli kullanıcı ekran görüntülerinden gözlemler
+
+Aşağıdaki maddeler tek bir kullanıcının redakte edilmiş ekran görüntülerinde görülen arayüz öğeleridir. Tüm kullanıcılar, yargı birimleri veya yetkiler için genel kural oldukları anlamına gelmez. Görüntüler bu public depoya eklenmemiştir.
+
+- Ana sayfada bildirimler, aylık/yıllık dosya sayısı ve kota, tüm görevlendirmeler, rapor teslim eden/bekleyen sayaçları ve yaklaşan işler alanları görülüyor.
+- Sol menüde bilirkişi bilgileri, iş listesi, işlemlerim, bölge kuruluna evrak gönderme, bilişimsel iletişim, dosya reddiyatları, önceki görevlendirmeler ve duyurular gibi bölümler görünüyor.
+- İş listesinde tarih aralığı filtreleri, görev nedeni/türü, görevlendirme ve rapor teslim tarihi ile “Dosya Görüntüle” ve “Mahkemeye Evrak Gönder” eylemleri görünüyor.
+- Dosya görüntüleme penceresinde “Dosya Bilgileri”, “Evrak” ve “Taraf Bilgileri” sekmeleri var.
+- Evrak sekmesindeki uyarıda, Cumhuriyet savcılıkları ve ceza mahkemeleri görevlendirmelerinde evrakları görüntüleyebilmek için portal üzerinden “Bilirkişinin Dava Dosyasını İnceleme Talebi (Portal)” gönderilmesi ve ilgili birim amirinin yetki vermesi gerektiği yazıyor. Bu ekran gözlemidir; her dosyaya uygulanacak genel bir kural olduğu varsayılmamalıdır.
+- “Mahkeme Evrak Gönder” penceresinde “Bilirkişi Raporu”, “Bilirkişi Genel Talep Dilekçesi” ve “Bilirkişi Ek Süre Talebi” türleri görünüyor. Ekranda evrakların 10 MB'tan küçük ve belirtilen biçimlere uygun olması uyarısı yer alıyor. Kesin dosya türü/limit, güncel portal kuralı olarak ayrıca doğrulanmalıdır.
+- “Bölge Kuruluna Talep Gönderme” ekranında bilgi güncelleme, nakil, savunma, şikâyet ve genel talep dilekçesi seçenekleri görünüyor.
+- “Dosya Tartışma” görünümünde görevlendirmedeki diğer bilirkişilere belge gönderme ve mesaj gönderme eylemleri bulunuyor.
+
+## İlk kullanıcı testinden çıkarılan süreç hipotezi
+
+1. Bilirkişi görevlendirmeyi ve gerekli dosya/evrak erişimini UYAP üzerinden görür.
+2. Görev kabulü ve resmî portal adımları bilirkişi tarafından UYAP içinde yürütülür.
+3. Materyal portal üzerinden veya fiziki ortamda (ör. USB) edinilebilir; teslim kaynağı ve yöntemi dosyadan dosyaya değişebilir.
+4. Bilirkişi MİHENK'te manuel olarak yeni bir çalışma/dosya alanı açar ve gerekli görev bilgisini girer.
+5. MİHENK'e aktarılacak kopyalar güvenli biçimde envantere alınır; orijinal materyal korunur.
+6. Kontroller, inceleme araçları ve rapor hazırlık adımları MİHENK içinde yürütülür.
+7. Uzman, otomatik hazırlanmış taslakları ve işaretlenen eksikleri gözden geçirir; nihai teknik değerlendirmeyi yapar.
+8. Rapor ve ekler uygun biçimde dışa aktarılır; bilirkişi bunları UYAP'a kendisi yükler ve resmî teslimi portalda doğrular.
+
+Bu sıra tek bir senaryo üzerinden oluşturulmuş çalışma hipotezidir; görev türüne ve yargı birimine göre farklılaşabilir.
+
+## UYAP işlevleri ile MİHENK sınırı
+
+| İşlem | Portalda görülen / resmî açıklamada bulunan | MİHENK için araştırılacak destek | Sınır |
 |---|---|---|---|
-| Adaylık başvurusu | UYAP Bilirkişi Portal üzerinden; e-Devlet/e-imza veya mobil imza | Belge hazırlama kontrol listesi; resmî başvuru yerine geçmez | Güncel portal ekranları ve alan validasyonları |
-| Sicil/liste | Daire Başkanlığı listeleri ve portal tanımı | Kullanıcıya kendi girdiği durumu hatırlatma | Sicil ve aktif portal erişim senkronu |
-| Görevlendirme bildirimi | Portal genel kullanım açıklamalarında dosya takibi var | Kullanıcı manuel görev kaydı ekleyebilir | Bildirim kanalı, kabul/ret akışının tam ekranları |
-| Dosyayı elektronik inceleme | Portal açık tanıtımında var | UYAP dışı not/çalışma planı | İndirme, görüntüleme, dosya boyutu ve rol tabanlı erişim |
-| Fiziki materyal | CMK m.67 gibi düzenlemelerde mühürlü materyal ve tutanak hükümleri bulunur | Teslim/iade kontrol listesi | Portal işlevinden çok fiziki teslim uygulaması |
-| Görevi kabul/ret/çekilme | Portalda çekilme işlevi açıkça tanıtılıyor | Taslak gerekçe/not; resmî işlem portalda | Kabul/ret ekranı, süre, gerekçe ve yetki kapsamı |
-| Ek süre/ek bilgi | Açık tanıtım sayfasında doğrulanmadı | Kullanıcının talep taslağı ve süre takibi | Portal menüsü ve resmi talep şekli |
-| Rapor/ek rapor | Portalda gönderim açıklanıyor | Rapor taslağı, biçim kontrolü, teslim kanıtı saklama | Dosya biçimi/elektronik imza/limitler |
-| Kurul iletişimi / ön rapor | Portalda genel olarak duyuruluyor | Ortak çalışma notu, görev dağılımı ve revizyon | Gizlilik ve rol/yetkilendirme detayları |
-| Ücret bilgisi | Portal açıklamasında görüntüleme işlevi var | Kişisel muhasebe/masraf kayıtları; resmî ödeme yerine geçmez | Detay ekranları ve gerçek tahsilat takvimi |
-| Performans / istatistik | Portalın genel sayfalarında sınırlı açıklama | Ürün içi çalışma metrikleri | Resmî kota ve performans metriklerinin mevcut sürümü |
-
-## Ücret/gider işlevinin ürün sınırı
-
-2026 tarifesi ücret ve gideri ayırır; belge karşılığı mutat giderler, avans, ek ücret koşulları, görevlendirme tarihindeki tarife ve vergi kesintisi gibi hükümler içerir. UYAP içinde ücret bilgisi görüntüleme tanıtılmış olsa da MİHENK resmî ödeme başlatmamalı veya tahakkuk kararı vermemelidir. Kullanıcı yalnızca kendi masraf/ödeme takibini tutabilir.
+| Bildirim ve görevlendirme | İş listesi ve bildirim alanları | Kullanıcının manuel görev kaydı ve süre hatırlatması | Yetkili entegrasyon yoksa otomatik veri çekme yok |
+| Dosya/evrak erişimi | Dosya görüntüleme; erişim talebi uyarısı | Erişilebilen materyalin yerel envanteri | Portal erişim yetkisi MİHENK tarafından verilemez |
+| Fiziki materyal | Tekil test anlatımında USB ile materyal edinimi | Teslim notu, dosya listesi, hash ve çalışma kopyası | Orijinal materyale yazma yapılmamalı |
+| Rapor hazırlığı | Portal rapor gönderim eylemi | Şablon, taslak, ek ve kontrol listesi | Resmî şablon/biçim güncel kaynakla doğrulanmalı |
+| Raporun sunulması | “Mahkemeye Evrak Gönder” eylemi | Dışa aktarma paketi ve kullanıcıya yükleme kontrol listesi | MİHENK gönderimi yapmış gibi durum gösteremez |
+| Ek süre/genel talep | Ekran görüntüsünde talep türleri | Dilekçe taslağı ve süre takibi | Hukuki gerekçe ve gönderim insan onayında |
+| Bölge kurulu talebi | Bilgi güncelleme, nakil, savunma, şikâyet, genel talep seçenekleri | Belge hazırlık kontrolü | Resmî işlem portalda |
+| Diğer bilirkişi iletişimi | Dosya tartışma/mesaj ve evrak gönderme alanı | İzinli ekip notu/iş listesi hipotezi | Gizlilik ve erişim yetkisi ayrıca değerlendirilmeli |
 
 ## Entegrasyon kararı
 
-Bu taramada herkese açık, üçüncü taraf kullanımına izin veren UYAP API dokümantasyonu bulunmamıştır. Bu, hiç API olmadığı anlamına gelmez; yalnızca kamusal doğrulama yoktur. Yazılı izin ve teknik şartname sağlanana kadar otomatik oturum açma, ekran kazıma, veri çekme/gönderme, imza taklidi ve tarayıcı otomasyonu kapsam dışıdır.
+Bu araştırmada herkese açık, üçüncü taraf kullanımını açıkça yetkilendiren UYAP API dokümantasyonu doğrulanamadı. Bu, kurum içinde veya yetkili taraflara açık API bulunmadığını kanıtlamaz. Yazılı izin, yetkili API dokümantasyonu ve teknik şartname sağlanana kadar otomatik oturum açma, ekran kazıma, veri çekme/gönderme, imza taklidi ve tarayıcı otomasyonu kapsam dışıdır.
 
-## Uygulama sınırı
+## Resmî işlem sınırı
 
-**UYAP = resmî kayıt ve resmî işlem. MİHENK = bilirkişinin kendi çalışma notu, hazırlığı, materyal envanteri, kontrol listesi ve taslak dokümanı.** Uygulama hiçbir zaman “rapor UYAP'a sunuldu” dememeli; kullanıcı teslimi portalda tamamlayıp kanıtı manuel işaretlemedikçe durum “sunulduğu doğrulanmadı” olmalıdır.
+**UYAP = resmî kayıt ve resmî işlem. MİHENK = bilirkişinin çalışma alanı, materyal envanteri, inceleme hazırlığı, taslak ve kalite kontrolü.**
+
+MİHENK “rapor UYAP'a sunuldu” dememelidir. Kullanıcı portalda teslimi tamamlayıp sonucu kendisi doğrulamadıkça durum “UYAP teslimi kullanıcı tarafından doğrulanmadı” olmalıdır.
 
 ## Kaynaklar
 
 - [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
-- [6754 sayılı Bilirkişilik Kanunu — Adalet Bakanlığı Mevzuat ve İçtihat Programı](https://mevzuat.adalet.gov.tr/mevzuat/104136)
-- [5271 sayılı Ceza Muhakemesi Kanunu — resmî PDF](https://aile.gov.tr/uploads/chgm/uploads/pages/kanunlar/5271-sayili-ceza-muhakemesi-kanunu.pdf)
-- [Bilirkişi Rapor Şablonları ve Kontrol Listesi duyurusu](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/Bilirki%C5%9Fi%20Rapor%20%C5%9Eablonlar%C4%B1%E2%80%9D%20ve%20%E2%80%9CBilirki%C5%9Filer%20%C4%B0%C3%A7in%20Kontrol%20Listesi)
-- [2026 Yılı Bilirkişilik Asgari Ücret Tarifesi — 26.12.2025 Resmî Gazete](https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-4.htm)
+- [Bilirkişilik Daire Başkanlığı — Bilirkişi Rapor Şablonları ve Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/Bilirki%C5%9Fi%20Rapor%20%C5%9Eablonlar%C4%B1%E2%80%9D%20ve%20%E2%80%9CBilirki%C5%9Filer%20%C4%B0%C3%A7in%20Kontrol%20Listesi)
+- [6754 sayılı Bilirkişilik Kanunu](https://mevzuat.adalet.gov.tr/mevzuat/104136)
