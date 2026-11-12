@@ -1,6 +1,6 @@
 # UYAP ve Resmî İş Akışları
 
-> **Durum:** Kullanıcı ekran gözlemi eklendi — yetkili süreç doğrulaması bekliyor  
+> **Durum:** Kullanıcı ekran gözlemi ve görev anlatımı eklendi — yetkili süreç doğrulaması bekliyor  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Resmî portalın yeri
@@ -22,18 +22,35 @@ Aşağıdaki maddeler tek bir kullanıcının redakte edilmiş ekran görüntül
 - “Bölge Kuruluna Talep Gönderme” ekranında bilgi güncelleme, nakil, savunma, şikâyet ve genel talep dilekçesi seçenekleri görünüyor.
 - “Dosya Tartışma” görünümünde görevlendirmedeki diğer bilirkişilere belge gönderme ve mesaj gönderme eylemleri bulunuyor.
 
-## İlk kullanıcı testinden çıkarılan süreç hipotezi
+## İlk fiziksel teslim anlatımından gözlemler
 
-1. Bilirkişi görevlendirmeyi ve gerekli dosya/evrak erişimini UYAP üzerinden görür.
-2. Görev kabulü ve resmî portal adımları bilirkişi tarafından UYAP içinde yürütülür.
-3. Materyal portal üzerinden veya fiziki ortamda (ör. USB) edinilebilir; teslim kaynağı ve yöntemi dosyadan dosyaya değişebilir.
-4. Bilirkişi MİHENK'te manuel olarak yeni bir çalışma/dosya alanı açar ve gerekli görev bilgisini girer.
-5. MİHENK'e aktarılacak kopyalar güvenli biçimde envantere alınır; orijinal materyal korunur.
-6. Kontroller, inceleme araçları ve rapor hazırlık adımları MİHENK içinde yürütülür.
-7. Uzman, otomatik hazırlanmış taslakları ve işaretlenen eksikleri gözden geçirir; nihai teknik değerlendirmeyi yapar.
-8. Rapor ve ekler uygun biçimde dışa aktarılır; bilirkişi bunları UYAP'a kendisi yükler ve resmî teslimi portalda doğrular.
+1. Bilirkişi görevlendirmeyi UYAP'ta gördü ve kabul etti.
+2. Mahkeme telefonla arayarak fiziki dosyanın alınması için bilgilendirdi.
+3. Dosya ve ekleriyle birlikte USB bellek imza karşılığında teslim alındı.
+4. USB, fiziki dosyanın içindeki bir zarftan çıkarıldı; içerik bilgisayara kopyalandı ve USB yeniden zarfa konuldu.
+5. Dosyadaki görevlendirme/talep kısmı okundu; fiziki dosyanın geri kalan içeriği bu test anlatımında bütünüyle envanterlenmiş veya incelenmiş olarak doğrulanmadı.
+6. USB'den sekiz ses dosyası bulunduğu ve toplam sürenin yaklaşık 160 dakika olduğu bildirildi.
 
-Bu sıra tek bir senaryo üzerinden oluşturulmuş çalışma hipotezidir; görev türüne ve yargı birimine göre farklılaşabilir.
+Bu anlatım tek kullanıcı deneyimidir; her mahkeme veya görevde aynı teslim yöntemi kullanıldığı anlamına gelmez. Fiziki evrakı bütünüyle okumama ile teslim edilen materyali envanterlememe aynı şey değildir: hangi materyallerin teslim alındığı, hangilerinin görev kapsamına girdiği ve hangilerinin incelendiği ayrı ayrı kaydedilmelidir.
+
+## Resmî kontrol listesi ve rapor şablonları
+
+Bilirkişilik Daire Başkanlığının yayımladığı kontrol listesi; görevin uzmanlık alanına girip girmediğini, görevlendirme yazısında inceleme sınırı ve cevaplanacak soruların açık olup olmadığını, ek kayıt/belge ihtiyacını, teslim edilen materyallerin içerikleriyle birlikte listesinin bulunup bulunmadığını, rapor şablonuna uygunluğu ve fiziken alınan dosya/eklerin iadesini sorgular. Bu nedenle MİHENK'in materyal envanteri ve son kontrol hipotezi, resmî listedeki bu başlıklarla eşleştirilmelidir.
+
+Daire Başkanlığının rapor şablonları sayfası hukuk/idare-vergi mahkemeleri, ceza mahkemeleri, Cumhuriyet başsavcılığı ve icra müdürlükleri için ayrı şablonlar listeler. MİHENK tek bir rapor biçimini tüm görevlere dayatmamalı; ilgili merci ve görev türü seçimini kullanıcıya doğrulatmalıdır. Kullanılan belgenin güncel sürümü görev bazında ayrıca teyit edilmelidir.
+
+## İlk kullanıcı testinden çıkarılan MİHENK iş akışı hipotezi
+
+1. Bilirkişi görevlendirmeyi UYAP'ta görür ve resmî kabul işlemini portaldan yapar.
+2. Görevlendirme kapsamı ve cevaplanacak sorular belirlenir; belirsiz veya eksikse görev veren merciye açıklama/ek materyal ihtiyacı bildirilir.
+3. Fiziki teslim varsa teslim kaynağı, tarih, teslim alan/veren, imza veya mevcut tutanak bilgisi kaydedilir.
+4. Fiziki dosya, ekler, zarf/taşıyıcı ve dijital ortam için ayrı materyal envanteri oluşturulur.
+5. USB/medya içeriği güvenli biçimde listelenir; orijinal-kopya ayrımı ve işlem kaydı yapılır.
+6. Teslim edilen materyal, beklenen materyal ve inceleme kapsamı karşılaştırılır; eksik, okunamayan veya incelenmeyen materyal açıkça işaretlenir.
+7. MİHENK görev alanında inceleme ve uzmanlık işlemleri yürütülür.
+8. Rapor, görev/merci için doğrulanmış şablonda hazırlanır; tüm sorular, ekler, referanslar ve belirsizlikler kontrol edilir.
+9. Fiziken teslim alınan dosya ve materyallerin iadesi için kullanıcıya kontrol listesi sunulur; resmî iade MİHENK tarafından yapılmış gibi gösterilmez.
+10. Rapor ve ekler dışa aktarılır. Bilirkişi bunları UYAP'a kendisi yükler, imzalar ve resmî teslimi portalda doğrular.
 
 ## UYAP işlevleri ile MİHENK sınırı
 
@@ -41,12 +58,11 @@ Bu sıra tek bir senaryo üzerinden oluşturulmuş çalışma hipotezidir; göre
 |---|---|---|---|
 | Bildirim ve görevlendirme | İş listesi ve bildirim alanları | Kullanıcının manuel görev kaydı ve süre hatırlatması | Yetkili entegrasyon yoksa otomatik veri çekme yok |
 | Dosya/evrak erişimi | Dosya görüntüleme; erişim talebi uyarısı | Erişilebilen materyalin yerel envanteri | Portal erişim yetkisi MİHENK tarafından verilemez |
-| Fiziki materyal | Tekil test anlatımında USB ile materyal edinimi | Teslim notu, dosya listesi, hash ve çalışma kopyası | Orijinal materyale yazma yapılmamalı |
-| Rapor hazırlığı | Portal rapor gönderim eylemi | Şablon, taslak, ek ve kontrol listesi | Resmî şablon/biçim güncel kaynakla doğrulanmalı |
-| Raporun sunulması | “Mahkemeye Evrak Gönder” eylemi | Dışa aktarma paketi ve kullanıcıya yükleme kontrol listesi | MİHENK gönderimi yapmış gibi durum gösteremez |
-| Ek süre/genel talep | Ekran görüntüsünde talep türleri | Dilekçe taslağı ve süre takibi | Hukuki gerekçe ve gönderim insan onayında |
-| Bölge kurulu talebi | Bilgi güncelleme, nakil, savunma, şikâyet, genel talep seçenekleri | Belge hazırlık kontrolü | Resmî işlem portalda |
-| Diğer bilirkişi iletişimi | Dosya tartışma/mesaj ve evrak gönderme alanı | İzinli ekip notu/iş listesi hipotezi | Gizlilik ve erişim yetkisi ayrıca değerlendirilmeli |
+| Fiziki materyal | Tekil testte imza karşılığı teslim anlatımı | Teslim tutanağı notu, materyal listesi ve iade takibi | Uygulama içi kayıt resmî tutanağın yerine geçmez |
+| USB/dijital materyal | Tekil testte sekiz ses dosyasının aktarımı | Dosya envanteri, hash, kopya doğrulama ve inceleme durumu | Hash, geçmişteki özgünlüğü kanıtlamaz |
+| Rapor hazırlığı | Portal rapor gönderim eylemi | Merciye uygun şablon, taslak, ek ve tamlık kontrolü | Güncel resmî şablon seçimi kullanıcıca doğrulanır |
+| Raporun sunulması | “Mahkemeye Evrak Gönder” eylemi | Dışa aktarma paketi ve yükleme kontrol listesi | MİHENK gönderimi yapmış gibi durum gösteremez |
+| Fiziki iade | Resmî kontrol listesinde fiziki dosya/ekleri iade etme başlığı | İade öncesi liste ve kullanıcı onayı | Resmî teslim/tesellüm işlemi MİHENK dışında |
 
 ## Entegrasyon kararı
 
@@ -61,5 +77,7 @@ MİHENK “rapor UYAP'a sunuldu” dememelidir. Kullanıcı portalda teslimi tam
 ## Kaynaklar
 
 - [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
-- [Bilirkişilik Daire Başkanlığı — Bilirkişi Rapor Şablonları ve Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/Bilirki%C5%9Fi%20Rapor%20%C5%9Eablonlar%C4%B1%E2%80%9D%20ve%20%E2%80%9CBilirki%C5%9Filer%20%C4%B0%C3%A7in%20Kontrol%20Listesi)
+- [Bilirkişi Rapor Şablonları — Bilirkişilik Daire Başkanlığı](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
+- [Bilirkişiler İçin Kontrol Listesi — Resmî PDF](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20için%20Kontrol%20Listesi.pdf)
+- [Bilirkişi Rapor Şablonları ve Kontrol Listesi duyurusu](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/Bilirki%C5%9Fi%20Rapor%20%C5%9Eablonlar%C4%B1%E2%80%9D%20ve%20%E2%80%9CBilirki%C5%9Filer%20%C4%B0%C3%A7in%20Kontrol%20Listesi)
 - [6754 sayılı Bilirkişilik Kanunu](https://mevzuat.adalet.gov.tr/mevzuat/104136)

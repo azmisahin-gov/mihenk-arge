@@ -1,5 +1,15 @@
 # Değişiklik Kaydı
 
+## 0.4.0 — 13.11.2026
+
+- İlk görev anlatımı; görevlendirme, imza karşılığı fiziki teslim, USB içe alma, sekiz ses dosyası, dinleme ve rapor hazırlama adımlarıyla genişletildi.
+- Resmî bilirkişi kontrol listesi ve merci bazlı rapor şablonlarıyla materyal envanteri/rapor kontrolü eşleştirildi.
+- Materyal kabulü, fiziki/dijital envanter, kaynak-kopya ilişkisi ve iade izlenebilirliği ürün hipotezlerine eklendi.
+- Uzun kayıt dinleme yükü, zaman damgası/tekrar dinleme ve rapor eski-veri sızıntısı kalite testlerine eklendi.
+- Konuşmacı sırası ile gerçek kişi kimliği; transkripsiyon ile ses özgünlüğü/manipülasyon incelemesi ayrıştırıldı.
+- Eski uygulamalarla test planı kaldırıldı; MİHENK'in clean-room ve sentetik/açık lisanslı veriyle test edilmesi belgelendi.
+- Görüşme notu şablonu, serbest anlatımı zorunlu forma dönüştürmeden görev gözlemini yapılandıracak şekilde yenilendi.
+
 ## 0.3.0 — 13.11.2026
 
 - Araştırma deposunun `mihenk-arge`, ayrılmış uygulama deposunun `mihenk` olduğu kaydedildi.
