@@ -28,5 +28,9 @@
 | ADR-022 | 13.11.2026 | Belge motoru ve uzmanlık araçlarında açık kaynak önceliklidir; lisans/güvenlik/biçim doğruluğu geçmeden bağımlılık eklenmez | Kullanıcı açık kaynak alternatiflerini önceliklendirdi; public GitHub deposu lisans incelemesi gerektirir | Kabul edildi |
 | ADR-023 | 13.11.2026 | UDF ve e-imza son aşaması resmî UYAP/Adalet akışıyla uyumluluk testinden geçmelidir | UDF resmî format; topluluk kütüphaneleri reverse-engineered ve imza/portal kabulünü tek başına garanti etmez | Araştırma sürüyor |
 | ADR-024 | 13.11.2026 | Uzmanlık modülleri imzalı, sürümlü, izinleri sınırlı ve geri alınabilir paketler olmalıdır | Modül kapsamı büyüdükçe tedarik zinciri ve veri erişimi riski artar | Taslak |
+| ADR-025 | 13.11.2026 | UYAP Editörü ve Adalet e-İmza resmî son aşama araçlarıdır; MİHENK yükleyicisine dahil edilmez | Bakanlık resmî indirme/destek kanalı sunuyor; yeniden dağıtım lisansı ve kaynak kodu doğrulanmadı | Kabul edildi |
+| ADR-026 | 13.11.2026 | MİHENK için Bakanlık onaylı ASR modeli doğrulanmadığından yerel açık kaynak modeller MİHENK test kabulünden geçmeden üretimde kullanılmaz | Kamuya açık resmî kaynaklarda 56.12 ASR onayı bulunamadı | Kabul edildi |
+| ADR-027 | 13.11.2026 | 56.12 ASR en az iki aday modelle, aynı yerel test seti ve aynı referans metin üzerinden karşılaştırılır | Türkçe doğal konuşma başarımı, düşük ses, gürültü, örtüşme ve kaynak kullanımı modele göre değişebilir | Kabul edildi |
+| ADR-028 | 13.11.2026 | ASR motorları yerel/çevrimdışı çalışır; birden fazla çıktının otomatik çoğunlukla birleştirilmesi yapılmaz | Gerçek vaka sesinin dışarı çıkmaması ve model uyuşmazlığının insan dinlemesine yönlendirilmesi | Kabul edildi |
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.

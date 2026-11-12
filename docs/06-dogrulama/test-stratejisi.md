@@ -1,6 +1,6 @@
 # Test Stratejisi
 
-> **Durum:** Görev Profili, modül mimarisi ve belge biçim testleriyle güncellendi  
+> **Durum:** Görev Profili, modül mimarisi ve belge/ASR testleriyle güncellendi  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Test katmanları
@@ -14,7 +14,9 @@
 7. **Kullanılabilirlik/insan faktörü:** İlk kurulum, görev açma, uzmanlık araçlarının aynı arayüzde kullanımı, inceleme ve rapor süresi.
 8. **Belge/format:** DOCX/ODT/PDF/UDF içe/dışa aktarma, Türkçe karakter, tablo, görsel, dipnot, sayfa düzeni, yazı tipi ve imza durumu.
 9. **UYAP uyumu:** UDF çıktılarının güncel resmî Doküman Editörü'nde açılması, yeniden kaydedilmesi ve portalda ilgili evrak türü için test edilmesi.
-10. **Uzman kabulü:** Sentetik/açık lisanslı test verisi ile gerçek bilirkişi iş akışı doğrulaması.
+10. **ASR karşılaştırma:** Aynı ses setinde Whisper, Türkçe uyarlaması ve bağımsız küçük modelin WER/CER/RTF, sessizlik halüsinasyonu ve hata sınıfı ölçümü.
+11. **Modül güvenliği:** İmzalı paket, model checksum, SBOM, ağ/dosya izinleri, sürüm sabitleme, geri alma.
+12. **Uzman kabulü:** Sentetik/açık lisanslı test verisi ile bilirkişi iş akışı doğrulaması.
 
 ## Belge motoru kabul testleri
 
@@ -27,10 +29,22 @@
 - UDF → DOCX/PDF ve DOCX/ODT → UDF dönüşümlerinde içerik/biçim kaybı test ediliyor mu?
 - Her test sentetik belge ve sabitlenmiş checksum ile tekrar üretilebiliyor mu?
 
+## ASR kabul testleri
+
+- Aynı yerel ses veri seti, aynı normalizasyon ve aynı referans metinle tüm modeller çalıştırılır.
+- Türkçe özel harfler, ekler, kişi/yer adları, sayılar, tarihler, kısaltmalar ve olumsuzluklar ayrı hata sınıfı olarak ölçülür.
+- Temiz okuma, doğal diyalog, telefon kaydı, düşük ses, fısıltı, aksan, gürültü ve örtüşen konuşma ayrı test gruplarıdır.
+- Sessizlikte uydurma metin üretimi ve cümle atlama ayrıca test edilir.
+- WER/CER dilsel hata ölçüsüdür; adli doğruluk, sesin gerçekliği veya kanıt değeri değildir.
+- Model kendi çıktısını confidence yüksek diye doğrulanmış gibi gösteremez.
+- Aynı işlem modeli/runtime/checksum/parametre sürümleri sabitlenerek tekrar üretilebilir.
+- CPU, GPU, bellek, uzun kayıt performansı, gerçek zaman katsayısı ve kesinti sonrası devam ölçülür.
+- En az iki aday modelin uyuşmadığı bölümler uzman dinleme listesine alınır; otomatik oy çokluğu ile karar verilmez.
+
 ## Modül güvenlik ve dağıtım testleri
 
-- İmzasız veya bütünlüğü bozuk modül yüklenmiyor mu?
-- Modül manifesti izin vermiyorsa internet, kamera, mikrofon, GPU veya diğer görev dosyalarına erişemiyor mu?
+- İmzasız veya bütünlüğü bozuk modül/model yüklenmiyor mu?
+- Modül manifesti izin vermiyorsa internet, mikrofon, kamera veya başka görev dosyalarına erişemiyor mu?
 - Bir modül çökünce görev durumu ve orijinal materyal etkilenmiyor mu?
 - İşlem kaydı modül/araç/model sürümünü ve parametreleri tutuyor mu?
 - Güncelleme yarıda kesilirse son çalışan sürüme dönülebiliyor mu?
@@ -45,4 +59,5 @@ Her rapor yeni görev kaydı ve sürümlü şablondan üretilir. Test A'nın sen
 
 - Önce sentetik Türkçe belge/ses ve kullanım koşulları doğrulanmış açık lisanslı veriler kullanılır.
 - Gerçek dava kaydı, UYAP ekran görüntüsü, taraf bilgisi veya kişisel veri public CI, fixture veya log'a giremez.
+- Gerçek vaka sesleri hiçbir ASR sağlayıcısına veya haricî buluta gönderilmez; yalnızca izinli yerel pilot ortamında, çevrimdışı test edilir.
 - Açık kaynak proje deposundaki gerçek dosya örnekleri izin ve gizlilik incelemesi olmadan kopyalanmaz.

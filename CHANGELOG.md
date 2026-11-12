@@ -1,5 +1,15 @@
 # Değişiklik Kaydı
 
+## 0.8.0 — 13.11.2026
+
+- Adalet Bakanlığı/UYAP'ın resmî Doküman Editörü, Adalet e-İmza ve Bilirkişi Portal araçları kaynaklarıyla ayrıştırıldı.
+- Pardus'un TÜBİTAK BİLGEM tarafından sürdürülen Debian tabanlı işletim sistemi olduğu; UYAP Editörü'nün Bakanlık yazılımı olarak Pardus/Debian için de dağıtıldığı belgelendi.
+- UYAP'ın tarihsel OpenOffice 2.4 kullanımı güncel onay gibi sunulmadan araştırma notuna eklendi.
+- 56.12 için Whisper, TurkMedSTT M1, ufakzeka-kulak ve Vosk Turkish Small modelleri lisans, veri kökeni ve test sonuçlarıyla karşılaştırıldı.
+- Bakanlıkça onaylı ASR yazılımı kamuya açık resmî kaynaklarda doğrulanamadığı kaydedildi.
+- ASR'nin yerel/çevrimdışı çalışması, aynı test setinde en az iki aday karşılaştırması ve uyuşmazlıkların dinleme kuyruğuna alınması gereksinimleri eklendi.
+- 56.12 araç/yöntem, UYAP akışı, modül mimarisi, test stratejisi ve karar kayıtları güncellendi.
+
 ## 0.7.0 — 13.11.2026
 
 - MİHENK'in uzmanlık araçlarını tek kullanıcı arayüzünde sunan bütünleşik platform hedefi karara bağlandı.
@@ -15,13 +25,3 @@
 - İki tamamen kurgusal görevlendirme metni ve beklenen Görev Profili sonuçları eklendi.
 - Materyal sayısı, görev süresi, tebliğ tarihi, teslim kanalı ve rapor formatının görevler arasında değişebildiği sentetik testle gösterildi.
 - Görev Profili, kaynak izi ve istisna yönetimi kararları ADR-018–020 olarak kaydedildi.
-
-## 0.6.0 — 13.11.2026
-
-- Görevlendirme belgesinden her dava için ayrı Görev Profili oluşturma yaklaşımı tanımlandı.
-- Yönetmelik m.51–52 gereklilikleri ile ürün tasarımı ayrıştırıldı.
-- Görev kapsamı, sorular, süre, ücret, materyal, erişim, şablon, çıktı, nüsha, imza ve iade koşulları profil alanlarına eklendi.
-- Kaynak sayfa/metin izi ve belirsiz/çelişkili alanlar için istisna işleme tasarlandı.
-- 12 sentetik Görev Profili test senaryosu eklendi; gerçek vaka verisi kullanılmadı.
-- UDF, güncel UYAP Editörü ve 2026 e-imza güncellemesi araştırma belgesine işlendi.
-- Ürün gereksinimleri, işlevsel gereksinimler, alan modeli ve yol haritası güncellendi.

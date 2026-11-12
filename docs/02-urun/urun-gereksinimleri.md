@@ -1,6 +1,6 @@
 # Ürün Gereksinimleri
 
-> **Durum:** Görev Profili ve bütünleşik modül hedefiyle güncellendi — MVP kararı değil  
+> **Durum:** Görev Profili, bütünleşik modül ve resmî araç sınırıyla güncellendi — MVP kararı değil  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Gereksinim kayıt formatı
@@ -35,7 +35,10 @@ Her gereksinim `REQ-*` kimliği, kaynak, tip, gerekçe, öncelik, doğrulama, ba
 | REQ-DOC-001 | Rapor belge modeli DOCX/ODT/PDF/UDF biçimlerinden bağımsız olmalı | Belge motoru araştırması | P0 | Tek içerik modeli farklı çıktı adaptörleriyle üretilebilir | Taslak |
 | REQ-DOC-002 | Yerel ve çevrimdışı belge düzenleme desteklenmeli | Proje sahibi tercih/araştırma | P0 | Ağ kapalıyken rapor düzenleme ve çıktı alınabilmeli | Araştırma |
 | REQ-DOC-003 | UDF içe alma/çıktı ve imza uyumluluğu resmî editörle test edilmeli | UYAP resmî yardım + teknik araştırma | P0 | Sentetik belgeler UYAP Editör'de açılır; biçim/tablolar/imza sınanır | Araştırma |
-| REQ-AUDIO-001 | Otomatik transkript ile uzman düzeltmesi ayrı tutulmalı | 56.12 ilk görev gözlemi | P1 | Taslak, revizyon ve uzman kabulü ayrı sürümlenir | Araştırma |
+| REQ-ASR-001 | Türkçe ASR MİHENK içinde yerel motor olarak çalışmalı | Proje hedefi + açık kaynak araştırması | P0 | Ağ kapalı testte ses dışarı çıkmadan transkript taslağı üretilir | Taslak |
+| REQ-ASR-002 | En az iki ASR adayı aynı test setiyle karşılaştırılmalı | Kalite/güvenilirlik | P0 | Model, runtime, checksum, WER/CER, RTF ve kaynak kaydedilir | Taslak |
+| REQ-ASR-003 | ASR motoru ve model sürümü görev kaydına bağlanmalı | İzlenebilirlik | P0 | Her segmentin üretim motoru/model/parametre kaynağı görülebilir | Taslak |
+| REQ-ASR-004 | Birden fazla modelin çıktısı otomatik olarak doğru kabul edilip birleştirilmemeli | Adli güvenilirlik | P0 | Uyuşmayan bölüm uzman dinlemesine çıkarılır | Taslak |
 | REQ-OPS-001 | Yedekleme ve geri yükleme akışı test edilmeli | Güvenilirlik gereksinimi | P0 | Tam geri yükleme ve bütünlük doğrulama | Taslak |
 
 ## Öncelik anlamı
@@ -46,7 +49,5 @@ P0: Güvenlik, veri kaybı veya resmî görev sınırı açısından ilk kontrol
 
 - [Bilirkişilik Yönetmeliği — özellikle m.51–52](https://www.lexpera.com.tr/mevzuat/yonetmelikler/bilirkisilik-yonetmeligi-2)
 - [UYAP Doküman Editörü — resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
-- [LibreOffice lisansları ve SDK](https://www.libreoffice.org/licenses/)
-- [ONLYOFFICE Community lisans açıklaması](https://helpcenter.onlyoffice.com/docs/faq/docs-community.aspx)
-- [Collabora Online](https://www.collaboraonline.com/faqs/)
-- [Apache PDFBox](https://pdfbox.apache.org/)
+- [Whisper ve TurkMedSTT ASR araştırması](../03-uzmanlik-modulleri/ilk-pilot/asr-motor-arastirmasi.md)
+- [Pardus ve Adalet Bakanlığı resmî araç araştırması](../01-arastirma/bakanlik-pardus-uyap-resmi-yazilimlari.md)
