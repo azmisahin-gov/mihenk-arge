@@ -1,5 +1,15 @@
 # Değişiklik Kaydı
 
+## 0.5.0 — 13.11.2026
+
+- Görevlendirme tutanağındaki inceleme kapsamı, sorular, süre, teslim, materyal ve rapor koşullarının her görev için ayrı yapılandırılması karara bağlandı.
+- 30 günlük sürenin tekil görevlendirme koşulu olduğu; mevzuattaki süre çerçevesinden ayrılması belgelendi.
+- Taraf sayısının bir fazlası kadar suret talimatının görev özelinde tutulacağı, genel ve otomatik nüsha kuralına dönüştürülmeyeceği açıklandı.
+- Her dava için önceki rapor kopyalanmadan temiz belge üretilmesi ve görevler arası veri sızıntısı testleri eklendi.
+- UDF biçiminin UYAP Doküman Editörü ve imza akışındaki yeri resmî kaynaklarla araştırıldı; evrak türüne özgü biçim uyumu açık konu olarak bırakıldı.
+- Otomasyon varsayılan, insan müdahalesi belirsizlik/istisna ve mesleki onay noktalarıyla sınırlı olacak şekilde güncellendi.
+- Araştırma ve uygulama deposundaki kullanıcı dokümantasyonu/README/PR/commit dili Türkçe standardına bağlandı.
+
 ## 0.4.0 — 13.11.2026
 
 - İlk görev anlatımı; görevlendirme, imza karşılığı fiziki teslim, USB içe alma, sekiz ses dosyası, dinleme ve rapor hazırlama adımlarıyla genişletildi.

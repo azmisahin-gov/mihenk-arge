@@ -1,37 +1,47 @@
 # Otomasyon Matrisi
 
-> **Durum:** İLK SAHA GÖZLEMİYLE GÜNCELLENDİ — gereksinimler ve hukukî sınırlar ayrıca doğrulanacak  
+> **Durum:** İlk saha gözlemi + mevzuat araştırmasıyla güncellendi  
 > **Güncelleme:** 13 Kasım 2026
 
 | İş | Sınıf | Ürün yaklaşımı | Sınır |
 |---|---|---|---|
-| Görev/çalışma alanı açma | Kullanıcı girdisiyle otomatik | Temel görev bilgisi ve görev soruları için yapılandırılmış kayıt | Resmî görevlendirme veya UYAP kabulü değildir |
-| Görev kapsamı ve yeterlilik kontrolü | Sistem hatırlatır, uzman karar verir | Uzmanlık alanı, işbirliği ihtiyacı, süre ve eksik bilgi soruları | Görevi kabul/ret veya hukuki kanaati yazılım vermez |
-| Fiziki teslim kaydı | Kullanıcı kontrollü | Teslim eden/alan, tarih, mevcut tutanak ve iade durumu | Resmî tutanağın yerine geçmez |
-| Fiziki/dijital materyal envanteri | Kısmen otomatik | Klasör/dosya listesi, dosya sayısı ve metadata çıkarımı; fiziksel evrak kullanıcı tarafından kaydedilir | İçeriğin görev açısından yeterli olup olmadığını uzman belirler |
-| Eksik/işlenmemiş materyal kontrolü | Kural tabanlı otomatik | Beklenen/alınan/aktarılmış/incelenmiş materyal durumlarını karşılaştır | Eksik materyalin hukuki önemini uzman değerlendirir |
-| Dosya üstverisi | Otomatik hazırla, onay gerekir | Tür, boyut, süre, codec, kanal, örnekleme oranı ve okunabilirlik | Metadata kaynağın doğruluğunu veya özgünlüğünü kanıtlamaz |
-| Hash ve kopya doğrulama | Deterministik otomasyon | İçe alım hash'i, çalışma kopyası hash karşılaştırması ve yeniden doğrulama | İlk hash teslim öncesi değişikliği göstermez; resmî delil zinciri değildir |
-| Güvenli çalışma kopyası | Uzman onaylı otomatik | Orijinali koru; dönüştürme aracını/sürümünü/parametresini kaydet | Orijinal üzerinde çalışma yapılmamalı |
-| Virüs ve dosya güvenliği | Kontrollü otomasyon | Güvenli/izole tarama ve medya ayrıştırma; riskte işlemi durdur | Tarama tüm kötü amaçlı davranışları yakalamayı garanti etmez |
-| ASR/transkripsiyon | Uzman kontrollü | Makine taslağı, zaman damgası ve belirsiz alan işaretleri | Makine çıktısı nihai transkript değildir |
-| Konuşmacı sıralama | Yazılım önerir, uzman düzeltir | Nötr Konuşmacı 1/2 etiketleri ve örtüşme/belirsizlik işareti | Gerçek kimlik, yaş/cinsiyet veya ses karşılaştırması çıkarımı yok |
-| Dinleme/düzeltme | İnsan + arayüz desteği | Metinle eşzamanlı oynatma, zaman konumuna atlama, tekrar döngüsü, hız kontrolü | Tüm kaydın yeterli incelenmesi gerektiği görev ölçütünü uzman belirler |
-| Önemli bölüm işaretleme | Yazılım kolaylaştırır, uzman seçer | Kaynak dosya ve zaman aralığına bağlı işaret/alıntı | Önem, bağlam ve rapora alınma kararını uzman verir |
-| Rapor şablonu seçimi | Öneri + kullanıcı doğrulaması | Merci/yargı türüne göre resmî şablon kataloğu ve sürüm kontrolü | Yanlış şablon seçiminin sorumluluğu otomasyona bırakılamaz |
-| Rapor tamlık/biçim kontrolü | Kural tabanlı otomatik | Boş alan, soru-cevap eşleşmesi, ek listesi, dosya referansı ve eski görev verisi kontrolü | İçerik doğruluğu, gerekçe ve kanaat uzman onayındadır |
-| Hukuki değerlendirme ve nihai teknik kanaat | Otomatikleştirilmemeli | Bu alanlarda karar üretme özelliği yok | Bilirkişinin mesleki sorumluluğu |
-| Sesin özgünlüğü/manipülasyon incelemesi | Ayrı uzmanlık/görev | Ayrı kapsam ve yöntem ihtiyacını işaretle | Transkripsiyon modülü otomatik “orijinal/sahte” diyemez |
-| UYAP teslimi | Yetkisiz otomasyon kapsam dışı | Resmî portalda kullanıcı adımları için son kontrol | API/yazılı izin olmadan entegrasyon yok |
-| Materyal iadesi | Uzman kontrollü | İade öncesi envanter ve kontrol listesi | Fiziki teslim tutanağının yerine geçmez |
-| Saklama/silme | Karar bekliyor | Kullanıcı ve hukukçu onaylı politika | Genel süre uydurulmaz |
+| Görevlendirme belgesini içe alma | Varsayılan otomatik | PDF/UDF veya izinli belgeyi oku, alanları çıkar | Düşük güvenli/çelişkili alanı işaretle |
+| Görev koşullarını yapılandırma | Otomatik çıkarım + istisna kontrolü | Konu, sınır, sorular, tarih, süre, teslim ve suret şartlarını görev profiline dönüştür | Belirsiz talimatı kendi kendine yorumlayıp hukukî karar üretmez |
+| Uzmanlık uygunluğu | Sistem ön kontrolü, bilirkişi kararı | Uzmanlık alanı ve işbirliği ihtiyacını karşılaştır | Görevi kabul/ret veya çekinme kararını yazılım vermez |
+| Görev/çalışma alanı açma | Otomatik | Her görevlendirme için yeni, izole görev alanı oluştur | UYAP'ta resmî görevlendirme değildir |
+| Süre/hatırlatma | Otomatik | Tutanaktaki süre ve başlangıç olayından yerel takvim oluştur | Başlangıç olayı belirsizse doğrulama ister; resmî tebligat değildir |
+| Fiziki teslim kaydı | Kullanıcı girdisi + otomatik kontrol | Teslim eden/alan, tarih, imza/tutanak, taşıyıcı ve iade bilgisi | Resmî tutanağın yerine geçmez |
+| Fiziki/dijital materyal envanteri | Dosyalar için otomatik; fiziksel evrak için yardımcı kayıt | Klasör/dosya listesi, metadata, dosya adedi ve içerik bağlantısı | Fiziki evrakın içeriği kullanıcı/merci listesiyle eşleştirilir |
+| Beklenen/alınan/incelenen/iade edilen materyal | Otomatik karşılaştırma | Dört ayrı envanter durumunu karşılaştır | Eksik materyalin önemini uzman belirler |
+| Metadata ve okunabilirlik | Otomatik | Tür, boyut, süre, codec, kanal, örnekleme oranı ve dosya açılabilirliği | Metadata kaynağın geçmiş özgünlüğünü kanıtlamaz |
+| Hash ve kopya doğrulama | Deterministik otomasyon | İçe alma hash'i, çalışma kopyası karşılaştırması ve yeniden doğrulama | İlk hash teslimden önceki değişikliği kanıtlamaz |
+| Güvenli çalışma kopyası | Otomatik, riskte durdur | Orijinali koru; dönüşüm aracı/sürüm/parametre kaydet | Tehlikeli veya desteklenmeyen dosyada işlem durur |
+| ASR/transkripsiyon | Varsayılan makine taslağı | Dosya başına kuyruk, zaman damgası ve belirsiz bölüm işareti | Nihai metin ve kanaat bilirkişide |
+| Ses-metni inceleme | Arayüz otomasyonu | Zaman konumuna atlama, bölüm tekrar döngüsü, hız ve oynatma kontrolleri | Yeterli inceleme ölçütünü görev ve uzman belirler |
+| Konuşmacı sıralaması | Yazılım önerisi + insan düzeltmesi | Nötr Konuşmacı 1/2 etiketleri | Gerçek kişi kimliği, yaş/cinsiyet veya ses karşılaştırması iddiası yok |
+| Önemli bölüm işaretleme | Yazılım kolaylaştırır, uzman seçer | Kaynak dosya ve zaman aralığına bağlı işaret/alıntı | Önem ve bağlam kararını bilirkişi verir |
+| Rapor şablonu seçimi | Otomatik öneri + istisna kontrolü | Merci/yargı türü ve görev kapsamına göre sürümlü şablon | Belirsiz/çelişkili durumda kullanıcıya sorar |
+| Her dava için yeni rapor | Varsayılan otomatik | Sadece o görevin doğrulanmış alanları ve sonuçlarından yeni belge üret | Önceki dava raporundan kopyala-yapıştır yok |
+| Rapor tamlık/biçim kontrolü | Otomatik | Boş alan, cevaplanmamış soru, ek, eski görev verisi, suret ve biçim kontrolü | İçerik doğruluğu ve teknik kanaat bilirkişide |
+| Rapor biçimi/UDF uyumu | Araştırma + uyumluluk testi | UYAP Editörü ve görev türünün desteklediği biçimlere çıktı adaptörü | UDF/diğer format ve imza kombinasyonu doğrulanmadan varsayım yok |
+| E-imza/m-imza | Kullanıcı kontrolünde | Resmî editör/imza aracına hazır dosya paketi | Anahtar/PIN MİHENK'e alınmaz; uzman imzalar |
+| UYAP'a resmî gönderim | Yetkisiz otomasyon kapsam dışı | Yükleme için hazır paket ve adım kontrolü | API/yazılı izin olmadan portal otomasyonu yok |
+| Hukuki değerlendirme/nihai teknik kanaat | Otomatikleştirilmemeli | Karar yerine kanıt, kaynak ve kontrol görünürlüğü | Bilirkişinin mesleki sorumluluğu |
+| Fiziki iade | Kullanıcı kontrollü + otomatik liste | İade öncesi envanter karşılaştırması | Resmî teslim/tesellüm işlemi MİHENK dışında |
 
-Her yeni otomasyon için hata etkisi, geri alma, iz kaydı, kullanıcı onayı ve başarı ölçütü ayrı tasarlanmalıdır. Otomatik kontrol sonucu yalnızca tanımlanmış kontrolün geçtiğini ifade eder; “inceleme eksiksizdir” veya “rapor doğrudur” garantisi değildir.
+## Otomasyonun çalışma politikası
+
+- Tekrarlı, deterministik ve güvenli işlemler varsayılan olarak otomatik çalışır; her adımda kullanıcı onayı istenmez.
+- Eksik/bozuk materyal, çelişkili talimat, düşük belge okuma güveni veya belirsiz görev kapsamı varsa yalnızca sorunlu adım kullanıcıya çıkarılır.
+- İşlem sonucu ve kaynağı kaydedilir; otomatik işlem gerektiğinde tekrar çalıştırılabilir veya güvenli şekilde geri alınabilir.
+- Nihai teknik kanaat, raporun meslekî onayı, elektronik imza ve resmî UYAP teslimi kullanıcı kontrolünde kalır.
+- Otomatik kontrolün geçtiği ifadesi yalnızca tanımlı kontrolün geçtiğini gösterir; “rapor kesinlikle doğru/eksiksizdir” garantisi değildir.
 
 ## Kaynaklar
 
-- [6754 sayılı Bilirkişilik Kanunu](https://mevzuat.adalet.gov.tr/mevzuat/104136)
-- [Bilirkişiler İçin Kontrol Listesi — Resmî PDF](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20için%20Kontrol%20Listesi.pdf)
-- [UYAP Bilirkişi Portal](https://bilirkisi.uyap.gov.tr/)
-- [SWGDE Best Practices for Forensic Audio, v2.5](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
-- [SWGDE Best Practices for Digital Audio Authentication](https://www.swgde.org/documents/published-complete-listing/15-a-001-swgde-best-practices-for-digital-audio-authentication/)
+- [Bilirkişilik Yönetmeliği — 16.06.2025 tarihli konsolide PDF](https://rayp.adalet.gov.tr/resimler/494/dosya/bilirkisilik-yonetmeligi16-06-20254-49-pm.pdf)
+- [6100 sayılı HMK](https://mevzuat.adalet.gov.tr/mevzuat/103103)
+- [5271 sayılı CMK](https://mevzuat.adalet.gov.tr/mevzuat/102946)
+- [Bilirkişiler İçin Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20için%20Kontrol%20Listesi.pdf)
+- [UYAP Doküman Editörü — Resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
+- [Mahkemeye Rapor Gönder — Bilirkişi Portal Kullanım Rehberi](https://rayp.adalet.gov.tr/resimler/489/dosya/portal-kullanimi21-09-202210-21-am.pdf)
