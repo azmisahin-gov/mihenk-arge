@@ -1,35 +1,66 @@
 # 56.12 Araçlar ve Yöntemler
 
-> **Durum:** TASLAK  
-> **Araştırma tarihi:** 12 Kasım 2026  
-> **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
+> **Durum:** Resmî araç ve ASR araştırmasıyla güncellendi — üretim aracı seçilmedi  
+> **Araştırma tarihi:** 13 Kasım 2026
 
-## Araçların rolü
+## 1. Araçların rolü
 
-- **FFmpeg/FFprobe:** Medya çözme ve teknik metadata okuma için genel amaçlı araçlar. Tek başına adli yöntem veya bilirkişi görüşü değildir.
-- **whisper.cpp / Whisper ailesi:** Otomatik konuşma tanıma. Makine çıktısı taslaktır; insan doğrulaması olmadan nihai transkript kabul edilmemelidir.
-- **Praat:** Fonetik/ses incelemede kullanılan araştırma aracı; 56.12 için otomatik olarak gerekli değildir.
-- **Audacity:** Ses dinleme/düzenleme genel aracıdır; orijinal materyalin değiştirilmeyip çalışma kopyasında çalışılması gerekir.
+56.12, ses kayıtlarının metin hâline dönüştürülmesi alanıdır. MİHENK'in 56.12 modülü kendi arayüzünden ses materyali kabulü, teknik inceleme, yerel ASR, dinleme/düzeltme, zaman bağlantısı ve rapor hazırlığını yürütmelidir.
 
-## Ses materyali ilkeleri
+MİHENK'in amacı kullanıcıya ayrı Audacity/FFmpeg/ASR web sayfası açtırmak değildir. Alttaki motorlar, lisans ve güvenlik incelemesinden sonra uygulama ile birlikte paketlenmiş yerel araç veya izole worker olabilir. Kullanıcı tek MİHENK uygulamasında kalır.
 
-SWGDE forensic audio v2.5, mümkün olduğunda orijinal veya elde edilebilir en erken nesil kaydın istenmesini ve materyalin alınma/transfer yönteminin kaydını vurgular. Yeniden kodlama/örnekleme ses niteliğine etki edebilir; bu nedenle ASR için mono/16kHz dönüşüm gerekiyorsa orijinal korunmalı, türetilmiş kopyanın parametreleri belgelenmelidir.
+## 2. Bakanlıkça doğrulanmış resmî araçlar
 
-## Kalite ölçümü
+- UYAP Doküman Editörü Adalet Bakanlığı Bilgi İşlem biriminin geliştirdiği resmî kelime işlemci ve UYAP ile entegre araçtır.
+- UYAP Editör Windows, macOS, Pardus/Debian ve mobil platformlar için resmî dağıtım sayfasında sunulmaktadır.
+- Adalet e-İmza, UYAP'ın 2026 duyurularında yer alan resmî imza/giriş uygulamasıdır.
+- İncelenen kamuya açık resmî kaynaklarda 56.12 için Bakanlıkça onaylandığı belirtilen ASR modeli/konuşma tanıma paketi doğrulanamamıştır.
 
-- WER/CER yalnızca insan tarafından doğrulanmış referans transkriptle anlamlıdır.
-- Test seti aksan, lehçe, gürültü, telefon kalitesi, çoklu konuşmacı, üst üste konuşma, özel isim ve sayıları ayrı etiketlemelidir.
-- Duyulmayan kısımlar tahminle tamamlanmamalı; açık placeholder kullanılmalı.
-- Motor, model, quantization, sürüm ve parametreler kayıt altına alınmalıdır.
-- İnsan gözden geçirme süresi ve hata sınıfları da ölçülmelidir.
+MİHENK'in ASR adayları bu nedenle “Bakanlık onaylı” değil; açık kaynak ve MİHENK tarafından test edilmiş yardımcı modeller olarak ele alınacaktır.
 
-## Uzmanlık sınırı
+## 3. ASR adayları
 
-Bu modül transkripsiyon için destek sağlar. Kimlik tespiti, konuşmacı karşılaştırması, ses özgünlüğü, manipülasyon tespiti veya hukuki değerlendirme yapmaz.
+İlk karşılaştırma:
+- Whisper Large v3 / turbo (MIT) + whisper.cpp veya doğrulanmış yerel çalışma zamanı.
+- TurkMedSTT Whisper Large v3 Türkçe Genel M1 (Apache 2.0 model kartı; veri kaynakları ayrıca lisans kontrolünden geçer).
+- ufakzeka-kulak (Apache 2.0; küçük çevrimdışı aday; konuşma diyaloğunda hata artışı nedeniyle ikincil).
+- Vosk Turkish Small 35 MB (Apache 2.0; WER “TBD”, yalnız düşük öncelikli karşılaştırma).
 
-## Kaynaklar
+Bu seçeneklerin hiçbirinin adli seslerde doğruluğu kabul edilmiş sayılmaz. Aday ayrıntıları `docs/03-uzmanlik-modulleri/ilk-pilot/asr-motor-arastirmasi.md` belgesindedir.
 
-- [SWGDE Best Practices for Forensic Audio, v2.5 (09.06.2022)](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
-- [forensic-transcriber GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber)
-- [forensic-transcriber-next GitHub deposu](https://github.com/azmisahin-gov/forensic-transcriber-next)
-- [Temel ve Alt Uzmanlık Alanları ve Aranan Nitelikler — 22.01.2026 PDF](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260122151908585Bilirkişilik%20Temel%20ve%20Alt%20Uzmanlık%20Alanları%20ile%20Bilirkişilerde%20Aranan%20Nitelikler.pdf)
+## 4. Ses materyali ilkeleri
+
+- Orijinal dosya salt okunur ve hash ile kaydedilmiş kalır.
+- ASR ön işleme (kanal seçimi, yeniden örnekleme, ses seviye düzenleme, kesit çıkarma) yalnız çalışma kopyasında yapılır.
+- Her türev dosyada kaynak hash, işlem, araç/model sürümü ve parametreler saklanır.
+- Duyulmayan ses tahminle doldurulmaz; belirsiz zaman aralığı açıkça işaretlenir.
+- Gürültü azaltma veya ses iyileştirme çıktısı orijinalin yerine geçmez ve yeni bir türev olarak kaydedilir.
+- ASR, sesin özgünlüğünü/manipülasyonunu doğrulamaz.
+- Konuşmacı sıralaması kişi kimliği, yaş, cinsiyet veya biyometrik teşhis değildir.
+
+## 5. İnsan incelemesi ve zaman bağlantısı
+
+- Transkript, kaynak ses ve zaman konumuyla birlikte gösterilir.
+- Kullanıcı bir metin parçasına tıklayınca ilgili ses aralığına gidebilir.
+- Tekrar dinleme, hız ayarı ve ses dalga formu aynı MİHENK arayüzünde bulunur.
+- Birden fazla ASR motoru kullanılırsa farklı sonuçlar birleştirilip doğrulanmış gibi sunulmaz; uyuşmayan bölümler bilirkişinin dinleme kuyruğunda öne çıkarılır.
+- İnsan düzeltmeleri kaynak model çıktısından ayrı sürüm ve olay kaydı taşır.
+
+## 6. Kalite ölçümü
+
+- WER/CER insan tarafından doğrulanmış referans transkriptle hesaplanır.
+- Aksan, telefon kalitesi, düşük ses, fısıltı, arka plan gürültüsü, üst üste konuşma, özel adlar, sayı/tarih ve sessizlik ayrı test sınıfıdır.
+- Sessizlikte uydurma metin, cümle atlama ve konuşmacı karışması ayrı hata sınıfı olarak ölçülür.
+- İşlem süresi, bellek, CPU/GPU kullanımı, gerçek zaman katsayısı ve kesinti sonrası devam ölçülür.
+- Model güven puanı, bilirkişi kanaati veya adli doğruluk garantisi değildir.
+
+## 7. Adli kapsam sınırı
+
+56.12 transkripsiyon desteği ile 56.11 adli ses/görüntü inceleme ve çözümlemesi birbirine karıştırılmaz. Konuşmacı kimliklendirmesi, ses karşılaştırması, montaj/manipülasyon incelemesi ve kaydın özgünlüğü ayrı yöntem ve uzmanlık gerektirebilir; bu modül bunları otomatik olarak yapmış sayılmaz.
+
+## 8. Kaynaklar
+
+- [Bilirkişilik Temel ve Alt Uzmanlık Alanları](https://bilirkisilik.adalet.gov.tr/)
+- [UYAP Doküman Editörü](https://www.uyap.gov.tr/UYAP-Editor)
+- [56.12 Türkçe ASR motor araştırması](asr-motor-arastirmasi.md)
+- [SWGDE Best Practices for Forensic Audio v2.5](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
