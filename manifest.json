@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
-  "updated": "12 Kasım 2026",
-  "markdown_count": 60,
-  "file_count": 63,
+  "updated": "13 Kasım 2026",
+  "markdown_count": 61,
+  "file_count": 64,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -24,6 +24,7 @@
     "docs/01-arastirma/bilirkisi-olma-yolculugu.md",
     "docs/01-arastirma/gorev-yasam-dongusu.md",
     "docs/01-arastirma/ilk-pilot-secimi.md",
+    "docs/01-arastirma/ilk-saha-gozlemleri.md",
     "docs/01-arastirma/kaynak-kaydi.md",
     "docs/01-arastirma/mevcut-depo-incelemesi.md",
     "docs/01-arastirma/mevzuat-haritasi.md",
