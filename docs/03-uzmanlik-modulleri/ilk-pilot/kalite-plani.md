@@ -3,7 +3,7 @@
 > **Durum:** Araştırma şablonu — seçilmiş modül/pilot değildir  
 > **Güncelleme:** 13 Kasım 2026
 
-Bu belge, 56.12 olası uzmanlık akışında hangi kalite sorularının sorulabileceğini gösterir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir. Ayrıntılı veri kümesi, anotasyon, ASR/diarization ölçütleri, performans ve kabul kapıları için [56.12 Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md) belgesine bakınız.
+Bu belge, 56.12 olası uzmanlık akışında hangi kalite sorularının sorulabileceğini gösterir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir. Ayrıntılı veri kümesi, anotasyon, ASR/diarization ölçütleri, performans ve kabul kapıları için [56.12 Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md) belgesine bakınız. Adayların koşu sırası, model/runtime karşılaştırması ve donanım ölçüm alanları [56.12 İlk Benchmark Koşu Matrisi](56-12-benchmark-kosu-matrisi.md) belgesinde tanımlanmıştır.
 
 ## İnsan referans kümesi
 
