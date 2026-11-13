@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.7 — 13.11.2026
+
+- 56.12 için yerel benchmark düzeneği tasarımı eklendi; test tanımı, motor adapter'ı, yerel orkestrasyon, metrik ve sonuç şeması ayrıştırıldı.
+- Aynı modelin farklı runtime/quantization koşullarında değerlendirilmesi ve yerel ağsız test yürütme akışı tanımlandı.
+- Test koşusu sonuçları için JSON şablonu eklendi; LLM, GGUF ve embedding kullanım sınırları benchmark bağlamında açıklandı.
+- Test planı benchmark tasarımı ve koşu şablonuna bağlandı.
+
 ## 0.9.6 — 13.11.2026
 
 - whisper.cpp, faster-whisper/CTranslate2, Transformers/PyTorch, WhisperX, pyannote, sherpa-onnx ve NVIDIA NeMo adaylarının görev, model biçimi, runtime ve lisans sınırları belgelendi.
