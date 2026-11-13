@@ -13,8 +13,6 @@
 - Kamuya açık kaynak düzeyi metadata ile korumalı yerel örnek manifesti ayrıştırıldı; dosya yolları, örnek hash'leri ve anotasyonların public depoya yazılmaması yapısal kuralla desteklendi.
 - Mevcut veri kümesi ve anotasyon belgeleri tek kaynak olarak korunarak yinelenen taslak belgeler kaldırıldı.
 
-# Değişiklik Kaydı
-
 ## 0.9.9 — 13.11.2026
 
 - İncelenen açık model kartları ve benchmark tariflerinde Türkçe karışık mono konuşma için bağımsız diarization doğrulaması bulunamadığı, kapsamı sınırlı bir araştırma bulgusu olarak belgelendi.
