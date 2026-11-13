@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.10.2 — 13.11.2026
+
+- 56.12 ilk benchmark koşu matrisi eklendi; model kalitesi, runtime/nicemleme ve uzman iş akışı testleri birbirinden ayrıldı.
+- Common Voice/FLEURS temel testleri, kontrollü doğal diyalog ve mono örtüşme setleri, ASR adayları ve diarization koşuları için sıralı yürütme planı tanımlandı.
+- RAM/VRAM/RTF, soğuk/sıcak başlangıç, gerçek compute türü, kalite ve tekrar üretilebilirlik alanları sabitlendi; henüz sayısal donanım/kabul eşiği verilmedi.
+- Test planındaki bozuk veri kümesi tablosu satırları düzeltildi ve benchmark matrisi ana kalite belgelerine bağlandı.
+
 ## 0.10.1 — 13.11.2026
 
 - TurkASR-Bench'i kullanan güncel Türkçe ASR liderlik tablosunun dış benchmark sonuçları belgelendi; genel WER'in doğal diyalogdaki yüksek hata oranını gizleyebildiği gösterildi.
