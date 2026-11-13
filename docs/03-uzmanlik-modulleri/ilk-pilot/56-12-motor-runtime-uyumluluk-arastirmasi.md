@@ -62,7 +62,31 @@ Bu görevlerin tek bir “ses yapay zekâsı” motorunda birleşmesi zorunlu de
 
 **Önerilen rol:** Türkçe uyarlamaların referans çalışma zamanı ve model dönüştürme denetimi. Üretim dağıtım tercihi henüz değil.
 
-### 3.4 whisper.cpp ve faster-whisper arasında seçim
+### 3.4 Model-özel GGUF dışa aktarımı: ufakzeka-kulak + parakeet.cpp
+
+- ufakzeka-kulak model kartı aynı ağırlıkların NeMo, Transformers, sherpa-onnx, parakeet.cpp için GGUF ve parakeet-mlx biçimlerinde yayımlandığını belirtiyor.
+- GGUF dosyaları Parakeet.cpp v0.6.1 ile çalıştırılmak üzere hazırlanmıştır; f32 ve q8_0 varyantları bulunur. Model kartı q8_0 dışa aktarımını FLEURS Turkish dev ve Common Voice 27 Turkish dev üzerinde NeMo referansına yakın sonuçlarla kontrol ettiğini bildirir.
+- Bu, GGUF'nin whisper.cpp tarafından kullanıldığı anlamına gelmez. Her GGUF dosyası yalnızca kendi model mimarisini ve runtime'ını destekleyen yürütücüyle çalışır.
+- Model tek utterance işleyen, streaming olmayan bir modeldir; VAD ile bölütleme ve her bölümde birkaç yüz milisaniye sınır payı önerilir.
+- Model diarization yapmaz; kelime zaman damgaları değerlendirilmemiştir. Real-TurnTurk konuşma testinde bildirilen WER 0,3807'dir; doğal diyalogta önemli başarım düşüşü vardır.
+- Eğitim verilerinin büyük bölümü YODAS kaynaklıdır. Model kartına göre bu kayıtların önemli kısmının metni bir ASR tarafından oluşturulup başka bir ASR tarafından kontrol edilmiştir; iki sistemin ortak hataları eğitim metninde kalmış olabilir.
+
+**Önerilen rol:** Düşük kaynaklı, Türkçe tek-utterance ASR karşılaştırması; özellikle Parakeet.cpp GGUF q8_0 ile sherpa-onnx INT8 varyantlarının aynı örneklerde ölçülmesi. Yalnızca model kartı benchmark'ıyla üretim onayı verilmez.
+
+### 3.5 Turkish STT 66M v2 + sherpa-onnx
+
+- [mihuai/turkish-stt-66m-v2](https://huggingface.co/mihuai/turkish-stt-66m-v2) yaklaşık 68 MB INT8, 66M parametreli streaming Zipformer transducer modeli olarak tanıtılıyor.
+- Model kartı tek CPU thread'inde çalışmayı ve sherpa-onnx doğrudan kullanımını belgeliyor. FLEURS-TR 743 klip için geliştirici standart WER yüzde 10,06; Damga normalizasyonuyla yüzde 6,21 rapor ediyor.
+- Model kartında lisans mihu-community-license olarak görünmekte; tam lisans metni bu araştırmada erişilebilir olmadığından ürün/dağıtım için uygunluğu doğrulanmamıştır.
+- Lisans, eğitim veri kaynakları ve gerçek diyalog/örtüşme testleri doğrulanana kadar bekleme adayı olarak kalır. Performans beyanı MİHENK ölçümü değildir.
+
+### 3.6 Uran STT Base + faster-whisper/CTranslate2
+
+- [curiositytech/uran-stt-base](https://huggingface.co/curiositytech/uran-stt-base), Apache 2.0 lisanslı, Whisper-base temelli ve CTranslate2/faster-whisper biçiminde yayımlanan Türkçe uyarlamadır.
+- Model kartı yaklaşık 75 MB INT8, yaklaşık 80 saat Common Voice 17 Turkish ve OpenSLR-108 eğitim verisi bildiriyor.
+- Kartta Common Voice 17 Turkish testinde WER yüzde 38,5 / CER yüzde 10,3 ve belirli Intel i7 12. nesil CPU'da 5 saniyelik örnek için 250–400 ms latency beyanı bulunuyor.
+- Bu sonuçlar model geliştiricisinin kendi ölçümleridir; test protokolü ve split sızıntısı bağımsız MİHENK denetiminden geçmemiştir. WER değeri nedeniyle ana doğruluk adayı değildir; düşük öncelikli CPU taban çizgisi olarak tutulur.
+### 3.7 whisper.cpp ve faster-whisper arasında seçim
 
 | Karar ölçütü | whisper.cpp | faster-whisper / CTranslate2 |
 |---|---|---|
@@ -143,6 +167,8 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 | İşlev | İlk araştırma adayı | İkinci aday | Ön durum |
 |---|---|---|---|
 | ASR – yerel temel | whisper.cpp GGML | faster-whisper/CTranslate2 | Aynı Whisper modelleriyle karşılaştır |
+| Türkçe düşük kaynak ASR | ufakzeka-kulak / sherpa-onnx INT8 | ufakzeka-kulak / Parakeet.cpp GGUF q8_0 | Türkçe doğal konuşmada düşük başarı riski; CPU/RAM testine bağlı |
+| Küçük streaming CPU ASR | Turkish STT 66M v2 (lisans beklemede) | Uran STT Base / CTranslate2 | Lisans ve WER sonuçlarına göre kısıtlı/ikincil test |
 | Türkçe uyarlama | TurkMedSTT M1 / Transformers | Türkçe XLS-R | Runtime dönüştürme ve model veri kökenini doğrula |
 | Düşük bellek diarization | sherpa-onnx + uygun ONNX ağırlıklar | pyannote community-1 | Önce kaynak/lisans, sonra Türkçe test |
 | Diarization referans kalitesi | pyannote community-1 | NeMo Sortformer | Dil/ortam genellemesi ayrıca ölçülmeli |
@@ -177,13 +203,15 @@ Tüm koşullarda test verisi, model ve runtime checksum/sürüm bilgisi, paramet
 
 ## 9. Ara kararlar
 
-1. **GGUF, whisper.cpp için model biçimi değildir; whisper.cpp GGML biçimini kullanır.**
+1. **GGUF, whisper.cpp için model biçimi değildir; whisper.cpp GGML biçimini kullanır.** Bununla birlikte Parakeet.cpp gibi ayrı runtime'lar, destekledikleri ses mimarileri için GGUF dışa aktarımı sunabilir. Bu destek modele/runtime'a özeldir.
 2. whisper.cpp küçük/nicemlenmiş modeller ve C/C++ paketleme açısından güçlü yerel ASR adayıdır.
 3. faster-whisper/CTranslate2, INT8 ve GPU bellek yönetimi açısından ayrı benchmark adayıdır.
 4. WhisperX, Türkçe alignment modeli sunması nedeniyle zaman hizalaması için dikkate değerdir; fakat Python/PyTorch/pyannote bağımlılıkları ve model lisansları ayrı yük oluşturur.
 5. Türkçe diarization için whisper.cpp tinydiarize yerine bağımsız diarization motorları araştırılmalıdır.
 6. sherpa-onnx düşük bellek/offline paketleme adayı; pyannote kalite referansı; NeMo ileri karşılaştırma adayı olarak tutulur.
-7. Hiçbir runtime veya model henüz üretim için seçilmedi.
+7. Turkish STT 66M v2 düşük kaynak adayıdır ancak özel lisans metni erişilebilir olmadığından beklemededir; Uran STT Base Apache 2.0 olsa da yayımlanan WER değeri nedeniyle düşük önceliklidir.
+8. ufakzeka-kulak için Parakeet.cpp GGUF q8_0 ve sherpa-onnx INT8 dışa aktarımları gerçek testte karşılaştırılabilir; modelin doğal konuşma sınırlaması göz önünde tutulmalıdır.
+9. Hiçbir runtime veya model henüz üretim için seçilmedi.
 
 ## 10. Kaynaklar
 
