@@ -76,6 +76,7 @@ Gerçek dosya, dava bilgisi veya kişi verisi senaryo açıklamasına, test gün
 | DIA-003 | P2 | Üst üste konuşma | Zaman açısından örtüşen iki konuşmacı içeren kontrollü kayıt | Referans ve çıktı örtüşmeyi korur; yanlış tek konuşmacıya indirgeme görünür hata olur. |
 | DIA-004 | P2 | Kanalı ayrı kaydedilmiş konuşma | Her konuşmacının ayrı kanalda olduğu veri | Kanal etiketi konuşmacı atamasından ayrıştırılır; bu test mono diarization başarısı olarak raporlanmaz. |
 | DIA-005 | P2 | Konuşma boyunca etiket kararlılığı | Aynı iki konuşmacının birçok kez söz aldığı kayıt | Aynı anonim konuşmacı kümesi tutarlı tutulur; etiket değişimi/confusion ölçülür. |
+| DIA-006 | P2 | Türkçe karışık mono kayıt üzerinde aday motor doğrulaması | Kontrollü protokole göre iki veya daha fazla gönüllünün aynı miks/mono kayıtta konuştuğu, insan anotasyonlu referans ses; pyannote/sherpa-onnx/NeMo adapter'ı | Modelin Türkçe başarımı varsayılmaz; DER, FA/Miss/Confusion, örtüşme dilimleri, RAM/VRAM ve RTF raporlanır. Lisans/izin eksikse test ENGELLENDİ olur; kayıtlar arası kimlik eşleştirmesi yapılmaz. |
 
 ### 3.5 Zaman bağlantısı ve kullanıcı incelemesi
 
@@ -169,7 +170,7 @@ Gerçek vaka kimliği, kişi adı, dosya numarası, mahkeme adı veya gerçek do
 2. GUV-001–GUV-004 ve KUR-001–KUR-002: güvenlik ve kurtarma zeminini doğrula.
 3. ASR-001, ASR-003, ASR-004, ASR-005 ve ZAM-001: temel ASR ve inceleme döngüsünü dene.
 4. PERF-001–PERF-003 ve ASR-008: uzun kayıt, chunk ve bellek davranışını değerlendir.
-5. DIA-001–DIA-005: veri/anotasyon ve uzman ihtiyacı doğrulanırsa çalıştır.
+5. DIA-001–DIA-006: veri/anotasyon ve uzman ihtiyacı doğrulanırsa çalıştır.
 6. SES-005–SES-006: ses iyileştirme ve oynatma yardımcılarını ayrı deney olarak değerlendir.
 7. RPR-001–RPR-004 ve E2E-001: uçtan uca uzman kabulünü dene.
 
