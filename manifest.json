@@ -2,7 +2,7 @@
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
   "markdown_count": 76,
-  "file_count": 82,
+  "file_count": 84,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -80,6 +80,8 @@
     "docs/08-karar-ve-acik-konular/karar-kaydi.md",
     "docs/08-karar-ve-acik-konular/risk-kaydi.md",
     "manifest.json",
+    "templates/56-12-test-veri-manifesti-sablonu.json",
+    "templates/56-12-test-veri-manifesti.schema.json",
     "templates/arastirma-notu-sablonu.md",
     "templates/gereksinim-sablonu.md",
     "templates/gorusme-notu-sablonu.md",
