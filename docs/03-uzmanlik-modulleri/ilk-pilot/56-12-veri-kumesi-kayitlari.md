@@ -195,6 +195,15 @@ Her kaynak ve indirilen sürüm için:
 
 Manifest şablonu 56-12-veri-kumesi-manifest-sablonu.json dosyasındadır. Public dosya yalnızca kamuya açık kaynak verisi ve genel metadata içerebilir. Gerçek bilirkişi dosyalarının hash'leri, adları, transkriptleri veya kimlik bilgileri public manifest'e yazılmaz.
 
+### 6.1 Kamuya açık katalog manifesti ile yerel örnek manifestinin ayrımı
+
+İki manifest düzeyi birbirinin yerine kullanılmaz:
+
+- **Kamuya açık veri kümesi kaydı:** Veri kümesi düzeyinde kaynak, sürüm, beyan edilen lisans, izin verilen amaçlar, split özeti ve sınırlamaları içerir. Bunun yapısal doğrulaması [kamuya açık manifest JSON Schema](../../../../templates/56-12-test-veri-manifesti.schema.json) ile yapılır; başlangıç kaydı [kamuya açık manifest şablonudur](../../../../templates/56-12-test-veri-manifesti-sablonu.json).
+- **Korumalı yerel örnek manifesti:** Tek tek ses örneklerinin hash, korumalı dosya konumu, kaynak örnek kimliği, anotasyon ve split/grup token'larını içerir. Bunun boş alan şablonu [yerel veri kümesi manifestidir](56-12-veri-kumesi-manifest-sablonu.json). Doldurulmuş hali yalnızca erişim kontrollü yerel test alanında tutulur.
+
+Kamuya açık katalog şeması; ses, transkript, ham dosya yolu, örnek bazlı hash ve konuşmacı kimliklendirme verisinin public depoya yazılmasını yapısal olarak engeller. Yerel manifestin doldurulmuş hali Git'e, issue/PR içeriğine, CI loguna veya ekran görüntüsüne kopyalanmaz.
+
 ## 7. Kaynaklar
 
 - [Mozilla Common Voice – veri kümesi kataloğu](https://commonvoice.mozilla.org/bas/datasets)
