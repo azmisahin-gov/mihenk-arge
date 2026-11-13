@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 69,
-  "file_count": 72,
+  "markdown_count": 70,
+  "file_count": 73,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -44,6 +44,7 @@
     "docs/02-urun/urun-gereksinimleri.md",
     "docs/02-urun/urun-vizyonu.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-teknik-is-akisi.md",
+    "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/araclar-ve-yontemler.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/asr-motor-arastirmasi.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/is-akisi.md",
