@@ -1,0 +1,72 @@
+{
+  "run_schema_version": "1.0",
+  "run_id": "RUN-SYN-000001",
+  "test_id": "ASR-001",
+  "started_at": null,
+  "completed_at": null,
+  "status": "pending",
+  "dataset": {
+    "dataset_id": "DATASET-ANON-001",
+    "dataset_version": "source-release-or-commit",
+    "split": "test",
+    "sample_id": "SAMPLE-ANON-0001",
+    "source_audio_sha256": null,
+    "derived_audio_sha256": null
+  },
+  "model": {
+    "model_id": "MODEL-ANON-001",
+    "revision": null,
+    "sha256": null,
+    "license": null,
+    "quantization": null
+  },
+  "runtime": {
+    "runtime_id": "RUNTIME-ANON-001",
+    "version": null,
+    "build": null,
+    "license": null,
+    "adapter_version": null
+  },
+  "parameters": {},
+  "preprocessing": [],
+  "environment": {
+    "os": null,
+    "os_version": null,
+    "cpu": null,
+    "cpu_threads": null,
+    "ram_bytes": null,
+    "gpu": null,
+    "vram_bytes": null,
+    "driver": null
+  },
+  "network": {
+    "policy": "offline",
+    "violation_detected": false,
+    "evidence_ref": null
+  },
+  "outputs": {
+    "raw_output_ref": null,
+    "normalized_output_ref": null,
+    "error_ref": null
+  },
+  "metrics": {
+    "wer_tr_1": null,
+    "wer_tr_2": null,
+    "cer_tr_1": null,
+    "der": null,
+    "der_false_alarm": null,
+    "der_missed_speech": null,
+    "der_confusion": null,
+    "rtf": null,
+    "load_time_ms": null,
+    "first_output_latency_ms": null,
+    "peak_ram_bytes": null,
+    "peak_vram_bytes": null
+  },
+  "human_review": {
+    "status": "not-reviewed",
+    "reviewer_role": null,
+    "notes": []
+  },
+  "notes": []
+}

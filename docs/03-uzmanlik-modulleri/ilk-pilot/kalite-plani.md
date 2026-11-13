@@ -3,7 +3,7 @@
 > **Durum:** Araştırma şablonu — seçilmiş modül/pilot değildir  
 > **Güncelleme:** 13 Kasım 2026
 
-Bu belge, 56.12 olası uzmanlık akışında hangi kalite sorularının sorulabileceğini gösterir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir.
+Bu belge, 56.12 olası uzmanlık akışında hangi kalite sorularının sorulabileceğini gösterir. İlk sürümün zorunlu kapsamı ve kabul kapıları için [56.12 Minimum Sürüm Kapsamı](56-12-minimum-surum-kapsami.md) esas alınır; aşağıdaki ileri test katmanlarının tümü MVP ön koşulu değildir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir. Ayrıntılı veri kümesi, anotasyon, ASR/diarization ölçütleri, performans ve kabul kapıları için [56.12 Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md) belgesine bakınız. Adayların koşu sırası, model/runtime karşılaştırması ve donanım ölçüm alanları [56.12 İlk Benchmark Koşu Matrisi](56-12-benchmark-kosu-matrisi.md) belgesinde tanımlanmıştır.
 
 ## İnsan referans kümesi
 
@@ -31,7 +31,7 @@ Pilot yapılmasına karar verilirse sentetik veya lisansı/izin koşulları doğ
 - Arka plan gürültüsü, düşük ses ve fısıltı.
 - İki veya daha fazla konuşmacı; üst üste konuşma ve kısa konuşma geçişleri.
 - Özel isim, sayı, tarih, saat ve kısaltmalar.
-- Uzun kayıtlar ve tek görevde sekiz/daha fazla dosya.
+- Uzun kayıtlar ve çoklu dosya.
 - Zaman damgası ve belirli cümleye tekrar atlama.
 - Dosya hash'i, orijinalin değişmezliği ve çalışma kopyası.
 - Dosya sayısı/ek envanteri, eksik materyal ve çift kayıt.
@@ -59,7 +59,7 @@ WER/CER ve model güven puanı tek başına bilirkişilik doğruluğu veya hukuk
 2. Görevlendirme kapsamı/uzmanlık sınırı net mi?
 3. Fiziki ve dijital materyallerin envanteri ve kaynağı belli mi?
 4. Her materyal için incelendi/incelenmedi/eksik/bozuk/kapsam dışı durumu açık mı?
-5. Sekiz ses dosyası gibi çoklu dosyalarda her dosya ile transkript eşleşiyor mu?
+5. Çoklu dosyalarda her dosya ile transkript eşleşiyor mu?
 6. Kullanılan yöntem, araç, model ve sürüm bilgisi yazılmış mı?
 7. Makine çıktısı ile uzman tarafından düzeltilip kabul edilen içerik ayrılmış mı?
 8. Belirsiz, örtüşen veya incelenemeyen bölümler açıkça belirtilmiş mi?

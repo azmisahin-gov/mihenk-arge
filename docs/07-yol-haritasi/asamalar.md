@@ -1,6 +1,6 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** Keşif aşaması — Görev Profili tanımı üzerinde çalışılıyor  
+> **Durum:** Keşif ve 56.12 minimum pilot kapsamı tanımlı; uzman doğrulaması ve PoC bekliyor  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
@@ -31,6 +31,18 @@
 - Uzmanlık modülleri ile göreve özel iş akışlarının ayrımı.
 - Otomatik yürütülecek işler, istisna yönetimi ve insan karar sınırları.
 - Rapor üretimi, kalite kapısı ve çıktı formatı kabul kriterleri.
+
+## 56.12 modül dikey dilimi — İlk pilot alt akışı
+
+Bu çalışma genel MİHENK platform MVP'sinden ayrıdır. 56.12 için [minimum kapsam ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md) tanımlanmıştır; bu, modülün ürünleştiği veya alan uzmanı tarafından onaylandığı anlamına gelmez.
+
+1. **M0 – Kapsam doğrulaması:** B-01'in gerçek giriş ses biçimleri, rapor/teslim çıktısı ve meslekî kontrol noktaları doğrulanır.
+2. **M1 – Yerel dikey dilim:** Bir ASR motoruyla ses alımı → yerel transkript → sesle karşılaştırarak düzeltme → çıktı akışı denenir.
+3. **M2 – Gerekiyorsa model kıyası:** Aynı küçük insan referanslı testte en fazla bir alternatif ölçülür.
+4. **M3 – Kabul kapıları:** 12 minimum güvenlik/işlev kapısı sentetik veya izinli yerel veride uygulanır.
+5. **M4 – Uzman pilotu:** Zaman ve düzeltme eforu kazanımı ile kabul/ret gerekçesi kaydedilir.
+
+Özel benchmark aracı, otomatik diarization ve ileri ses işleme bu alt akışın ön koşulu değildir. İlk dikey dilim gerçek cihaz ve uzman iş akışı doğrulandıktan sonra mimari kararları besler.
 
 ## Aşama 4 — Sıfırdan mimari ve teknoloji kararı
 

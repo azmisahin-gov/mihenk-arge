@@ -32,5 +32,10 @@
 | ADR-026 | 13.11.2026 | MİHENK için Bakanlık onaylı ASR modeli doğrulanmadığından yerel açık kaynak modeller MİHENK test kabulünden geçmeden üretimde kullanılmaz | Kamuya açık resmî kaynaklarda 56.12 ASR onayı bulunamadı | Kabul edildi |
 | ADR-027 | 13.11.2026 | 56.12 ASR en az iki aday modelle, aynı yerel test seti ve aynı referans metin üzerinden karşılaştırılır | Türkçe doğal konuşma başarımı, düşük ses, gürültü, örtüşme ve kaynak kullanımı modele göre değişebilir | Kabul edildi |
 | ADR-028 | 13.11.2026 | ASR motorları yerel/çevrimdışı çalışır; birden fazla çıktının otomatik çoğunlukla birleştirilmesi yapılmaz | Gerçek vaka sesinin dışarı çıkmaması ve model uyuşmazlığının insan dinlemesine yönlendirilmesi | Kabul edildi |
+| ADR-029 | 13.11.2026 | 56.12 için ilk dikey dilim prototipi başlatılır; bu karar MİHENK platformunun genel MVP seçimi değildir | Proje sahibi minimum kapsamlı 56.12 pilotunu ilerletme talimatı verdi; tek kullanıcı bulguları tüm uzmanlıklara genellenmez | Kabul edildi |
+| ADR-030 | 13.11.2026 | İlk masaüstü prototipte Tauri 2 + React/TypeScript/Vite adayı denenir; teknoloji kararı geçicidir | Tek uygulama deneyimi, yerel Rust işçi katmanı ve dar yetkili web arayüzü denemesi; hedef işletim sistemi/donanım, paketleme, güvenlik ve bakım testleri tamamlanmadan nihai mimari sayılmaz | Prototip kararı |
+
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.
+
+| ADR-031 | 13.11.2026 | Gerçek vaka verisinden önce şifreli yerel görev kasası zorunludur; ilk teknik tasarımda parola ile korunan rastgele kasa anahtarı, şifreli görev metaverisi ve rastgele erişimli doğrulanmış ses blokları değerlendirilir | Otomatik kayıt tek başına yeterli değildir; disk üzerinde açık ses/transkript, kesintiyle bozulma ve yedekten kurtarılamama riski kapatılmalıdır. Kriptografi bileşenleri ile özel dosya biçimi ayrı güvenlik testinden geçmeden üretim kararı verilemez | Taslak / güvenlik incelemesi bekliyor |

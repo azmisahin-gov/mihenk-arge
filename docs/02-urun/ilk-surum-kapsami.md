@@ -5,7 +5,9 @@
 
 ## Bu aşamadaki karar
 
-Henüz MVP veya ilk uzmanlık modülü seçilmedi. 56.12, tek kullanıcının ilk örnek görev senaryosudur. Bu davadaki sekiz ses dosyası yalnızca o örneğin materyal sayısıdır; MİHENK'in dosya sayısı veya görev akışı varsayılanı değildir.
+**MİHENK platformunun genel MVP'si henüz seçilmiş değildir.** Bununla birlikte ilk uzmanlık modülü adayı olarak 56.12 için dar kapsamlı bir pilot/ilk dikey dilim gereksinimi tanımlanmıştır: [56.12 Minimum Sürüm Kapsamı ve Kabul Kapıları](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md).
+
+Bu karar, bütün bilirkişiler veya bütün uzmanlık alanları için ürün kapsamının doğrulandığı anlamına gelmez. 56.12 kapsamı da şu an tek uzman kullanıcının deneyimine dayanan öneridir; alan uzmanı ve hukuk/veri koruma incelemesiyle doğrulanmalıdır. B-01 örneğindeki sekiz ses dosyası yalnızca o görevin materyal sayısıdır; MİHENK'in dosya sayısı veya görev akışı varsayılanı değildir.
 
 ## Uzun vadeli ürün hedefi
 
