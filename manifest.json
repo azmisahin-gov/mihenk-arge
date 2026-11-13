@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 73,
-  "file_count": 78,
+  "markdown_count": 74,
+  "file_count": 79,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -10,6 +10,11 @@
     ".gitignore",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
+    "LICENSE-DECISION.md",
+    "PAKET-ICERIGI.md",
+    "README.md",
+    "SECURITY.md",
+    "YONETICI-OZETI.md",
     "docs/00-yonetim/arastirma-yontemi.md",
     "docs/00-yonetim/belge-yazim-kurallari.md",
     "docs/00-yonetim/proje-amaci-ve-kapsam.md",
@@ -39,6 +44,7 @@
     "docs/02-urun/urun-gereksinimleri.md",
     "docs/02-urun/urun-vizyonu.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-anotasyon-kaydi-sablonu.json",
+    "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-kontrollu-ses-kayit-protokolu.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-teknik-is-akisi.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-test-senaryolari.md",
@@ -70,17 +76,12 @@
     "docs/08-karar-ve-acik-konular/acik-sorular.md",
     "docs/08-karar-ve-acik-konular/karar-kaydi.md",
     "docs/08-karar-ve-acik-konular/risk-kaydi.md",
-    "LICENSE-DECISION.md",
     "manifest.json",
-    "PAKET-ICERIGI.md",
-    "README.md",
-    "SECURITY.md",
     "templates/arastirma-notu-sablonu.md",
     "templates/gereksinim-sablonu.md",
     "templates/gorusme-notu-sablonu.md",
     "templates/karar-kaydi-sablonu.md",
     "templates/kaynak-karti-sablonu.md",
-    "templates/risk-kaydi-sablonu.md",
-    "YONETICI-OZETI.md"
+    "templates/risk-kaydi-sablonu.md"
   ]
 }
