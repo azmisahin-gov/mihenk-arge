@@ -138,6 +138,8 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 
 ## 4. MİHENK için önerilen veri katmanları
 
+MİHENK'in kendi gönüllü kayıtlarını üretmesi gerekirse [56.12 Kontrollü Ses Kayıt Protokolü](56-12-kontrollu-ses-kayit-protokolu.md) uygulanır. Protokol yalnızca test verisi üretimi içindir; gerçek bilirkişi delilinin dönüştürülmesi için talimat değildir.
+
 ### Katman A – Temel ASR
 
 - FLEURS tr_tr test split'i.
