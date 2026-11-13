@@ -120,7 +120,19 @@ Bu görevlerin tek bir “ses yapay zekâsı” motorunda birleşmesi zorunlu de
 
 whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level timestamp seçeneği deneysel olarak belgelenmiştir. Türkçe kelime sınırlarının yeterliliği ve noktalama/sayı biçimiyle ilişkisi ayrıca ölçülmelidir. Forced alignment ile aynı işlem değildir.
 
-## 5. Konuşmacı ayrımı motorları
+## 5. Türkçe diarization doğrulama boşluğu
+
+İncelenen açık model kartları ve benchmark tariflerinde, Türkçe konuşma için ayrı raporlanmış; doğal, aynı miks/tek-kanal konuşma, örtüşen konuşma ve bağımsız insan referansı içeren bir diarization test sonucu doğrulanamadı. Bu bulgu “Türkçe diarization modeli hiç yoktur” anlamına gelmez; yalnız bu araştırmada üretim kararı destekleyecek açık ve tekrarlanabilir Türkçe benchmark kanıtı bulunamadığını gösterir.
+
+- [pyannote Community-1 model kartı](https://huggingface.co/pyannote/speaker-diarization-community-1) ve [önceki speaker-diarization model kartı](https://huggingface.co/pyannote/speaker-diarization), çok sayıda veri kümesi üzerinde benchmark sonuçları verir; gözden geçirilen sonuç tabloları Türkçe özel bir set göstermemektedir. pyannote.ai'nin dil-agnostik çalışma iddiası yararlı bir sağlayıcı beyanıdır, ancak Türkçe 56.12 gerçek karışık kayıtta bağımsız doğrulamanın yerine geçmez.
+- [SpeechBrain ECAPA-TDNN VoxCeleb modeli](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb), speaker embedding/verification amaçlıdır; tek başına VAD + segmentation + clustering + speaker assignment içeren diarization sistemi değildir.
+- [SpeechBrain VoxLingua107 ECAPA model kartı](https://huggingface.co/Jzuluaga/acoustic-embeddings-model), dil tanıma (language identification) içindir. Türkçe dilini tanıyabilmesi, konuşmacı ayırımı yaptığını göstermez.
+- [SpeechBrain AMI diarization reçetesi](https://github.com/speechbrain/speechbrain/tree/develop/recipes/AMI) konferans/AMI veri kümesi için geliştirilmiştir; bu İngilizce AMI sonuçları Türkçe diyalog başarımı olarak genellenemez.
+- [pyannote.metrics](https://pyannote.github.io/pyannote-metrics/reference.html) DER değerlendirmesi sağlar; metrik kütüphanesinin olması test verisinin Türkçe veya modelin Türkçe'de doğrulanmış olduğu anlamına gelmez.
+
+**Sonuç:** pyannote.audio Community-1 kalite karşılaştırma adayı, sherpa-onnx ise uygun model ağırlıkları bulunduğunda düşük bellek/yerel çalışma zamanı adayı olarak tutulur. İkisi için de Türkçe kabul kararı, MİHENK kontrollü karışık mono kayıtları ve insan anotasyonlu örtüşme referansı üzerinde alınmalıdır. NeMo da aynı kanıt boşluğu nedeniyle yalnız ileri araştırma adayıdır.
+
+## 6. Konuşmacı ayrımı motorları
 
 ### 5.1 pyannote.audio – speaker-diarization-community-1
 
@@ -162,7 +174,7 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 - Bu nedenle Türkçe 56.12 diarization çözümü olarak kullanıma uygun kabul edilmez.
 - VAD veya konuşmacı dönüş etiketi, genel çok konuşmacılı diarization ile eş anlamlı değildir.
 
-## 6. Motorların görev bazında ön karşılaştırması
+## 7. Motorların görev bazında ön karşılaştırması
 
 | İşlev | İlk araştırma adayı | İkinci aday | Ön durum |
 |---|---|---|---|
@@ -177,7 +189,7 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 | Source separation | sherpa-onnx model kataloğundaki uygun adaylar | ayrı araştırma | İlk sürüm zorunluluğu değil |
 | Speech enhancement | ayrı kontrollü yerel motor | sherpa-onnx yardımcıları | Varsayılan değil; türev ses ve karşılaştırma şart |
 
-## 7. MİHENK için önerilen test sırası
+## 8. MİHENK için önerilen test sırası
 
 1. **ASR tabanı:** whisper.cpp üzerinde base, small, large-v3-turbo ve desteklenen Q5_0 varyantlarını aynı kısa/uzun testlerde ölç.
 2. **Aynı Whisper modelinde runtime kıyaslaması:** Uyumlu model sürümüyle whisper.cpp ve faster-whisper/CTranslate2 hız, RAM/VRAM ve WER/CER karşılaştırması yap.
@@ -189,7 +201,7 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 
 Tüm koşullarda test verisi, model ve runtime checksum/sürüm bilgisi, parametreler, ağ kapalı durumu, CPU/GPU ve bellek kaydedilir.
 
-## 8. Teknik ve güvenlik kısıtları
+## 9. Teknik ve güvenlik kısıtları
 
 - Gerçek dosyalar çevrimdışı, bilirkişinin yetkili cihazında kalır.
 - Model dosyası ve runtime ilk kurulumdan sonra internet olmadan çalışabilmelidir.
@@ -201,7 +213,7 @@ Tüm koşullarda test verisi, model ve runtime checksum/sürüm bilgisi, paramet
 - Orijinal ses değişmez; downmix, resampling, VAD kesiti, filtre ve iyileştirme yalnız türev çalışma kopyasında yapılır.
 - Kod ve model lisansları ayrı saklanır; bağımlılık ve model envanteri/SBOM her sürüm için tutulur.
 
-## 9. Ara kararlar
+## 10. Ara kararlar
 
 1. **GGUF, whisper.cpp için model biçimi değildir; whisper.cpp GGML biçimini kullanır.** Bununla birlikte Parakeet.cpp gibi ayrı runtime'lar, destekledikleri ses mimarileri için GGUF dışa aktarımı sunabilir. Bu destek modele/runtime'a özeldir.
 2. whisper.cpp küçük/nicemlenmiş modeller ve C/C++ paketleme açısından güçlü yerel ASR adayıdır.
@@ -213,7 +225,7 @@ Tüm koşullarda test verisi, model ve runtime checksum/sürüm bilgisi, paramet
 8. ufakzeka-kulak için Parakeet.cpp GGUF q8_0 ve sherpa-onnx INT8 dışa aktarımları gerçek testte karşılaştırılabilir; modelin doğal konuşma sınırlaması göz önünde tutulmalıdır.
 9. Hiçbir runtime veya model henüz üretim için seçilmedi.
 
-## 10. Kaynaklar
+## 11. Kaynaklar
 
 - [whisper.cpp README – GGML biçimi, bellek ve quantization](https://github.com/ggml-org/whisper.cpp)
 - [whisper.cpp model listesi – Q5_0, large-v3-turbo ve English-only tinydiarize](https://github.com/ggml-org/whisper.cpp/blob/master/models/README.md)
