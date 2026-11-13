@@ -77,7 +77,8 @@ Adapter'lar aynı komut satırını veya aynı model dosyasını kullanmak zorun
 | Transformers/PyTorch | TurkMedSTT M1 gibi kaynak mimari modeller | Model kartındaki desteklenen mimari/processor | P1 |
 | WhisperX alignment | Uzman tarafından doğrulanmış metne zaman önerisi | ASR çıktısı ve Türkçe alignment ağırlığı | P2 |
 | pyannote.audio | Diarization kalite karşılaştırma hattı | Gated ağırlık koşulları kabul edilmiş, yerel model | P2 |
-| sherpa-onnx | ONNX tabanlı yerel VAD/diarization denemesi | Her segmentation/embedding ağırlığının lisansı ayrı | P2 |
+| sherpa-onnx | ONNX tabanlı yerel VAD/diarization ve uygun ASR modelleri | Her model ağırlığının lisansı ayrı; ufakzeka-kulak ve Turkish STT 66M v2 ayrı koşullarda | P2 |
+| parakeet.cpp | GGUF dışa aktarımı bulunan destekli Parakeet modelleri | Yalnız model kartında açıkça desteklenen GGUF varyantı; whisper.cpp ile karıştırılmaz | P2 |
 
 Bu tablo test sırasıdır; üretim dağıtımına kabul veya nihai motor tercihi değildir.
 
@@ -179,7 +180,7 @@ RAM ile VRAM ayrı gösterilir. Model dosyasının disk boyutu RAM ihtiyacı ola
 ## 9. LLM, GGUF ve embedding sınırı
 
 - ASR benchmark döngüsüne LLM eklenmez. Modelin kendi ürettiği metne başka bir LLM ile düzeltme yaptırmak, ASR motorunun ham başarımını ölçmeyi bozar.
-- GGUF, genel amaçlı LLM modelleri için kullanılan bir model biçimidir; whisper.cpp'nin GGML biçiminin yerine geçmez. Bir model biçimi ancak ilgili mimari ve runtime açıkça destekliyorsa kullanılır.
+- GGUF, LLM modellerinde yaygın olsa da Parakeet.cpp gibi bazı ses runtime'ları tarafından da belirli ses modeli mimarileri için desteklenebilir. Bu evrensel uyumluluk anlamına gelmez: whisper.cpp GGML kullanır; ufakzeka-kulak GGUF dosyası Parakeet.cpp için hazırlanmıştır. Her model/runtime biçim eşleşmesi ayrı doğrulanır.
 - Diarization embedding'leri, metin arama/semantic retrieval embedding'leriyle aynı amaçta değildir. Bu vektörler gerçek kişi kimliği veya kayıtlar arasında kişi eşleştirme için kullanılmaz.
 - Rapor dil kontrolü veya alan eşleme gibi LLM yardımları ileride ayrı bir deney olarak değerlendirilebilir; ASR ve anotasyon benchmark'ıyla aynı skor hattına konmaz.
 - İlk benchmark için LLM, RAG veya genel metin embedding motoru zorunlu bağımlılık değildir.
@@ -192,6 +193,7 @@ RAM ile VRAM ayrı gösterilir. Model dosyasının disk boyutu RAM ihtiyacı ola
 3. CPU koşusu ve varsa desteklenen GPU koşusu.
 4. Tekrarlı koşularla WER/CER, kritik hata, RTF, tepe RAM/VRAM, soğuk/sıcak yükleme.
 5. JSON sonuç kaydı ve karşılaştırma tablosu.
+6. Sonraki küçük model kıyası: ufakzeka-kulak için Parakeet.cpp GGUF q8_0 ve sherpa-onnx INT8; lisansı doğrulanırsa Turkish STT 66M v2; Uran STT Base düşük öncelikli taban çizgisi.
 
 TurkMedSTT M1, diarization, WhisperX alignment ve sherpa-onnx ikinci aşamada eklenir. İlk PoC başarıyla çalışmadan MİHENK'e runtime paketleme kararı verilmez.
 
