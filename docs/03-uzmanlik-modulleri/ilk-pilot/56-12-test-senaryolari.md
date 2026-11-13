@@ -12,6 +12,8 @@ Her senaryonun çalıştırma kaydı ayrı tutulmalıdır. Bir senaryonun “ge�
 
 ## 2. Öncelik ve veri sınıfları
 
+> **Minimum pilot notu:** Bu katalog geniş regresyon ve ileri araştırma senaryolarını da içerir; 48 senaryonun tamamı ilk sürüm şartı değildir. İlk pilot için yalnızca 12 gruplanmış kabul kapısı zorunludur. Kapsam ve senaryo eşlemesi [56.12 Minimum Sürüm Kapsamı](56-12-minimum-surum-kapsami.md) belgesinde tek kaynak olarak tutulur.
+
 ### Öncelik
 
 - **P0 – Kritik:** Orijinal materyal, görev yalıtımı, ağsız çalışma, izlenebilirlik ve uzman onayı.
