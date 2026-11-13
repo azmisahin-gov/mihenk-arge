@@ -93,12 +93,15 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 ### 3.5 TurkASR-Bench
 
 - Kaynak: [TurkASR-Bench veri kartı](https://huggingface.co/datasets/yagmurtuncer/turkasr-bench) ve [kaynak lisans tablosu](https://huggingface.co/datasets/yagmurtuncer/turkasr-bench/blob/main/LICENSE.md).
-- Veri kartı yaklaşık 5.200 ifade, 7 kaynak, 16 kHz FLAC ve hem ham hem normalize metin bilgisi veriyor.
+- Veri kartı 5.200 ifade, 7 kaynak ve 14,7 saat bildirir; sesler 16 kHz mono FLAC olarak standartlaştırılmıştır. Her kaynaktan 743 örnek seçilmek üzere 5.201 satır hazırlanmış, boş sesli bir Real-TurnTurk örneği çıkarılmıştır: sonuçta altı kaynakta 743, Real-TurnTurk'te 742, toplamda 5.200 örnek vardır.
+- Bu seti kullanan Turkish ASR Leaderboard, 19 açık modeli aynı test seti ve ana sayı-yazıyla normalizasyonunda karşılaştırır. Liderlik tablosu, TurkMedSTT için genel WER/CER %12,39/%5,79; Whisper Large v3 için %12,83/%7,04; Turbo için %12,92/%6,91; Qwen3-ASR-1.7B için %15,85/%7,15 raporlar. Real-TurnTurk alt kümesinde bu modellerin WER'i sırasıyla %55,16, %55,93, %56,57 ve %57,99'dur. Bu bulgu doğal diyalog zorluğunu gösterir; MİHENK sonucu veya RAM/hız ölçümü değildir.
 - Lisans mixed-per-source; her örnek kendi kaynağının lisansını taşır.
 - Erişim için veri kartındaki koşulları kabul etmek gerekir. Kart, araştırma/değerlendirme amacını ve konuşmacı kimliğini belirlememe şartını bildiriyor.
 - Alt kaynaklar arasında CC0-1.0, CC BY 4.0, CC BY-NC-SA 3.0 ve GPL-3.0 gibi farklı şartlar yer alıyor.
 - Kaynak lisans dosyasında Real-TurnTurk alt kümesi CC BY 4.0 olarak görünürken özgün Real-TurnTurk veri kartı Apache 2.0 göstermektedir. Bu fark açıklığa kavuşmadan bu alt küme kullanıma uygun sayılmaz.
 - Veri kartındaki yaklaşık toplam örnek sayısı ile kaynakların alt küme dökümü yerel erişimde tekrar doğrulanmalıdır.
+
+- Liderlik tablosu, modellerin tek Apple Silicon dizüstünde çalıştırıldığını ve hız sıralaması yayımlanmadığını belirtir; bu nedenle harici WER/CER sonuçlarından donanım performansı çıkarılmaz.
 
 **Ön karar:** Tek bir serbest lisanslı test paketi gibi kullanılamaz. Kullanılacaksa her satırın license alanına göre filtrelenir, kaynak lisansı korunur, kısıtlı/uyuşmayan alt kümeler dışarıda bırakılır ve veri erişim şartları kabul edilir.
 
