@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.0 — 13.11.2026
+
+- 56.12 modülü için görevlendirmeden teslim paketine kadar uçtan uca teknik iş akışı taslağı eklendi.
+- Orijinal materyal/türev çalışma kopyası ayrımı, hash doğrulaması, ses envanteri, yerel ASR, isteğe bağlı diarization, uzman incelemesi, rapor ve teslim kapıları tanımlandı.
+- 56.12 ile 56.11 kapsam sınırları ve otomatik sistemlerin uzman kanaati üretemeyeceği ilkesi netleştirildi.
+- SWGDE ses delili ve dijital ses iyileştirme rehberleri teknik kaynak olarak eklendi; Türkiye'de bağlayıcı mevzuat olmadıkları belirtildi.
+
 ## 0.8.0 — 13.11.2026
 
 - Adalet Bakanlığı/UYAP'ın resmî Doküman Editörü, Adalet e-İmza ve Bilirkişi Portal araçları kaynaklarıyla ayrıştırıldı.
