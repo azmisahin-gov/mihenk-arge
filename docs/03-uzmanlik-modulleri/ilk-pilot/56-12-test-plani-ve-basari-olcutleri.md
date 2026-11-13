@@ -4,6 +4,8 @@
 > **Tarih:** 13 Kasım 2026  
 > **İlişkili belgeler:** [56.12 uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [veri kümeleri kaydı](56-12-veri-kumesi-kayitlari.md), [transkripsiyon anotasyon kuralları](56-12-transkripsiyon-anotasyon-kurallari.md), [veri kümesi manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json), [ilk benchmark koşu matrisi](56-12-benchmark-kosu-matrisi.md)
 
+> **Kapsam önceliği:** Bu belge ayrıntılı araştırma/test referansıdır. İlk ürün sürümü için zorunlu işlevler ve yalnızca 12 kabul kapısı [56.12 Minimum Sürüm Kapsamı](56-12-minimum-surum-kapsami.md) belgesinde daraltılmıştır. Aşağıdaki tüm test ve model araştırmaları MVP için zorunlu kabul edilmemelidir.
+
 ## 1. Amaç
 
 Bu plan, MİHENK 56.12 modülünün ses dosyası kabulünden uzman tarafından doğrulanmış transkript ve rapor taslağına kadar olan işlevlerini tekrarlanabilir testlerle değerlendirmek için hazırlanmıştır.
