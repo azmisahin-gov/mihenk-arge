@@ -1,0 +1,46 @@
+{
+  "annotation_schema_version": "1.0",
+  "recording_id": "SYN-ORNEK-0001",
+  "source_audio_sha256": null,
+  "annotation_policy_version": "56.12-TR-ANOT-0.1",
+  "timebase": "milliseconds-from-source-recording-start",
+  "language": "tr",
+  "segments": [
+    {
+      "segment_id": "SEG-0001",
+      "start_ms": 0,
+      "end_ms": 2100,
+      "channel_id": "CH-01",
+      "speaker_label": "SPK-01",
+      "segment_type": "speech",
+      "intelligibility": "clear",
+      "text_verbatim": "Bugün saat üçte başlayacak.",
+      "overlap_group_id": null,
+      "tags": [],
+      "annotator_id": "ANON-ANNOTATOR-01",
+      "adjudication_status": "adjudicated"
+    },
+    {
+      "segment_id": "SEG-0002",
+      "start_ms": 2100,
+      "end_ms": 2700,
+      "channel_id": "CH-01",
+      "speaker_label": null,
+      "segment_type": "unintelligible_speech",
+      "intelligibility": "unintelligible",
+      "text_verbatim": null,
+      "overlap_group_id": null,
+      "tags": ["manual-review"],
+      "annotator_id": "ANON-ANNOTATOR-01",
+      "adjudication_status": "pending"
+    }
+  ],
+  "normalization_profile": "WER-TR-1",
+  "reference_status": "draft",
+  "adjudication": {
+    "required": true,
+    "completed": false,
+    "adjudicator_id": null,
+    "notes": []
+  }
+}
