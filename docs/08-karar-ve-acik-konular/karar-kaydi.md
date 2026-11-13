@@ -37,3 +37,5 @@
 
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.
+
+| ADR-031 | 13.11.2026 | Gerçek vaka verisinden önce şifreli yerel görev kasası zorunludur; ilk teknik tasarımda parola ile korunan rastgele kasa anahtarı, şifreli görev metaverisi ve rastgele erişimli doğrulanmış ses blokları değerlendirilir | Otomatik kayıt tek başına yeterli değildir; disk üzerinde açık ses/transkript, kesintiyle bozulma ve yedekten kurtarılamama riski kapatılmalıdır. Kriptografi bileşenleri ile özel dosya biçimi ayrı güvenlik testinden geçmeden üretim kararı verilemez | Taslak / güvenlik incelemesi bekliyor |
