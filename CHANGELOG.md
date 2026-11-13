@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.4 — 13.11.2026
+
+- Common Voice Spontaneous Speech 5.0 Türkçe veri kümesi doğal yanıt konuşması adayı olarak eklendi; 54 klip, 13 konuşmacı ve atanmamış split nedeniyle yalnız keşifsel kontrol olarak sınırlandı.
+- IARPA Babel Turkish telefon konuşması paketi, LDC lisans/ücret koşulları ve 8 kHz A-law özellikleriyle kaydedildi.
+- SpeechDataAI ticari Türkçe diyalog verisi ve SesMetin-v2 sentetik TTS kümesi ayrı kullanım kategorileri olarak belgelendi.
+- Açık, kısıtlı, ticari ve sentetik veri kaynaklarının birbirinin yerine geçemeyeceği açıklandı; test planı güncellendi.
+
 ## 0.9.3 — 13.11.2026
 
 - 56.12 Türkçe test veri kaynakları; split, lisans, kullanım kısıtları ve veri yapısı açısından ayrı ayrı kaydedildi.
