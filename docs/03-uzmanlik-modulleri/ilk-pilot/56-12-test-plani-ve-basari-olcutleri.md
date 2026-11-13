@@ -2,7 +2,7 @@
 
 > **Durum:** Test tasarımı; henüz model/ürün kabul eşiği veya üretim kararı değildir  
 > **Tarih:** 13 Kasım 2026  
-> **İlişkili belge:** [56.12 uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md)
+> **İlişkili belgeler:** [56.12 uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [veri kümeleri kaydı](56-12-veri-kumesi-kayitlari.md), [transkripsiyon anotasyon kuralları](56-12-transkripsiyon-anotasyon-kurallari.md), [veri kümesi manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json)
 
 ## 1. Amaç
 
@@ -31,14 +31,16 @@ Tek bir WER puanı, modelin adli doğruluğunu, kaydın özgünlüğünü veya b
 
 ## 3. Test veri kümeleri ve lisans incelemesi
 
+Kaynak bazında güncel inceleme, kısıtlar ve ön kullanım kararları [56.12 Türkçe Test Veri Kümeleri Kaydı](56-12-veri-kumesi-kayitlari.md) belgesinde tutulur. Her indirilen sürüm için [manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json) doldurulur; kaynak sayfasının güncel lisansına erişim anında yeniden bakılır.
+
 ### 3.1 İlk araştırmada bulunan kaynaklar
 
 | Kaynak | Konuşma türü / kullanım | Yayımlanan lisans bilgisi | Testte önerilen rol ve sınırlama |
 |---|---|---|---|
 | Mozilla Common Voice Turkish 27.0 | Gönüllülerin okuduğu Türkçe cümleler | Mozilla Data Collective sayfasında CC0-1.0 | Genel ASR başlangıç testi; okuma konuşması doğal diyalog yerine geçmez. Konuşmacıyı tanımlamaya çalışma yapılmaz. |
-| Google FLEURS – tr_tr | Çok dilli, çoğunlukla kontrollü/okunmuş konuşma | Hugging Face veri sayfasında CC BY 4.0 | Temiz ve kontrollü konuşma karşılaştırması; atıf ve lisans koşulları korunur. |
-| MediaSpeech – Türkçe | Yayın/medya konuşmasından kısa kesitler; veri kartı yaklaşık 10 saat Türkçe içerik bildirir | Veri kartında CC BY 4.0 | Yayın tarzı konuşma için aday; kaynak video/ses hakları ve veri kartı koşulları ayrıca incelenmeden dağıtıma veya ticari ürüne dahil edilmez. |
-| Real-TurnTurk | Altı doğal, iki kişilik Türkçe görüşme; katılımcılar ayrı ses kanalında, zaman hizalı transkript ve konuşma etkinliği etiketleri var | Kaynak veri deposunda Apache 2.0 | Diyalog, zaman hizası ve konuşma etkinliği için sınırlı aday. Ayrı mikrofon kanalları gerçek tek-kanal diarization karışımı değildir. Kaynağın sınırlı konuşmacı/oturum sayısı genellemeyi kısıtlar. |
+| Google FLEURS – tr_tr | Çok dilli, kontrollü/okunmuş konuşma; veri kartında Türkçe train 2.526, validation 338, test 743 örnek | CC BY 4.0 | Temel ASR karşılaştırması için önerilen aday; test split'i sabitlenir, atıf koşulu korunur. |
+| MediaSpeech – Türkçe | Kaynak README dört dil için 10'ar saat bildiriyor ve tr yapılandırmasını listeliyor; görünür güncel kart dili/önizlemesi Türkçe alt kümeyi açıkça göstermiyor | Veri kartında CC BY 4.0 | Yayın tarzı konuşma için beklemede; Türkçe erişim ve kaynak medya hakları doğrulanmadan ana test setine alınmaz. |
+| Real-TurnTurk | Altı doğal diyalog; altı konuşmacı ve konuşmacı başına izole ses kanalları; zamanlı transkript | Özgün veri kartında Apache 2.0; TurkASR-Bench lisans listesinde farklı kayıt var | Zaman/konuşma sırası için keşifsel kaynak; ayrı kanallar mono diarization testi değildir. Kişi eşleştirmesi ve görsel öznitelikler kullanılmaz. |
 | TurkASR-Bench | Yedi kaynaktan 5.200 ifade / 14,7 saat; kaynak ağırlıklı dengeli Türkçe ASR testi | mixed-per-source; her örneğin lisansı kaynak bazında | Hazır karşılaştırma için güçlü aday; erişim koşulları, her alt kümenin lisansı ve referans kalitesi incelenmeden tek bir serbest lisanslı paket gibi kullanılamaz. |
 
 ### 3.2 Lisans ve veri kökeni uyarıları
@@ -69,6 +71,8 @@ Tek bir WER puanı, modelin adli doğruluğunu, kaydın özgünlüğünü veya b
 Sesler ve referans transkriptleri gerekiyorsa araştırma deposundan ayrı, şifreli ve erişim kontrollü yerel test alanında tutulur.
 
 ## 4. İnsan referans transkripti ve anotasyon protokolü
+
+Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json) kullanılır.
 
 WER/CER için referans metin, model çıktısından bağımsız hazırlanmalıdır.
 
