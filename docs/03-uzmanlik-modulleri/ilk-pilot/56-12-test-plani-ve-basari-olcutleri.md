@@ -31,6 +31,8 @@ Tek bir WER puanı, modelin adli doğruluğunu, kaydın özgünlüğünü veya b
 
 ## 3. Test veri kümeleri ve lisans incelemesi
 
+Açık veri kaynaklarının kapsamadığı doğal okuma, serbest konuşma ve aynı miks içinde örtüşen konuşmacı testleri için gönüllü kayıt düzeni, kurgusal Türkçe cümle seti ve kontrollü kayıt koşulları [56.12 Kontrollü Ses Kayıt Protokolü](56-12-kontrollu-ses-kayit-protokolu.md) belgesinde tanımlanmıştır. Henüz gerçek gönüllü kaydı alınmamıştır.
+
 Kaynak bazında güncel inceleme, kısıtlar ve ön kullanım kararları [56.12 Türkçe Test Veri Kümeleri Kaydı](56-12-veri-kumesi-kayitlari.md) belgesinde tutulur. Her indirilen sürüm için [manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json) doldurulur; kaynak sayfasının güncel lisansına erişim anında yeniden bakılır.
 
 ### 3.1 İlk araştırmada bulunan kaynaklar
@@ -78,7 +80,7 @@ Sesler ve referans transkriptleri gerekiyorsa araştırma deposundan ayrı, şif
 
 ## 4. İnsan referans transkripti ve anotasyon protokolü
 
-Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json) kullanılır.
+Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json), [kontrollü ses kayıt protokolü](56-12-kontrollu-ses-kayit-protokolu.md) kullanılır.
 
 WER/CER için referans metin, model çıktısından bağımsız hazırlanmalıdır.
 
