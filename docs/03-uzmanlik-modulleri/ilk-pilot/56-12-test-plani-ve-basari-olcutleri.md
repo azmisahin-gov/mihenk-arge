@@ -2,7 +2,7 @@
 
 > **Durum:** Test tasarımı; henüz model/ürün kabul eşiği veya üretim kararı değildir  
 > **Tarih:** 13 Kasım 2026  
-> **İlişkili belgeler:** [56.12 uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [veri kümeleri kaydı](56-12-veri-kumesi-kayitlari.md), [transkripsiyon anotasyon kuralları](56-12-transkripsiyon-anotasyon-kurallari.md), [veri kümesi manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json)
+> **İlişkili belgeler:** [56.12 uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [veri kümeleri kaydı](56-12-veri-kumesi-kayitlari.md), [transkripsiyon anotasyon kuralları](56-12-transkripsiyon-anotasyon-kurallari.md), [veri kümesi manifest şablonu](56-12-veri-kumesi-manifest-sablonu.json), [ilk benchmark koşu matrisi](56-12-benchmark-kosu-matrisi.md)
 
 ## 1. Amaç
 
@@ -45,8 +45,7 @@ Kaynak bazında güncel inceleme, kısıtlar ve ön kullanım kararları [56.12 
 | Real-TurnTurk | Altı doğal diyalog; altı konuşmacı ve konuşmacı başına izole ses kanalları; zamanlı transkript | Özgün veri kartında Apache 2.0; TurkASR-Bench lisans listesinde farklı kayıt var | Zaman/konuşma sırası için keşifsel kaynak; ayrı kanallar mono diarization testi değildir. Kişi eşleştirmesi ve görsel öznitelikler kullanılmaz. |
 | TurkASR-Bench | Yedi kaynaktan 5.200 ifade / 14,7 saat; kaynak ağırlıklı dengeli Türkçe ASR testi | mixed-per-source; her örneğin lisansı kaynak bazında | Hazır karşılaştırma için güçlü aday; erişim koşulları, her alt kümenin lisansı ve referans kalitesi incelenmeden tek bir serbest lisanslı paket gibi kullanılamaz. |
 
-#| Common Voice Spontaneous Speech Turkish 5.0 | Sorulara verilen doğal/serbest yanıtlar; kaynak kartında 54 klip / 13 konuşmacı / 0,28 saat, yalnız 41 doğrulanmış klip | CC0-1.0; konuşmacı kimliğini belirleme ve yeniden barındırma/paylaşma yasak | Doğal tek konuşmacılı konuşma için küçük keşifsel kontrol; split atanmamış ve ana benchmark olamaz. |
-| MediaSpeech – Türkçe | Medya konuşması; kaynak README Türkçe yapılandırmasını listeliyor fakat güncel görünür kart/önizleme bunu açıkça göstermiyor | CC BY 4.0 | Türkçe alt küme ve kaynak hakları doğrulanana kadar beklemede. |
+| Common Voice Spontaneous Speech Turkish 5.0 | Sorulara verilen doğal/serbest yanıtlar; kaynak kartında 54 klip / 13 konuşmacı / 0,28 saat, yalnız 41 doğrulanmış klip | CC0-1.0; konuşmacı kimliğini belirleme ve yeniden barındırma/paylaşma yasak | Doğal tek konuşmacılı konuşma için küçük keşifsel kontrol; split atanmamış ve ana benchmark olamaz. |
 | IARPA Babel Turkish | Yaklaşık 213 saat telefon konuşması ve senaryolu telefon konuşması; 8 kHz / 8-bit A-law | LDC üzerinden ücretli ve amaca göre değişen sözleşme | Telefon kalitesi testi için gelecekte ücretli aday. |
 | SpeechDataAI Turkish Conversational Speech | Sağlayıcı beyanı: 2.000 saat, 200 konuşmacı, iki kanal | Ticari lisans; ses dosyaları HF üzerinde barındırılmıyor | Yalnız gelecekteki ücretli tedarik seçeneği; numune/sözleşme/rıza doğrulaması gerekir. |
 | SesMetin-v2 | TTS ile oluşturulmuş sentetik Türkçe konuşma; telephony/ITN odaklı | Apache 2.0 olarak listelenmiş | Yazılım regresyonu için yardımcı; insan konuşması benchmark'ı değildir. |
@@ -165,6 +164,8 @@ Her test örneği birden fazla etiket taşıyabilir. Veri kümesinin temsil etme
 Test raporu yalnız toplam skoru değil, bu alt gruplardaki hata dağılımını da sunmalıdır. Bir model temiz okuma konuşmasında iyi sonuç verip doğal konuşmada başarısız olabilir; gruplar tek ortalama altında gizlenmemelidir.
 
 ## 6. ASR karşılaştırma protokolü
+
+Adayların aynı veri/split üzerinde hangi sırayla, hangi model/runtime kombinasyonlarıyla ve hangi donanım ölçümleriyle karşılaştırılacağı [56.12 İlk Benchmark Koşu Matrisi](56-12-benchmark-kosu-matrisi.md) belgesinde sabitlenmiştir. Bu matris de henüz çalıştırılmış benchmark sonucu değildir.
 
 ASR model/runtime uyumluluğu ve ayrı motor görevleri için [56.12 motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md) temel teknik başvuru belgesidir. whisper.cpp'nin GGML biçimi kullandığı, faster-whisper/CTranslate2'nin farklı model dönüştürme ve compute türleri istediği unutulmamalıdır; GGUF tüm ses modellerine uygulanabilen evrensel biçim değildir.
 
