@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.5 — 13.11.2026
+
+- 56.12 kontrollü ses kayıt protokolü ve kurgusal Türkçe okuma/doğal diyalog metin seti eklendi.
+- Gönüllü rızası, anonim etiketleme, gerçek tek-miks konuşmacı ayrımı girdisi ve ayrı referans mikrofon/kanal yaklaşımı tanımlandı.
+- Ana kayıt ile türev gürültü/telefon/codec örnekleri ayrıştırıldı; henüz gerçek gönüllü kaydı alınmadığı açıklandı.
+- Test planı ve veri kümesi kaydı kontrollü ses protokolüne bağlandı.
+
 ## 0.9.4 — 13.11.2026
 
 - Common Voice Spontaneous Speech 5.0 Türkçe veri kümesi doğal yanıt konuşması adayı olarak eklendi; 54 klip, 13 konuşmacı ve atanmamış split nedeniyle yalnız keşifsel kontrol olarak sınırlandı.
