@@ -80,7 +80,7 @@ Sesler ve referans transkriptleri gerekiyorsa araştırma deposundan ayrı, şif
 
 ## 4. İnsan referans transkripti ve anotasyon protokolü
 
-Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json), [kontrollü ses kayıt protokolü](56-12-kontrollu-ses-kayit-protokolu.md), [motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md) kullanılır.
+Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json), [kontrollü ses kayıt protokolü](56-12-kontrollu-ses-kayit-protokolu.md), [motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md), [yerel benchmark düzeneği tasarımı](56-12-yerel-benchmark-harness-tasarimi.md), [test koşusu JSON şablonu](56-12-test-kosu-kaydi-sablonu.json) kullanılır.
 
 WER/CER için referans metin, model çıktısından bağımsız hazırlanmalıdır.
 
@@ -162,6 +162,8 @@ Model ve çalışma zamanı birbirinden ayrı test nesneleridir. Her model yaln�
 GGUF, GGML, ONNX veya başka bir model paketi/çalışma zamanı biçimi genel olarak her model mimarisine uygulanabilir kabul edilmez. Özellikle GGUF dönüşümü, model mimarisi ve kullanılan çıkarım motoru bunu destekliyorsa ayrı bir uyumluluk testi olarak yapılır.
 
 ### 6.2 İki ayrı karşılaştırma
+
+Aynı modelin runtime/quantization karşılaştırması ve test koşusu kayıt alanları için [yerel benchmark düzeneği tasarımı](56-12-yerel-benchmark-harness-tasarimi.md) ile [test koşusu JSON şablonu](56-12-test-kosu-kaydi-sablonu.json) referans alınır. RUN-001 senaryosu bu karşılaştırmanın tekrar üretilebilir olmasını kontrol eder.
 
 **A. Model kalite karşılaştırması**
 - Her model, belgelenmiş referans çalışma zamanında ve desteklenen önerilen ayarlarda çalıştırılır.
