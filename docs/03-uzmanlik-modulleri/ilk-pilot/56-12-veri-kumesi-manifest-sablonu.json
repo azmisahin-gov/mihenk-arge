@@ -1,0 +1,70 @@
+{
+  "manifest_schema_version": "1.0",
+  "recording_or_dataset_id": "DATASET-ANON-001",
+  "dataset_name": "Veri kümesi adı",
+  "source_url": "https://example.invalid/dataset",
+  "source_owner": "Kaynak sahibi",
+  "source_version": "Sürüm veya release",
+  "source_commit": null,
+  "accessed_at": "YYYY-MM-DD",
+  "language": "tr",
+  "locale_or_config": null,
+  "split": "test",
+  "task": "automatic-speech-recognition",
+  "license": {
+    "identifier": null,
+    "source_license_url": null,
+    "per_item_license": false,
+    "license_status": "pending-review",
+    "additional_terms": []
+  },
+  "usage": {
+    "intended_purpose": "evaluation",
+    "commercial_use_reviewed": false,
+    "redistribution_allowed": false,
+    "speaker_identity_inference_allowed": false,
+    "conditions": []
+  },
+  "contents": {
+    "sample_count": null,
+    "duration_seconds": null,
+    "audio_format": null,
+    "codec": null,
+    "sample_rate_hz": null,
+    "channels": null,
+    "transcript_available": false,
+    "speaker_annotations_available": false,
+    "overlap_annotations_available": false
+  },
+  "local_snapshot": {
+    "downloaded": false,
+    "archive_sha256": null,
+    "file_manifest_path": null,
+    "local_storage_location": null
+  },
+  "annotation": {
+    "reference_policy_version": null,
+    "human_reviewed": false,
+    "annotator_count": 0,
+    "adjudicated": false
+  },
+  "leakage_review": {
+    "model_training_overlap_checked": false,
+    "speaker_split_checked": false,
+    "session_split_checked": false,
+    "known_overlap_or_unknowns": []
+  },
+  "privacy_review": {
+    "personal_data_reviewed": false,
+    "speaker_reidentification_prohibited_by_project": true,
+    "visual_features_excluded": true
+  },
+  "decision": {
+    "status": "pending",
+    "approved_for_local_test": false,
+    "approved_for_public_redistribution": false,
+    "reviewer_role": null,
+    "reviewed_at": null,
+    "notes": []
+  }
+}
