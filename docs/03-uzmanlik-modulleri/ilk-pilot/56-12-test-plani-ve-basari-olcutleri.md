@@ -80,7 +80,7 @@ Sesler ve referans transkriptleri gerekiyorsa araştırma deposundan ayrı, şif
 
 ## 4. İnsan referans transkripti ve anotasyon protokolü
 
-Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json), [kontrollü ses kayıt protokolü](56-12-kontrollu-ses-kayit-protokolu.md) kullanılır.
+Türkçe sözcüğü sözcüğüne yazım, belirsizlik, örtüşme, anonim konuşmacı etiketleri ve WER normalizasyonunun ayrıntılı önerisi [56.12 Türkçe Transkripsiyon ve Anotasyon Kuralları](56-12-transkripsiyon-anotasyon-kurallari.md) belgesindedir. Makinece okunur örnek için [anotasyon kaydı şablonu](56-12-anotasyon-kaydi-sablonu.json), [kontrollü ses kayıt protokolü](56-12-kontrollu-ses-kayit-protokolu.md), [motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md) kullanılır.
 
 WER/CER için referans metin, model çıktısından bağımsız hazırlanmalıdır.
 
@@ -146,6 +146,8 @@ Her test örneği birden fazla etiket taşıyabilir. Veri kümesinin temsil etme
 Test raporu yalnız toplam skoru değil, bu alt gruplardaki hata dağılımını da sunmalıdır. Bir model temiz okuma konuşmasında iyi sonuç verip doğal konuşmada başarısız olabilir; gruplar tek ortalama altında gizlenmemelidir.
 
 ## 6. ASR karşılaştırma protokolü
+
+ASR model/runtime uyumluluğu ve ayrı motor görevleri için [56.12 motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md) temel teknik başvuru belgesidir. whisper.cpp'nin GGML biçimi kullandığı, faster-whisper/CTranslate2'nin farklı model dönüştürme ve compute türleri istediği unutulmamalıdır; GGUF tüm ses modellerine uygulanabilen evrensel biçim değildir.
 
 ### 6.1 Adaylar ve çalışma zamanı
 
@@ -240,7 +242,16 @@ Real-TurnTurk'te iki katılımcı ayrı kanal kaydettiği için konuşmacı atam
 
 Konuşmacı ayrımı hiçbir aşamada gerçek kişi kimliğini, yaşını, cinsiyetini veya biyometrik özelliklerini belirleme testi değildir.
 
-## 8. Ses ön işleme ve iyileştirme testleri
+## 8. VAD ve forced alignment testleri
+
+VAD ve forced alignment ASR'nin kendisi değildir:
+- VAD konuşma aralıklarını tahmin eder. Kısa, kısık, fısıltı veya gürültü içindeki konuşmayı dışarıda bırakıp bırakmadığı test edilir. Her çıkarılan kesit kaynak ses ofsetine, padding bilgisine ve türev işlem kaydına bağlanır.
+- Forced alignment önceden verilmiş metni sese hizalar. Yanlış metni de hizalayabilir; bu nedenle doğruluk kapısı değildir. Yalnızca uzman tarafından incelenmiş metne zaman önerisi vermek için kullanılabilir.
+- Hizalanamayan Türkçe sayı, kısaltma, özel ad ve sözlük dışı karakterler görünür istisna olarak kalır; zorla zaman damgası üretilmez.
+
+Bu işlevlere ait senaryolar [test senaryoları kataloğunda](56-12-test-senaryolari.md) VAD-001, ALIGN-001 ve ALIGN-002 olarak tanımlanmıştır.
+
+## 9. Ses ön işleme ve iyileştirme testleri
 
 Filtreleme, gürültü azaltma, de-reverberation, kanal ayırma, source separation veya time-stretch ASR'nin zorunlu varsayılan adımları yapılmamalıdır. Her yöntem ayrı kontrollü deney olarak ele alınır.
 
@@ -254,7 +265,7 @@ Her deneyde:
 
 Sadece WER iyileşti diye işlem kabul edilmez; iyileştirme bir konuşma sesini veya önemli fonetik ayrıntıyı silebilir. Kör dinleme ve orijinalle karşılaştırma uzman değerlendirmesinin parçasıdır. SWGDE'nin dijital ses iyileştirme rehberi, işlemlerin tekrarlanabilir belgelenmesini, girdi/çıktı karşılaştırmasını ve aşırı işlemeden kaçınmayı vurgular.
 
-## 9. Performans, bellek ve kararlılık testleri
+## 10. Performans, bellek ve kararlılık testleri
 
 ### 9.1 Donanım/ortam manifesti
 
@@ -293,7 +304,7 @@ Soğuk başlatma ve model bellekteyken sıcak çalıştırma ayrı ölçülür. 
 - Chunk sınırında kelime atlama/tekrar, timestamp offset, bağlam kopması, sıranın bozulması ve kısmi dosya hatası ayrıca incelenir.
 - İşlem iptali, uygulama kapanması, sistem yeniden başlatma ve disk alanı dolması sonrası kurtarma sınanır.
 
-## 10. Güvenlik ve mahremiyet testleri
+## 11. Güvenlik ve mahremiyet testleri
 
 - Test sırasında ağ erişimi kapatıldığında ASR ve tüm yerel yardımcı işlemler çalışmaya devam edebilmeli.
 - Dosyanın dış ağa gönderilmediği ağ/işlem izleme ile doğrulanmalı.
@@ -304,7 +315,7 @@ Soğuk başlatma ve model bellekteyken sıcak çalıştırma ayrı ölçülür. 
 - Test bittiğinde geçici kopyaların saklama/imha politikası uygulanmalı.
 - Kullanım koşulu konuşmacı kimliği tespitini yasaklayan veri kümelerinde, kimliklendirme veya kişi eşleştirme deneyi yapılmamalı.
 
-## 11. Uzman iş akışı ve kullanılabilirlik testi
+## 12. Uzman iş akışı ve kullanılabilirlik testi
 
 Test, yalnız motor puanını değil gerçek iş yükünü ölçmelidir.
 
@@ -324,7 +335,7 @@ Kaydedilecek ölçümler:
 
 B-01 tek kullanıcı gözlemidir; ilk kullanılabilirlik geri bildirimi olarak değerlendirilir, genel kullanıcı kabulü veya istatistiksel temsil olarak sunulmaz. Eşikler ve kullanılabilirlik sonucu başka bilirkişilerle doğrulanmalıdır.
 
-## 12. Deney aşamaları
+## 13. Deney aşamaları
 
 | Aşama | İçerik | Çıkış ölçütü |
 |---|---|---|
@@ -337,7 +348,7 @@ B-01 tek kullanıcı gözlemidir; ilk kullanılabilirlik geri bildirimi olarak d
 
 Bu aşamalar veri kaynaklarının uygunluğu ve test altyapısı hazır oldukça yürütülür. Aşamaların tamamlanması, otomatik transkripsiyonu tek başına nihai rapor üretmeye yetkili kılmaz.
 
-## 13. Kabul kapıları ve karar yöntemi
+## 14. Kabul kapıları ve karar yöntemi
 
 Aday model/runtime ancak aşağıdaki kapıların tümünden geçerse pilot dağıtım adayı olabilir:
 
@@ -351,7 +362,7 @@ Aday model/runtime ancak aşağıdaki kapıların tümünden geçerse pilot dağ
 
 Şimdilik sayısal WER/DER/RTF veya RAM kabul eşiği belirlenmemiştir. Eşikler; test seti, donanım hedefi, kritik hata riski ve uzman görüşü ortaya çıktıktan sonra karar kaydıyla belirlenecektir. Model sıralaması tek bir ortalama puana indirgenmeyecek; doğruluk, kritik hata, hız, bellek, kararlılık ve lisans ayrı sütunlarda değerlendirilecektir.
 
-## 14. Test raporu şablonu
+## 15. Test raporu şablonu
 
 Her test koşusu şu alanları içermelidir:
 
@@ -368,7 +379,7 @@ Her test koşusu şu alanları içermelidir:
 - İnsan düzeltme süresi ve uzman değerlendirmesi.
 - Bilinen kısıtlar, beklenmeyen durumlar ve karar önerisi.
 
-## 15. Açık kararlar
+## 16. Açık kararlar
 
 1. 56.12 için sözcüğü sözcüğüne transkripsiyon ve okunabilir rapor biçimi arasındaki kural.
 2. Anotasyon ve belirsiz bölüm gösterim standardı.
@@ -380,7 +391,7 @@ Her test koşusu şu alanları içermelidir:
 8. Whisper.cpp dışındaki model runtime'larının MİHENK paketine dahil edilme koşulları.
 9. GGUF/ONNX gibi dönüştürülmüş model biçimlerinin doğruluk ve dağıtım test gereksinimleri.
 
-## 16. Kaynaklar
+## 17. Kaynaklar
 
 - [Mozilla Common Voice veri kümesi kataloğu](https://commonvoice.mozilla.org/bas/datasets) – güncel Türkçe veri sürümü ve CC0-1.0 bilgisi.
 - [Google FLEURS veri kümesi](https://huggingface.co/datasets/google/fleurs) – tr_tr bölümü ve CC BY 4.0.
