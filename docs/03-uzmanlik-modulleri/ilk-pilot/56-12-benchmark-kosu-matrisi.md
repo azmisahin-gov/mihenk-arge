@@ -8,7 +8,7 @@
 
 İlk sürüm için amaç, çok sayıda modeli ve donanım kombinasyonunu yarıştırmak değil; **bir yerel transkripsiyon akışının gerçek uzman işini azaltıp azaltmadığını** gösterecek kadar kanıt toplamaktır.
 
-Bu nedenle ilk turda 48 senaryonun tamamı ve tüm motor/runtime araştırması zorunlu değildir. Minimum pilot için yalnızca [12 kabul kapısı](56-12-minimum-surum-kapsami.md#4-minimum-dogrulama--12-kabul-kapisi) uygulanır.
+Bu nedenle ilk turda 48 senaryonun tamamı ve tüm motor/runtime araştırması zorunlu değildir. Minimum pilot için yalnızca [12 kabul kapısı](56-12-minimum-surum-kapsami.md) uygulanır.
 
 ## 2. İlk model denemesi
 
