@@ -2,7 +2,7 @@
 
 > **Durum:** İlk test senaryosu kataloğu; çalıştırma sonucu içermez  
 > **Tarih:** 13 Kasım 2026  
-> **İlişkili belgeler:** [Uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md)
+> **İlişkili belgeler:** [Uçtan uca teknik iş akışı](56-12-teknik-is-akisi.md), [Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md), [Motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md)
 
 ## 1. Amaç ve kullanım
 
@@ -100,7 +100,17 @@ Gerçek dosya, dava bilgisi veya kişi verisi senaryo açıklamasına, test gün
 | GUV-003 | P0 | Bozuk/kötü amaçlı medya girdisi | Test için hazırlanmış geçersiz veya sınır durumundaki dosya | Decoder sınırlandırılmış süreçte hata verir; ana uygulama ve diğer görevler etkilenmez. |
 | GUV-004 | P0 | Görevler arası veri yalıtımı | A ve B adlı iki sentetik görev; A'ya özgü işaretleyiciler | A'ya ait ad/metin/dosya/metadata B'nin araması, raporu, cache'i ve çıktısında görünmez. |
 
-### 3.7 Rapor ve uçtan uca görev
+
+### 3.7 VAD, zaman hizalama ve runtime uyumluluğu
+
+| Kimlik | Öncelik | Senaryo | Girdi / ön koşul | Beklenen davranış |
+|---|---|---|---|---|
+| VAD-001 | P1 | Kısa ve düşük sesli konuşmada VAD sınırı | Uzun sessizlik, fısıltı/kısık ses ve kısa sözler içeren sentetik/kontrollü kayıt | VAD'nin çıkardığı aralıklar kaynak zaman ofseti ve padding ile saklanır; kesilmiş olabilecek konuşma açıkça işaretlenir; VAD çıktısı transkript veya konuşmacı ayrımı sayılmaz. |
+| ALIGN-001 | P0 | Yanlış metne forced alignment uygulama | Bilerek hatalı kelime içeren ASR taslağı ve aynı ses | Hizalama motoru zaman önerisi üretse bile metin doğrulanmış sayılmaz; uzman onayı olmadan zaman önerisi rapora kesin delil gibi taşınmaz. |
+| ALIGN-002 | P1 | Türkçe sayı/kısaltma/özel ad hizalaması | Sayı, kısaltma, ekli özel ad ve sözlükte olmayan karakterler içeren referans | Hizalanamayan token ve eksik zaman aralığı görünür kalır; MİHENK yanlış bir zaman damgasını zorla üretmez; ham metin korunur. |
+| RUN-001 | P1 | Aynı Whisper modelinde runtime/quantization karşılaştırması | Aynı temel model sürümünün desteklenen whisper.cpp GGML ve faster-whisper/CTranslate2 varyantları; aynı sabit test split'i | Model/runtime/build/checksum, compute türü ve parametreler kaydedilir; WER/CER, kritik hata, RAM/VRAM ve RTF karşılaştırılır; whisper.cpp için GGUF uyumluluğu varsayılmaz. |
+
+### 3.8 Rapor ve uçtan uca görev
 
 | Kimlik | Öncelik | Senaryo | Girdi / ön koşul | Beklenen davranış |
 |---|---|---|---|---|
@@ -158,7 +168,11 @@ Gerçek vaka kimliği, kişi adı, dosya numarası, mahkeme adı veya gerçek do
 
 İlk yürütmede sayısal performans veya doğruluk eşiği icat edilmez; ölçümler toplanır ve karar kaydına girdi sağlar. Güvenlik ve orijinal bütünlük senaryoları için toleranssız beklenti uygulanır.
 
-## 8. Açık işler
+- [ ] Forced alignment'ın yalnızca zaman önerisi olduğu ve metni doğrulamadığı davranışı test et.
+- [ ] VAD'nin kısa/düşük sesli konuşmayı kesme sınırlarını ölç.
+- [ ] whisper.cpp GGML ile faster-whisper/CTranslate2 runtime karşılaştırmasını sabit model/test koşulunda yap.
+
+## 9. Açık işler
 
 - [ ] Türkçe transkripsiyon anotasyon kurallarını uzman değerlendirmesiyle kesinleştir.
 - [ ] Açık veri kümelerinin güncel lisans ve erişim koşullarını kayda al.
