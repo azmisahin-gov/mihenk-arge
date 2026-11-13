@@ -1,5 +1,13 @@
 # Değişiklik Kaydı
 
+## 0.9.6 — 13.11.2026
+
+- whisper.cpp, faster-whisper/CTranslate2, Transformers/PyTorch, WhisperX, pyannote, sherpa-onnx ve NVIDIA NeMo adaylarının görev, model biçimi, runtime ve lisans sınırları belgelendi.
+- whisper.cpp'nin GGML biçimi kullandığı ve GGUF ile aynı olmadığı; VAD, forced alignment ve diarization işlevlerinin birbirinden farklı olduğu netleştirildi.
+- Türkçe WhisperX hizalama modeli ile İngilizce/deneysel whisper.cpp tinydiarize sınırları kaydedildi.
+- VAD, forced alignment ve runtime/quantization karşılaştırması için 4 yeni test senaryosu eklendi; katalog 48 senaryoya ulaştı.
+- ASR motor araştırması, araçlar/yöntemler, test planı ve manifest yeni uyumluluk belgesiyle ilişkilendirildi.
+
 ## 0.9.5 — 13.11.2026
 
 - 56.12 kontrollü ses kayıt protokolü ve kurgusal Türkçe okuma/doğal diyalog metin seti eklendi.
@@ -40,7 +48,7 @@
 
 - 56.12 modülü için görevlendirmeden teslim paketine kadar uçtan uca teknik iş akışı taslağı eklendi.
 - Orijinal materyal/türev çalışma kopyası ayrımı, hash doğrulaması, ses envanteri, yerel ASR, isteğe bağlı diarization, uzman incelemesi, rapor ve teslim kapıları tanımlandı.
-- 56.12 ile 56.11 kapsam sınırları ve otomatik sistemlerin uzman kanaati üretemeyeceği ilkesi netleştirildi.
+- 56.12 ile 56.11 kapsam sınırları ve otomatik sistemlerin uzman kanaatinin yerine geçemeyeceği ilkesi netleştirildi.
 - SWGDE ses delili ve dijital ses iyileştirme rehberleri teknik kaynak olarak eklendi; Türkiye'de bağlayıcı mevzuat olmadıkları belirtildi.
 
 ## 0.8.0 — 13.11.2026
