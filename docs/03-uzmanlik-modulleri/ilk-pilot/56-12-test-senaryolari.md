@@ -110,7 +110,14 @@ Gerçek dosya, dava bilgisi veya kişi verisi senaryo açıklamasına, test gün
 | ALIGN-002 | P1 | Türkçe sayı/kısaltma/özel ad hizalaması | Sayı, kısaltma, ekli özel ad ve sözlükte olmayan karakterler içeren referans | Hizalanamayan token ve eksik zaman aralığı görünür kalır; MİHENK yanlış bir zaman damgasını zorla üretmez; ham metin korunur. |
 | RUN-001 | P1 | Aynı Whisper modelinde runtime/quantization karşılaştırması | Aynı temel model sürümünün desteklenen whisper.cpp GGML ve faster-whisper/CTranslate2 varyantları; aynı sabit test split'i | Model/runtime/build/checksum, compute türü ve parametreler kaydedilir; WER/CER, kritik hata, RAM/VRAM ve RTF karşılaştırılır; whisper.cpp için GGUF uyumluluğu varsayılmaz. |
 
-### 3.8 Rapor ve uçtan uca görev
+### 3.8 Düşük kaynak ASR ve model biçimi testleri
+
+| Kimlik | Öncelik | Senaryo | Girdi / ön koşul | Beklenen davranış |
+|---|---|---|---|---|
+| ASR-011 | P1 | Türkçe 66M streaming ONNX adayını değerlendirme | Turkish STT 66M v2; özel lisans metni ve yerel kullanım hakkı önceden doğrulanmış olmalı | Lisans doğrulanmadıysa test ENGELLENDİ olarak kalır; izin varsa FLEURS ve doğal konuşma alt kümelerinde WER/CER, RTF, tepe RAM ve streaming gecikmesi kaydedilir. |
+| ASR-012 | P2 | Uran STT Base CPU taban çizgisi | Apache 2.0 model, CTranslate2 INT8 runtime ve sabit test split'i | Yayımlanmış geliştirici WER'i MİHENK sonucu sayılmaz; aynı referansla WER/CER ve kaynak tüketimi ölçülür; düşük başarı durumunda ana aday yapılmaz. |
+| RUN-002 | P2 | Model-özel GGUF dışa aktarımı | ufakzeka-kulak GGUF f32/q8_0 ve Parakeet.cpp; aynı modelin sherpa-onnx INT8 dışa aktarımı | Her dosya yalnız destekleyen runtime'da çalıştırılır; WER/CER, token eşdeğerliği, bellek ve RTF raporlanır; GGUF dosyası whisper.cpp'ye verilmez. |
+### 3.9 Rapor ve uçtan uca görev
 
 | Kimlik | Öncelik | Senaryo | Girdi / ön koşul | Beklenen davranış |
 |---|---|---|---|---|
