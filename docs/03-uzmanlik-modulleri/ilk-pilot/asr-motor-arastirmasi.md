@@ -2,7 +2,8 @@
 
 > **Durum:** Aday değerlendirmesi — üretim motoru seçimi değildir  
 > **Araştırma tarihi:** 13 Kasım 2026  
-> **Amaç:** MİHENK içinde yerel, çevrimdışı ve test edilebilir konuşma tanıma motor(lar)ı belirlemek.
+> **Amaç:** MİHENK içinde yerel, çevrimdışı ve test edilebilir konuşma tanıma motor(lar)ı belirlemek.  
+> **Runtime uyumluluğu:** [ASR, zaman hizalama ve diarization motor uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md)
 
 ## 1. Resmî onay ve açık kaynak ayrımı
 
@@ -78,13 +79,25 @@ Kaynaklar:
 - [Vosk API](https://github.com/alphacep/vosk-api)
 - [Vosk modeller listesi — Türkçe model ve TBD bilgisi](https://alphacephei.com/vosk/models)
 
-## 4. Aday dışı / düşük öncelikli model notları
+## 4. Runtime, model biçimi ve nicemleme notları
+
+- whisper.cpp, model dosyalarında kendi GGML biçimini kullanır; **GGUF, whisper.cpp model biçimi değildir**. GGUF dosyası uzantısı değiştirilerek whisper.cpp'ye verilemez.
+- whisper.cpp model listesinde `.en` son ekli ağırlıklar İngilizceye özeldir; Türkçe testte kullanılmaz. `small.en-tdrz` tinydiarize örneği deneysel İngilizce konuşmacı dönüş işaretlemesidir; genel Türkçe diarization motoru olarak değerlendirilmez.
+- whisper.cpp VAD (ör. Silero-VAD) ile konuşma bulunan aralıkları seçebilir. VAD, diarization değildir; yalnız konuşma/sessizlik bölütlemesi yapar. Kısa, düşük sesli veya örtüşen konuşmayı kesme riski ayrıca ölçülmelidir.
+- faster-whisper, Whisper modellerini CTranslate2 üzerinde çalıştıran alternatif runtime'dır. CTranslate2 INT8, FP16 ve desteklenen diğer compute türlerini sunar; gerçek kullanım türü donanım/backend'e bağlıdır. INT8 seçeneği her donanımda aynı sonuç veya bellek kazancını garanti etmez.
+- TurkMedSTT M1'in Transformers/PyTorch ile çalışması, otomatik olarak whisper.cpp GGML veya CTranslate2 biçimine dönüştürülebileceği anlamına gelmez. Her dönüşüm için model mimarisi, tokenizer, ağırlıklar ve çıktı eşdeğerliği doğrulanmalıdır.
+- WhisperX'in Türkçe hizalama modeli bulunması, transkriptin doğru olduğunu göstermez. Forced alignment yalnızca verilen metne zaman aralığı önerir; yanlış metni de hizalayabilir.
+- Kod/runtime lisansı, her model ağırlığının ve eğitim verisinin lisansından ayrıdır. Her dosya için ayrı kaynak, checksum, lisans ve kullanım koşulu kaydedilir.
+
+Ayrıntılı karşılaştırma, model biçimleri, VAD, diarization, alignment ve runtime adayları için [motor/runtime uyumluluk araştırmasına](56-12-motor-runtime-uyumluluk-arastirmasi.md) bakınız. Hiçbir runtime veya model üretim için seçilmiş değildir.
+
+## 5. Aday dışı / düşük öncelikli model notları
 
 - `ozcangundes/wav2vec2-large-xlsr-53-turkish` Apache 2.0 ve Common Voice temelli. Model kartında self-reported Common Voice WER 29,620 olarak listeleniyor; bu sonuç Whisper/TurkMedSTT ile aynı test protokolü değildir ve doğal adli konuşmayı doğrulamaz.
 - `oguzhankarahan/asr-300m-turkish` Apache 2.0; model kartında WER 0,3879 bildiriliyor. İlk MİHENK aday sırasına alınmıyor.
 - Araştırma erişimiyle sınırlı, ticari olmayan veya yeniden dağıtımı yasak modeller MİHENK uygulamasına eklenemez.
 
-## 5. İlk önerilen karşılaştırma
+## 6. İlk önerilen karşılaştırma
 
 | Rol | Aday | Gerekçe | Şimdiki karar |
 |---|---|---|---|
@@ -95,7 +108,7 @@ Kaynaklar:
 
 Whisper Large v3 ve M1 aynı temel aileden olduğundan tamamen bağımsız iki mimari sayılmaz. ufakzeka-kulak bağımsız ve küçük mimari alternatifidir. Vosk da farklı ve çok küçük bir seçenek olarak saklanabilir; fakat Türkçe kalite verisi beklenir.
 
-## 6. Test planı — gerçek ses public depoya girmez
+## 7. Test planı — gerçek ses public depoya girmez
 
 ### Açık/sentetik test
 - Kullanım lisansı ve konuşmacı koşulları doğrulanmış açık Türkçe veri.
@@ -116,7 +129,7 @@ Whisper Large v3 ve M1 aynı temel aileden olduğundan tamamen bağımsız iki m
 - Duyulmayan bölümün uydurulması, sessizlikte metin üretimi, cümle atlama ve konuşmacılar arası karışma ayrı hata olarak kaydedilir.
 - Modelin kendi güven skoru veya WER değeri “adli doğruluk” ya da hukukî ispat anlamına gelmez.
 
-## 7. MİHENK içinde çalışma ilkesi
+## 8. MİHENK içinde çalışma ilkesi
 
 - ASR motorları kullanıcıya ayrı masaüstü program olarak açılmaz; MİHENK'in 56.12 modülünün arka plan motorları olarak yönetilir.
 - Model dosyaları imzalı/sabitlenmiş sürüm, checksum, lisans ve kaynak bilgisiyle paketlenir.
@@ -127,7 +140,7 @@ Whisper Large v3 ve M1 aynı temel aileden olduğundan tamamen bağımsız iki m
 - ASR metni makine taslağıdır. Bilirkişi onayı ve düzeltmesi ayrı sürümlenir.
 - Konuşmacı ayırımı, kimlik tespiti ve ses özgünlüğü incelemesi ASR ile aynı özellik değildir; ayrıca doğrulanır ve gerekiyorsa ayrı modül/uzmanlık kapsamı gerektirir.
 
-## 8. Kabul kararı için kapılar
+## 9. Kabul kararı için kapılar
 
 - Aynı MİHENK test seti tüm adaylarda çalıştırılmalı.
 - Model/runtime/quantization sürümleri sabitlenmeli ve checksum ile kaydedilmeli.
