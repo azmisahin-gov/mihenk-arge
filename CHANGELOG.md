@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.9 — 13.11.2026
+
+- İncelenen açık model kartları ve benchmark tariflerinde Türkçe karışık mono konuşma için bağımsız diarization doğrulaması bulunamadığı, kapsamı sınırlı bir araştırma bulgusu olarak belgelendi.
+- pyannote/sherpa-onnx/NeMo adayları üretim onayı almadan tutuldu; ECAPA speaker embedding ve VoxLingua107 language-ID modellerinin tek başına diarization olmadığı açıklandı.
+- Türkçe karışık mono kayıtta aday motor doğrulaması için DIA-006 eklendi; senaryo kataloğu 52 benzersiz test kimliğine ulaştı.
+- Test planına Türkçe diarization kanıt boşluğu ve kabul ön koşulları eklendi.
+
 ## 0.9.8 — 13.11.2026
 
 - Türkçe düşük kaynak ASR adayları Turkish STT 66M v2 ve Uran STT Base araştırmaya eklendi; lisans/kalite kısıtları nedeniyle biri beklemeye, diğeri düşük öncelikli karşılaştırmaya alındı.
