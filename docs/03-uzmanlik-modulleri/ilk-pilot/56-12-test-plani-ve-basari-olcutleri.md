@@ -267,7 +267,7 @@ Sadece WER iyileşti diye işlem kabul edilmez; iyileştirme bir konuşma sesini
 
 ## 10. Performans, bellek ve kararlılık testleri
 
-### 9.1 Donanım/ortam manifesti
+### 10.1 Donanım/ortam manifesti
 
 Her koşuda kaydedilecekler:
 - İşletim sistemi ve sürüm.
@@ -279,7 +279,7 @@ Her koşuda kaydedilecekler:
 - Runtime, derleyici/derleme ayarı, thread ve batch ayarları.
 - Ses dosyasının süresi, codec'i, kanal sayısı ve örnekleme hızı.
 
-### 9.2 Ölçülecek performans
+### 10.2 Ölçülecek performans
 
 | Ölçüt | Tanım |
 |---|---|
@@ -295,7 +295,7 @@ Her koşuda kaydedilecekler:
 
 Soğuk başlatma ve model bellekteyken sıcak çalıştırma ayrı ölçülür. Tek koşu yerine tekrarlı koşular yapılır; medyan ve yüksek yüzdelik (ör. P95) raporlanır. Bir modelin GPU VRAM'i ile sistem RAM'i birbirinin yerine yazılmaz.
 
-### 9.3 Uzun kayıt ve kuyruk testi
+### 10.3 Uzun kayıt ve kuyruk testi
 
 - Kısa klip ve uzun tek kayıt ayrı test edilir.
 - Yaklaşık 20 dakikalık kayıt testi, B-01'in anlattığı örnek dosya süresini kapsamak amacıyla yer alır; tüm görevler için varsayılan dosya süresi değildir.
