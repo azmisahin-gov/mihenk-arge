@@ -172,7 +172,7 @@ Gerçek vaka kimliği, kişi adı, dosya numarası, mahkeme adı veya gerçek do
 - [ ] VAD'nin kısa/düşük sesli konuşmayı kesme sınırlarını ölç.
 - [ ] whisper.cpp GGML ile faster-whisper/CTranslate2 runtime karşılaştırmasını sabit model/test koşulunda yap.
 
-## 9. Açık işler
+## 8. Açık işler
 
 - [ ] Türkçe transkripsiyon anotasyon kurallarını uzman değerlendirmesiyle kesinleştir.
 - [ ] Açık veri kümelerinin güncel lisans ve erişim koşullarını kayda al.
