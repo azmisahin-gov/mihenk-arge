@@ -62,7 +62,7 @@ Kaynaklar:
 - Raporda FLEURS Turkish test WER 0,0921 ve Common Voice 27 test WER 0,0916; gerçek konuşma diyaloğu Real-TurnTurk testinde WER 0,3807.
 - Bu fark, temiz/okunmuş konuşma ile doğal diyalog başarımının aynı olmadığını gösteriyor. B-01'in örneğindeki doğal konuşma, fısıltı ve üst üste konuşma için düşük WER sonucu tek başına yeterli değildir.
 
-**Önerilen rol:** Küçük ve kaynak dostu ikinci motor adayı; özellikle CPU/düşük donanım profilini değerlendirmek için. Doğal konuşma başarımı yeterli görülmeden ana motor yapılamaz.
+**Önerilen rol:** Küçük ve kaynak dostu ikinci motor adayı; özellikle CPU/düşük donanım profilini değerlendirmek için. Model kartında GGUF dışa aktarımı Parakeet.cpp için sunulmaktadır; bu, whisper.cpp GGML biçimiyle aynı değildir. Doğal konuşma başarımı yeterli görülmeden ana motor yapılamaz.
 
 Kaynak:
 - [ufakzeka-kulak — 02.11.2026 tarihli teknik rapor](https://arxiv.org/abs/2611.03605)
@@ -78,6 +78,28 @@ Kaynak:
 Kaynaklar:
 - [Vosk API](https://github.com/alphacep/vosk-api)
 - [Vosk modeller listesi — Türkçe model ve TBD bilgisi](https://alphacephei.com/vosk/models)
+
+### Aday E — Turkish STT 66M v2 (lisans incelemesi bekliyor)
+
+- Model kartı: [mihuai/turkish-stt-66m-v2](https://huggingface.co/mihuai/turkish-stt-66m-v2).
+- Model kartına göre 66 milyon parametreli, yaklaşık 68 MB INT8, streaming Zipformer transducer ve 16 kHz mono giriş kullanır.
+- sherpa-onnx tabanlı ONNX encoder/decoder/joiner dosyaları yayımlanmıştır; tek CPU thread'inde akışlı/yerel çalıştırma örneği vardır.
+- Geliştiricinin aynı FLEURS-TR 743 klibinde bildirdiği standart WER yüzde 10,06; Damga normalizasyonuyla yüzde 6,21. Whisper large-v3 için aynı kartta sırasıyla yüzde 7,82 ve yüzde 4,48 bildirilmiştir. Sonuçlar geliştirici ölçümüdür; doğal adli konuşma/örtüşme başarımı kanıtı değildir.
+- Model kartı tek CPU thread'inde RTF 0,128 ve 16 çekirdekli makinede yaklaşık 25x gerçek zaman kapasitesi iddia eder; bunlar MİHENK donanımında doğrulanmış değildir.
+- Lisans alanı özel mihu-community-license olarak gösteriliyor; bağlantılı LICENSE dosyasının tam metni bu araştırmada alınamadı. Bu nedenle model lisans metni doğrulanana kadar indirme/paketleme ve ürün kullanımına kapalıdır. Testte kullanımı da yalnızca hak sahibinin koşulları izin verirse mümkündür.
+- Model kartında eğitim verisi ayrıntısı yalnızca Türkçe konuşma olarak özetlenmiş; kaynak/split ve gerçek diyalog dağılımı bu araştırmada doğrulanamadı.
+
+**Önerilen rol:** Çok küçük CPU/streaming adayı olarak lisans ve veri kökeni doğrulamasına bağlı bekleme listesi. Şu an onaylı açık kaynak aday değildir.
+
+### Aday F — Uran STT Base (düşük öncelikli CPU karşılaştırması)
+
+- Model kartı: [curiositytech/uran-stt-base](https://huggingface.co/curiositytech/uran-stt-base).
+- Whisper-base üzerine LoRA/PEFT ile uyarlanmış; önerilen çalışma zamanı faster-whisper/CTranslate2; Apache 2.0 lisansı ve yaklaşık 75 MB INT8 model boyutu beyanı vardır.
+- Eğitim kaynağı olarak Common Voice 17 Turkish ve OpenSLR-108 Turkish; toplam yaklaşık 80 saat bildirilmiştir.
+- Model kartında Common Voice 17 Turkish testinde WER yüzde 38,5 / CER yüzde 10,3 açıklanıyor. Bu skor diğer kaynakların test protokolü ve normalizasyonuyla doğrudan birleştirilemez; ayrıca gerçek diyalog başarımı göstermez.
+- 5 saniyelik örnek için Intel i7 12. nesil CPU'da 250–400 ms gecikme ve RTF 0,06 beyan edilmiştir; donanım/ayar farklılıkları nedeniyle yalnızca geliştirici ölçümüdür.
+
+**Önerilen rol:** Hafif CTranslate2/CPU taban çizgisi olarak düşük öncelikli test. Yayımlanan WER değeri nedeniyle ana doğruluk adayı değildir.
 
 ## 4. Runtime, model biçimi ve nicemleme notları
 
