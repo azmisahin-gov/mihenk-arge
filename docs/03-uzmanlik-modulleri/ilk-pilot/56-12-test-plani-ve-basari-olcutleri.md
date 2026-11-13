@@ -51,6 +51,25 @@ Kaynak bazında güncel inceleme, kısıtlar ve ön kullanım kararları [56.12 
 | SpeechDataAI Turkish Conversational Speech | Sağlayıcı beyanı: 2.000 saat, 200 konuşmacı, iki kanal | Ticari lisans; ses dosyaları HF üzerinde barındırılmıyor | Yalnız gelecekteki ücretli tedarik seçeneği; numune/sözleşme/rıza doğrulaması gerekir. |
 | SesMetin-v2 | TTS ile oluşturulmuş sentetik Türkçe konuşma; telephony/ITN odaklı | Apache 2.0 olarak listelenmiş | Yazılım regresyonu için yardımcı; insan konuşması benchmark'ı değildir. |
 
+
+### 3.1.1 Harici TurkASR-Bench liderlik tablosunun gösterdiği risk
+
+Turkish ASR Leaderboard, 19 açık modeli TurkASR-Bench'in 7 kaynaklı, 5.200 örnekli ve 14,7 saatlik değerlendirme setinde aynı normalizasyon/puanlama yöntemiyle karşılaştırıyor. Ana görünümde sayılar Türkçe yazı biçimine çevriliyor; eşleştirilmiş bootstrap sayısı 2.000. Liderlik tablosunun açıkladığı model koşuları tek bir Apple Silicon dizüstünde yapılmış; hız sıralaması yayımlanmamış.
+
+| Model | Genel WER | Genel CER | Real-TurnTurk WER |
+|---|---:|---:|---:|
+| TurkMedSTT Whisper | %12,39 | %5,79 | %55,16 |
+| Whisper Large v3 | %12,83 | %7,04 | %55,93 |
+| Whisper Large v3 Turbo | %12,92 | %6,91 | %56,57 |
+| Qwen3-ASR-1.7B | %15,85 | %7,15 | %57,99 |
+
+Bu harici sonuçların MİHENK açısından temel anlamı, genel WER'in tek başına yeterli olmamasıdır: aynı karşılaştırmada doğal diyalog kaynağı Real-TurnTurk için en iyi modelde bile WER %55'in üzerindedir. Okunmuş ve kontrollü ses başarısı, doğal diyalog, kısa geri bildirim, örtüşen konuşma veya bilirkişi materyali başarısı olarak genellenemez.
+
+Bu sonuçlar **MİHENK testi değildir**; donanım, model/runtime ve lisans koşullarını da doğrulamaz. Liderlik tablosunda hız sıralaması bulunmadığından RAM/VRAM/RTF kararı için kullanılamaz. TurkASR-Bench karma lisanslı olduğundan, skorları kaynak göstererek aktarmak ses örneklerini kopyalama/dağıtma izni vermez.
+
+Kaynak: [Turkish ASR Leaderboard](https://yagmurtuncer-turkish-asr-leaderboard.hf.space/), [TurkASR-Bench veri kartı](https://huggingface.co/datasets/yagmurtuncer/turkasr-bench).
+
+
 ## 3.2 Lisans ve veri kökeni uyarıları
 
 - TurkASR-Bench kendi sayfasında erişim için koşulları kabul etmeyi, her örneğin kaynak lisansına uymayı ve konuşmacı kimliğini belirlemeye çalışmamayı ister.
@@ -154,12 +173,13 @@ ASR model/runtime uyumluluğu ve ayrı motor görevleri için [56.12 motor/runti
 İlk aday listesi mevcut ASR araştırma belgesinden alınır:
 - Whisper Large v3 ve Turbo.
 - TurkMedSTT Whisper Large v3 Türkçe Genel M1.
+- Qwen3-ASR 0.6B / 1.7B (Türkçe destekli, Apache 2.0 proje/model kaydı; yerel Transformers/vLLM runtime).
 - ufakzeka-kulak; sherpa-onnx ve Parakeet.cpp GGUF gibi model kartında doğrulanmış dışa aktarımları ayrı koşul olarak.
 - Turkish STT 66M v2 (özel lisans metni doğrulanırsa; aksi halde test ENGELLENDİ).
 - Uran STT Base (Apache 2.0; yayımlanan WER nedeniyle düşük öncelikli CPU taban çizgisi).
 - Vosk Turkish Small (düşük öncelikli; ölçüm verisi sınırlı).
 
-Model ve çalışma zamanı birbirinden ayrı test nesneleridir. Her model yalnız kendi mimarisi tarafından desteklenen, belgelenmiş çalışma zamanında çalıştırılır. TurkMedSTT M1'in Whisper ailesinden olması, doğrudan whisper.cpp ile çalışacağı anlamına gelmez. Uyumlu model biçimi, dönüştürme ve çıktı eşdeğerliği test edilmeden bu varsayım yapılmaz.
+Model ve çalışma zamanı birbirinden ayrı test nesneleridir. Her model yalnız kendi mimarisi tarafından desteklenen, belgelenmiş çalışma zamanında çalıştırılır. Qwen3-ASR-1.7B ve 0.6B resmî proje belgelerinde Türkçe, çevrimdışı ve akışlı kullanım için listelenir; Qwen3-ASR-1.7B model kartı Apache 2.0 gösterir. Buna karşılık Qwen3-ForcedAligner-0.6B'nin yayımlanmış 11 dil listesinde Türkçe bulunmaz; Qwen ASR çıktısı Türkçe zaman hizalaması varmış gibi kabul edilmez. TurkMedSTT M1'in Whisper ailesinden olması, doğrudan whisper.cpp ile çalışacağı anlamına gelmez. Uyumlu model biçimi, dönüştürme ve çıktı eşdeğerliği test edilmeden bu varsayım yapılmaz.
 
 GGUF, GGML, ONNX veya başka bir model paketi/çalışma zamanı biçimi genel olarak her model mimarisine uygulanabilir kabul edilmez. Özellikle GGUF dönüşümü, model mimarisi ve kullanılan çıkarım motoru bunu destekliyorsa ayrı bir uyumluluk testi olarak yapılır.
 
