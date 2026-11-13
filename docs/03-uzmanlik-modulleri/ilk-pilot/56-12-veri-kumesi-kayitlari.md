@@ -14,6 +14,7 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 | Kaynak | Lisans/kullanım kaydı | Veri türü | 56.12 testindeki rol | Durum |
 |---|---|---|---|---|
 | Mozilla Common Voice Turkish 27.0 | CC0-1.0; kaynak koşulları ayrıca korunur | Okunmuş Türkçe cümleler | Temel ASR ve kontrollü referans karşılaştırması | **Aday – kaynak sürümü sabitlenmeli** |
+| Common Voice Spontaneous Speech Turkish 5.0 | CC0-1.0; konuşmacı kimliği çıkarımı ve yeniden barındırma/paylaşım yasakları var | Sorulara verilen doğal/serbest yanıtlar | Doğal tek konuşmacılı konuşma için küçük kontrol kümesi | **Sınırlı aday – 54 klip, 13 konuşmacı, split atanmamış** |
 | Google FLEURS tr_tr | CC BY 4.0 | Okunmuş/standartlaştırılmış çok dilli konuşma | Temel ASR ve sabit test split'i | **Aday – önerilen başlangıç testlerinden biri** |
 | MediaSpeech tr | Veri kartı CC BY 4.0; Türkçe alt küme erişimi/metadata doğrulanmalı | Medya yayınlarından kısa parçalar, elle yazılmış metin | Yayın tarzı konuşma için tamamlayıcı ASR testi | **Beklemede – Türkçe yapılandırma doğrulanmalı** |
 | Real-TurnTurk | Veri kartı Apache 2.0 | Doğal ikili görüşmeler; konuşmacı başına ayrı ses kanalı ve zamanlı metin | Diyalog segmenti/zaman bilgisi keşfi; mono diarization ana testi değil | **Sınırlı aday – veri yapısı ve mahremiyet incelemesi** |
@@ -34,6 +35,20 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 - Test öncesi iş: İndirilen arşivin gerçek sürümü, dosya sayısı, split, konuşmacı/oturum çakışması, referans metin kalitesi ve checksum bilgisi yerel manifestte sabitlenir.
 
 **Ön karar:** En kolay başlangıç adaylarından biri; ancak doğal diyalog başarısı için tek başına yeterli değildir.
+
+### 3.1.1 Common Voice Spontaneous Speech – Turkish 5.0
+
+- Kaynak: [Mozilla Data Collective – Common Voice Spontaneous Speech 5.0 Turkish](https://mozilladatacollective.com/datasets/cmu5lzrng00ramh0781xpmrnc)
+- Sürüm: sps-corpus-5.0-2026-09-11; release tarihi 17 Eylül 2026.
+- Lisans: CC0-1.0.
+- İçerik: Katılımcıların Türkçe sorulara verdiği doğal yanıtlar; okunmuş metin değil.
+- Kaynak sayfasındaki ölçü: 54 klip, 0,28 saat toplam / 0,22 saat doğrulanmış ses, 13 konuşmacı. 41 transkript doğrulanmış, 9 beklemede, 4 transkripsiyonsuz.
+- Resmî train/dev/test ataması bulunmuyor; 54 klip de unassigned olarak listeleniyor.
+- Önerilen rol: Doğal tek konuşmacılı yanıtlar, dolgu sözcükleri, serbest anlatım ve Türkçe konuşma akışına ilişkin küçük bir tamamlayıcı kontrol.
+- Sınırlama: Örneklem çok küçüktür; çok konuşmacılı diyalog veya gerçek diarization benchmark'ı değildir. Kaynak koşulu konuşmacı kimliğini belirlemeyi ve veri kümesini yeniden barındırıp/paylaşmayı yasaklar.
+- Kullanım: Yerel ve izin koşullarına uygun test; public depoya ses kopyası eklenmez. Test split'i olmadığı için sonuçlar standart ayrılmış benchmark skoru olarak değil, keşifsel sonuç olarak raporlanır.
+
+**Ön karar:** Açık doğal konuşma kaynağı olarak değerli; ancak ana ASR kabul kümesi olamaz.
 
 ### 3.2 Google FLEURS – Türkçe (tr_tr)
 
@@ -87,6 +102,40 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 
 **Ön karar:** Tek bir serbest lisanslı test paketi gibi kullanılamaz. Kullanılacaksa her satırın license alanına göre filtrelenir, kaynak lisansı korunur, kısıtlı/uyuşmayan alt kümeler dışarıda bırakılır ve veri erişim şartları kabul edilir.
 
+### 3.6 IARPA Babel Turkish Language Pack (LDC2016S10)
+
+- Kaynak: [Linguistic Data Consortium katalog kaydı](https://catalog.ldc.upenn.edu/LDC2016S10).
+- Katalog numarası: LDC2016S10; yayımlanma tarihi 19 Ekim 2016.
+- Veri: Yaklaşık 213 saat Türkçe konuşmalı ve senaryolu telefon görüşmesi; 2012 yılında toplanmış.
+- Ses: 8 kHz, 8-bit A-law/SPHERE; transkriptler UTF-8.
+- Kapsam: Türkiye'nin yedi ağız/bölge alanı; cep/sabit telefon ve farklı ortamlar.
+- Lisans: LDC üzerinden farklı sözleşmeler (for-profit, non-member, not-for-profit); erişim/ücret üyelik ve kullanım amacına göre değişir.
+- Önerilen rol: Telefon kalitesi ve doğal konuşma testi için güçlü, fakat ücretli/izinli bir aday.
+- Sınırlama: Lisans ve bütçe kararı olmadan kullanılamaz; eski telefon kodeği ve 2012 kayıt koşulları güncel vaka seslerini bütünüyle temsil etmez.
+
+**Ön karar:** İleride ücretli veri erişimi düşünülürse değerlendirme listesinde tut; şimdilik zorunlu değil.
+
+### 3.7 SpeechDataAI – Turkish Conversational Speech (ticari)
+
+- Kaynak: [SpeechDataAI veri kartı](https://huggingface.co/datasets/SpeechDataAI/turkish-conversational-speech) ve [sağlayıcı sayfası](https://www.speechdata.ai/datasets/turkish).
+- Sağlayıcı beyanı: 2.000 saat doğal iki kişilik Türkçe görüşme, 200 konuşmacı, iki ayrı kanal, zaman hizalı insan doğrulamalı transkript ve imzalı ticari kullanım rıza kayıtları.
+- Lisans: Ticari; HF veri kartı ses dosyalarının depoda barındırılmadığını, örneklerin talep üzerine sağlandığını söylüyor.
+- Sağlayıcı sayfasında görünen fiyat: 75 ABD doları/saat; gerçek fiyat ve şartlar yazılı teklif ile doğrulanmalıdır.
+- Önerilen rol: İleride büyük ölçekli doğal konuşma doğrulaması gerekiyorsa ticari alternatif.
+- Sınırlama: Açık veri değildir; sağlayıcı beyanları numune, sözleşme, rıza zinciri, veri alt lisansı ve işleme hakları üzerinden denetlenmeden kabul edilmez. İki ayrı kanal, tek kanal karışık konuşma diarization testine tek başına denk değildir.
+
+**Ön karar:** Open-source/ücretsiz tercih nedeniyle şu an ana plana dahil değil; yalnızca gelecekteki ücretli tedarik seçeneği.
+
+### 3.8 SesMetin-v2 Türkçe Konuşma Derlemi (sentetik)
+
+- Kaynak: [SesMetin-v2 veri kartı](https://huggingface.co/datasets/The0Sanity/sesmetin-v2-speech-corpus).
+- Lisans: Apache 2.0 olarak listelenmiş.
+- Veri kartı: Kokoro-82M sentetik Türkçe sesleriyle oluşturulmuş; telephony, ITN ve diyalog örnekleri içerdiğini belirtiyor. Görünen veri önizlemesinde 448 satır listelenmiş.
+- Önerilen rol: Test yazılımının regresyonu, numara/ITN biçimleri ve sentetik telefon akustiği için yardımcı veri.
+- Sınırlama: İnsan konuşmacı kaydı değildir; doğal Türkçe konuşma veya adli kayıt performansını kanıtlamaz. Ham dosyaların, süre alanlarının ve ses/metin eşleşmelerinin yerel indirmede kontrol edilmesi gerekir.
+
+**Ön karar:** Sentetik regresyon kümesi olarak değerlendirilebilir; insan konuşması benchmark'ına karıştırılmaz.
+
 ## 4. MİHENK için önerilen veri katmanları
 
 ### Katman A – Temel ASR
@@ -97,8 +146,15 @@ Bu belge indirme veya yeniden dağıtım izni değildir. Her veri kümesi kullan
 
 ### Katman B – Doğal konuşma ve medya
 
+- Common Voice Spontaneous Speech Turkish 5.0 küçük/keşifsel kontrol için; train/dev/test split olmadığı ve yeniden barındırma yasakları nedeniyle public benchmark paketi yapılmaz.
 - MediaSpeech tr, ancak Türkçe alt küme erişimi ve kaynak hakları doğrulanırsa.
 - Real-TurnTurk'ten yalnız uygun ses odaklı keşif; kişi eşleştirmesi ve görsel öznitelikler dışarıda.
+- İleride ücretli veri gerekirse IARPA Babel ve SpeechDataAI ayrı lisans/tedarik incelemesine alınabilir.
+
+### Katman D – Sentetik ses regresyonu
+
+- SesMetin-v2 gibi sentetik TTS kaynakları; yalnızca uygulama/ITN/decoder regresyonu için.
+- Sentetik TTS sonuçları insan konuşması ASR başarısı olarak raporlanmaz.
 
 ### Katman C – MİHENK kontrollü sentetik/kontrollü diyalog
 
