@@ -1,7 +1,8 @@
 # 56.12 Araçlar ve Yöntemler
 
 > **Durum:** Resmî araç ve ASR araştırmasıyla güncellendi — üretim aracı seçilmedi  
-> **Araştırma tarihi:** 13 Kasım 2026
+> **Araştırma tarihi:** 13 Kasım 2026  
+> **Motor uyumluluğu:** [56.12 motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md)
 
 ## 1. Araçların rolü
 
@@ -28,7 +29,18 @@ MİHENK'in ASR adayları bu nedenle “Bakanlık onaylı” değil; açık kayna
 
 Bu seçeneklerin hiçbirinin adli seslerde doğruluğu kabul edilmiş sayılmaz. Aday ayrıntıları `docs/03-uzmanlik-modulleri/ilk-pilot/asr-motor-arastirmasi.md` belgesindedir.
 
-## 4. Ses materyali ilkeleri
+## 4. Ses motorlarının görev sınırları
+
+- **ASR** metin taslağı üretir.
+- **VAD** konuşma olan aralıkları belirler; konuşmacı ayrımı yapmaz.
+- **Forced alignment** önceden hazırlanmış metne zaman aralığı önerir; metnin doğruluğunu teyit etmez.
+- **Diarization** kayıt içindeki anonim konuşmacı kümelerini ayırır; gerçek kimlik belirlemez.
+- **Source separation** karışmış kaynakları ayrı kanallara ayırmaya çalışır; ilk sürüm zorunluluğu değildir.
+- **Speech enhancement** sesin işitilebilirliğini değiştirebilir; yalnız türev kopyada ve karşılaştırmalı testle değerlendirilir.
+
+Bu motorlar arka planda farklı teknoloji kullanabilir; uzman tek MİHENK arayüzünde kalır. Adayların model biçimi, runtime, lisans ve bellek koşulları [uyumluluk araştırmasında](56-12-motor-runtime-uyumluluk-arastirmasi.md) ele alınmıştır.
+
+## 5. Ses materyali ilkeleri
 
 - Orijinal dosya salt okunur ve hash ile kaydedilmiş kalır.
 - ASR ön işleme (kanal seçimi, yeniden örnekleme, ses seviye düzenleme, kesit çıkarma) yalnız çalışma kopyasında yapılır.
@@ -38,7 +50,7 @@ Bu seçeneklerin hiçbirinin adli seslerde doğruluğu kabul edilmiş sayılmaz.
 - ASR, sesin özgünlüğünü/manipülasyonunu doğrulamaz.
 - Konuşmacı sıralaması kişi kimliği, yaş, cinsiyet veya biyometrik teşhis değildir.
 
-## 5. İnsan incelemesi ve zaman bağlantısı
+## 6. İnsan incelemesi ve zaman bağlantısı
 
 - Transkript, kaynak ses ve zaman konumuyla birlikte gösterilir.
 - Kullanıcı bir metin parçasına tıklayınca ilgili ses aralığına gidebilir.
@@ -46,7 +58,7 @@ Bu seçeneklerin hiçbirinin adli seslerde doğruluğu kabul edilmiş sayılmaz.
 - Birden fazla ASR motoru kullanılırsa farklı sonuçlar birleştirilip doğrulanmış gibi sunulmaz; uyuşmayan bölümler bilirkişinin dinleme kuyruğunda öne çıkarılır.
 - İnsan düzeltmeleri kaynak model çıktısından ayrı sürüm ve olay kaydı taşır.
 
-## 6. Kalite ölçümü
+## 7. Kalite ölçümü
 
 - WER/CER insan tarafından doğrulanmış referans transkriptle hesaplanır.
 - Aksan, telefon kalitesi, düşük ses, fısıltı, arka plan gürültüsü, üst üste konuşma, özel adlar, sayı/tarih ve sessizlik ayrı test sınıfıdır.
@@ -54,13 +66,14 @@ Bu seçeneklerin hiçbirinin adli seslerde doğruluğu kabul edilmiş sayılmaz.
 - İşlem süresi, bellek, CPU/GPU kullanımı, gerçek zaman katsayısı ve kesinti sonrası devam ölçülür.
 - Model güven puanı, bilirkişi kanaati veya adli doğruluk garantisi değildir.
 
-## 7. Adli kapsam sınırı
+## 8. Adli kapsam sınırı
 
 56.12 transkripsiyon desteği ile 56.11 adli ses/görüntü inceleme ve çözümlemesi birbirine karıştırılmaz. Konuşmacı kimliklendirmesi, ses karşılaştırması, montaj/manipülasyon incelemesi ve kaydın özgünlüğü ayrı yöntem ve uzmanlık gerektirebilir; bu modül bunları otomatik olarak yapmış sayılmaz.
 
-## 8. Kaynaklar
+## 9. Kaynaklar
 
 - [Bilirkişilik Temel ve Alt Uzmanlık Alanları](https://bilirkisilik.adalet.gov.tr/)
 - [UYAP Doküman Editörü](https://www.uyap.gov.tr/UYAP-Editor)
 - [56.12 Türkçe ASR motor araştırması](asr-motor-arastirmasi.md)
+- [56.12 motor/runtime uyumluluk araştırması](56-12-motor-runtime-uyumluluk-arastirmasi.md)
 - [SWGDE Best Practices for Forensic Audio v2.5](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
