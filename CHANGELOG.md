@@ -1,5 +1,13 @@
 # Değişiklik Kaydı
 
+## 0.9.1 — 13.11.2026
+
+- 56.12 için veri kümesi/lisans incelemesi, insan referans anotasyonu, Türkçe WER normalizasyonu ve kritik hata sınıflarını tanımlayan ayrıntılı test planı eklendi.
+- ASR model kalitesi ile MİHENK dağıtım/runtime performans testleri birbirinden ayrıldı.
+- Diarization için DER bileşenleri, collar ve örtüşen konuşma raporlama yaklaşımı belgelendi.
+- Yerel/çevrimdışı çalışma, RAM/VRAM/RTF, uzun kayıt, kurtarma ve uzman iş akışı testleri tanımlandı.
+- Common Voice, FLEURS, MediaSpeech, Real-TurnTurk ve TurkASR-Bench kaynaklarının lisans/kapsam sınırlamaları kaydedildi; gerçek vaka materyalinin public depoya alınmaması tekrarlandı.
+
 ## 0.9.0 — 13.11.2026
 
 - 56.12 modülü için görevlendirmeden teslim paketine kadar uçtan uca teknik iş akışı taslağı eklendi.
@@ -22,8 +30,8 @@
 - MİHENK'in uzmanlık araçlarını tek kullanıcı arayüzünde sunan bütünleşik platform hedefi karara bağlandı.
 - Modül/araç paketleri için manifest, imza, izin, lisans/SBOM, sandbox, güncelleme ve geri alma ilkeleri eklendi.
 - LibreOffice/UNO, ONLYOFFICE, Collabora Online ve Apache OpenOffice seçenekleri lisans, offline, gömme ve format açısından karşılaştırıldı.
-- UDF topluluk araçları incelendi; Apache 2.0 lisanslı `udfpdf` yalnızca okuma/dönüştürme PoC adayı, lisanssız veya ticari entegrasyonu yasaklı projeler kapsam dışı olarak kaydedildi.
-- PDF.js, PDFBox, OCRmyPDF ve Tesseract adayları incelendi.
+- UDF topluluk araçları incelendi; Apache 2.0 lisanslı udfpdf yalnızca okuma/dönüştürme PoC adayı, lisanssız veya ticari entegrasyonu yasaklı projeler kapsam dışı olarak kaydedildi.
+- PDF.js, Apache PDFBox, OCRmyPDF ve Tesseract adayları incelendi.
 - Tek rapor modeli ve DOCX/ODT/PDF/UDF çıktı adaptörleri yaklaşımı tasarlandı; teknoloji kararı verilmedi.
 - Belge motoru ve modül güvenliği için test stratejisi güncellendi.
 
