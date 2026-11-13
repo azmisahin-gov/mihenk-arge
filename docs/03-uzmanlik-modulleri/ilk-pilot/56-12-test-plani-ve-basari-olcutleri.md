@@ -154,7 +154,9 @@ ASR model/runtime uyumluluğu ve ayrı motor görevleri için [56.12 motor/runti
 İlk aday listesi mevcut ASR araştırma belgesinden alınır:
 - Whisper Large v3 ve Turbo.
 - TurkMedSTT Whisper Large v3 Türkçe Genel M1.
-- ufakzeka-kulak.
+- ufakzeka-kulak; sherpa-onnx ve Parakeet.cpp GGUF gibi model kartında doğrulanmış dışa aktarımları ayrı koşul olarak.
+- Turkish STT 66M v2 (özel lisans metni doğrulanırsa; aksi halde test ENGELLENDİ).
+- Uran STT Base (Apache 2.0; yayımlanan WER nedeniyle düşük öncelikli CPU taban çizgisi).
 - Vosk Turkish Small (düşük öncelikli; ölçüm verisi sınırlı).
 
 Model ve çalışma zamanı birbirinden ayrı test nesneleridir. Her model yalnız kendi mimarisi tarafından desteklenen, belgelenmiş çalışma zamanında çalıştırılır. TurkMedSTT M1'in Whisper ailesinden olması, doğrudan whisper.cpp ile çalışacağı anlamına gelmez. Uyumlu model biçimi, dönüştürme ve çıktı eşdeğerliği test edilmeden bu varsayım yapılmaz.
