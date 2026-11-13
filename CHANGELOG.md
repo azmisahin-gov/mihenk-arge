@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.10.1 — 13.11.2026
+
+- TurkASR-Bench'i kullanan güncel Türkçe ASR liderlik tablosunun dış benchmark sonuçları belgelendi; genel WER'in doğal diyalogdaki yüksek hata oranını gizleyebildiği gösterildi.
+- Qwen3-ASR 0.6B/1.7B, Türkçe destekleyen yerel/akışlı ve farklı bir ASR ailesi olarak karşılaştırma adaylarına eklendi.
+- Qwen3-ForcedAligner'ın yayımlanmış 11 dil listesinde Türkçe olmadığı belirtildi; Türkçe zaman hizalaması ayrı değerlendirmeye bırakıldı.
+- TurkASR-Bench'in 5.200 örnek/14,7 saat/16 kHz mono FLAC yapısı ve 742 örneklik Real-TurnTurk alt kümesi kaydedildi. Harici leaderboard sonuçlarının MİHENK testi olmadığı açıklandı.
+
 ## 0.10.0 — 13.11.2026
 
 - Kamuya açık veri kümesi kataloğu için JSON Schema ve doldurulabilir manifest şablonu eklendi.
