@@ -1,8 +1,8 @@
 {
   "created": "12 Kasım 2026",
   "updated": "13 Kasım 2026",
-  "markdown_count": 74,
-  "file_count": 79,
+  "markdown_count": 75,
+  "file_count": 80,
   "files": [
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/arastirma-bulgusu.md",
@@ -45,6 +45,7 @@
     "docs/02-urun/urun-vizyonu.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-anotasyon-kaydi-sablonu.json",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-kontrollu-ses-kayit-protokolu.md",
+    "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-motor-runtime-uyumluluk-arastirmasi.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-teknik-is-akisi.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md",
     "docs/03-uzmanlik-modulleri/ilk-pilot/56-12-test-senaryolari.md",
