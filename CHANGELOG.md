@@ -1,5 +1,12 @@
 # Değişiklik Kaydı
 
+## 0.9.8 — 13.11.2026
+
+- Türkçe düşük kaynak ASR adayları Turkish STT 66M v2 ve Uran STT Base araştırmaya eklendi; lisans/kalite kısıtları nedeniyle biri beklemeye, diğeri düşük öncelikli karşılaştırmaya alındı.
+- ufakzeka-kulak modelinin NeMo, Transformers, sherpa-onnx ve Parakeet.cpp GGUF dışa aktarımları ile f32/q8_0 varyantları belgelendi.
+- GGUF'nin yalnızca LLM modelleriyle sınırlı olmadığı, ancak her model/runtime çifti için ayrı destek gerektiği açıklandı; whisper.cpp'nin GGML biçimi kullandığı kuralı korundu.
+- Benchmark tasarımı Parakeet.cpp adapter'ıyla güncellendi; 3 yeni düşük kaynak/model biçimi testi eklenerek senaryo kataloğu 51'e çıkarıldı.
+
 ## 0.9.7 — 13.11.2026
 
 - 56.12 için yerel benchmark düzeneği tasarımı eklendi; test tanımı, motor adapter'ı, yerel orkestrasyon, metrik ve sonuç şeması ayrıştırıldı.
