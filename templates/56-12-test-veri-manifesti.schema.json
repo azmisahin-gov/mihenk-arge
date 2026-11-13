@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://azmisahin-gov.github.io/mihenk-arge/schemas/56-12-test-veri-manifesti.schema.json",
+  "$id": "https://raw.githubusercontent.com/azmisahin-gov/mihenk-arge/main/templates/56-12-test-veri-manifesti.schema.json",
   "title": "MİHENK 56.12 Kamuya Açık Test Veri Kümesi Manifesti",
   "description": "Yalnızca veri kümesi düzeyinde kaynak ve lisans metadata'sı içerir. Örnek bazlı ses, transkript, dosya yolu, hash ve kişi eşleştirme verileri bu manifestte tutulmaz.",
   "type": "object",
