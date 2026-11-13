@@ -7,6 +7,8 @@
 
 ## 1. Amaç ve sınırlar
 
+> **Minimum ürün kapsamı:** Bu iş akışının ilk uygulanabilir dilimi, [56.12 Minimum Sürüm Kapsamı ve Kabul Kapıları](56-12-minimum-surum-kapsami.md) ile sınırlandırılmıştır. Otomatik diarization, ses iyileştirme, forced alignment ve ileri model araştırmaları ilk sürümün ön koşulu değildir.
+
 Bu belge, MİHENK 56.12 modülünün görevlendirmeden rapor ve teslim hazırlığına kadar izleyeceği teknik iş akışını tanımlar. Belge bir ürün tasarımı ve araştırma çıktısıdır; bilirkişinin mesleki yönteminin, mevzuatın veya yetkili makam talimatının yerine geçmez.
 
 Adalet Bakanlığının 22 Ocak 2026 tarihli Bilirkişilik Temel ve Alt Uzmanlık Alanları belgesinde 56.12, “Ses Kayıtlarının Metin Hâline Dönüştürülmesi” olarak tanımlanır ve yargı mercilerince Ses ve Görüntü Bilişim Sisteminin kullanılması istisna tutulur. 56.11 “Adli Ses ve Görüntü İnceleme ve Çözümlemeleri” ayrı bir alt uzmanlık alanıdır. MİHENK bu sınırı ürün içinde görünür tutmalıdır.
