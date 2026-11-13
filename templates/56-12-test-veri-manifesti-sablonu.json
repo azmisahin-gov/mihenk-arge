@@ -1,0 +1,63 @@
+{
+  "manifest_version": "1.0.0",
+  "dataset_id": "yerine-koyun",
+  "dataset_name": "DOLDURULACAK – Test veri kümesi kaydı",
+  "dataset_version": "0.0.0-template",
+  "record_status": "draft",
+  "source": {
+    "kind": "public_dataset",
+    "publisher": "KAYNAK_YAYINCISI",
+    "source_url": null,
+    "source_revision": null,
+    "snapshot_date": "2026-11-13",
+    "citation": null
+  },
+  "license_review": {
+    "status": "pending",
+    "declared_license": "UNKNOWN",
+    "license_scope": "unknown",
+    "commercial_use": "not_assessed",
+    "redistribution": "not_assessed",
+    "attribution_required": null,
+    "conditions": [
+      "Lisans ve erişim koşulları doğrulanmadan veri kullanılmaz."
+    ],
+    "evidence_urls": [],
+    "reviewed_on": null,
+    "reviewer_role": null
+  },
+  "purposes": [
+    "asr_evaluation"
+  ],
+  "split_policy": {
+    "strategy": "exploratory_only",
+    "locked_test": false,
+    "leakage_status": "pending",
+    "split_names": [],
+    "notes": [
+      "Split ve veri sızıntısı incelemesi tamamlanmadı."
+    ]
+  },
+  "privacy": {
+    "public_repo_contains_audio": false,
+    "public_repo_contains_transcripts": false,
+    "public_repo_contains_raw_paths": false,
+    "public_repo_contains_per_sample_hashes": false,
+    "identity_inference_performed": false,
+    "contains_face_or_video_features": false,
+    "storage_class": "restricted_local",
+    "retention_rule": "Kullanım öncesi saklama ve silme kuralı belirlenmelidir."
+  },
+  "records_summary": {
+    "total_records": 0,
+    "total_duration_seconds": 0,
+    "by_split": []
+  },
+  "limitations": [
+    "Bu dosya boş kayıt şablonudur; gerçek veri kümesi kaydı değildir."
+  ],
+  "publication": {
+    "dataset_level_metadata_public": true,
+    "sample_level_manifest_public": false
+  }
+}
