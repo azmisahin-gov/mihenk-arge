@@ -86,7 +86,23 @@ Bu görevlerin tek bir “ses yapay zekâsı” motorunda birleşmesi zorunlu de
 - Model kartı yaklaşık 75 MB INT8, yaklaşık 80 saat Common Voice 17 Turkish ve OpenSLR-108 eğitim verisi bildiriyor.
 - Kartta Common Voice 17 Turkish testinde WER yüzde 38,5 / CER yüzde 10,3 ve belirli Intel i7 12. nesil CPU'da 5 saniyelik örnek için 250–400 ms latency beyanı bulunuyor.
 - Bu sonuçlar model geliştiricisinin kendi ölçümleridir; test protokolü ve split sızıntısı bağımsız MİHENK denetiminden geçmemiştir. WER değeri nedeniyle ana doğruluk adayı değildir; düşük öncelikli CPU taban çizgisi olarak tutulur.
-### 3.7 whisper.cpp ve faster-whisper arasında seçim
+### 3.7 Qwen3-ASR 1.7B / 0.6B + Transformers / vLLM
+
+- Resmî [Qwen3-ASR deposu](https://github.com/QwenLM/Qwen3-ASR) Apache 2.0 lisanslıdır. [Qwen3-ASR-1.7B model kartı](https://huggingface.co/Qwen/Qwen3-ASR-1.7B) ayrıca Apache 2.0 lisansı bildirir; her model checkpoint'i ve dönüştürülmüş dosya için artifact/lisans kaydı yine de tutulmalıdır.
+- Resmî proje, 1.7B ve 0.6B modellerinde 52 dil ve lehçede ASR/dil tanıma desteği bulunduğunu; Türkçenin desteklenen diller arasında olduğunu belirtir.
+- Aynı model ailesi tek modelle offline ve streaming çıkarım desteği sunduğunu bildirir. Resmî `qwen-asr` paketi Transformers ve vLLM arka uçlarını destekler. İlk ağırlık indirme/kurulum kontrollü ortamda yapılmalı; sonrasında yerel dizinden ağsız yükleme ayrıca doğrulanmalıdır.
+- Native Transformers desteği 26.06.2026 tarihinde duyurulmuştur. FlashAttention 2, uyumlu GPU/dtype koşulunda bellek ve hız için öneriliyor; bu özellik her donanımda çalışır varsayılmamalıdır.
+- Qwen3-ASR-1.7B liderlik tablosunda WER %15,85 / CER %7,15; Real-TurnTurk WER %57,99 raporlamıştır. Bu üçüncü taraf benchmark değeridir, MİHENK testi değildir.
+- Qwen3-ForcedAligner-0.6B, en fazla 5 dakikalık konuşma için 11 dilde timestamp alignment iddia eder; yayımlanmış dil listesinde Türkçe yer almaz. Dolayısıyla bu aligner Türkçe zaman damgası çözümü olarak seçilemez.
+- 1.7B model ve 0.6B varyantı ayrı test edilir. 0.6B'nin lisans ve artifact ayrıntıları indirme anında ayrıca kaydedilir; parametre sayısı tek başına RAM ihtiyacını belirlemez. CPU/GPU bellek, ilk yükleme, RTF ve çevrimdışı davranış hedef cihazda ölçülür.
+
+**Önerilen rol:** Whisper/TurkMedSTT karşısında farklı model ailesi olarak kalite karşılaştırması; yerel streaming mimarisi için ek runtime araştırması. Qwen ForcedAligner Türkçe için uygun olmadığı için Türkçe hizalama ayrı motorla test edilmelidir.
+
+Kaynaklar:
+- [Qwen3-ASR resmî proje ve çalışma zamanı belgeleri](https://github.com/QwenLM/Qwen3-ASR)
+- [Qwen3-ASR-1.7B model kartı](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)
+
+### 3.8 whisper.cpp ve faster-whisper arasında seçim
 
 | Karar ölçütü | whisper.cpp | faster-whisper / CTranslate2 |
 |---|---|---|
