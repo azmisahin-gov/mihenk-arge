@@ -6,6 +6,8 @@
 
 ## 1. Amaç ve sınır
 
+> **Aşama notu:** Bu özel benchmark düzeneği ilk 56.12 sürümü için gerekli değildir. İlk pilotta mevcut test koşusu JSON şablonu ve kontrollü yerel test günlüğü yeterlidir. Bu tasarım, birden fazla model/runtime tekrar tekrar ölçülmeye başlandığında uygulanacak ileri araştırma altyapısıdır.
+
 Benchmark düzeneği, ASR, VAD, forced alignment ve diarization adaylarını aynı veri, aynı anotasyon, kayıtlı parametreler ve izlenebilir donanım koşullarıyla karşılaştırmak için tasarlanır.
 
 Bu araç:
