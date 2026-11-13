@@ -1,6 +1,6 @@
 # Aşamalar ve Yol Haritası
 
- > **Durum:** Keşif ve 56.12 minimum pilot kapsamı tanımlı; uzman doğrulaması ve PoC bekliyor  
+> **Durum:** Keşif ve 56.12 minimum pilot kapsamı tanımlı; uzman doğrulaması ve PoC bekliyor  
 > **Güncelleme:** 13 Kasım 2026
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
