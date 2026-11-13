@@ -122,30 +122,30 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 
 ## 5. Türkçe diarization doğrulama boşluğu
 
-İncelenen açık model kartları ve benchmark tariflerinde, Türkçe konuşma için ayrı raporlanmış; doğal, aynı miks/tek-kanal konuşma, örtüşen konuşma ve bağımsız insan referansı içeren bir diarization test sonucu doğrulanamadı. Bu bulgu “Türkçe diarization modeli hiç yoktur” anlamına gelmez; yalnız bu araştırmada üretim kararı destekleyecek açık ve tekrarlanabilir Türkçe benchmark kanıtı bulunamadığını gösterir.
+İncelenen açık model kartları ve benchmark tariflerinde, Türkçe doğal/karışık mono konuşma, örtüşen konuşma ve bağımsız insan referansı içeren ayrı bir diarization test sonucu doğrulanamadı. Bu bulgu “Türkçe diarization modeli hiç yoktur” anlamına gelmez; yalnızca bu araştırmada üretim kararı destekleyecek açık ve tekrarlanabilir Türkçe benchmark kanıtı bulunamadığını gösterir.
 
-- [pyannote Community-1 model kartı](https://huggingface.co/pyannote/speaker-diarization-community-1) ve [önceki speaker-diarization model kartı](https://huggingface.co/pyannote/speaker-diarization), çok sayıda veri kümesi üzerinde benchmark sonuçları verir; gözden geçirilen sonuç tabloları Türkçe özel bir set göstermemektedir. pyannote.ai'nin dil-agnostik çalışma iddiası yararlı bir sağlayıcı beyanıdır, ancak Türkçe 56.12 gerçek karışık kayıtta bağımsız doğrulamanın yerine geçmez.
-- [SpeechBrain ECAPA-TDNN VoxCeleb modeli](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb), speaker embedding/verification amaçlıdır; tek başına VAD + segmentation + clustering + speaker assignment içeren diarization sistemi değildir.
-- [SpeechBrain VoxLingua107 ECAPA model kartı](https://huggingface.co/Jzuluaga/acoustic-embeddings-model), dil tanıma (language identification) içindir. Türkçe dilini tanıyabilmesi, konuşmacı ayırımı yaptığını göstermez.
-- [SpeechBrain AMI diarization reçetesi](https://github.com/speechbrain/speechbrain/tree/develop/recipes/AMI) konferans/AMI veri kümesi için geliştirilmiştir; bu İngilizce AMI sonuçları Türkçe diyalog başarımı olarak genellenemez.
+- [pyannote Community-1 model kartı](https://huggingface.co/pyannote/speaker-diarization-community-1) ve [önceki speaker-diarization model kartı](https://huggingface.co/pyannote/speaker-diarization) çok sayıda veri kümesi üzerinde benchmark sonuçları verir; gözden geçirilen sonuç tabloları Türkçe özel bir test kümesi göstermemektedir. Dil-agnostik çalışma iddiası yararlı bir sağlayıcı beyanıdır, ancak Türkçe 56.12 gerçek karışık kayıtta bağımsız doğrulamanın yerine geçmez.
+- [SpeechBrain ECAPA-TDNN VoxCeleb modeli](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) speaker embedding/verification amaçlıdır; tek başına VAD, segmentation, clustering ve speaker assignment içeren diarization sistemi değildir.
+- [SpeechBrain VoxLingua107 ECAPA model kartı](https://huggingface.co/Jzuluaga/acoustic-embeddings-model) dil tanıma (language identification) içindir. Türkçe dilini tanıyabilmesi, konuşmacı ayırımı yaptığını göstermez.
+- [SpeechBrain AMI diarization reçetesi](https://github.com/speechbrain/speechbrain/tree/develop/recipes/AMI) AMI konferans veri kümesi için geliştirilmiştir; bu sonuçlar Türkçe diyalog başarımı olarak genellenemez.
 - [pyannote.metrics](https://pyannote.github.io/pyannote-metrics/reference.html) DER değerlendirmesi sağlar; metrik kütüphanesinin olması test verisinin Türkçe veya modelin Türkçe'de doğrulanmış olduğu anlamına gelmez.
 
-**Sonuç:** pyannote.audio Community-1 kalite karşılaştırma adayı, sherpa-onnx ise uygun model ağırlıkları bulunduğunda düşük bellek/yerel çalışma zamanı adayı olarak tutulur. İkisi için de Türkçe kabul kararı, MİHENK kontrollü karışık mono kayıtları ve insan anotasyonlu örtüşme referansı üzerinde alınmalıdır. NeMo da aynı kanıt boşluğu nedeniyle yalnız ileri araştırma adayıdır.
+**Sonuç:** pyannote.audio Community-1 kalite karşılaştırma adayı, sherpa-onnx ise uygun model ağırlıkları bulunduğunda düşük bellek/yerel çalışma zamanı adayı olarak tutulur. İkisi için de Türkçe kabul kararı MİHENK kontrollü karışık mono kayıtları ve insan anotasyonlu örtüşme referansı üzerinde alınmalıdır. NeMo da aynı kanıt boşluğu nedeniyle yalnızca ileri araştırma adayıdır.
 
 ## 6. Konuşmacı ayrımı motorları
 
-### 5.1 pyannote.audio – speaker-diarization-community-1
+### 6.1 pyannote.audio – speaker-diarization-community-1
 
 - pyannote.audio kodu MIT; speaker-diarization-community-1 model pipeline'ı CC BY 4.0.
 - Model dosyalarına erişmek için Hugging Face koşullarının kabul edilmesi ve hesap token'ı gerekir. Model indirildikten sonra yerel/çevrimdışı çalıştırılabilir; bulut kullanımına zorunlu değildir.
 - Pipeline mono 16 kHz ses bekler; stereo/çok kanallı girdiyi otomatik mono karışıma indirger ve gerekirse 16 kHz'e örnekler. MİHENK kanalları otomatik birleştirmemeli; kaynak kanalları korumalı ve yalnızca seçilmiş çalışma kopyasını motora vermelidir.
 - community-1, konuşmacı ataması ve konuşmacı sayısı iyileştirmeleri ile exclusive diarization çıktısı sağlar.
 - PyTorch tabanlı çalışma zamanı ve bağımlılıkları nedeniyle CPU/RAM yükü sherpa-onnx gibi ONNX seçeneklerinden farklı olabilir; gerçek donanım testi gerekir.
-- Benchmark sonuçları farklı diller/ortamlar üzerinde verilmiştir; Türkçe adli konuşma performansı ayrıca doğrulanmalıdır.
+- Benchmark sonuçları farklı diller/ortamlar üzerindedir; Türkçe adli konuşma performansı ayrıca doğrulanmalıdır.
 
 **Önerilen rol:** Kaliteli diarization için karşılaştırma referansı. Gated model erişimi ve CC BY 4.0 model şartları kurumsal dağıtım incelemesine tabidir.
 
-### 5.2 sherpa-onnx
+### 6.2 sherpa-onnx
 
 - Runtime kodu Apache 2.0; yerel/offline speech processing, C/C++ API ve çoklu platform desteği sunar.
 - Offline diarization; konuşmacı segmentasyonu, speaker embedding çıkarımı ve clustering aşamalarını birleştirir.
@@ -154,9 +154,9 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 - Örnek embedding ağırlıklarından biri 3D-Speaker ERes2Net Çince (zh-cn) 16 kHz modelidir. Bu modelin Türkçe konuşmacı kümelerinde başarımı, model lisansı ve dağıtım koşulu ayrı test edilmelidir; boyutu küçük diye otomatik kabul edilmez.
 - sherpa-onnx runtime lisansı, indirilen her segmentation/embedding modelinin lisansını kapsamaz. Her model dosyasıyla birlikte gelen lisans ve kaynak belgesi kontrol edilmelidir.
 
-**Önerilen rol:** Düşük bellek/CPU ve paketlenebilir offline diarization hattı için birincil runtime adayı; Türkçe seslerde segmentation ve embedding modelleri ayrı ayrı doğrulanmalı.
+**Önerilen rol:** Düşük bellek/CPU ve paketlenebilir offline diarization hattı için bir runtime adayı; Türkçe seslerde segmentation ve embedding modelleri ayrı ayrı doğrulanmalıdır.
 
-### 5.3 NVIDIA NeMo Sortformer / Nemotron-3-Diarization
+### 6.3 NVIDIA NeMo Sortformer / Nemotron-3-Diarization
 
 - Sortformer, konuşmacı etkinliğini uçtan uca tahmin eden diarization yaklaşımıdır.
 - Güncel nvidia/Nemotron-3-Diarization model kartı OpenMDW License Agreement 1.1 gösterir ve en çok sekiz konuşmacı için yerel kayıtlı/gerçek zamanlı konuşma kullanımını tanımlar.
@@ -167,7 +167,7 @@ whisper.cpp segment ve token zaman bilgisi üretebilir; DTW tabanlı token-level
 
 **Önerilen rol:** Gelişmiş karşılaştırma adayı. İlk pilot için varsayılan motor değil; Türkçe ve hedef donanım doğrulaması gerekir.
 
-### 5.4 whisper.cpp tinydiarize
+### 6.4 whisper.cpp tinydiarize
 
 - whisper.cpp'nin small.en-tdrz modeli -tdrz ile deneysel konuşmacı dönüşü işaretleme örneği sunar.
 - Mevcut resmî model listesi bu varyantı small.en-tdrz olarak gösterir; .en İngilizce modele işaret eder.
