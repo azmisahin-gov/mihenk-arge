@@ -1,6 +1,22 @@
 # Değişiklik Kaydı
 
+# Değişiklik Kaydı
+
+## 0.11.0 — 13.11.2026
+
+- 56.12 için ilk ürün sürümünün asgari işlevleri tek kapsam belgesinde toplandı.
+- 48 senaryoluk geniş katalogdan ilk pilot için 12 gruplanmış kabul kapısı seçildi; katalogdaki diğer senaryolar ileri regresyon/araştırma olarak ayrıldı.
+- Otomatik diarization, ses iyileştirme, forced alignment, çoklu model/runtime matrisi ve özel benchmark aracı MVP ön koşulu olmaktan çıkarıldı.
+- İlk model değerlendirmesi bir yerel temel motor ve en fazla bir alternatifle sınırlandı; hedef cihaz ve gerçek uzman düzeltme eforu görülmeden model seçilmedi.
+- UDF üretimi, e-imza ve UYAP'a otomatik gönderim resmî hak/teknik doğrulama olmadan ilk sürüm dışında tutuldu.
+- Teknik iş akışı, test planı, senaryo kataloğu, kalite planı ve benchmark belgeleri minimum sürüm kararıyla hizalandı.
+
 ## 0.10.2 — 13.11.2026
+
+- 56.12 ilk benchmark koşu matrisi eklendi; model kalitesi, runtime/nicemleme ve uzman iş akışı testleri birbirinden ayrıldı.
+- Common Voice/FLEURS temel testleri, kontrollü doğal diyalog ve mono örtüşme setleri, ASR adayları ve diarization koşuları için sıralı yürütme planı tanımlandı.
+- RAM/VRAM/RTF, soğuk/sıcak başlangıç, gerçek compute türü, kalite ve tekrar üretilebilirlik alanları sabitlendi; henüz sayısal donanım/kabul eşiği verilmedi.
+- Test planındaki bozuk veri kümesi tablosu satırları düzeltildi ve benchmark matrisi ana kalite belgelerine bağlandı.
 
 - 56.12 ilk benchmark koşu matrisi eklendi; model kalitesi, runtime/nicemleme ve uzman iş akışı testleri birbirinden ayrıldı.
 - Common Voice/FLEURS temel testleri, kontrollü doğal diyalog ve mono örtüşme setleri, ASR adayları ve diarization koşuları için sıralı yürütme planı tanımlandı.
