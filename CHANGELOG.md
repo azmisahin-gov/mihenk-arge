@@ -1,5 +1,11 @@
 # Değişiklik Kaydı
 
+## 0.9.2 — 13.11.2026
+
+- 56.12 test planını uygulanabilir senaryolara dönüştüren katalog eklendi.
+- Materyal kabulü, bütünlük, ses teknik kontrolü, ASR, diarization, zaman bağlantısı, performans, güvenlik, kurtarma ve rapor senaryoları kimlik ve önceliklerle tanımlandı.
+- Testlerin sentetik/açık lisanslı/kontrollü pilot veri sınıfları ayrıştırıldı; senaryo kataloğunda test sonucu veya model kabulü iddiası bulunmadığı belirtildi.
+
 ## 0.9.1 — 13.11.2026
 
 - 56.12 için veri kümesi/lisans incelemesi, insan referans anotasyonu, Türkçe WER normalizasyonu ve kritik hata sınıflarını tanımlayan ayrıntılı test planı eklendi.
