@@ -66,6 +66,7 @@ Gerçek dosya, dava bilgisi veya kişi verisi senaryo açıklamasına, test gün
 | ASR-008 | P1 | Chunk sınırında konuşma | Uzun konuşma; kesme noktasına yakın kelime ve cümleler | Parçalar arasında kelime atlama/tekrar ve zaman kayması ölçülür; kaynak sesle atlama yapılabilir. |
 | ASR-009 | P1 | Uzman düzeltmesi ve sürümleme | ASR taslağı ve referans ses | Düzeltme ham ASR çıktısının üzerine yazılmaz; eski/yeni metin, kullanıcı, zaman ve ses aralığı bağı korunur. |
 | ASR-010 | P0 | Model uyuşmazlığı | Aynı kaydı işleyen iki bağımsız aday motor | Sonuçlar ayrı gösterilir; otomatik oy çokluğu veya birleştirme yapılmaz; farklar inceleme listesine girer. |
+| ASR-013 | P1 | Qwen3-ASR aile karşılaştırması | Qwen3-ASR-0.6B ve 1.7B'nin ayrı model/runtime koşuları; aynı sabitlenmiş test split'i | WER/CER, kritik hata, yükleme, RAM/VRAM, RTF ve çevrimdışı davranış ayrı raporlanır; Qwen3 ForcedAligner Türkçe desteği olmadığı için zaman hizalaması yaptığı varsayılmaz. |
 
 ### 3.4 Konuşmacı ayrımı
 
