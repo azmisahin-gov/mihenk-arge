@@ -37,19 +37,25 @@ Kaynak bazında güncel inceleme, kısıtlar ve ön kullanım kararları [56.12 
 
 | Kaynak | Konuşma türü / kullanım | Yayımlanan lisans bilgisi | Testte önerilen rol ve sınırlama |
 |---|---|---|---|
-| Mozilla Common Voice Turkish 27.0 | Gönüllülerin okuduğu Türkçe cümleler | Mozilla Data Collective sayfasında CC0-1.0 | Genel ASR başlangıç testi; okuma konuşması doğal diyalog yerine geçmez. Konuşmacıyı tanımlamaya çalışma yapılmaz. |
+| Mozilla Common Voice Turkish 27.0 | Gönüllülerin okuduğu Türkçe cümleler | Mozilla Data Collective sayfasında CC0-1.0 | Genel ASR başlangıç testi; okuma konuşması doğal diyalog yerine geçmez. Konuşmacı kimliği çıkarımı yapılmaz. |
 | Google FLEURS – tr_tr | Çok dilli, kontrollü/okunmuş konuşma; veri kartında Türkçe train 2.526, validation 338, test 743 örnek | CC BY 4.0 | Temel ASR karşılaştırması için önerilen aday; test split'i sabitlenir, atıf koşulu korunur. |
 | MediaSpeech – Türkçe | Kaynak README dört dil için 10'ar saat bildiriyor ve tr yapılandırmasını listeliyor; görünür güncel kart dili/önizlemesi Türkçe alt kümeyi açıkça göstermiyor | Veri kartında CC BY 4.0 | Yayın tarzı konuşma için beklemede; Türkçe erişim ve kaynak medya hakları doğrulanmadan ana test setine alınmaz. |
 | Real-TurnTurk | Altı doğal diyalog; altı konuşmacı ve konuşmacı başına izole ses kanalları; zamanlı transkript | Özgün veri kartında Apache 2.0; TurkASR-Bench lisans listesinde farklı kayıt var | Zaman/konuşma sırası için keşifsel kaynak; ayrı kanallar mono diarization testi değildir. Kişi eşleştirmesi ve görsel öznitelikler kullanılmaz. |
 | TurkASR-Bench | Yedi kaynaktan 5.200 ifade / 14,7 saat; kaynak ağırlıklı dengeli Türkçe ASR testi | mixed-per-source; her örneğin lisansı kaynak bazında | Hazır karşılaştırma için güçlü aday; erişim koşulları, her alt kümenin lisansı ve referans kalitesi incelenmeden tek bir serbest lisanslı paket gibi kullanılamaz. |
 
-### 3.2 Lisans ve veri kökeni uyarıları
+#| Common Voice Spontaneous Speech Turkish 5.0 | Sorulara verilen doğal/serbest yanıtlar; kaynak kartında 54 klip / 13 konuşmacı / 0,28 saat, yalnız 41 doğrulanmış klip | CC0-1.0; konuşmacı kimliğini belirleme ve yeniden barındırma/paylaşma yasak | Doğal tek konuşmacılı konuşma için küçük keşifsel kontrol; split atanmamış ve ana benchmark olamaz. |
+| MediaSpeech – Türkçe | Medya konuşması; kaynak README Türkçe yapılandırmasını listeliyor fakat güncel görünür kart/önizleme bunu açıkça göstermiyor | CC BY 4.0 | Türkçe alt küme ve kaynak hakları doğrulanana kadar beklemede. |
+| IARPA Babel Turkish | Yaklaşık 213 saat telefon konuşması ve senaryolu telefon konuşması; 8 kHz / 8-bit A-law | LDC üzerinden ücretli ve amaca göre değişen sözleşme | Telefon kalitesi testi için gelecekte ücretli aday. |
+| SpeechDataAI Turkish Conversational Speech | Sağlayıcı beyanı: 2.000 saat, 200 konuşmacı, iki kanal | Ticari lisans; ses dosyaları HF üzerinde barındırılmıyor | Yalnız gelecekteki ücretli tedarik seçeneği; numune/sözleşme/rıza doğrulaması gerekir. |
+| SesMetin-v2 | TTS ile oluşturulmuş sentetik Türkçe konuşma; telephony/ITN odaklı | Apache 2.0 olarak listelenmiş | Yazılım regresyonu için yardımcı; insan konuşması benchmark'ı değildir. |
+
+## 3.2 Lisans ve veri kökeni uyarıları
 
 - TurkASR-Bench kendi sayfasında erişim için koşulları kabul etmeyi, her örneğin kaynak lisansına uymayı ve konuşmacı kimliğini belirlemeye çalışmamayı ister.
 - TurkASR-Bench'in lisans tablosunda Real-TurnTurk için CC BY 4.0 bilgisi görünürken, Real-TurnTurk'ün kendi kaynak kartı Apache 2.0 gösterir. Bu uyuşmazlık açıklığa kavuşmadan bu alt küme için toplulaştırılmış lisans bilgisine dayanılmamalıdır; kaynak veri sahibinin güncel koşulları ayrıca doğrulanmalıdır.
 - TurkASR-Bench; CC BY-NC-SA 3.0 lisanslı Khan Academy ve GPL-3.0 olarak listelenen VoxForge gibi farklı koşullardaki alt kümeler içerir. Bu alt kümeler MİHENK'in ticari/yeniden dağıtım senaryosuna otomatik olarak uygun sayılamaz.
 - TurkASR-Bench veri kartı, bazı referanslarda olası yazım hatalarının bulunduğunu ve bunların otomatik denetimle işaretlendiğini belirtir. Bu nedenle hazır referanslar uzman kontrolü olmadan mutlak altın standart kabul edilmez.
-- Common Voice sürümü değiştikçe veri sürümü ve lisansı yeniden kaydedilir. “Common Voice Türkçe” gibi sürümsüz bir kayıt testin tekrarlanabilirliği için yeterli değildir.
+- Common Voice sürümü değiştikçe veri sürümü ve lisansı yeniden kaydedilir. “Common Voice Türkçe” gibi sürümsüz bir kayıt testin tekrarlanabilirliği için yeterli değildir. Spontaneous Speech Türkçe 5.0 sayfasında train/dev/test atamasının henüz yapılmadığı ve yeniden barındırmanın yasak olduğu belirtilmiştir.
 - Açık lisans, ses kaydındaki tüm üçüncü taraf haklarının veya kullanım koşullarının otomatik olarak temizlendiği anlamına gelmez. Her veri kümesi için kaynak, sürüm, lisans metni, erişim koşulu, konuşmacı kısıtları ve amaç uygunluğu kaydedilir.
 
 ### 3.3 MİHENK test deposunda neler bulunabilir?
