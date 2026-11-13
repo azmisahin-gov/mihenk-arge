@@ -1,5 +1,13 @@
 # Değişiklik Kaydı
 
+## 0.9.3 — 13.11.2026
+
+- 56.12 Türkçe test veri kaynakları; split, lisans, kullanım kısıtları ve veri yapısı açısından ayrı ayrı kaydedildi.
+- FLEURS tr_tr split sayıları ve Real-TurnTurk'ün ayrı konuşmacı kanalları gibi test tasarımını etkileyen ayrıntılar belgelendi.
+- MediaSpeech Türkçe yapılandırmasının güncel metadata/README görünümündeki tutarsızlık ve TurkASR-Bench kaynak lisansı uyuşmazlığı açık risk olarak kaydedildi.
+- İnsan referans transkripti için sözcüğü sözcüğüne anotasyon, zaman aralığı, belirsizlik, örtüşme ve anonim konuşmacı etiketleme kuralları önerildi.
+- Veri kümesi ve anotasyon kayıtları için JSON şablonları eklendi.
+
 ## 0.9.2 — 13.11.2026
 
 - 56.12 test planını uygulanabilir senaryolara dönüştüren katalog eklendi.
