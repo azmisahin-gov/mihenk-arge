@@ -242,6 +242,17 @@ Bu değerler raporlama varyantlarıdır; MİHENK için evrensel bir kabul eşiğ
 
 ### 7.3 Veri kümesi sınırlaması
 
+### 7.4 Türkçe kanıt durumu ve kabul ön koşulu
+
+İncelenen açık model kartları ve benchmark açıklamalarında, Türkçe doğal/karışık mono konuşma ve örtüşme için bağımsız insan anotasyonlu diarization başarımı doğrulanamamıştır. pyannote.audio ve sherpa-onnx teknik aday olarak test edilebilir; fakat başka dilde veya ayrı kanallı veride yayımlanan DER sonuçları Türkçe tek-kanal karışık konuşma başarımı olarak sunulamaz.
+
+- Diarization pilot girdisi kontrollü ses protokolündeki ortak miks/mono kayıt olmalıdır; ayrı referans mikrofonları yalnızca insan anotasyonuna yardım eder.
+- Referans etiketleri kayıt içinde anonim olmalı; kayıtlar arası kişi eşleştirmesi yapılmamalıdır.
+- ECAPA speaker embedding modeli tek başına diarization sistemi sayılmaz; VAD, segmentasyon, clustering ve speaker assignment hattı birlikte sınanmalıdır.
+- Türkçe için bağımsız test sonuçları toplanmadan üretim modeli, kabul eşiği veya kullanıcıya güven puanı kararı verilmez.
+
+
+
 Real-TurnTurk'te iki katılımcı ayrı kanal kaydettiği için konuşmacı ataması kanal bilgisinden anlaşılabilir; bu, mikrofonların aynı kanalda karıştığı gerçek diarization problemini doğrudan test etmez. İki kanalı birleştirerek sentetik karışım üretilecekse sonuçlar “sentetik karışım” olarak etiketlenir; doğal tek mikrofon/oda kaydıyla eşdeğer kabul edilmez.
 
 Konuşmacı ayrımı hiçbir aşamada gerçek kişi kimliğini, yaşını, cinsiyetini veya biyometrik özelliklerini belirleme testi değildir.
