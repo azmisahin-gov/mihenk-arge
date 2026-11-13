@@ -101,6 +101,22 @@ Kaynaklar:
 
 **Önerilen rol:** Hafif CTranslate2/CPU taban çizgisi olarak düşük öncelikli test. Yayımlanan WER değeri nedeniyle ana doğruluk adayı değildir.
 
+### Aday G — Qwen3-ASR 1.7B / 0.6B
+
+- Resmî [Qwen3-ASR projesi](https://github.com/QwenLM/Qwen3-ASR) ve model kartları, 1.7B ve 0.6B modellerinin 52 dil ve lehçede ASR/dil tanıma yaptığını; Türkçenin desteklenen diller arasında bulunduğunu bildiriyor.
+- Proje belgelerinde çevrimdışı ve akışlı (streaming) çıkarım desteği yer alıyor. Resmî `qwen-asr` paketi Transformers ve vLLM arka uçlarını sunuyor; yerel ağırlıklar indirildikten sonra ağ erişimi olmadan kullanılabilir.
+- Qwen3-ASR-1.7B model kartında Apache 2.0 lisansı görülüyor; proje deposu da Apache 2.0. 0.6B ve dönüştürülmüş/quantized dosyalar için ürün paketine alınmadan önce tam model kartı ve artifact lisansı ayrıca kaydedilmelidir.
+- TurkASR-Bench liderlik tablosunda Qwen3-ASR-1.7B WER yüzde 15,85 / CER yüzde 7,15 raporlamıştır. Aynı kaynağın Real-TurnTurk alt kümesinde WER yüzde 57,99'dur. Bunlar üçüncü taraf benchmark sonuçlarıdır; MİHENK ölçümü değildir.
+- Qwen3-ForcedAligner-0.6B, proje kartında 11 dil için listeleniyor; listede Türkçe yoktur. Bu nedenle Qwen3-ASR'nin Türkçe desteklemesi, Qwen ForcedAligner'ın Türkçe zaman hizalaması yaptığı anlamına gelmez.
+- Qwen'in ASR modeli Whisper ailesinden ayrı bir adaydır; ancak 1.7B ağırlık boyutu, Transformers/vLLM bağımlılıkları ve donanım bellek gereksinimi ölçülmelidir.
+
+**Önerilen rol:** Aynı veri ve anotasyonla Whisper/TurkMedSTT karşısında ölçülecek bağımsız çok dilli ASR ailesi. 0.6B ve 1.7B ayrı koşu kimlikleriyle test edilir; üretim veya düşük RAM uygunluğu şimdiden varsayılmaz.
+
+Kaynaklar:
+- [Qwen3-ASR resmî deposu ve Apache 2.0 lisansı](https://github.com/QwenLM/Qwen3-ASR)
+- [Qwen3-ASR-1.7B model kartı](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)
+- [Turkish ASR Leaderboard](https://yagmurtuncer-turkish-asr-leaderboard.hf.space/)
+
 ## 4. Runtime, model biçimi ve nicemleme notları
 
 - whisper.cpp, model dosyalarında kendi GGML biçimini kullanır; **GGUF, whisper.cpp model biçimi değildir**. GGUF dosyası uzantısı değiştirilerek whisper.cpp'ye verilemez.
@@ -127,8 +143,32 @@ Ayrıntılı karşılaştırma, model biçimleri, VAD, diarization, alignment ve
 | Türkçe doğruluk adayı | TurkMedSTT M1 | Genel Türkçe uyarlama; model kartında daha düşük WER beyanı | Teste alınsın; veri lisansları/çalışma zamanı doğrulansın |
 | Düşük kaynak alternatifi | ufakzeka-kulak | Küçük model; Apache 2.0; çevrimdışı hedef; doğal konuşmada belirgin hata artışı | İkincil test |
 | Çok küçük alternatif | Vosk Turkish Small | 35 MB; Apache 2.0; WER yayımlanmamış | Yalnız düşük öncelikli test |
+| Bağımsız çok dilli aday | Qwen3-ASR 0.6B / 1.7B | Türkçe destekli; resmî yerel/akışlı runtime; harici leaderboard'da ölçülmüş | Aynı testte eklensin; yerel kaynak kullanımı ölçülsün |
 
 Whisper Large v3 ve M1 aynı temel aileden olduğundan tamamen bağımsız iki mimari sayılmaz. ufakzeka-kulak bağımsız ve küçük mimari alternatifidir. Vosk da farklı ve çok küçük bir seçenek olarak saklanabilir; fakat Türkçe kalite verisi beklenir.
+
+### 6.1 Harici TurkASR-Bench liderlik tablosu – MİHENK dışı kanıt
+
+13 Kasım 2026 tarihinde incelenen Turkish ASR Leaderboard, aynı TurkASR-Bench setinde 19 açık modeli karşılaştırıyor. Ana görünümde sayılar Türkçe sözcük biçimine çevrilerek puanlanıyor; Türkçe küçük harf dönüşümü, noktalama temizliği ve kelime içi kesme işaretinin korunması kullanılıyor. Farkların anlamlılığı 2.000 eşleştirilmiş bootstrap örneklemesiyle inceleniyor.
+
+| Model | Parametre | WER | CER | Real-TurnTurk WER |
+|---|---:|---:|---:|---:|
+| TurkMedSTT Whisper | 1,55B | %12,39 | %5,79 | %55,16 |
+| Whisper Large v3 | 1,55B | %12,83 | %7,04 | %55,93 |
+| Whisper Large v3 Turbo | 809M | %12,92 | %6,91 | %56,57 |
+| Qwen3-ASR-1.7B | 1,7B | %15,85 | %7,15 | %57,99 |
+
+**Yorum ve sınır:**
+- Bu tablo, aynı veri ve puanlama yöntemi üzerinde adayların birbirlerine göre konumunu gösteren harici bir referanstır; MİHENK'in kendi test sonucu, bilirkişilik doğruluğu veya üretim kabulü değildir.
+- Genel WER yaklaşık %12–16 aralığındayken Real-TurnTurk doğal diyalog alt kümesinde ilk dört modelin WER'i %55'in üzerindedir. Tek bir genel ortalama doğal konuşmadaki ciddi düşüşü gizleyebilir. MİHENK sonuçları kaynak/konuşma türü bazında ayrı raporlamalıdır.
+- Leaderboard modelleri tek bir Apple Silicon dizüstünde çalıştırdığını, hız sıralaması vermediğini belirtiyor. Bu tablodan RAM, VRAM, RTF veya Windows/Pardus performansı çıkarılamaz.
+- TurkASR-Bench karışık kaynak lisanslıdır; bu skorları referans almak, bütün ses dosyalarını indirip MİHENK'e dahil etme izni anlamına gelmez. Veri kaynağı ve lisans incelemesi ayrı tutulur.
+
+Kaynaklar:
+- [Turkish ASR Leaderboard – sıralama ve kaynak bazında sonuçlar](https://yagmurtuncer-turkish-asr-leaderboard.hf.space/)
+- [TurkASR-Bench veri kartı ve lisans sınırları](https://huggingface.co/datasets/yagmurtuncer/turkasr-bench)
+
+
 
 ## 7. Test planı — gerçek ses public depoya girmez
 
