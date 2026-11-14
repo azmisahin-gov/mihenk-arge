@@ -125,7 +125,7 @@ Bu oturumun başında araştırma deposunda:
 - PR #10: v0.2 ürün taslağı; **birleştirilmeden kapatıldı**, v0.3 ile supersede edildi.
 - PR #11: v0.3 taslakları, ürün sözleşmesi, README/yol haritası/ADR ve bu devir belgesiyle birlikte **15.11.2026 tarihinde ana dala squash-merge edildi**.
 - Son doğrulamada araştırma deposunda **açık PR ve açık issue yok**.
-- Araştırma deposunun ana dalı: 1ece361d244cc02b508a534df99b0745317454ab.
+- Araştırma deposunda ana dal (main) güncel ve yetkili devam noktasıdır; yeni oturumda hash sabitlemek yerine canlı main yeniden doğrulanmalıdır.
 
 Uygulama deposunda görülen dallar: main, feat/56-12-report-question-answers, feat/56-12-transcript-review-queue ve feat/56-12-transcript-revision-history. PR #45 yeni ürün akışı netleşene kadar kapatılmış, birleştirilmemişti. Bu eski uygulama dalları bir sonraki oturumda içerik ve PR ilişkileriyle birlikte ayrıca denetlenmeli; araştırma deposu dal temizliğiyle karıştırılmamalı. Son kontrolde uygulama deposunda açık PR görünmüyordu.
 
