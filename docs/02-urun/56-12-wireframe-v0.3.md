@@ -4,6 +4,8 @@
 > **Tarih:** 15.11.2026  
 > **Görsel:** [Wireframe v0.3 — tam ekran panosu](56-12-wireframe-v0.3.svg)
 
+> **ÖNEMLİ:** Bu v0.3 taslağı proje sahibi tarafından kabul edilmiş nihai tasarım değildir. Kullanıcı, genel yönü önceki sürümlere göre daha anlaşılır buldu ancak görsel tasarım ve kullanım kolaylığı konusunda hâlâ tereddüt bildirdi. Yeni oturumda bu taslak yeniden gözden geçirilecek; profil, kasa, uzmanlık/modül ilişkisi, gezinme ve rapor önizlemesi netleşmeden uygulama UI'sı bu taslağa göre kesinleştirilmeyecektir.
+
 ## 1. Önce beş kavramı ayıralım
 
 | Kavram | Anlamı | Nerede yönetilir? |
