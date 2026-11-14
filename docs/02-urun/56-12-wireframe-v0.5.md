@@ -28,7 +28,7 @@ SVG'ler vektörel çizimdir; büyütülebilir ve tarayıcıda açılabilir.
 - **Uzmanlık Modülleri:** MİHENK'in sunduğu yazılım iş akışlarıdır. İlk aktif modül 56.12'dir.
 - **56.12 → Motorlar ve Modeller:** Whisper ailesi, SEDA ve diğer aday motorların test/kurulum/sürüm/lisans/donanım yönetimidir.
 - **Ses Araçları:** dinleme, kanal seçimi, ses iyileştirme ve teknik görünüm ayarları.
-- **Dil ve Metin:** konuşma algılama, noktalama ve isteğe bağlı konuşmacı ayrımı gibi yardımcı bileşenler.
+- **Dil ve Metin:** VAD (konuşma/sessizlik tespiti), isteğe bağlı konuşmacı gruplama ve noktalama gibi sınırlı yardımcı bileşenler. Bunlar motor/model ayarlarında yönetilir.
 
 Bunlar aynı menü öğesi değildir. Bilirkişi profilde meslekî uzmanlık alanlarını tanımlar; modül kataloğunda 56.12 iş akışına girer; ASR motorlarını da bu modülün altındaki altyapı alanında yönetir.
 
@@ -104,6 +104,10 @@ Bu, 56.12'nin en yoğun ve en önemli çalışma ekranıdır. Bir görevde tek b
 
 Bu işaretler **gerçek doğruluk yüzdesi değildir**. Yalnızca nereden başlanmasının daha yararlı olacağına dair kontrol önceliğidir. Bilirkişi isterse bütün kaydı baştan sona inceleyebilir.
 
+**NLP / dil modeli sınırı**
+
+56.12'nin temel transkripsiyon zincirinde serbest biçimde metin yazan bir LLM/NLP modeli nihai sözcük kaynağı değildir ve varsayılan olarak gerekli değildir. ASR'nin tanıdığı kelimeleri bağlamdan tahmin ederek tamamlama, özetleme veya yeniden yazma yapılmaz. İhtiyaç ve karşılaştırmalı test varsa yalnızca sınırları belirli yardımcılar (noktalama, konuşma/sessizlik tespiti, kayıt içi konuşmacı gruplama, arama/biçimlendirme) etkinleştirilebilir. Yardımcı çıktı da uzman tarafından kontrol edilir; ham ASR metnini ve kaynak ses bağlantısını ortadan kaldırmaz.
+
 **Konuşmacı ayrımı**
 - Çoklu konuşmacı olduğu düşünülen kayıtlarda sistem isteğe bağlı diarization/konuşmacı gruplama yapabilir.
 - Başlangıçta kimlik değil, “Konuşmacı A”, “Konuşmacı B” gibi kayıt içi etiketler kullanılır.
@@ -165,6 +169,7 @@ Sol menü daraltıldığında aynı öğeler ve aynı sıralama korunur; yalnız
 | Yeni görev wizard mı? | Hayır. Taslak oluşturan, otomatik kaydeden ve her zaman geri dönülebilen kabul akışıdır. |
 | Materyal en başta eklenmek zorunda mı? | Hayır. Şimdi veya daha sonra eklenebilir; sistem beklenen ve teslim alınanları izler. |
 | ASR'nin yalnız yapamadıkları mı gösterilir? | Hayır. Tüm kayıt ve metin erişilebilir; kontrol kuyruğu ilk bakışta sorunlu bölümlere öncelik verir. |
+| NLP/LLM gerekir mi? | Serbest metin üreten LLM transkripsiyonun doğruluk kaynağı değildir. VAD, sınırlı noktalama ve isteğe bağlı diarization gibi test edilmiş yardımcı bileşenler modülde etkinleştirilir. |
 | Konuşmacı ayrımı var mı? | İhtiyaç ve kalite uygunsa opsiyonel gruplama vardır; uzman kontrol eder; kimlik iddiası değildir. |
 | Ses iyileştirme var mı? | Dinleme araçları ve geri alınabilir işlenmiş kopyalar tasarlanır; orijinal korunur, bütün işlemler kaydedilir. |
 | Rapor segmente göre mi yazılır? | Hayır. Segment çalışma birimidir; rapor okunabilir, zaman damgalı konuşmacı paragrafları sunar. |
