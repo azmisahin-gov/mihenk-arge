@@ -1,10 +1,11 @@
 # MİHENK — Araştırma, Ürün Keşfi ve Proje Yönetimi
 
-> **Durum:** Keşif ve gereksinim doğrulama aşaması  
-> **Güncelleme:** 13 Kasım 2026  
-> **Ürün/MVP kararı:** Henüz verilmedi
+> **Durum:** 56.12 ilk teslimat yönü belirlendi; kullanıcı arayüzü taslağı v0.3 gözden geçirme bekliyor  
+> **Güncelleme:** 15 Kasım 2026  
+> **İlk teslimat:** 56.12 kontrollü uzman pilotu  
+> **Wireframe durumu:** v0.3 taslak — kullanıcı tarafından henüz kabul edilmedi
 
-MİHENK, Türkiye'de bilirkişilerin görevlerini daha güvenli, düzenli ve verimli yürütebilmeleri için ihtiyaçları araştırılan yeni bir ürün girişimidir. İlk saha gözlemleri başladı; ancak tek uzmanla yapılan ilk çalışma bütün bilirkişileri temsil etmez ve henüz MVP kararı oluşturmaz.
+MİHENK, bilirkişilerin görevlendirme, materyal inceleme, bulgu ve rapor hazırlama işlerini tek bir çalışma alanında daha güvenli ve düzenli yürütmesini hedefleyen bir üründür. Proje sahibi ilk kullanılabilir teslimatın 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü uzman pilotu olmasını istemiştir. Bu, tüm bilirkişilik alanları için genel platform MVP'sinin veya nihai ürün tasarımının tamamlandığı anlamına gelmez; v0.3 wireframe hâlâ taslaktır.
 
 Bu depo **araştırma, mevzuat, anonimleştirilmiş saha sentezleri, gereksinimler, ürün/mimari kararları ve proje yönetimi** içindir. Uygulama kaynak kodu burada tutulmaz.
 
@@ -13,9 +14,9 @@ Bu depo **araştırma, mevzuat, anonimleştirilmiş saha sentezleri, gereksiniml
 | Depo | Sorumluluk | 13.11.2026 durumu |
 |---|---|---|
 | [mihenk-arge](https://github.com/azmisahin-gov/mihenk-arge) | Araştırma, ürün keşfi, gereksinim, mevzuat, risk ve karar belgeleri | Aktif belge deposu |
-| [mihenk](https://github.com/azmisahin-gov/mihenk) | MİHENK uygulamasının sıfırdan yazılacak kodu, testleri, CI ve release süreçleri | Ayrılmış, public ve henüz boş; geliştirme başlamadı |
+| [mihenk](https://github.com/azmisahin-gov/mihenk) | MİHENK masaüstü uygulamasının kodu, testleri, CI ve release süreçleri | Prototip/önizleme geliştirmesi mevcut; 0.1.0-53 kullanıcının denediği sürümdür, ilk kullanılabilir pilot kabul edilmemiştir |
 
-Depoların adı ayrılmış olsa da ürün kapsamı, ilk sürüm, teknoloji, lisans ve yayın modeli henüz kararlaştırılmadı. Uygulama deposunun public olması, kaynak kodun herkese açık olacağı anlamına gelir; bu tercih bilinçli değilse ilk kaynak kodu eklenmeden önce private yapılması değerlendirilmelidir. Public görünürlük tek başına açık kaynak lisansı seçildiği anlamına gelmez.
+İlk teslimat kapsamının 56.12 kontrollü pilotu olması yönünde ürün kararı vardır. Wireframe, resmî rapor/UYAP biçimi ve gerçek uzman kabulü henüz tamamlanmadığından ilk pilotun kullanıma hazır olduğu söylenemez. Genel platformun tüm uzmanlıkları kapsayan kapsamı ve uzun vadeli yayın/lisans tercihleri ayrıca olgunlaştırılacaktır. Uygulama deposunun public olması, kaynak kodun herkese açık olacağı anlamına gelir; bu tercih bilinçli değilse ilk kaynak kodu eklenmeden önce private yapılması değerlendirilmelidir. Public görünürlük tek başına açık kaynak lisansı seçildiği anlamına gelmez.
 
 ## MİHENK sıfırdan tasarlanacak
 
@@ -30,7 +31,17 @@ Bu projelerden kod, mimari, veri modeli, bağımlılık, arayüz bileşeni, mode
 
 İlk deneme, bir bilirkişinin 56.12 kapsamındaki örnek ses-kayıt işi ve UYAP Bilirkişi Portal ekran akışı üzerinden yürütüldü. İlk gözlemler, tek başına transkripsiyon üretmenin yeterli olmadığını; materyal kabulü, güvenli envanter, inceleme, düzeltme, raporun biçimlendirilmesi ve teslim öncesi kontrollerin de işin parçası olduğunu düşündürüyor. Bunlar henüz doğrulanması gereken ürün hipotezleridir.
 
-56.12, ilk test senaryosudur; MİHENK'in seçilmiş tek uzmanlık alanı veya kesin MVP'si değildir. 56.11 ile kapsamı karıştırılmayacaktır.
+56.12, proje sahibinin talimatıyla ilk kullanılabilir teslimatın odak uzmanlık modülüdür. Bu karar, MİHENK'in uzun vadede yalnızca 56.12 olacağı anlamına gelmez; platformun diğer uzmanlık modüllerine genişlemesi hedeflenir. 56.11 ile kapsamı karıştırılmayacaktır. 56.12 wireframe v0.3 yalnızca çalışma taslağıdır ve kullanıcı tarafından henüz kabul edilmemiştir.
+
+## Güncel devam noktası — 15 Kasım 2026
+
+- İlk teslimat yönü: 56.12 ses kayıtlarının metne dönüştürülmesi kontrollü uzman pilotu.
+- Güncel kullanıcı deneyimi taslağı: [Wireframe v0.3](docs/02-urun/56-12-wireframe-v0.3.md) ve [SVG ekran panosu](docs/02-urun/56-12-wireframe-v0.3.svg). **Kabul edilmedi; tasarım çalışması devam ediyor.**
+- Ürün sözleşmesi: [56.12 ilk teslimat sözleşmesi](docs/02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md).
+- Yeni oturum için tek başlangıç belgesi: [Oturum devam noktası](docs/00-yonetim/yeni-oturum-baslangic-noktasi.md).
+- Kod geliştirmeye yeni UI işleriyle devam edilmeden önce wireframe ilk kurulumdan tek rapora kadar kullanıcı açısından netleştirilecek.
+- 0.1.0-53 masaüstü önizlemesinde bilinen kullanıcı blokajları: uygulamanın X ile kapanması, kasa açılışında kayıtlı sesin seçilmesi/oynatmaya hazır hâle gelmesi, dayanak seçicisinin düzeni ve güncelleme hatalarının tanılanması.
+- Resmî UYAP Editör uyumu gerçek Windows Editör aç/kaydet/yeniden aç testi olmadan ilan edilmeyecek.
 
 ## Ürün ilkesi
 
@@ -54,8 +65,8 @@ Her iki depo public olduğundan GitHub'a hiçbir koşulda gerçek vaka dosyası,
 
 - `docs/00-yonetim/`: amaç, çalışma yöntemi, proje yönetimi ve karar kuralları
 - `docs/01-arastirma/`: mevzuat, UYAP, görev akışı ve saha gözlemleri
-- `docs/02-urun/`: kullanıcılar, yolculuklar, gereksinimler ve MVP hipotezleri
-- `docs/03-uzmanlik-modulleri/`: uzmanlık bazlı araştırma; henüz seçilmiş modül yok
+- `docs/02-urun/`: kullanıcılar, yolculuklar, gereksinimler, 56.12 ilk teslimat sözleşmesi ve wireframe taslakları
+- `docs/03-uzmanlik-modulleri/`: uzmanlık bazlı araştırma; ilk teslimat odağı 56.12, diğer modüller sonraki aşamalar
 - `docs/04-mimari/`: teknoloji bağımsız mimari ilkeler ve veri modeli hipotezleri
 - `docs/05-guvenlik-ve-mevzuat/`: hukuk, kişisel veri, tehdit, delil bütünlüğü ve yedekleme
 - `docs/06-dogrulama/`: görüşme, test ve pilot planları
