@@ -1,7 +1,5 @@
 # Değişiklik Kaydı
 
-# Değişiklik Kaydı
-
 ## 0.12.0 — 15.11.2026
 
 - İlk kullanılabilir MİHENK teslimatının 56.12 kontrollü uzman pilotu olması karara bağlandı; uzun vadeli modüler platform yönü korundu.
