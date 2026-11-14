@@ -1,6 +1,6 @@
 # MİHENK — Kullanıcı Deneyimi ve Ekran Tasarımı v0.4
 
-> **Durum:** Sistem haritası v1.0 temelinde hazırlanmış, altı görsel panolu wireframe taslağı. Kullanıcı kabulü ve alan uzmanı değerlendirmesi bekleniyor.  
+> **Durum:** Sistem haritası v1.0 temelinde hazırlanmış, sekiz görsel panolu wireframe taslağı. Kullanıcı kabulü ve alan uzmanı değerlendirmesi bekleniyor.  
 > **Tarih:** 15 Kasım 2026  
 > **Önemli:** Bu belge ve SVG'ler ürün tasarım taslağıdır; tamamlanmış görsel tasarım veya uygulama UI kodlama onayı değildir.
 
@@ -91,6 +91,27 @@ SVG'ler vektörel çizimdir; büyütülebilir, tarayıcıda açılabilir ve gere
 - Çevrimdışı durumda yerel model paketi hazır değilse davranış.
 - Başarısız uygulama güncellemesi ve kullanıcı kontrollü tanılama.
 
+### 07 — Gezinme, profil ve materyal ayrıntıları
+
+[SVG panosunu aç](wireframe-v0.4-07-gezinme-profil-materyal-guvenlik.svg)
+
+İçerik:
+- Daraltılmış sol menü, ikon ipuçları ve avatar menüsü.
+- İlk kurulumdan sonra profil/uzmanlık alanı düzenleme.
+- Tek materyalin dosya kimliği, orijinal/kopya, hash, teknik metadata ve işlem geçmişi.
+- Kasa parolası, otomatik kilit, yedek ve geri yükleme yönetimi.
+
+### 08 — Uygulama ayarları ve güncellemeler
+
+[SVG panosunu aç](wireframe-v0.4-08-uygulama-ayarlari-ve-guncellemeler.svg)
+
+İçerik:
+- Tema, yazı boyutu, erişilebilirlik, kontrast ve hareket tercihi.
+- Dil/bölge, tarih/saat, yerel bildirim ve açılış davranışı.
+- Uygulama güncelleme kanalı ve doğrulama.
+- Uygulama sürümü, lisanslar, yardım ve tanılama.
+- Uygulama güncellemesi ile 56.12 modül/model güncellemesinin ayrılması.
+
 ## 3. Ekran kataloğu ve görsel eşlemesi
 
 Sistem tasarımı v1.0'daki S-01–S-30 kimlikleri korunur. Bir kimlik bağımsız tam ekran, bir sayfa içi panel, modal veya durum görünümü olabilir; her kimliğin ayrı bir menü öğesi olması gerekmez.
@@ -99,8 +120,8 @@ Sistem tasarımı v1.0'daki S-01–S-30 kimlikleri korunur. Bir kimlik bağıms�
 |---|---|---|
 | S-01 | İlk karşılama | 01 / Karşılama |
 | S-02 | Kasa oluştur | 01 / Kasa oluşturma bölümü |
-| S-03 | Bilirkişi profili | 01 / Profil sihirbazı |
-| S-04 | Uzmanlık alanlarım | 01 / Profil sihirbazı |
+| S-03 | Bilirkişi profili | 01 / Kurulum sihirbazı; 07 / Profil düzenleme |
+| S-04 | Uzmanlık alanlarım | 01 / Kurulum sihirbazı; 07 / Profil düzenleme |
 | S-05 | Kasa aç | 01 / Mevcut kasayı aç bölümü |
 | S-06 | Genel Bakış | 01 / Ana uygulama kabuğu |
 | S-07 | Görevlerim | 02 / Görev listesi |
@@ -110,7 +131,7 @@ Sistem tasarımı v1.0'daki S-01–S-30 kimlikleri korunur. Bir kimlik bağıms�
 | S-11 | Görev Özeti | 03 / Görev aşamaları |
 | S-12 | Görevlendirme | 03 / Görev Profili doğrulama |
 | S-13 | Materyal envanteri | 03 / Envanter |
-| S-14 | Materyal ayrıntısı | 03 / Envanter satırı ve ayrıntı etkileşimi |
+| S-14 | Materyal ayrıntısı | 07 / Teknik ayrıntı ve bütünlük |
 | S-15 | Ses ve Transkript | 04 / Ses çalışma tezgâhı |
 | S-16 | ASR kuyruk durumu | 04 / Kayıt listesi ve işlem durumları |
 | S-17 | Dayanak seçici | 05 / Geniş arama/seçim |
@@ -121,9 +142,9 @@ Sistem tasarımı v1.0'daki S-01–S-30 kimlikleri korunur. Bir kimlik bağıms�
 | S-22 | Uzmanlık Modülleri | 02 / Modül kataloğu |
 | S-23 | 56.12 modül yönetimi | 02 / Modül kataloğu ve yönetim |
 | S-24 | Yerel motor/model yönetimi | 02 / 56.12 motor yönetimi |
-| S-25 | Uygulama Ayarları | 02 / Genel tercihler; 06 / Güncelleme |
-| S-26 | Kasa ve Güvenlik | 05 / Yedek; 06 / kurtarma ve işlem onayı |
-| S-27 | Yardım ve Tanılama | 05 / Yardım; 06 / tanılama |
+| S-25 | Uygulama Ayarları | 02 / Kategori listesi; 08 / Alt ekranlar ve güncellemeler |
+| S-26 | Kasa ve Güvenlik | 05 / Yedek; 07 / parola ve otomatik kilit; 06 / kurtarma |
+| S-27 | Yardım ve Tanılama | 05 / Yardım; 08 / uygulama bilgisi ve tanılama |
 | S-28 | Görev kapat/arşivle/sil | 06 / Görev yaşam döngüsü |
 | S-29 | Çevrimdışı ve bağlantı durumu | 02 / Model yönetimi; 06 / çevrimdışı durumu |
 | S-30 | Genel hata/boş durum sistemi | 05 / Durum galerisi; 06 / güncelleme hatası |
