@@ -6,7 +6,7 @@
 
 ## 1. Bu sürümde neyi değiştirdik?
 
-v0.4'te sistemin çok sayıda alanını aynı anda göstermeye çalışırken bazı alt alanların nerede başladığı, bir işlemden sonra nereye geçildiği ve bilirkişinin asıl işine nasıl odaklandığı yeterince açık değildi. v0.5 bu nedenle ekran sayısını çoğaltmak yerine beş temel ekran/akış etrafında sadeleştirildi:
+v0.4'te sistemin çok sayıda alanını aynı anda göstermeye çalışırken bazı alt alanların nerede başladığı, bir işlemden sonra nereye geçildiği ve bilirkişinin asıl işine nasıl odaklandığı yeterince açık değildi. v0.5 bu nedenle ekran sayısını çoğaltmak yerine altı pano ile ana akış ve gezinme davranışı sadeleştirilip netleştirildi:
 
 1. Profildeki meslekî uzmanlık, MİHENK modülü ve modülün motor/model ayarı birbirinden ayrıldı.
 2. Yeni görevlendirme sabit adımlı, geri dönüşü zor bir wizard olmaktan çıkarıldı. Belge alındığında taslak görev kaydı oluşur; otomasyon başlar; materyaller aynı anda veya daha sonra eklenebilir.
@@ -67,12 +67,6 @@ Her görevlendirmenin kendi çalışma alanı ve kendi materyal/soru/rapor bağl
 Görev Özeti kullanıcıya sıradaki işleri gösterir: örneğin kontrol bekleyen ses parçaları, görevlendirme alanı istisnaları, yanıtsız sorular ve rapor durumu. Kullanıcıyı ayar ekranına göndermek yerine doğrudan ilgili işe götürür.
 
 Görevlerim ana menüden her zaman erişilebilir. Bir göreve girildiğinde yalnız o göreve ait sesler, transkriptler, dayanaklar, sorular ve rapor gösterilir.
-
-### 04 — Ana menünün geniş ve dar hâli
-
-[06 Daraltılabilir ana menü panosunu aç](wireframe-v0.5-06-daraltilebilir-ana-menu.svg)
-
-Sol menü daraltıldığında aynı öğeler ve aynı sıralama korunur; yalnız metin etiketleri gizlenir. Aktif öğe renk/arka planla belirgin kalır, ikon üzerinde bekleme araç ipucu açar, klavye erişimi ve erişilebilir adlar korunur. Tercih sonraki açılışta hatırlanır. Böylece Görevlerim'e dar menüden de tek tıklamayla dönülür; yeni bir gezinme hiyerarşisi öğrenmek gerekmez.
 
 ### 04 — Ana ses inceleme tezgâhı
 
@@ -154,6 +148,13 @@ Adalet Bakanlığı Bilirkişilik Daire Başkanlığının sitesinde hukuk/idare
 - Rapor, tüm sayfaları ve ekleriyle A4 biçiminde önizlenir. Sayfa numarası, başlık, altbilgi, tablo bölünmesi, Türkçe karakterler, kenar boşlukları ve imza alanı gerçek çıktı üzerinde test edilir.
 - UYAP Editör'de açma/kaydetme/yeniden açma testi geçmeyen bir çıktı “UYAP'a hazır” olarak etiketlenmez.
 - UYAP Portal'a giriş, imza ve raporu gönderme bilirkişinin kontrolünde kalır.
+
+### 06 — Ana menünün geniş ve dar hâli
+
+[06 Daraltılabilir ana menü panosunu aç](wireframe-v0.5-06-daraltilebilir-ana-menu.svg)
+
+Sol menü daraltıldığında aynı öğeler ve aynı sıralama korunur; yalnız metin etiketleri gizlenir. Aktif öğe renk/arka planla belirgin kalır, ikon üzerinde bekleme araç ipucu açar, klavye erişimi ve erişilebilir adlar korunur. Tercih sonraki açılışta hatırlanır. Böylece Görevlerim'e dar menüden de tek tıklamayla dönülür; yeni bir gezinme hiyerarşisi öğrenmek gerekmez.
+
 
 ## 3. Kullanıcının sorularına doğrudan tasarım cevabı
 
