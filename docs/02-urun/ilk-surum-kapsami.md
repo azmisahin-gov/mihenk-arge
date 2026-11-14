@@ -1,7 +1,7 @@
 # İlk Sürüm Kapsamı
 
-> **Durum:** Henüz belirlenmedi — bütünleşik platform hedefi eklendi  
-> **Güncelleme:** 13 Kasım 2026
+> **Durum:** İlk teslimat odağı 56.12 kontrollü pilotu; genel platform MVP'si ve nihai UX doğrulaması açık  
+> **Güncelleme:** 15 Kasım 2026
 
 ## Bu aşamadaki karar
 
