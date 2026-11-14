@@ -1,6 +1,6 @@
 # MİHENK — Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0
 
-> **Durum:** Ürün/sistem tasarım temeli tamamlandı; v0.4 wireframe üretimine girdi olacak. Henüz görsel tasarım kabulü veya UI geliştirme onayı değildir.  
+> **Durum:** Ürün/sistem tasarım temeli tamamlandı; wireframe v0.4 taslağı üretildi. Henüz görsel tasarım kabulü veya UI geliştirme onayı değildir.  
 > **Tarih:** 15 Kasım 2026  
 > **İlk teslimat:** 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotu  
 > **Uzun vadeli hedef:** Ortak çekirdek ve birbirinden ayrılmış uzmanlık modülleriyle MİHENK platformu.
@@ -770,7 +770,7 @@ Bu doğrulamalar tamamlanmadan “56.12 kullanıma hazır”, “UYAP'a hazır�
 
 ## 20. v0.4 wireframe kabul kapsamı
 
-Sistem tasarımı v1.0, v0.4 wireframe üretimi için yeterli bilgi mimarisi ve kullanıcı akışı sağlar. Wireframe aşağıdaki aşamaları kesintisiz göstermelidir:
+Sistem tasarımı v1.0 temelinde [Wireframe v0.4](56-12-wireframe-v0.4.md) ve altı görsel pano oluşturuldu. Sistem tasarımı v1.0, v0.4 değerlendirmesi için bilgi mimarisi ve kullanıcı akışının ana kaynağıdır. Wireframe aşağıdaki aşamaları kesintisiz göstermelidir:
 
 1. İlk açılış ve kasa oluşturma.
 2. Profil ve uzmanlık alanı.
