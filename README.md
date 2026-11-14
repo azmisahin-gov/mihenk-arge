@@ -37,7 +37,7 @@ Bu projelerden kod, mimari, veri modeli, bağımlılık, arayüz bileşeni, mode
 
 - İlk teslimat yönü: 56.12 ses kayıtlarının metne dönüştürülmesi kontrollü uzman pilotu.
 - Önceki kullanıcı deneyimi taslağı: [Wireframe v0.3](docs/02-urun/56-12-wireframe-v0.3.md) ve [SVG ekran panosu](docs/02-urun/56-12-wireframe-v0.3.svg). **Kabul edilmedi.**
-- Yeni tasarım: [Wireframe v0.4](docs/02-urun/56-12-wireframe-v0.4.md) ve [altı görsel pano](docs/02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg). **Taslak; kullanıcı ve uzman değerlendirmesi bekliyor.**
+- Yeni tasarım: [Wireframe v0.4](docs/02-urun/56-12-wireframe-v0.4.md) ve [sekiz görsel pano](docs/02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg). **Taslak; kullanıcı ve uzman değerlendirmesi bekliyor.**
 - Ürün sözleşmesi: [56.12 ilk teslimat sözleşmesi](docs/02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md).
 - Sistem tasarımı: [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](docs/02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md). Bu belge ana gezinme, ekran kataloğu, ayar sahipliği, ASR yönetimi, rapor ve hata akışlarının referansıdır.
 - Yeni oturum için tek başlangıç belgesi: [Oturum devam noktası](docs/00-yonetim/yeni-oturum-baslangic-noktasi.md).
