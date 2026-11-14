@@ -202,3 +202,13 @@ Yeni oturumda kullanıcı araştırma reposunu verdiğinde şu şekilde başlanm
 ---
 
 **Kapanış ölçütü:** Yeni oturum başladığında ilk iş tekrar “MİHENK ne yapacak?” sorusunu sıfırdan sormak değil; bu belgede kayıtlı hedefi doğrulamak, wireframe'i iyileştirmek ve kalan açık kararları kapatmaktır.
+
+
+## Güncel tasarım durumu — 15.11.2026
+
+- Kullanıcının v0.4 geri bildirimi: alan hiyerarşisi, yeni görev sonrası navigasyon, materyalin ne zaman eklendiği, 04 ses inceleme çalışma alanının derinliği, konuşmacı ayrımı, dinleme/iyileştirme araçları ve tek raporun gerçek biçimi daha net gösterilmeli.
+- Bu geri bildirime göre [Wireframe v0.5](../02-urun/56-12-wireframe-v0.5.md) ve beş SVG pano oluşturuldu.
+- v0.5'te yeni görev katı wizard değildir; ilk belgeden itibaren otomatik kaydedilen ve materyal eklemeyi sonradan da destekleyen görev kabul akışıdır.
+- Ses ekranı bütün kayıt ve metni gösterir; kontrol önceliği ASR işaretleriyle belirlenir. Konuşmacı ayrımı isteğe bağlıdır; ses iyileştirme orijinali değiştirmeyen kopyada yürür.
+- Tek rapor merci türüne göre örnek iskeletle eşleştirilir; rapor tek ana belge ve eklerdir. Segmentler nihai raporda tek tek satır yapılmaz; zamanlı, konuşmacı sıralı okunabilir paragraflar sunulur.
+- v0.5 henüz kullanıcı/alan uzmanı tarafından kabul edilmemiştir. Uygulama UI kodlaması başlamaz; araştırma reposunda yalnızca ürün dokümanı ve wireframe çalışması vardır.
