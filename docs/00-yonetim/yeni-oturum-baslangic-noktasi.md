@@ -12,7 +12,8 @@ Proje sahibi, yeni oturumda araştırma deposunu tekrar paylaşarak çalışmaya
 - **Uygulama deposu:** [azmisahin-gov/mihenk](https://github.com/azmisahin-gov/mihenk)
 - **İlk teslimat yönü:** 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotu.
 - **Uzun vadeli ürün:** farklı uzmanlık modüllerini ortak çekirdekte sunan MİHENK platformu.
-- **Güncel wireframe:** v0.3; **kullanıcı tarafından kabul edilmedi**. Yalnızca daha önceki taslaklara göre daha iyi bulunan bir çalışma taslağıdır.
+- **Güncel wireframe:** v0.3; **kullanıcı tarafından kabul edilmedi**.
+- **Sistem tasarımı:** [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı; v0.4 wireframe'in ana referansıdır.
 - **Bu oturumdaki uygulama kodu:** değiştirilmedi. Yeni MSI üretilmedi.
 - **Önizleme sürümü:** proje sahibinin son bildirdiği gerçek kurulum 0.1.0-53'tür.
 
@@ -79,28 +80,32 @@ Proje sahibi v0.3'ün önceki sürümlere kıyasla daha iyi olduğunu söyledi; 
 Önce aşağıdaki belgeler yeniden açılıp birbirleriyle karşılaştırılmalı:
 
 1. [Bu oturum devam belgesi](yeni-oturum-baslangic-noktasi.md)
-2. [Karar kaydı](../08-karar-ve-acik-konular/karar-kaydi.md) — ADR-032–035
+2. [Karar kaydı](../08-karar-ve-acik-konular/karar-kaydi.md) — ADR-032–038
 3. [56.12 ilk teslimat ürün sözleşmesi](../02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md)
-4. [56.12 wireframe v0.3](../02-urun/56-12-wireframe-v0.3.md)
-5. [Görevlendirme belgesi ve Görev Profili](../02-urun/gorevlendirme-belgesi-ve-gorev-profili.md)
-6. [Alan modeli](../04-mimari/alan-modeli.md)
-7. [Bütünleşik uzmanlık modülü mimarisi](../04-mimari/butunlesik-uzmanlik-modul-mimarisi.md)
-8. [56.12 minimum sürüm kapsamı ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md)
-9. [56.12 test planı ve senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md) ve [test senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-senaryolari.md)
-10. [Resmî UYAP/görevlendirme akışı](../01-arastirma/uyap-is-akisi.md)
-11. [Otomasyon matrisi](../02-urun/otomasyon-matrisi.md)
-12. [Yol haritası](../07-yol-haritasi/asamalar.md)
-13. [Açık sorular](../08-karar-ve-acik-konular/acik-sorular.md) ve [risk kaydı](../08-karar-ve-acik-konular/risk-kaydi.md)
+4. [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) — yeni sistem tasarımı ve v0.4 ekran kataloğu
+5. [56.12 wireframe v0.3](../02-urun/56-12-wireframe-v0.3.md)
+6. [Görevlendirme belgesi ve Görev Profili](../02-urun/gorevlendirme-belgesi-ve-gorev-profili.md)
+7. [Alan modeli](../04-mimari/alan-modeli.md)
+8. [Bütünleşik uzmanlık modülü mimarisi](../04-mimari/butunlesik-uzmanlik-modul-mimarisi.md)
+9. [56.12 minimum sürüm kapsamı ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md)
+10. [56.12 test planı ve senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md) ve [test senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-senaryolari.md)
+11. [Resmî UYAP/görevlendirme akışı](../01-arastirma/uyap-is-akisi.md)
+12. [Otomasyon matrisi](../02-urun/otomasyon-matrisi.md)
+13. [Yol haritası](../07-yol-haritasi/asamalar.md)
+14. [Açık sorular](../08-karar-ve-acik-konular/acik-sorular.md) ve [risk kaydı](../08-karar-ve-acik-konular/risk-kaydi.md)
 
 ### Rapor konusunda önemli araştırma notu
 
-Bilirkişilik Daire Başkanlığının sayfasındaki örnek rapor aileleri incelenmeli; ancak Mayıs 2025 Bilirkişilik Temel Eğitimi Kaynak Kitabı raporlar için özel ve değişmez tek bir şablon olmadığını, örneklerin ihtiyatla kullanılmasını ve kopyala-yapıştır yapılmamasını belirtiyor. MİHENK merci/yargı türüne ve görevlendirme içeriğine uygun rapor yapısı önermeli; sabit formu zorla uygulamamalı. UYAP Editör uyumluluğu gerçek Windows Editör'de aç/kaydet/yeniden aç testiyle kanıtlanmalı.
+16.06.2025 tarihli konsolide Bilirkişilik Yönetmeliği m.55, raporda inceleme yöntemi ile bilimsel ve teknik dayanakların bulunmasını ister. 06.04.2026 tarihli Adalet Bakanlığı rehberi raporun somut nedenlere dayalı, denetlenebilir, anlaşılır ve gereksiz ayrıntıdan uzak olmasını; soruların tek tek cevaplanmasını vurgular. Resmî rapor şablonları merci/yargı türüne göre ayrı aileler hâlinde yayımlanır; MİHENK tek bir sabit şablonu her göreve zorlamaz.
+
+ASR gerçekten kullanılmışsa, MİHENK ürün politikası olarak motor/model adı ve sürümünü inceleme yöntemi/teknik araçlar bölümünde kısa ve anlaşılır biçimde açıklar. Tam runtime/build/parametre/checksum ve kayıt bazındaki model eşlemesi teknik işlem kaydında, gerektiğinde teknik ekte tutulur. Yönetmelik belirli bir ASR marka/model adını açıkça zorunlu kılmaz; bu açıklama MİHENK'in denetlenebilirlik ve şeffaflık önerisidir. Makine çıktısı bilirkişi kontrolü olmadan nihai transkript gibi gösterilmez.
 
 Kaynaklar:
+- [16.06.2025 konsolide Bilirkişilik Yönetmeliği](https://rayp.adalet.gov.tr/resimler/494/dosya/bilirkisilik-yonetmeligi16-06-20254-49-pm.pdf)
+- [Bilirkişilerin Uyacağı Rehber İlkeler ve Bilirkişi Raporlarında Bulunması Gereken Standartlar — 06.04.2026](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260406170009026Bilirkişilerin%20Uyacağı%20Rehber%20İlkeler%20ve%20Bilirkişi%20Raporlarında%20Bulunması%20Gereken%20Standartlar.pdf)
 - [Bilirkişi Rapor Şablonları — Bilirkişilik Daire Başkanlığı](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
-- [Bilirkişilik Temel Eğitimi Kaynak Kitabı, Mayıs 2025](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/15052025204011Bilirkis%CC%A7ilik%20Temel%20E%C4%9Fitimi%20Kaynak%20Kitab%C4%B1.pdf)
-- [Bilirkişiler İçin Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/14032022110908Bilirkişiler%20i%C3%A7in%20Kontrol%20Listesi.pdf)
-- [UYAP Doküman Editörü resmî yardım](https://uyap.gov.tr/Uyap-Editor-Yardim)
+- [Bilirkişiler İçin Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisiler-icin-kontrol-listesi14032022105444)
+- [SWGDE Best Practices for Forensic Audio](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
 
 ## 6. Mevcut masaüstü uygulaması: kullanıcıdan gelen gerçek bulgular
 
@@ -116,62 +121,60 @@ Proje sahibi MSI'ı manuel indirerek geliştirme önizlemesini takip ediyor:
 
 Bunlar gerçek kullanıcı kabulünde P0/P1 önceliğinde ele alınmalı. Özellikle uygulamanın güvenli kapanması ve kayıtlı görev/ses bağlamının geri yüklenmesi, görsel ince ayarlardan önce gelmeli. Bu oturumda uygulama deposunda kod değiştirilmedi.
 
-## 7. Uygulama deposu ve çalışma dalları hakkında
+## 7. Güncel depo ve dal durumu — 15.11.2026 canlı kontrolü
 
-Araştırma ve uygulama depoları ayrı tutulmaya devam etmeli. Araştırma deposundaki uygulama kodu/gerçek vaka dosyası eklenmemeli.
+Araştırma ve uygulama depoları ayrı tutulur. Araştırma deposuna uygulama kodu veya gerçek vaka dosyası eklenmez.
 
-Bu oturumun başında araştırma deposunda:
-- PR #1–#9: **birleştirilmiş**; bunlara ait branch isimleri eski squash-merge dalları olarak duruyor.
-- PR #10: v0.2 ürün taslağı; **birleştirilmeden kapatıldı**, v0.3 ile supersede edildi.
-- PR #11: v0.3 taslakları, ürün sözleşmesi, README/yol haritası/ADR ve bu devir belgesiyle birlikte **15.11.2026 tarihinde ana dala squash-merge edildi**.
-- Son doğrulamada araştırma deposunda **açık PR ve açık issue yok**.
-- Araştırma deposunda ana dal (main) güncel ve yetkili devam noktasıdır; yeni oturumda hash sabitlemek yerine canlı main yeniden doğrulanmalıdır.
+### Araştırma deposu: mihenk-arge
 
-Uygulama deposunda görülen dallar: main, feat/56-12-report-question-answers, feat/56-12-transcript-review-queue ve feat/56-12-transcript-revision-history. PR #45 yeni ürün akışı netleşene kadar kapatılmış, birleştirilmemişti. Bu eski uygulama dalları bir sonraki oturumda içerik ve PR ilişkileriyle birlikte ayrıca denetlenmeli; araştırma deposu dal temizliğiyle karıştırılmamalı. Son kontrolde uygulama deposunda açık PR görünmüyordu.
+- Yetkili dal: main.
+- Son canlı dal kontrolünde **yalnızca main** kaldığı doğrulandı.
+- PR #1–#9 ve #11 birleştirilmiştir; PR #10 v0.2 taslağı birleştirilmeden kapatılmıştır.
+- Açık PR: 0; açık issue: 0.
+- Son doğrulanan main commit: e5461e8 (15.11.2026 oturum kontrolü).
 
-**Dal temizliği sınırı:** Araştırma deposunda 11 dal adı duruyor. Silinmeye aday, PR içeriği ana dala alınmış eski dallar şunlardır:
-- PR #1: decision/from-scratch-and-repo-separation
-- PR #2: discovery/first-field-findings-and-repo-split
-- PR #3: research/field-workflow-and-quality-gates
-- PR #4: research/case-specific-rules-and-turkish-docs
-- PR #5: product/gorev-profili-and-intake-rules
-- PR #6: product/synthetic-assignment-fixture-and-decisions
-- PR #7: research/butunlesik-moduller-ve-belge-araclari
-- PR #8: research/bakanlik-pardus-asr-ve-56-12-araclari
-- PR #9: docs/56-12-teknik-is-akisi
-- PR #11: docs/56-12-ilk-teslimat-plani
+Bu nedenle eski araştırma dallarının silinmesi işi tamamlanmış görünüyor; yeni oturumda yine canlı GitHub durumu esas alınmalıdır.
 
-Bu PR'ların içerikleri ana dala alınmıştır; PR #10 aynı son dal üzerinde kapatılmış eski v0.2 taslağıdır ve yeni v0.3/ürün belgeleri PR #11 ile ana dala taşınmıştır. Açık PR/issue bulunmuyor. Bu oturumda bağlı GitHub araçları dalı okuma/güncelleme ve PR birleştirme/kapatmayı destekliyor; fiziksel branch silme eylemi sunmuyor. Bu nedenle silinmiş gibi gösterilmediler. Repo sahibinin GitHub [Branches ekranında](https://github.com/azmisahin-gov/mihenk-arge/branches) main dışındaki bu 10 eski branch'i silmesi son temizlik olacaktır.
+### Uygulama deposu: mihenk
 
-Uygulama deposu ayrı tutulur. Son kontrolde şu üç eski uygulama dalı duruyordu: feat/56-12-report-question-answers, feat/56-12-transcript-review-queue, feat/56-12-transcript-revision-history. Uygulama deposunda açık PR yoktu; PR #45 kapalı ve birleştirilmemişti. Bu dallar, kod kaybı yaratmamak için yeni oturumda app main ile karşılaştırılmadan silinmemelidir.
+Son canlı kontrolde dört dal vardı:
+- main
+- feat/56-12-report-question-answers
+- feat/56-12-transcript-review-queue
+- feat/56-12-transcript-revision-history
+
+İçerik karşılaştırması:
+- Soru-cevap/dayanak işinin güncel uygulama dilimi PR #42 ile main'e birleştirildi. Eski feat/56-12-report-question-answers dalı 16 commit önde ve 4 commit geride, yani ayrışmış eski bir geliştirme hattıdır; silinmemeli, PR #41 birleştirilmeden kapatılmıştır.
+- Ham ASR metni ve transkript revizyon geçmişinin temel uygulama dilimi PR #40 ile main'e birleştirildi. Eski feat/56-12-transcript-revision-history dalı 33 commit önde ve 5 commit geride, yani ayrışmıştır; silinmemeli, PR #39 birleştirilmeden kapatılmıştır.
+- feat/56-12-transcript-review-queue main'den 6 commit önde ve 0 commit geridedir. PR #45 birleştirilmeden kapatılmıştır; dört filtreli transkript inceleme kuyruğu main'e alınmamıştır. Bu özellik v0.4 tasarım/backlog değerlendirmesine taşınmalıdır.
+
+Uygulama deposunda açık PR: 0. Son kontrol sırasında açık issue'lar #29–#34 ve #3 idi. Bunların bir kısmında eski “mevcut durum” metni sonradan birleştirilen PR'ları yansıtmamaktadır; issue'lar kapanmış sayılmamalı, tamamlanan dilimler ve kalan kabul maddeleri güncellenmelidir.
+
+**Dal yönetimi sınırı:** Uygulama deposundaki üç eski özellik dalı main ile karşılaştırılmadan silinmemelidir. Bu oturumda dal silme/birleştirme yapılmadı. Araştırma deposu main dışında dal içermemektedir.
 
 ## 8. Yeni oturumda izlenecek kesin sıra
 
-**Aşama A — Depoyu yeniden doğrula**
-1. Kullanıcının yeniden verdiği araştırma deposunu ve main dalını aç.
-2. Bu devir belgesini ve yukarıdaki kaynak belgeleri oku.
-3. README, ADR, yol haritası, açık sorular, risk kaydı, tüm PR ve branch durumlarını gerçek GitHub verisiyle doğrula.
-4. Eski branch/PR durumlarını tekrar tahmin etme; canlı durumdan başla.
+**Aşama A — Depo ve kaynak doğrulaması**
+1. Araştırma deposunun main dalını ve uygulama deposunun main/dal/PR/issue durumunu canlı GitHub'dan kontrol et.
+2. Bu devir belgesini, sistem tasarımı v1.0'ı, karar kaydını ve ürün sözleşmesini güncel repo içeriğiyle karşılaştır.
+3. Araştırma ve uygulama depolarını ayrı tut; eski uygulama dallarını karşılaştırmadan silme.
 
-**Aşama B — Ürün akışını gerçekten netleştir**
-1. İlk açılış, yerel kasa, profil ve uzmanlık alanı/modülü akışını tasarla.
-2. Daraltılabilir sol menü, avatar menüsü, profil, kasa/güvenlik ve uygulama ayarlarını ayrıştır.
-3. Genel Bakış dashboard'unu Görevlerim listesinden ayır.
-4. Yeni görevlendirmede belgeyi otomatik okuma, kaynak izi, istisna doğrulaması ve bir görevin çoklu materyal/soru ilişkisini netleştir.
-5. Görev içi sekmeler ile uygulama genel menüsünün farkını görsel olarak açıkla.
-6. Tek rapor oluşturma, gerçek belge sayfası önizlemesi, bölüm listesi ve kontrol durumunu gerçekçi tasarla.
-7. Boş durumlar, belge okuma başarısızlığı, desteklenmeyen modül, ASR hatası, kayıtlı sesi geri yükleme, rapor eksikleri, çevrimdışı kullanım ve kullanıcı geri dönüşünü de göster.
-8. v0.3'ü kullanıcıyla birlikte gözden geçir; kabul edilmedikçe nihai tasarım sayma.
+**Aşama B — Sistem tasarımı ve v0.4 wireframe**
+1. [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) belgesini ana sistem tasarım referansı olarak kullan.
+2. S-01–S-30 ekran kataloğunu, bilgi mimarisini ve bütün normal/boş/hata/çevrimdışı/kurtarma durumlarını v0.4 wireframe'e aktar.
+3. ASR yönetimi ile görev içi ASR kuyruğu ayrımını özellikle göster.
+4. Raporun tek ana çıktı olmasını; ASR/model bilgisinin yöntem bölümündeki şeffaf açıklama ve teknik provenance katmanını tasarla.
+5. Kullanıcıyla v0.4 ekranlarını değerlendir; tasarım kabul edilmeden uygulama UI koduna geçme.
 
-**Aşama C — Onay sonrası uygulamaya bağla**
+**Aşama C — Onay sonrası mevcut uygulamaya bağla**
 1. Onaylanan ekranları gereksinimlere ve uygulama backlog'una eşle.
-2. Önce P0 kullanıcı blokajlarını ele al: güvenli X ile kapanma, kayıtlı sesin doğru geri yüklenmesi/oynatılması, dayanak seçicisi düzeni, güncelleme hatasının tanılanması.
-3. Profil/kasa/modül ve görev oluşturma ayrımını mevcut kodun üzerine uygula; gerekçesiz yeniden yazım yapma.
-4. Otomatik görevlendirme okuma/çıkarımını sentetik belgeyle test et.
-5. Çoklu ses/materyal, ASR kuyruğu, transkript, çoklu soru/kanıt ilişkisi ve tek raporu bir uçtan uca senaryoda birleştir.
-6. Raporu güncel Windows UYAP Editör'de gerçek aç/kaydet/yeniden aç testiyle doğrula.
-7. Temiz Windows MSI kurulumu, güncelleme/geri dönüş, kasa yedek ve kurtarma testlerini tamamla.
-8. 56.12 uzmanı ile izinli/sentetik kontrollü pilot yap.
+2. Önce P0 kullanıcı blokajlarını ele al: X ile güvenli kapanma, kayıtlı sesin seçili/oynatılabilir geri yüklenmesi, dayanak seçicisi düzeni, güncelleme hatasının tanılanması.
+3. Profil/kasa/modül ve görev oluşturma ayrımını mevcut kod üzerinde uygula; gerekçesiz yeniden yazım yapma.
+4. Sentetik görevlendirme belgesiyle otomatik çıkarım ve istisnaları test et.
+5. Çoklu ses/materyal, yerel ASR kuyruğu, transkript/revizyon, çoklu soru/dayanak ve tek raporu uçtan uca bağla.
+6. Güncel Windows UYAP Editör'de aç/kaydet/yeniden aç ve ilgili Portal evrak türünü doğrula.
+7. Temiz kurulum, güvenli kapanma, kasa yedek/geri yükleme, güncelleme/geri alma ve E2E testlerini tamamla.
+8. 56.12 uzmanıyla izinli/sentetik kontrollü pilot yap.
 
 ## 9. Öncelik verilmeyecek işler
 
