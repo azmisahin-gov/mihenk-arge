@@ -1,14 +1,14 @@
 # İlk Saha Gözlemleri — Görevden Rapor Teslimine İlk Uçtan Uca Test
 
 > **Durum:** İLK GÖZLEM — bağımsız kullanıcı doğrulaması ve meslekî inceleme bekliyor  
-> **Güncelleme:** 13 Kasım 2026  
+> **Güncelleme:** 15 Kasım 2026  
 > **Veri ilkesi:** Katılımcı profili, dosya bilgisi, gerçek kayıt ve ekran görüntüsü public belgede tutulmaz.
 
 ## 1. Kapsam ve kanıt düzeyi
 
 Bu belge, proje sahibinin tek bir bilirkişiyle yaptığı örnek görev denemesi hakkındaki anlatımın anonimleştirilmiş sentezidir. Ham görüşme kaydı, birebir alıntı veya gerçek dava dosyası değildir. Tek kullanıcı ve tek görev tüm bilirkişileri temsil etmez. Bulgular, sonraki görüşmelerle sınanacak ilk gözlemler olarak değerlendirilmelidir.
 
-İlk örnek görev 56.12 ses kaydını metne dönüştürme senaryosudur. Bu, MİHENK'in seçilmiş tek uzmanlık modülü veya MVP kararı değildir.
+İlk örnek görev, o tarihte 56.12 ses kaydını metne dönüştürme senaryosuydu. Bu belgenin ilk yazıldığı tarihte modül seçimi yapılmamıştı. Daha sonraki proje sahibi talimatıyla 56.12, ilk kullanılabilir kontrollü uzman pilotunun odağı olarak belirlenmiştir (ADR-032). Bu saha gözlemi hâlâ tek kullanıcı/tek görev kanıtıdır; diğer uzmanlık alanlarına genellenemez.
 
 ## 2. Gözlemlenen görev akışı
 
