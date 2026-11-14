@@ -4,7 +4,7 @@
 
 | ID | Tarih | Karar | Gerekçe | Durum |
 |---|---|---|---|---|
-| ADR-001 | 12.11.2026 | MİHENK ilk aşamada araştırma ve keşif odaklıdır | Ürün ihtiyacı ve kapsam henüz yeterli saha kanıtıyla doğrulanmadı | Geçerli |
+| ADR-001 | 12.11.2026 | MİHENK ilk aşamada araştırma ve keşif odaklıdır | Ürün ihtiyacı ve kapsam henüz yeterli saha kanıtıyla doğrulanmadı | Tarihsel başlangıç kararı; 56.12 prototip geliştirme ve ilk teslimat yönüne ilerledi |
 | ADR-002 | 12.11.2026 | UYAP otomatik entegrasyonu ilk kapsam dışı | Kamuya açık üçüncü taraf API/izin doğrulanmadı | Geçerli |
 | ADR-003 | 13.11.2026 | 56.12 ilk örnek görev testidir; bu tek başına tüm platform MVP'sini seçmez | Tek kullanıcı ve tek test tüm alanı temsil etmez | Tarihsel karar; ilk teslimat odağı ADR-032 ile 56.12 kontrollü pilot olarak netleştirildi; genel platform MVP'si ayrı konudur |
 | ADR-004 | 12.11.2026 | Önceki örnek depolar birleştirilmeyecek | MİHENK ayrı ve sıfırdan bir projedir | Geçerli |
