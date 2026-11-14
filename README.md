@@ -1,6 +1,6 @@
 # MİHENK — Araştırma, Ürün Keşfi ve Proje Yönetimi
 
-> **Durum:** Sistem ve kullanıcı akışı v1.0 hazır; wireframe v0.4 hazırlanacak. v0.3 kabul edilmedi.  
+> **Durum:** Sistem ve kullanıcı akışı v1.0 hazır; wireframe v0.4 taslağı değerlendirmede. v0.3 kabul edilmedi.  
 > **Güncelleme:** 15 Kasım 2026  
 > **İlk teslimat:** 56.12 kontrollü uzman pilotu  
 > **Wireframe durumu:** v0.3 taslak — kullanıcı tarafından henüz kabul edilmedi
@@ -36,11 +36,12 @@ Bu projelerden kod, mimari, veri modeli, bağımlılık, arayüz bileşeni, mode
 ## Güncel devam noktası — 15 Kasım 2026
 
 - İlk teslimat yönü: 56.12 ses kayıtlarının metne dönüştürülmesi kontrollü uzman pilotu.
-- Güncel kullanıcı deneyimi taslağı: [Wireframe v0.3](docs/02-urun/56-12-wireframe-v0.3.md) ve [SVG ekran panosu](docs/02-urun/56-12-wireframe-v0.3.svg). **Kabul edilmedi; tasarım çalışması devam ediyor.**
+- Önceki kullanıcı deneyimi taslağı: [Wireframe v0.3](docs/02-urun/56-12-wireframe-v0.3.md) ve [SVG ekran panosu](docs/02-urun/56-12-wireframe-v0.3.svg). **Kabul edilmedi.**
+- Yeni tasarım: [Wireframe v0.4](docs/02-urun/56-12-wireframe-v0.4.md) ve [altı görsel pano](docs/02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg). **Taslak; kullanıcı ve uzman değerlendirmesi bekliyor.**
 - Ürün sözleşmesi: [56.12 ilk teslimat sözleşmesi](docs/02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md).
 - Sistem tasarımı: [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](docs/02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md). Bu belge ana gezinme, ekran kataloğu, ayar sahipliği, ASR yönetimi, rapor ve hata akışlarının referansıdır.
 - Yeni oturum için tek başlangıç belgesi: [Oturum devam noktası](docs/00-yonetim/yeni-oturum-baslangic-noktasi.md).
-- Sistem ve kullanıcı akışı tasarım temeli tamamlandı. Sıradaki adım bu referansa göre wireframe v0.4 hazırlamak ve kullanıcı kabulü almaktır; kabul öncesi UI kodlaması yapılmayacaktır.
+- Sistem ve kullanıcı akışı tasarım temeli ile v0.4 wireframe taslağı hazır. Sıradaki adım tasarımı kullanıcıyla değerlendirmek ve kabul almaktır; kabul öncesi UI kodlaması yapılmayacaktır.
 - 0.1.0-53 masaüstü önizlemesinde bilinen kullanıcı blokajları: uygulamanın X ile kapanması, kasa açılışında kayıtlı sesin seçilmesi/oynatmaya hazır hâle gelmesi, dayanak seçicisinin düzeni ve güncelleme hatalarının tanılanması.
 - Resmî UYAP Editör uyumu gerçek Windows Editör aç/kaydet/yeniden aç testi olmadan ilan edilmeyecek.
 
