@@ -34,4 +34,4 @@ Bu belgenin ilk yazıldığı 12 Kasım 2026 tarihinde 56.12, aday kümelerden b
 7. İzinli/sentetik test verisi oluşturma olanağı.
 8. Uygulama ve bakım maliyeti.
 
-Görüşmeler tamamlanmadan ağırlıklı puanlama veya kazanan modül ilan edilmeyecektir.
+Bu ölçütler, 56.12 dışındaki sonraki uzmanlık modüllerinin seçimi için geçerlidir. 56.12'nin ilk kontrollü teslimat odağı olması ADR-032 ile proje sahibi tarafından belirlenmiştir; diğer alanlar için kazanan modül ilan edilmemiştir.
