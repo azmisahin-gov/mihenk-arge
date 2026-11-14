@@ -129,7 +129,21 @@ Bu oturumun başında araştırma deposunda:
 
 Uygulama deposunda görülen dallar: main, feat/56-12-report-question-answers, feat/56-12-transcript-review-queue ve feat/56-12-transcript-revision-history. PR #45 yeni ürün akışı netleşene kadar kapatılmış, birleştirilmemişti. Bu eski uygulama dalları bir sonraki oturumda içerik ve PR ilişkileriyle birlikte ayrıca denetlenmeli; araştırma deposu dal temizliğiyle karıştırılmamalı. Son kontrolde uygulama deposunda açık PR görünmüyordu.
 
-**Dal temizliği sınırı:** Araştırma deposunda 11 dal adı duruyor: main ve PR #1–#9 ile PR #11'den kalan eski çalışma dalları. Bunların PR içerikleri ana dala alınmış; açık PR/issue bulunmuyor. Bu oturumda bağlı GitHub araçları branch referansını okuma/güncelleme ve PR birleştirme/kapatmayı destekliyor, ancak fiziksel dal silme eylemi sunmuyor. Bu nedenle eski remote branch'ler silinmiş gibi gösterilmedi. Bunların GitHub Branches ekranından silinmesi repo sahibinin yapabileceği son temizliktir; silmeden önce hepsinin PR'larının merged/closed olduğu doğrulanmalıdır.
+**Dal temizliği sınırı:** Araştırma deposunda 11 dal adı duruyor. Silinmeye aday, PR içeriği ana dala alınmış eski dallar şunlardır:
+- PR #1: decision/from-scratch-and-repo-separation
+- PR #2: discovery/first-field-findings-and-repo-split
+- PR #3: research/field-workflow-and-quality-gates
+- PR #4: research/case-specific-rules-and-turkish-docs
+- PR #5: product/gorev-profili-and-intake-rules
+- PR #6: product/synthetic-assignment-fixture-and-decisions
+- PR #7: research/butunlesik-moduller-ve-belge-araclari
+- PR #8: research/bakanlik-pardus-asr-ve-56-12-araclari
+- PR #9: docs/56-12-teknik-is-akisi
+- PR #11: docs/56-12-ilk-teslimat-plani
+
+Bu PR'ların içerikleri ana dala alınmıştır; PR #10 aynı son dal üzerinde kapatılmış eski v0.2 taslağıdır ve yeni v0.3/ürün belgeleri PR #11 ile ana dala taşınmıştır. Açık PR/issue bulunmuyor. Bu oturumda bağlı GitHub araçları dalı okuma/güncelleme ve PR birleştirme/kapatmayı destekliyor; fiziksel branch silme eylemi sunmuyor. Bu nedenle silinmiş gibi gösterilmediler. Repo sahibinin GitHub [Branches ekranında](https://github.com/azmisahin-gov/mihenk-arge/branches) main dışındaki bu 10 eski branch'i silmesi son temizlik olacaktır.
+
+Uygulama deposu ayrı tutulur. Son kontrolde şu üç eski uygulama dalı duruyordu: feat/56-12-report-question-answers, feat/56-12-transcript-review-queue, feat/56-12-transcript-revision-history. Uygulama deposunda açık PR yoktu; PR #45 kapalı ve birleştirilmemişti. Bu dallar, kod kaybı yaratmamak için yeni oturumda app main ile karşılaştırılmadan silinmemelidir.
 
 ## 8. Yeni oturumda izlenecek kesin sıra
 
