@@ -7,7 +7,7 @@
 
 İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 **kabul edilmemiştir**. Araştırma, mevzuat ve ürün sözleşmesi doğrulamasından sonra [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı. Bu belge ana gezinmeyi, profil/kasa/uzmanlık/modül ayrımını, yerel ASR sahipliğini, görevlendirme ve çoklu materyal/soru akışını, tek rapor yaklaşımını ve hata durumlarını tanımlar.
 
-**Wireframe v0.4 taslağı hazırdır:** [tasarım açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve altı görsel pano. İlk kurulumdan tek rapor önizlemesine, profil/kasa/modül/ASR yönetimine, çoklu materyal/soruya ve hata/kurtarma durumlarına kadar temel ekranlar çizildi. Sıradaki iş kullanıcının panoları değerlendirmesi, gerekli revizyonların yapılması ve tasarım kabulüdür. v0.4 kabul edilmeden uygulama UI kodlaması başlamaz.
+**Wireframe v0.4 taslağı hazırdır:** [tasarım açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve sekiz görsel pano. İlk kurulumdan tek rapor önizlemesine, profil/kasa/modül/ASR yönetimine, çoklu materyal/soruya ve hata/kurtarma durumlarına kadar temel ekranlar çizildi. Sıradaki iş kullanıcının panoları değerlendirmesi, gerekli revizyonların yapılması ve tasarım kabulüdür. v0.4 kabul edilmeden uygulama UI kodlaması başlamaz.
 
 Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 kullanıcı önizleme durumu vardır. Uygulama geliştirmesi sıfırdan başlamış gibi ele alınmamalı; mevcut kod korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
 
