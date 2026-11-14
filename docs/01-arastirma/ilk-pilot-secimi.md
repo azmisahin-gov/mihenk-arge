@@ -1,7 +1,7 @@
 # İlk Uzmanlık Alanı / Pilot Seçimi
 
-> **Durum:** Henüz seçim yapılmadı  
-> **Güncelleme:** 12 Kasım 2026
+> **Durum:** Tarihsel seçim çalışması — ilk teslimat odağı daha sonra 56.12 olarak belirlendi  
+> **Güncelleme:** 15 Kasım 2026
 
 ## Temel kural
 
@@ -21,7 +21,7 @@
 
 ## 56.12 notu
 
-56.12, önceki transkripsiyon örnekleri nedeniyle araştırma listesinde bulunur; fakat MİHENK'in ilk modülü olarak seçilmiş değildir. Önceki uygulamalar bu alanın talep gördüğüne dair pazar kanıtı değildir ve pilot uygulama olarak kullanılmayacaktır.
+Bu belgenin ilk yazıldığı 12 Kasım 2026 tarihinde 56.12, aday kümelerden biriydi ve henüz seçilmemişti. 14–15 Kasım 2026 tarihli proje sahibi talimatıyla 56.12, ilk kullanılabilir kontrollü uzman pilotunun odağı olarak seçildi (ADR-032). Bu karar, önceki uygulamaların pazar kanıtı olduğu veya bütün uzmanlıkların doğrulandığı anlamına gelmez. Sonraki modüller için aşağıdaki ölçütlerle ayrı seçim yapılmalıdır.
 
 ## Seçim ölçütleri
 
