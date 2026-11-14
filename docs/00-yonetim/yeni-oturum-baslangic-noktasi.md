@@ -14,7 +14,7 @@ Proje sahibi, yeni oturumda araştırma deposunu tekrar paylaşarak çalışmaya
 - **Uzun vadeli ürün:** farklı uzmanlık modüllerini ortak çekirdekte sunan MİHENK platformu.
 - **Önceki wireframe v0.3:** **kullanıcı tarafından kabul edilmedi**.
 - **Sistem tasarımı:** [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı.
-- **Güncel wireframe:** [v0.4 taslak açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve altı görsel pano hazırlandı; kullanıcı/uzman değerlendirmesi ve kabulü bekleniyor. UI kodlama onayı değildir.
+- **Güncel wireframe:** [v0.4 taslak açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve sekiz görsel pano hazırlandı; kullanıcı/uzman değerlendirmesi ve kabulü bekleniyor. UI kodlama onayı değildir.
 - **Bu oturumdaki uygulama kodu:** değiştirilmedi. Yeni MSI üretilmedi.
 - **Önizleme sürümü:** proje sahibinin son bildirdiği gerçek kurulum 0.1.0-53'tür.
 
@@ -58,7 +58,7 @@ Hedeflenen kullanıcı yolu:
 
 Wireframe v0.3, önceki taslaklardan daha iyi bulunmuş ancak kullanıcı tarafından kabul edilmemiştir. İlk kez kullanan bilirkişinin başlangıcı, sol menü, profil/kasa/ayar ayrımı, dashboard/görev listesi ayrımı, otomatik belge okuma, çoklu materyal/soru ve tek rapor deneyimi yeniden ele alınmalıdır. v0.3 nihai tasarım olarak savunulmamalıdır.
 
-Bu nedenle sistem haritası v1.0 hazırlandı ve ona dayanarak v0.4 için aşağıdaki altı görsel pano üretildi:
+Bu nedenle sistem haritası v1.0 hazırlandı ve ona dayanarak v0.4 için aşağıdaki sekiz görsel pano üretildi:
 
 1. [01 — Kurulum ve ana gezinme](../02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg)
 2. [02 — Gezinme, modül ve ayarlar](../02-urun/wireframe-v0.4-02-goz-atma-modul-ve-ayarlar.svg)
@@ -66,6 +66,8 @@ Bu nedenle sistem haritası v1.0 hazırlandı ve ona dayanarak v0.4 için aşağ
 4. [04 — Ses inceleme, bulgu ve tek rapor](../02-urun/wireframe-v0.4-04-inceleme-ve-tek-rapor.svg)
 5. [05 — Dayanak, güvenlik ve istisna durumları](../02-urun/wireframe-v0.4-05-dayanak-ve-isletim-durumlari.svg)
 6. [06 — Yaşam döngüsü ve kurtarma](../02-urun/wireframe-v0.4-06-yasam-dongusu-ve-kurtarma.svg)
+7. [07 — Gezinme, profil ve materyal ayrıntıları](../02-urun/wireframe-v0.4-07-gezinme-profil-materyal-guvenlik.svg)
+8. [08 — Uygulama ayarları ve güncellemeler](../02-urun/wireframe-v0.4-08-uygulama-ayarlari-ve-guncellemeler.svg)
 
 Ayrıntılı ekran kataloğu, ekran eşlemesi, davranış sözleşmesi ve kabul listesi: [56.12 Kullanıcı Deneyimi ve Ekran Tasarımı v0.4](../02-urun/56-12-wireframe-v0.4.md).
 
@@ -170,7 +172,7 @@ Uygulama deposunda açık PR: 0. Son kontrol sırasında açık issue'lar #29–
 
 **Aşama B — v0.4 tasarım değerlendirmesi ve kabulü**
 1. [Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile [Wireframe v0.4](../02-urun/56-12-wireframe-v0.4.md) belgelerini birlikte incele.
-2. Altı SVG panosunu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran, karışık terim, gereksiz adım veya görünmeyen durumları işaretle.
+2. Sekiz SVG panosunu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran, karışık terim, gereksiz adım veya görünmeyen durumları işaretle.
 3. Profil/kasa/modül/ASR sahipliği, görev içi akışlar, dayanak seçici, tek rapor ve A4 önizlemesini kontrol et.
 4. Boş/hata/çevrimdışı/kurtarma ekranlarının normal akışla tutarlı olduğunu doğrula.
 5. Gerekli revizyonları v0.4'e işle; kullanıcı ve gerektiğinde alan uzmanı kabulü olmadan uygulama UI koduna geçme.
@@ -195,7 +197,7 @@ SEDA mevcut uygulamada entegre ilk yerel ASR denemesidir; “en iyi motor” ola
 
 Yeni oturumda kullanıcı araştırma reposunu verdiğinde şu şekilde başlanmalı:
 
-> Önce docs/00-yonetim/yeni-oturum-baslangic-noktasi.md dosyasını ve bağlantılı karar/ürün belgelerini güncel repo içeriğiyle doğrula. Sistem Haritası v1.0 ve Wireframe v0.4 taslağını birlikte incele. Altı görsel panoyu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran ve akışları düzelt. Kullanıcı/uzman kabulü olmadan uygulama UI koduna geçme.
+> Önce docs/00-yonetim/yeni-oturum-baslangic-noktasi.md dosyasını ve bağlantılı karar/ürün belgelerini güncel repo içeriğiyle doğrula. Sistem Haritası v1.0 ve Wireframe v0.4 taslağını birlikte incele. Sekiz görsel panoyu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran ve akışları düzelt. Kullanıcı/uzman kabulü olmadan uygulama UI koduna geçme.
 
 ---
 
