@@ -5,9 +5,13 @@
 
 ## Bu aşamadaki karar
 
-**MİHENK platformunun genel MVP'si henüz seçilmiş değildir.** Bununla birlikte ilk uzmanlık modülü adayı olarak 56.12 için dar kapsamlı bir pilot/ilk dikey dilim gereksinimi tanımlanmıştır: [56.12 Minimum Sürüm Kapsamı ve Kabul Kapıları](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md).
+**İlk kullanılabilir teslimatın odağı 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü uzman pilotudur.** Bu yön, proje sahibinin açık talimatıdır ve ADR-032 ile kayıt altına alınmıştır.
 
-Bu karar, bütün bilirkişiler veya bütün uzmanlık alanları için ürün kapsamının doğrulandığı anlamına gelmez. 56.12 kapsamı da şu an tek uzman kullanıcının deneyimine dayanan öneridir; alan uzmanı ve hukuk/veri koruma incelemesiyle doğrulanmalıdır. B-01 örneğindeki sekiz ses dosyası yalnızca o görevin materyal sayısıdır; MİHENK'in dosya sayısı veya görev akışı varsayılanı değildir.
+Bu karar, MİHENK'in uzun vadeli bütün platform MVP'sinin tamamlandığı veya bütün uzmanlıkların kapsamının seçildiği anlamına gelmez. İlk teslimat dar bir uzmanlık modülünde baştan sona gerçek kullanıcı işini tamamlamayı hedefler; sonraki modüller ortak çekirdek üzerinde aşamalı biçimde ele alınır.
+
+56.12 kullanıcı arayüzü için [Wireframe v0.3](56-12-wireframe-v0.3.md) hazırlanmıştır. **v0.3 taslaktır, kullanıcı tarafından kabul edilmemiştir ve uygulama tasarımı için nihai referans değildir.** Yeni oturumda ilk açılıştan tek raporun önizlenmesine kadar yeniden gözden geçirilip netleştirilecektir.
+
+[56.12 Minimum Sürüm Kapsamı ve Kabul Kapıları](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md) teknik/işlevsel ilk pilot kapsamını; [İlk Teslimat Ürün Sözleşmesi](56-12-ilk-teslimat-urun-sozlesmesi.md) ise kullanıcı hedefini tanımlar. Bu belgeler gerçek 56.12 uzmanı, hukuk ve veri koruma incelemesinin yerine geçmez.
 
 ## Uzun vadeli ürün hedefi
 

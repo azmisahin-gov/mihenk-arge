@@ -6,13 +6,13 @@
 |---|---|---|---|---|
 | ADR-001 | 12.11.2026 | MİHENK ilk aşamada araştırma ve keşif odaklıdır | Ürün ihtiyacı ve kapsam henüz yeterli saha kanıtıyla doğrulanmadı | Geçerli |
 | ADR-002 | 12.11.2026 | UYAP otomatik entegrasyonu ilk kapsam dışı | Kamuya açık üçüncü taraf API/izin doğrulanmadı | Geçerli |
-| ADR-003 | 13.11.2026 | 56.12 ilk örnek görev testidir; seçilmiş MVP/modül değildir | Tek kullanıcı ve tek test tüm alanı temsil etmez | Geçerli |
+| ADR-003 | 13.11.2026 | 56.12 ilk örnek görev testidir; bu tek başına tüm platform MVP'sini seçmez | Tek kullanıcı ve tek test tüm alanı temsil etmez | Tarihsel karar; ilk teslimat odağı ADR-032 ile 56.12 kontrollü pilot olarak netleştirildi; genel platform MVP'si ayrı konudur |
 | ADR-004 | 12.11.2026 | Önceki örnek depolar birleştirilmeyecek | MİHENK ayrı ve sıfırdan bir projedir | Geçerli |
 | ADR-005 | 12.11.2026 | Eski depolardan kod/altyapı/bağımlılık taşınmayacak | Proje sahibinin açık kararı | Kabul edildi |
 | ADR-006 | 12.11.2026 | Teknoloji seçimi kullanıcı ve gereksinim keşfinden sonra yapılacak | Mevcut örneklerde kullanılan teknoloji varsayılmamalı | Geçerli |
 | ADR-007 | 12.11.2026 | Dokümantasyon ve uygulama kodu ayrı GitHub depolarında tutulacak | Araştırma belgeleri ile uygulama yaşam döngüsü farklıdır | Kabul edildi |
 | ADR-008 | 13.11.2026 | Araştırma deposu `mihenk-arge`, uygulama deposu `mihenk` adını kullanacak | Proje sahibinin yeniden adlandırma ve depo ayırma kararı | Kabul edildi |
-| ADR-009 | 13.11.2026 | `mihenk` uygulama deposu şimdilik boş tutulacak | Ürün/MVP, mimari, görünürlük ve lisans karar kapıları henüz tamamlanmadı | Geçerli |
+| ADR-009 | 13.11.2026 | `mihenk` uygulama deposu şimdilik boş tutulacak | Ürün/MVP, mimari, görünürlük ve lisans karar kapıları henüz tamamlanmadı | Tarihsel; bu karar sonrasında uygulama prototipi geliştirildi. Mevcut uygulama durumunu README ve oturum devam belgesi açıklar |
 | ADR-010 | 13.11.2026 | Her iki public depoda gerçek vaka veya kişiyi tanımlayabilecek veri bulunmayacak | Gizlilik, veri koruma ve delil güvenliği | Kabul edildi |
 | ADR-011 | 13.11.2026 | Nihai teknik kanaat, kanıt yorumu ve resmî teslim insan kontrolünde kalacak | Otomasyon doğruluğu garanti edemez; bilirkişi sorumluluğu korunmalı | Kabul edildi |
 | ADR-012 | 13.11.2026 | 56.12'de transkript makine taslağıdır; güven puanı nihai doğruluk değildir | Hatalı transkriptin rapor kanaatine etkisini azaltmak | Kabul edildi |
@@ -32,10 +32,18 @@
 | ADR-026 | 13.11.2026 | MİHENK için Bakanlık onaylı ASR modeli doğrulanmadığından yerel açık kaynak modeller MİHENK test kabulünden geçmeden üretimde kullanılmaz | Kamuya açık resmî kaynaklarda 56.12 ASR onayı bulunamadı | Kabul edildi |
 | ADR-027 | 13.11.2026 | 56.12 ASR en az iki aday modelle, aynı yerel test seti ve aynı referans metin üzerinden karşılaştırılır | Türkçe doğal konuşma başarımı, düşük ses, gürültü, örtüşme ve kaynak kullanımı modele göre değişebilir | Kabul edildi |
 | ADR-028 | 13.11.2026 | ASR motorları yerel/çevrimdışı çalışır; birden fazla çıktının otomatik çoğunlukla birleştirilmesi yapılmaz | Gerçek vaka sesinin dışarı çıkmaması ve model uyuşmazlığının insan dinlemesine yönlendirilmesi | Kabul edildi |
-| ADR-029 | 13.11.2026 | 56.12 için ilk dikey dilim prototipi başlatılır; bu karar MİHENK platformunun genel MVP seçimi değildir | Proje sahibi minimum kapsamlı 56.12 pilotunu ilerletme talimatı verdi; tek kullanıcı bulguları tüm uzmanlıklara genellenmez | Kabul edildi |
+| ADR-029 | 13.11.2026 | 56.12 için ilk dikey dilim prototipi başlatılır; bu karar tek başına MİHENK platformunun genel MVP'sini belirlemez | Proje sahibi minimum kapsamlı 56.12 pilotunu ilerletme talimatı verdi; tek kullanıcı bulguları tüm uzmanlıklara genellenmez | Geçerli; ilk teslimat kapsamı ADR-032 ile netleştirildi |
 | ADR-030 | 13.11.2026 | İlk masaüstü prototipte Tauri 2 + React/TypeScript/Vite adayı denenir; teknoloji kararı geçicidir | Tek uygulama deneyimi, yerel Rust işçi katmanı ve dar yetkili web arayüzü denemesi; hedef işletim sistemi/donanım, paketleme, güvenlik ve bakım testleri tamamlanmadan nihai mimari sayılmaz | Prototip kararı |
 
 
 Her karar yeni kanıt geldiğinde yeniden açılabilir. Bu kayıt ürün yönetişimidir; hukukî görüş değildir.
 
 | ADR-031 | 13.11.2026 | Gerçek vaka verisinden önce şifreli yerel görev kasası zorunludur; ilk teknik tasarımda parola ile korunan rastgele kasa anahtarı, şifreli görev metaverisi ve rastgele erişimli doğrulanmış ses blokları değerlendirilir | Otomatik kayıt tek başına yeterli değildir; disk üzerinde açık ses/transkript, kesintiyle bozulma ve yedekten kurtarılamama riski kapatılmalıdır. Kriptografi bileşenleri ile özel dosya biçimi ayrı güvenlik testinden geçmeden üretim kararı verilemez | Taslak / güvenlik incelemesi bekliyor |
+
+
+| ADR-032 | 14–15.11.2026 | İlk kullanılabilir MİHENK teslimatı 56.12 Ses Kayıtlarının Metin Hâline Dönüştürülmesi kontrollü uzman pilotudur; uzun vadeli ürün modüler platformdur | Proje sahibinin açık ürün hedefi; önce tek uzmanlık alanında görevlendirmeden tek rapora uzanan uçtan uca iş akışını sunmak | İlk teslimat yönü belirlendi; UI wireframe kabulü, uzman doğrulaması ve kabul kapıları bekliyor |
+
+
+| ADR-033 | 15.11.2026 | Wireframe v0.3 kabul edilmiş tasarım değil, sonraki oturumda gözden geçirilecek çalışma taslağıdır | Proje sahibi v0.3'ü önceki taslaklardan daha anlaşılır buldu; ancak görsel tasarım ve kullanım kolaylığı konusunda kesin onay vermedi | Taslak; tasarım çalışması sürüyor |
+| ADR-034 | 15.11.2026 | Wireframe ilk açılıştan tek rapor önizlemesine kadar netleşmeden yeni UI uygulaması başlatılmaz | Kullanıcı profil/kasa/modül, sol menü, dashboard/görev listesi ve tek rapor deneyiminin kolaylığından emin olmak istiyor | Geçerli çalışma sırası |
+| ADR-035 | 15.11.2026 | Yeni oturumun tek başlangıç kaynağı `docs/00-yonetim/yeni-oturum-baslangic-noktasi.md` olacaktır | Oturum kesintilerinde proje hedefi, tasarımın kabul durumu, bilinen sorunlar, PR/dal durumu ve sonraki işler tekrar kaybolmamalı | Geçerli |

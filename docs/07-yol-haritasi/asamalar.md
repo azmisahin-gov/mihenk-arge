@@ -1,7 +1,13 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** Keşif ve 56.12 minimum pilot kapsamı tanımlı; uzman doğrulaması ve PoC bekliyor  
-> **Güncelleme:** 13 Kasım 2026
+> **Durum:** 56.12 ilk teslimat yönü belirlendi; wireframe v0.3 taslağı ve ürün doğrulaması sürüyor  
+> **Güncelleme:** 15 Kasım 2026
+
+## Güncel durak — Ürün akışını netleştirme
+
+İlk teslimat 56.12 kontrollü uzman pilotudur. Kullanıcı arayüzü wireframe v0.3 hazırlanmıştır ancak **kullanıcı tarafından kabul edilmemiştir**. Bir sonraki oturumda araştırma deposu yeniden okunarak ekran akışı, profil/kasa/modül ayrımı, görev başlangıcı ve tek rapor deneyimi gözden geçirilecek; tasarım netleşmeden yeni UI kodu yazılmayacaktır.
+
+Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı vardır. Bu nedenle uygulama geliştirme başlamamış gibi ele alınmamalı; mevcut prototip korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
 
@@ -34,7 +40,7 @@
 
 ## 56.12 modül dikey dilimi — İlk pilot alt akışı
 
-Bu çalışma genel MİHENK platform MVP'sinden ayrıdır. 56.12 için [minimum kapsam ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md) tanımlanmıştır; bu, modülün ürünleştiği veya alan uzmanı tarafından onaylandığı anlamına gelmez.
+56.12, proje sahibinin talimatıyla ilk kullanılabilir teslimatın odağıdır; MİHENK'in uzun vadeli modüler platform hedefi korunur. Bu ilk pilot, diğer uzmanlıkların kapsamını belirlemez. [Minimum kapsam ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md) tanımlıdır; wireframe v0.3 kullanıcı tarafından henüz kabul edilmemiş ve alan uzmanı onayından geçmemiştir.
 
 1. **M0 – Kapsam doğrulaması:** B-01'in gerçek giriş ses biçimleri, rapor/teslim çıktısı ve meslekî kontrol noktaları doğrulanır.
 2. **M1 – Yerel dikey dilim:** Bir ASR motoruyla ses alımı → yerel transkript → sesle karşılaştırarak düzeltme → çıktı akışı denenir.
@@ -44,16 +50,16 @@ Bu çalışma genel MİHENK platform MVP'sinden ayrıdır. 56.12 için [minimum 
 
 Özel benchmark aracı, otomatik diarization ve ileri ses işleme bu alt akışın ön koşulu değildir. İlk dikey dilim gerçek cihaz ve uzman iş akışı doğrulandıktan sonra mimari kararları besler.
 
-## Aşama 4 — Sıfırdan mimari ve teknoloji kararı
+## Aşama 4 — Ürün ve mimari kararlarının tamamlanması
 
 - En az iki teknoloji/mimari alternatifini karşılaştır.
 - Yerel/web/mobil, çevrimdışı çalışma, belge işleme, güvenlik ve veri modelini kararlaştır.
 - Lisans ve üçüncü taraf bağımlılık politikasını belirle.
-- Uygulama deposunda CI, test ve release iskeletini kur.
+- Mevcut prototip mimarisi ve testleri gereksinimlere göre gözden geçir; gerekmedikçe sıfırdan başlama.
 
 ## Aşama 5 — Uygulama geliştirme
 
-Önceki karar kapıları geçildiğinde başlanır. İlk dikey dilim, onaylanmış sentetik görevlendirme belgesini alıp Görev Profili ve görev bazlı kontrol listesini otomatik oluşturmalıdır. Ardından materyal envanteri, uzmanlık işlemi ve rapor üretimi eklenir.
+Wireframe ve ilk teslimat ürün sözleşmesi kullanıcı/uzman tarafından gözden geçirildikten sonra mevcut prototip üzerinde önceliklendirilmiş düzeltmeler yapılır. Öncelik: ilk kurulum/profil, görevlendirme belgesinin otomatik okunması, bir görevde çoklu materyal ve soru, 56.12 ses/transkript akışı, tek rapor önizlemesi, ardından UYAP Editör biçim doğrulaması. Yeni teknik özellikler bu uçtan uca akışa katkı sağlamıyorsa bekletilir.
 
 ## Aşama 6 — Pilot ve doğrulama
 

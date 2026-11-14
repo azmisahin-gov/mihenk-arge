@@ -1,7 +1,7 @@
 # Açık Sorular
 
 > **Durum:** Araştırma ve ürün keşfi  
-> **Güncelleme:** 13 Kasım 2026
+> **Güncelleme:** 15 Kasım 2026
 
 ## Görevlendirme ve resmî süreç
 
@@ -38,3 +38,21 @@
 
 20. İkinci bilirkişi veya farklı uzmanlık alanı ile ortak çekirdek gereksinimleri nasıl doğrulayacağız?
 21. Hukuk, meslekî uygulama ve teknik güvenlik bulgularını kim/hangi kaynakla bağımsız doğrulayacak?
+
+
+## Wireframe v0.3 tasarım gözden geçirmesi
+
+> v0.3 kullanıcı tarafından kabul edilmedi. Aşağıdaki sorular yeni oturumda ekran/akış tasarımıyla birlikte yanıtlanmalıdır.
+
+22. İlk açılışta yerel kasa oluşturma, bilirkişi profilini bir kez tanımlama ve uzmanlık alanlarını belirtme sırası kullanıcı için en anlaşılır sıra mı?
+23. Bir yerel kasa/bir bilirkişi profili ilk sürüm için yeterli mi; aynı Windows hesabında farklı bilirkişilerin profilleri gerekecek mi?
+24. Bilirkişi profilinde rapor için gerçekten gereken zorunlu alanlar hangileri? Ad-soyad, sicil numarası, unvan/sıfat, temel/alt uzmanlık, bölge kurulu ve iletişim alanlarının hangileri şablon/görev türüne bağlı?
+25. Profil, uzmanlık alanı ve yazılım modülü arasındaki ilişki kullanıcıya nasıl anlatılmalı? Modül, görevlendirme belgesindeki uzmanlık ihtiyacına göre otomatik mi önerilmeli, kullanıcıya hangi noktada seçim sunulmalı?
+26. Sol menü daraltma/genişletme, ikon etiketleri ve durumun hatırlanması nasıl davranmalı? Avatar menüsünde profil ve uzmanlık alanı; ayrı ekranda kasa/güvenlik ve uygulama ayarları mı olmalı?
+27. Genel Bakış dashboard'unda hangi az sayıdaki özet gerçekten yararlı? Görevlerim listesinde hangi görev bilgileri görünmeli; hassas dosya bilgileri nasıl korunmalı?
+28. İlk belge alımında hangi formatlar (metinli/taranmış PDF, UDF, RTF, DOCX ve ekler) ilk pilotta desteklenmeli? OCR/okuma başarısızlığında kullanıcıya nasıl istisna gösterilmeli?
+29. Görevlendirme belgesinden çıkarılan alanlarda kaynak sayfa izi, güven/kalite işareti ve kullanıcı düzeltme geçmişi nasıl gösterilmeli?
+30. Görev içi sekmelerde çoklu materyal ve çoklu soru en anlaşılır biçimde nasıl sunulmalı? Büyük dosya, eksik materyal ve ASR hata/yeniden dene durumları nasıl gösterilmeli?
+31. Tek rapor önizlemesinde bölüm listesi, sayfa, kontrol özeti ve düzeltme alanı nasıl düzenlenmeli? Kullanıcı için raporun tek ana dosya olması hangi eklerin aynı rapora bağlanmasını, hangilerinin ayrı teslim eki kalmasını gerektiriyor?
+32. Gerçek Windows UYAP Editör testine girecek ilk rapor dosya biçimi ve ilgili Bilirkişi Portalı evrak türü nedir?
+33. İlk kez kullanan bilirkişinin sentetik görevi yardımsız tamamlaması için hangi yönlendirme/boş durum/geri dönüş ekranları gerekir?
