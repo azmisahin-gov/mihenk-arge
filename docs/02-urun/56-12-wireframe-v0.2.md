@@ -1,3 +1,5 @@
+> **DURUM: YERİNE YENİSİ GELDİ.** Bu sürüm profil/kasa/modül ayrımını ve tek rapor önizleme deneyimini yeterince açıklamıyordu. Güncel tasarım [Wireframe v0.3](56-12-wireframe-v0.3.md) ve [SVG ekran panosudur](56-12-wireframe-v0.3.svg).
+
 # 56.12 — Kullanıcı Akışı ve Ekran Wireframe'i v0.2
 
 > v0.1 taslağının yerine geçer. 15.11.2026. Düşük ayrıntılı ürün taslağıdır; uygulama kodu değildir.
