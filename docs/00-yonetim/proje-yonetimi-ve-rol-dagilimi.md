@@ -1,7 +1,7 @@
 # Proje Yönetimi ve Rol Dağılımı
 
 > **Durum:** Çalışma düzeni — kabul edildi  
-> **Güncelleme:** 13 Kasım 2026
+> **Güncelleme:** 15 Kasım 2026
 
 ## Roller
 
@@ -44,7 +44,7 @@ ChatGPT kendiliğinden bilirkişilere ulaşamaz, görüşme yapamaz veya sürekl
 Araştırma, mevzuat, anonimleştirilmiş saha sentezi, gereksinim, karar, risk ve proje yönetimi belgelerini içerir.
 
 ### `azmisahin-gov/mihenk` — uygulama deposu
-Proje sahibi tarafından ayrılmıştır; 13 Kasım 2026 itibarıyla public ve boştur. Uygulama kararı ve güvenlik kapıları geçilince yalnızca MİHENK için sıfırdan yazılmış kod, test, CI ve release süreçleri burada yer alacaktır. Eski transkripsiyon depolarından kod veya bağımlılık taşınmayacaktır. Kaynak kod eklenmeden önce public/private görünürlük ve lisans bilinçli biçimde kararlaştırılmalıdır.
+Proje sahibi tarafından ayrılmıştır; 15 Kasım 2026 itibarıyla public ve masaüstü prototip kodu/test/CI/release içermektedir. Prototip Tauri 2 + React/TypeScript/Vite adayıyla geliştirilmiştir; nihai mimari kararı ve ilk pilot kabulü henüz tamamlanmamıştır. Eski transkripsiyon depolarından kod veya bağımlılık taşınmamıştır. Public görünürlük ve lisans tercihleri yeniden gözden geçirilmelidir.
 
 ### Public depo kuralı
 Her iki depo public olduğundan gerçek vaka verisi, ses/görüntü, rapor, dosya numarası, kişi/kurum bilgisi, UYAP ekran görüntüsü, sertifika, token, parola, üretim logu ve gizli evrak commit edilmez. Katılımcı kodu tek başına anonimlik sağlamaz; yeniden kimliklendirme riski azaltılmış toplu/tematik bulgular kullanılır. Gerçek görüşme notları ve ham ekran görüntüleri public repoda tutulmaz.
