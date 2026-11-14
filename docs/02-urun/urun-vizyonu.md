@@ -1,7 +1,7 @@
 # Ürün Vizyonu
 
-> **Durum:** KARAR BEKLİYOR  
-> **Araştırma tarihi:** 12 Kasım 2026  
+> **Durum:** İlk teslimat odağı 56.12 olarak belirlendi; uzun vadeli platform kapsamı araştırılıyor  
+> **Güncelleme:** 15 Kasım 2026  
 > **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
 
 ## Vizyon hipotezi
@@ -18,9 +18,9 @@ Bilirkişinin kendi mesleki değerlendirmesini ve resmî sistemleri koruyan; gö
 6. Varsayılan olarak mümkün olan en az veri toplanmalı ve yerelde işlenmeli.
 7. Modüller mevzuat ve teknik kapsam doğrulanarak birbirinden ayrılmalı.
 
-## Şimdilik karar değil
+## Verilen ve açık kalan kararlar
 
-Masaüstü/web, Windows/multiplatform, bulut/senkronizasyon, ortak platform kapsamı ve ilk modül henüz nihai karar değildir. Saha görüşmesi ve güvenlik/hukuk analizi sonrasında değişebilir.
+İlk kullanılabilir teslimat odağı 56.12 ses kayıtlarının metne dönüştürülmesi kontrollü uzman pilotudur (ADR-032). Bu ilk teslimat, uzun vadeli platformun yalnızca bu uzmanlıkla sınırlı olacağı anlamına gelmez. Genel platformun bütün uzmanlıkları kapsayan MVP kapsamı, kullanıcı arayüzünün nihai tasarımı, çoklu profil ihtiyacı, desteklenecek işletim sistemi/dağıtım modeli, çevrimdışı çalışma ve yayın/lisans tercihleri hâlâ doğrulama/karar beklemektedir.
 
 ## Kaynaklar
 
