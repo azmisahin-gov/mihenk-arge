@@ -2,6 +2,16 @@
 
 # Değişiklik Kaydı
 
+## 0.12.0 — 15.11.2026
+
+- İlk kullanılabilir MİHENK teslimatının 56.12 kontrollü uzman pilotu olması karara bağlandı; uzun vadeli modüler platform yönü korundu.
+- Bilirkişi profili, uzmanlık alanı, yazılım modülü, yerel kasa ve görevlendirme kavramları ayrıştırıldı.
+- Genel Bakış dashboard'u ile Görevlerim listesi ayrıldı; görev başına çoklu materyal, çoklu soru ve tek ana rapor hedefi kaydedildi.
+- Wireframe v0.3, kullanıcı tarafından henüz kabul edilmemiş çalışma taslağı olarak araştırma deposuna eklendi.
+- README, ilk sürüm kapsamı, yol haritası, mimari, pilot, veri koruma ve karar belgeleri güncel ilk teslimat yönüyle hizalandı.
+- Yeni oturum başlangıç ve devir belgesi eklendi; PR #1–#9 ve #11 birleştirildi, PR #10 eski v0.2 taslağı olarak birleştirilmeden kapalı kaldı.
+- Araştırma deposunda açık PR/issue kalmadı; eski squash-merge branch adları fiziksel olarak silinmedi.
+
 ## 0.11.0 — 13.11.2026
 
 - 56.12 için ilk ürün sürümünün asgari işlevleri tek kapsam belgesinde toplandı.
