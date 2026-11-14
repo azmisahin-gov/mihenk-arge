@@ -1,13 +1,15 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** 56.12 ilk teslimat yönü belirlendi; wireframe v0.3 taslağı ve ürün doğrulaması sürüyor  
+> **Durum:** Sistem ve kullanıcı akışı v1.0 hazır; wireframe v0.4 hazırlanacak. v0.3 kabul edilmedi.  
 > **Güncelleme:** 15 Kasım 2026
 
-## Güncel durak — Ürün akışını netleştirme
+## Güncel durak — Sistem tasarımı tamamlandı; v0.4 wireframe sırada
 
-İlk teslimat 56.12 kontrollü uzman pilotudur. Kullanıcı arayüzü wireframe v0.3 hazırlanmıştır ancak **kullanıcı tarafından kabul edilmemiştir**. Bir sonraki oturumda araştırma deposu yeniden okunarak ekran akışı, profil/kasa/modül ayrımı, görev başlangıcı ve tek rapor deneyimi gözden geçirilecek; tasarım netleşmeden yeni UI kodu yazılmayacaktır.
+İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 **kabul edilmemiştir**. Araştırma, mevzuat ve ürün sözleşmesi doğrulamasından sonra [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı. Bu belge ana gezinmeyi, profil/kasa/uzmanlık/modül ayrımını, yerel ASR sahipliğini, görevlendirme ve çoklu materyal/soru akışını, tek rapor yaklaşımını ve hata durumlarını tanımlar.
 
-Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı vardır. Bu nedenle uygulama geliştirme başlamamış gibi ele alınmamalı; mevcut prototip korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
+**Sıradaki iş v0.4 wireframe'dir.** Ekran kataloğundaki ekranlar, dar/geniş gezinme, normal/boş/hata/çevrimdışı/kurtarma görünümleri ve ilk açılıştan rapor önizlemesine kadar uçtan uca akış çizilecektir. v0.4 kabul edilmeden uygulama UI kodlaması başlamaz.
+
+Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 kullanıcı önizleme durumu vardır. Uygulama geliştirmesi sıfırdan başlamış gibi ele alınmamalı; mevcut kod korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
 
@@ -37,6 +39,7 @@ Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı 
 - Uzmanlık modülleri ile göreve özel iş akışlarının ayrımı.
 - Otomatik yürütülecek işler, istisna yönetimi ve insan karar sınırları.
 - Rapor üretimi, kalite kapısı ve çıktı formatı kabul kriterleri.
+- **Sistem/kullanıcı akışı v1.0 tamamlandı:** gezinme, ayar sahipliği, profil, kasa, uzmanlık/modül, ASR, görev, materyal, transkript, sorular, tek rapor, güncelleme ve istisna akışları tek referansta toplandı.
 
 ## 56.12 modül dikey dilimi — İlk pilot alt akışı
 
@@ -59,7 +62,7 @@ Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı 
 
 ## Aşama 5 — Uygulama geliştirme
 
-Wireframe ve ilk teslimat ürün sözleşmesi kullanıcı/uzman tarafından gözden geçirildikten sonra mevcut prototip üzerinde önceliklendirilmiş düzeltmeler yapılır. Öncelik: ilk kurulum/profil, görevlendirme belgesinin otomatik okunması, bir görevde çoklu materyal ve soru, 56.12 ses/transkript akışı, tek rapor önizlemesi, ardından UYAP Editör biçim doğrulaması. Yeni teknik özellikler bu uçtan uca akışa katkı sağlamıyorsa bekletilir.
+Sistem tasarımı ve ilk teslimat ürün sözleşmesi kullanıcı tarafından gözden geçirilip v0.4 wireframe kabul edildikten sonra mevcut prototip üzerinde önceliklendirilmiş düzeltmeler yapılır. Öncelik: ilk kurulum/profil, görevlendirme belgesinin otomatik okunması, bir görevde çoklu materyal ve soru, 56.12 ses/transkript akışı, tek rapor önizlemesi, ardından UYAP Editör biçim doğrulaması. Yeni teknik özellikler bu uçtan uca akışa katkı sağlamıyorsa bekletilir.
 
 ## Aşama 6 — Pilot ve doğrulama
 
