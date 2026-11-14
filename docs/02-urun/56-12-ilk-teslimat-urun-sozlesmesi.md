@@ -72,3 +72,18 @@ ASR, genel uygulama ayarı değil 56.12 uzmanlık modülünün yerel altyapısı
 ASR fiilen kullanılmışsa, raporun inceleme yöntemi/teknik araçlar bölümünde kullanılan motor/model adı ve sürümü kısa, anlaşılır ve gerçeğe uygun biçimde açıklanır. Tam runtime, build, parametre, checksum, materyal-run eşlemesi ve revizyon kökeni teknik işlem kaydında; denetim için gerektiğinde teknik ekte tutulur. Mevzuat m.55 inceleme yöntemi ve bilimsel/teknik dayanakları sayar; belirli bir ASR markasını açıkça zorunlu tutmaz. Model bilgisinin açıklanması, MİHENK'in denetlenebilirlik ve şeffaflık ürün politikasıdır.
 
 MİHENK raporun yapısını ve doğrulanmış içeriğini otomatik birleştirir; bilirkişinin teknik kanaatini, konuşmanın hukukî anlamını veya soru yanıtını uydurmaz. Makine taslağı, bilirkişi kontrolünden geçmeden nihai transkript olarak gösterilmez.
+
+
+## v0.5 kullanıcı iş akışı ve ses çalışma tezgâhı
+
+Yeni görevlendirme katı bir wizard değildir. İlk görevlendirme belgesi eklendiğinde otomatik kaydedilen taslak oluşur; belge çıkarımı ve beklenen materyal tespiti otomatik yürür. Ses ve diğer materyaller ilk kabul sırasında veya daha sonra görev içindeki Materyaller alanından eklenebilir. Görev listesine dönüş ve taslağı yeniden açma her zaman mümkündür.
+
+Ses ve Transkript alanı bir görevin bütün kayıtlarını listeler. Kontrol kuyruğu düşük model güveni, gürültü, örtüşme, ses kesilmesi, konuşma/metin boşluğu ve bilirkişi işaretleri gibi nedenlerle önceliklendirilir; bu işaretler gerçek doğruluk yüzdesi sayılmaz. Bilirkişi her zaman tüm kaydı dinleyebilir ve tüm metni arayabilir.
+
+Konuşmacı diarization isteğe bağlıdır; Konuşmacı A/B gibi kayıt içi etiketler uzman tarafından kontrol edilir ve gerçek kişi kimliği iddiası değildir. Ses iyileştirme orijinal dosyaya uygulanmaz; türetilmiş kopya, parametre ve işlem geçmişiyle saklanır.
+
+ASR segmentleri düzenleme ve sese saniye hassasiyetli atlama birimidir. Rapor dökümü mikro-segmentleri satır satır kopyalamaz; konuşmacı sırası ve zaman aralığı korunmuş okunabilir paragraflar oluşturur. Uzun transkript aynı ana raporun ekinde sunulabilir.
+
+## v0.5 rapor biçimi ilkesi
+
+Her görevlendirme için tek ana rapor ve ona bağlı ekler vardır. Merci/dosya türü görevlendirme belgesinden çıkarılır ve uygun Bakanlık örnek raporu referans iskelet olarak otomatik eşleştirilir; belirsizlik varsa bilirkişiden yalnız bu alanı doğrulaması istenir. Bu, tüm bilirkişi raporları için tek ve zorunlu bir resmî şablon bulunduğu iddiası değildir. Raporda görevlendirmenin soruları sırayla, gerekçeli ve kaynaklarıyla yanıtlanır. Gerçek UYAP Editör aç/kaydet/yeniden aç testi tamamlanmadan çıktı “UYAP'a hazır” olarak adlandırılmaz.
