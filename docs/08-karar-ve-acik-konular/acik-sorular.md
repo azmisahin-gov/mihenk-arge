@@ -40,19 +40,31 @@
 21. Hukuk, meslekî uygulama ve teknik güvenlik bulgularını kim/hangi kaynakla bağımsız doğrulayacak?
 
 
-## Wireframe v0.3 tasarım gözden geçirmesi
+## Sistem tasarımı v1.0 ile yanıtlanan tasarım soruları
 
-> v0.3 kullanıcı tarafından kabul edilmedi. Aşağıdaki sorular yeni oturumda ekran/akış tasarımıyla birlikte yanıtlanmalıdır.
+> v0.3 kabul edilmedi. Aşağıdaki 22–33 numaralı tasarım soruları [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile ürün tasarımı düzeyinde yanıtlandı. Bunlar yeni wireframe'de gösterilecek; gerçek kullanıcı/uzman ve teknik kabul testleriyle doğrulanacak.
 
-22. İlk açılışta yerel kasa oluşturma, bilirkişi profilini bir kez tanımlama ve uzmanlık alanlarını belirtme sırası kullanıcı için en anlaşılır sıra mı?
-23. Bir yerel kasa/bir bilirkişi profili ilk sürüm için yeterli mi; aynı Windows hesabında farklı bilirkişilerin profilleri gerekecek mi?
-24. Bilirkişi profilinde rapor için gerçekten gereken zorunlu alanlar hangileri? Ad-soyad, sicil numarası, unvan/sıfat, temel/alt uzmanlık, bölge kurulu ve iletişim alanlarının hangileri şablon/görev türüne bağlı?
-25. Profil, uzmanlık alanı ve yazılım modülü arasındaki ilişki kullanıcıya nasıl anlatılmalı? Modül, görevlendirme belgesindeki uzmanlık ihtiyacına göre otomatik mi önerilmeli, kullanıcıya hangi noktada seçim sunulmalı?
-26. Sol menü daraltma/genişletme, ikon etiketleri ve durumun hatırlanması nasıl davranmalı? Avatar menüsünde profil ve uzmanlık alanı; ayrı ekranda kasa/güvenlik ve uygulama ayarları mı olmalı?
-27. Genel Bakış dashboard'unda hangi az sayıdaki özet gerçekten yararlı? Görevlerim listesinde hangi görev bilgileri görünmeli; hassas dosya bilgileri nasıl korunmalı?
-28. İlk belge alımında hangi formatlar (metinli/taranmış PDF, UDF, RTF, DOCX ve ekler) ilk pilotta desteklenmeli? OCR/okuma başarısızlığında kullanıcıya nasıl istisna gösterilmeli?
-29. Görevlendirme belgesinden çıkarılan alanlarda kaynak sayfa izi, güven/kalite işareti ve kullanıcı düzeltme geçmişi nasıl gösterilmeli?
-30. Görev içi sekmelerde çoklu materyal ve çoklu soru en anlaşılır biçimde nasıl sunulmalı? Büyük dosya, eksik materyal ve ASR hata/yeniden dene durumları nasıl gösterilmeli?
-31. Tek rapor önizlemesinde bölüm listesi, sayfa, kontrol özeti ve düzeltme alanı nasıl düzenlenmeli? Kullanıcı için raporun tek ana dosya olması hangi eklerin aynı rapora bağlanmasını, hangilerinin ayrı teslim eki kalmasını gerektiriyor?
-32. Gerçek Windows UYAP Editör testine girecek ilk rapor dosya biçimi ve ilgili Bilirkişi Portalı evrak türü nedir?
-33. İlk kez kullanan bilirkişinin sentetik görevi yardımsız tamamlaması için hangi yönlendirme/boş durum/geri dönüş ekranları gerekir?
+22. **İlk açılış sırası:** Yerel kasa → bilirkişi profili → uzmanlık alanları → 56.12 modül hazırlığı → Genel Bakış. Sonraki açılışlarda yalnız kasa açılır.
+23. **Yerel profil sayısı:** İlk ürün varsayımı bir yerel kasa/bir gerçek kişi bilirkişi profilidir. Çoklu profil bu sürümün kapsamı değildir; saha ihtiyacıyla yeniden değerlendirilir.
+24. **Profil alanları:** Ad, soyad, sicil numarası ve meslekî unvan rapor kimliği için temel alanlardır. Uzmanlık alanları ayrı çoklu seçimdir. Bölge kurulu, iletişim ve diğer bilgiler isteğe bağlı veya göreve/şablona bağlıdır.
+25. **Profil/alan/modül farkı:** Profildeki uzmanlık beyanı ile yazılım modülü ayrıdır. 56.12 ilk kullanılabilir modüldür; görev profiline göre modül önerilir. Kullanıcı motor seçimini her görevde yapmaz.
+26. **Gezinme ve menüler:** Sol menü daraltılabilir/genişletilebilir. Avatar menüsü profil ve uzmanlık alanına gider. Kasa ve Güvenlik ile Uygulama Ayarları ayrı ana bölümlerdir.
+27. **Dashboard/listeler:** Genel Bakış yalnız iş özetidir; Görevlerim tüm görevlerin ayrı listesidir. Hassas dosya içeriği listede varsayılan gösterilmez.
+28. **Belge biçimleri:** Metinli ve taranmış PDF ilk kabul hedefidir. Diğer belge/resim türleri doğrulanmış destek matrisiyle eklenir. UDF orijinal kaynak olarak saklanabilir; doğrudan okuma doğrulanmadan tam destek iddia edilmez. Okunamayan sayfa istisnaya çıkarılır.
+29. **Kaynak izi:** Her çıkarılan alan belge/sayfa/konum, çıkarım yöntemi, güven/kalite durumu ve kullanıcı düzeltme geçmişiyle gösterilir.
+30. **Çoklu materyal/soru:** Materyaller envanter sayfasında; sorular ve bulgular ayrı görev içi alanda yönetilir. Ses/Transkript birden fazla kayıt ve her kayıt için ayrı kuyruk/segment sunar.
+31. **Tek rapor:** Tek ana rapor, görev/merciye uygun bölüm yapısı, A4 sayfa önizlemesi, bölüm listesi ve kalite kontrol paneli kullanır. Yeniden oluşturma sürüm geçmişi üretir. Kullanıcı rapor biçimi seçmez.
+32. **UYAP biçimi:** Belge/evrak türü bazında gerçek Windows UYAP Editör aç/kaydet/yeniden aç ve Portal kabul testi hâlâ açıktır. Sistem tasarımı bu teknik kabulü varsaymaz; uygun formatı doğrulanmış testten sonra otomatik seçer.
+33. **İlk kullanım yardımı:** İlk kurulum yönlendirmesi, görev boş durumu, belge okuma istisnası, ASR hata/yeniden deneme, geri yükleme, rapor eksikleri ve çevrimdışı durumları ekran kataloğunda tanımlıdır.
+
+## Gerçek pilot/teknik kanıt bekleyen açık noktalar
+
+- Görevlendirme belgesi biçimlerinin gerçek kullanım dağılımı ve OCR doğruluğu.
+- B-01 ve ek bilirkişilerle Görev Profili alanlarının ve istisna mesajlarının meslekî doğrulaması.
+- Gerçek görevlerde süre başlangıç olayı, fiziki materyal iadesi ve saklama/silme uygulamaları.
+- Heyet/tüzel kişi raporu için gelecekteki profil ve imza akışı.
+- ASR adaylarının aynı insan referanslı izinli veri üzerinde karşılaştırılması; SEDA'nın en iyi model olduğu varsayılmaz.
+- Gerçek cihazlarda model/runtime/donanım performansı ve checksum/lisans doğrulaması.
+- UDF ve Portal evrak türü kabulü; güncel Windows UYAP Editör testi.
+- Kasa/yedek/kurtarma, otomatik kilit ve güncelleme güvenlik kabulü.
+- Bağımsız hukuk, meslekî uygulama ve veri güvenliği incelemesi.
