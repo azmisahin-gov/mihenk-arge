@@ -1,13 +1,13 @@
 # Pilot Planı
 
-> **Durum:** KARAR BEKLİYOR — MİHENK uygulaması henüz geliştirilmedi  
-> **Güncelleme:** 13 Kasım 2026
+> **Durum:** 56.12 kontrollü pilot yönü seçildi; mevcut uygulama prototipi ve pilot kabulü doğrulama bekliyor  
+> **Güncelleme:** 15 Kasım 2026
 
 ## Pilot amacı
 
-MİHENK'in sıfırdan geliştirilecek ilk sürümünün bilirkişinin gerçek görev akışını ne ölçüde desteklediğini; materyal envanteri, dosya bütünlüğü, inceleme ergonomisi, insan düzeltme süresi, rapor tamlığı ve hata toparlama bakımından ölçmek. Pilot, hukukî geçerlilik sertifikası veya bilirkişi kanaatinin otomatik doğrulanması değildir.
+Mevcut MİHENK masaüstü prototipinin ve sonraki kontrollü sürümün bilirkişinin gerçek görev akışını ne ölçüde desteklediğini; materyal envanteri, dosya bütünlüğü, inceleme ergonomisi, insan düzeltme süresi, rapor tamlığı ve hata toparlama bakımından ölçmek. Pilot, hukukî geçerlilik sertifikası veya bilirkişi kanaatinin otomatik doğrulanması değildir.
 
-56.12 ilk test senaryosudur; seçilmiş tek ürün modülü veya kesin MVP değildir.
+Bu planın ilk uygulanacağı modül 56.12 kontrollü uzman pilotudur (ADR-032). Bu seçim, genel MİHENK platformunun bütün uzmanlıkları kapsayan MVP kapsamının tamamlandığı anlamına gelmez.
 
 ## Pilot ön koşulları
 
