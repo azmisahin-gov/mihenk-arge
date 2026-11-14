@@ -1,11 +1,11 @@
 # Mimari İlkeler ve Teknoloji Seçim Süreci
 
-> **Durum:** Teknoloji seçimi yapılmadı  
-> **Güncelleme:** 13 Kasım 2026
+> **Durum:** Masaüstü prototip teknolojisi uygulanmış; nihai mimari kararı ve ürün kabulü açık  
+> **Güncelleme:** 15 Kasım 2026
 
 ## Sıfırdan karar ilkesi
 
-MİHENK'in dili, framework'ü, istemci tipi, veri tabanı, bulut/yerel yaklaşımı, GPU kullanımı veya dağıtım modeli henüz seçilmemiştir. Önceki transkripsiyon örneklerindeki teknoloji ve mimariler MİHENK için başlangıç varsayımı olmayacaktır.
+MİHENK uygulama deposunda Tauri 2 + React/TypeScript/Vite tabanlı bir masaüstü prototipi geliştirilmiştir. Bu, mevcut uygulama gerçeğidir; nihai mimari/teknoloji kararının bütün kabul kapılarından geçtiği anlamına gelmez. Önceki transkripsiyon örneklerinden kod veya bağımlılık taşınmamıştır. Nihai mimari; wireframe, görev akışı, güvenlik, bakım, paketleme ve kullanıcı kabulü doğrulandıktan sonra gözden geçirilmelidir.
 
 ## Ürün akışı için mimari hipotez
 
@@ -49,6 +49,6 @@ Kullanıcı görüşmeleri ve ürün kapsamı netleşmeden framework karşılaş
 ## Depo ayrımı
 
 - Araştırma deposu: [azmisahin-gov/mihenk-arge](https://github.com/azmisahin-gov/mihenk-arge)
-- Uygulama deposu: [azmisahin-gov/mihenk](https://github.com/azmisahin-gov/mihenk) — ayrılmış, public ve henüz boş.
+- Uygulama deposu: [azmisahin-gov/mihenk](https://github.com/azmisahin-gov/mihenk) — public; masaüstü prototip kodu, test, CI ve önizleme release içerir.
 
-Uygulama deposu yalnızca sıfırdan geliştirilecek ürün kodunu taşır. Public/private görünürlük ve lisans kararı kaynak kod eklenmeden önce tamamlanmalıdır.
+Uygulama deposu yalnızca MİHENK uygulama kodu, test, CI ve release içeriğini taşır. Depo şu anda public olduğundan kaynak kod görünürdür; public olma tercihi ve lisans kararı ayrıca gözden geçirilmeli, gerçek vaka verisi/anahtar/üretim gizlisi hiçbir koşulda eklenmemelidir.
