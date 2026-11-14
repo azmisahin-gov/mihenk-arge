@@ -1,7 +1,7 @@
 # Kaynak Kaydı
 
 > **Durum:** TASLAK  
-> **Araştırma tarihi:** 12 Kasım 2026  
+> **Güncelleme:** 15 Kasım 2026  
 > **Kapsam notu:** İlk masa başı araştırma sürümü; hukukçu ve gerçek bilirkişi doğrulaması gerektirir.
 
 | ID | Kaynak | Tarih / yürürlük | Tür | Kullanım | Güven |
@@ -26,11 +26,13 @@
 | SRC-018 | ISO/IEC 27037:2012 | 2012 | Uluslararası standart | Dijital delil tanımlama/toplama/edinim/koruma | Standart özeti doğrulanmalı; bağlayıcılığı ayrıca belirlenmeli |
 | SRC-019 | forensic-transcriber | GitHub, 12.11.2026 erişim | Kod/depo | Electron uygulama denetimi | Üretici beyanı + repo kaynakları |
 | SRC-020 | forensic-transcriber-next | GitHub, 12.11.2026 erişim | Kod/depo | Tauri/Rust uygulama denetimi | Üretici beyanı + repo kaynakları |
-| SRC-021 | mihenk | GitHub, 12.11.2026 erişim | Depo metaverisi | Depo varlık/boşluk kontrolü | Yüksek; GitHub API sonucu |
+| SRC-021 | mihenk | GitHub, 12.11.2026 erişim | Depo metaverisi | İlk depo varlık/boşluk kontrolü | Tarihsel; 12.11.2026 anlık görüntüsü |
+
+| SRC-022 | mihenk | GitHub, 15.11.2026 erişim | Depo metaverisi/kod | Masaüstü prototip, test, CI ve release içeriğinin mevcut olduğu | Yüksek; GitHub repo/branch/release incelemesi |
 
 ## Erişim tarihi
 
-Bu kayıttaki çevrimiçi kaynaklar 12.11.2026 tarihinde kontrol edilmiştir. Bazı resmî PDF'ler metin ve ekran görüntüsü olarak okunmuş; bazı konsolide mevzuat PDF adresleri web aracıyla açılamamıştır. Açılmayan mevzuat metinleri “tam madde madde denetlendi” olarak sunulmaz.
+Bu kayıttaki ilk çevrimiçi kaynaklar 12.11.2026 tarihinde kontrol edilmiştir; depo metaverisi 15.11.2026 tarihinde yeniden doğrulanmıştır. Bazı resmî PDF'ler metin ve ekran görüntüsü olarak okunmuş; bazı konsolide mevzuat PDF adresleri web aracıyla açılamamıştır. Açılmayan mevzuat metinleri “tam madde madde denetlendi” olarak sunulmaz.
 
 ## Kaynak bağlantıları
 
