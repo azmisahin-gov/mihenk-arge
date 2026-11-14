@@ -74,3 +74,4 @@ Sistem tasarımı ve ilk teslimat ürün sözleşmesi kullanıcı tarafından g�
 ## Aşama 7 — Bağımsız eleştiri ve yayın hazırlığı
 
 Mevzuat, veri güvenliği, uzmanlık sınırı, lisans ve teknik tasarım bağımsız incelemeye tabi tutulur; açık kritik bulgular kapatılmadan yayın yapılmaz.
+\n\n## v0.5 kabul kapısı — UI geliştirmeden önce\n\nYeni görevlendirme otomatik kabul akışı, modül/motor hiyerarşisi, çoklu ses için kontrol önceliği, konuşmacı ayrımının sınırları, geri alınabilir dinleme araçları ve tek raporun A4/merciye uygun yapısı kullanıcı ve 56.12 alan uzmanı tarafından değerlendirilmeden UI kodlamasına geçilmez.\n
