@@ -12,8 +12,9 @@ Proje sahibi, yeni oturumda araştırma deposunu tekrar paylaşarak çalışmaya
 - **Uygulama deposu:** [azmisahin-gov/mihenk](https://github.com/azmisahin-gov/mihenk)
 - **İlk teslimat yönü:** 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotu.
 - **Uzun vadeli ürün:** farklı uzmanlık modüllerini ortak çekirdekte sunan MİHENK platformu.
-- **Güncel wireframe:** v0.3; **kullanıcı tarafından kabul edilmedi**.
-- **Sistem tasarımı:** [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı; v0.4 wireframe'in ana referansıdır.
+- **Önceki wireframe v0.3:** **kullanıcı tarafından kabul edilmedi**.
+- **Sistem tasarımı:** [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı.
+- **Güncel wireframe:** [v0.4 taslak açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve altı görsel pano hazırlandı; kullanıcı/uzman değerlendirmesi ve kabulü bekleniyor. UI kodlama onayı değildir.
 - **Bu oturumdaki uygulama kodu:** değiştirilmedi. Yeni MSI üretilmedi.
 - **Önizleme sürümü:** proje sahibinin son bildirdiği gerçek kurulum 0.1.0-53'tür.
 
@@ -53,27 +54,35 @@ Hedeflenen kullanıcı yolu:
 
 İlk sürüm varsayımı olarak bir yerel kasa/bir bilirkişi profili düşünülmektedir; çoklu yerel kullanıcı desteği henüz kesin tasarım değildir.
 
-## 4. Wireframe v0.3 durumu ve kullanıcı geri bildirimi
+## 4. Wireframe v0.3 geri bildirimi ve v0.4 taslağının durumu
 
-Dosyalar:
-- [Wireframe v0.3 ekran açıklamaları](../02-urun/56-12-wireframe-v0.3.md)
-- [Wireframe v0.3 SVG panosu](../02-urun/56-12-wireframe-v0.3.svg)
-- [İlk teslimat ürün sözleşmesi](../02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md)
+Wireframe v0.3, önceki taslaklardan daha iyi bulunmuş ancak kullanıcı tarafından kabul edilmemiştir. İlk kez kullanan bilirkişinin başlangıcı, sol menü, profil/kasa/ayar ayrımı, dashboard/görev listesi ayrımı, otomatik belge okuma, çoklu materyal/soru ve tek rapor deneyimi yeniden ele alınmalıdır. v0.3 nihai tasarım olarak savunulmamalıdır.
 
-Proje sahibi v0.3'ün önceki sürümlere kıyasla daha iyi olduğunu söyledi; ancak:
-- Tasarımı kabul ettiğini söylemedi.
-- Bazı tasarımsal/görsel sorunlar olduğunu belirtti.
-- İlk kez kullanan bilirkişinin nereden başlayacağı ve ekranların neyi temsil ettiği tam olarak netleşmeli.
-- Sol menünün ChatGPT benzeri daraltılıp genişletilmesini önerdi.
-- Avatar/profil alanından profil sayfasına, ayrı bir yerden kasa/güvenlik ve uygulama ayarlarına gidilebileceğini düşündü.
-- “Ayarlar”, “kasa”, “profil”, “uzmanlık alanı” ve “uzmanlık modülü” bilgilerinin iyi ayrıştırılmasını istedi.
-- Genel Bakış'ın dashboard mu, görev listesi mi olduğu çok net olmalı; Görevlerim ayrı sayfa olmalı.
-- Görevlendirme belgesini kullanıcının baştan okuyup elle forma girmesi yerine önce uygulamanın okumasını, kullanıcıya yalnız belirsiz alanları sormasını istiyor.
-- Bir görevlendirmede birden çok ses/materyal ve birden çok soru olduğu ekranda anlaşılır biçimde gösterilmeli.
-- “Tek rapor” bölümü ve gerçekçi sayfa önizlemesi beklenen çıktının merkezinde olmalı. Kullanıcı ayrı ayrı rapor formatları arasında seçim yapmak istemiyor.
-- UI tasarımının ilk açılıştan tek raporun önizlenmesine kadar daha gerçekçi, kullanılabilir ve görsel olarak tutarlı hâle getirilmesini istedi.
+Bu nedenle sistem haritası v1.0 hazırlandı ve ona dayanarak v0.4 için aşağıdaki altı görsel pano üretildi:
 
-**Yeni oturumda v0.3'ü nihai kabul gibi savunma.** Onu sadece başlangıç taslağı olarak kullan; gerekirse v0.4 veya yeniden tasarlanmış v0.3 üret. Kullanıcıya aceleyle onay verdirmeye çalışma.
+1. [01 — Kurulum ve ana gezinme](../02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg)
+2. [02 — Gezinme, modül ve ayarlar](../02-urun/wireframe-v0.4-02-goz-atma-modul-ve-ayarlar.svg)
+3. [03 — Görevlendirme ve materyal kabulü](../02-urun/wireframe-v0.4-03-gorevlendirme-ve-materyaller.svg)
+4. [04 — Ses inceleme, bulgu ve tek rapor](../02-urun/wireframe-v0.4-04-inceleme-ve-tek-rapor.svg)
+5. [05 — Dayanak, güvenlik ve istisna durumları](../02-urun/wireframe-v0.4-05-dayanak-ve-isletim-durumlari.svg)
+6. [06 — Yaşam döngüsü ve kurtarma](../02-urun/wireframe-v0.4-06-yasam-dongusu-ve-kurtarma.svg)
+
+Ayrıntılı ekran kataloğu, ekran eşlemesi, davranış sözleşmesi ve kabul listesi: [56.12 Kullanıcı Deneyimi ve Ekran Tasarımı v0.4](../02-urun/56-12-wireframe-v0.4.md).
+
+### v0.4'te özellikle korunacak kararlar
+
+- İlk kurulum ekranlarında ana menü gösterilmez; kasa ve profil tamamlanınca uygulama kabuğu açılır.
+- Sonraki açılışta kullanıcı yalnızca kasasını açar.
+- Genel Bakış dashboard, Görevlerim tam listedir.
+- Profil/uzmanlık alanı, yazılım modülü, kasa ve uygulama ayarları birbirinden ayrıdır.
+- ASR ayarları 56.12 modül yönetimindedir; görev içinde yalnız kuyruk/işlem durumu gösterilir.
+- Görevlendirme belgesini önce MİHENK okur; kullanıcı yalnız belirsiz/çelişkili alanları çözer.
+- Bir görevde birden çok materyal ve soru olabilir.
+- Her görev tek ana rapor üretir; tam rapor A4 sayfalarıyla önizlenir.
+- ASR kullanıldıysa kullanılan motor/model adı ve sürümü yöntem bölümünde gerçeğe uygun açıklanır; tam teknik çalışma izi teknik kayıtta/uygun ekte tutulur.
+- Boş, hata, çevrimdışı ve kurtarma durumları wireframe kapsamındadır.
+
+**Durum:** v0.4 bir değerlendirme taslağıdır. Kullanıcı/uzman kabulü alınmamıştır. Tasarım kabul edilmeden uygulama arayüzü kodlaması başlatılmayacaktır.
 
 ## 5. Araştırma deposundaki güncel yön ve kaynak belgeler
 
@@ -159,12 +168,12 @@ Uygulama deposunda açık PR: 0. Son kontrol sırasında açık issue'lar #29–
 2. Bu devir belgesini, sistem tasarımı v1.0'ı, karar kaydını ve ürün sözleşmesini güncel repo içeriğiyle karşılaştır.
 3. Araştırma ve uygulama depolarını ayrı tut; eski uygulama dallarını karşılaştırmadan silme.
 
-**Aşama B — Sistem tasarımı ve v0.4 wireframe**
-1. [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) belgesini ana sistem tasarım referansı olarak kullan.
-2. S-01–S-30 ekran kataloğunu, bilgi mimarisini ve bütün normal/boş/hata/çevrimdışı/kurtarma durumlarını v0.4 wireframe'e aktar.
-3. ASR yönetimi ile görev içi ASR kuyruğu ayrımını özellikle göster.
-4. Raporun tek ana çıktı olmasını; ASR/model bilgisinin yöntem bölümündeki şeffaf açıklama ve teknik provenance katmanını tasarla.
-5. Kullanıcıyla v0.4 ekranlarını değerlendir; tasarım kabul edilmeden uygulama UI koduna geçme.
+**Aşama B — v0.4 tasarım değerlendirmesi ve kabulü**
+1. [Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile [Wireframe v0.4](../02-urun/56-12-wireframe-v0.4.md) belgelerini birlikte incele.
+2. Altı SVG panosunu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran, karışık terim, gereksiz adım veya görünmeyen durumları işaretle.
+3. Profil/kasa/modül/ASR sahipliği, görev içi akışlar, dayanak seçici, tek rapor ve A4 önizlemesini kontrol et.
+4. Boş/hata/çevrimdışı/kurtarma ekranlarının normal akışla tutarlı olduğunu doğrula.
+5. Gerekli revizyonları v0.4'e işle; kullanıcı ve gerektiğinde alan uzmanı kabulü olmadan uygulama UI koduna geçme.
 
 **Aşama C — Onay sonrası mevcut uygulamaya bağla**
 1. Onaylanan ekranları gereksinimlere ve uygulama backlog'una eşle.
@@ -186,7 +195,7 @@ SEDA mevcut uygulamada entegre ilk yerel ASR denemesidir; “en iyi motor” ola
 
 Yeni oturumda kullanıcı araştırma reposunu verdiğinde şu şekilde başlanmalı:
 
-> Önce docs/00-yonetim/yeni-oturum-baslangic-noktasi.md dosyasını ve orada bağlantısı verilen karar/ürün belgelerini oku. Bu devir belgesini özet olarak değil, repo içindeki güncel kaynaklarla karşılaştırarak doğrula. Wireframe v0.3 kabul edilmiş değildir; onu başlangıç taslağı olarak ele al. İlk hedef, 56.12 bilirkişisinin ilk açılıştan tek rapor önizlemesine kadar en kolay ve gerçekçi kullanıcı deneyimini birlikte netleştirmektir. Bu netleşmeden UI koduna geçme.
+> Önce docs/00-yonetim/yeni-oturum-baslangic-noktasi.md dosyasını ve bağlantılı karar/ürün belgelerini güncel repo içeriğiyle doğrula. Sistem Haritası v1.0 ve Wireframe v0.4 taslağını birlikte incele. Altı görsel panoyu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran ve akışları düzelt. Kullanıcı/uzman kabulü olmadan uygulama UI koduna geçme.
 
 ---
 
