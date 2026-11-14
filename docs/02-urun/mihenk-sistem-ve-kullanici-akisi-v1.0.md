@@ -790,3 +790,19 @@ Sistem tasarımı v1.0 temelinde [Wireframe v0.4](56-12-wireframe-v0.4.md) ve al
 Wireframe v0.3 kabul edilmiş tasarım olarak kullanılamaz. v0.4 bu sistem sözleşmesine göre yeniden çizilecek; kullanıcı kabulü olmadan uygulama arayüzü kodlanmayacaktır.
 
 ---
+
+
+## v0.5 tasarım düzeltmeleri — 15.11.2026
+
+Kullanıcı değerlendirmesinde v0.4'ün bazı alt alanları ve görevler arası geçişleri yeterince açık göstermediği görüldü. v0.5 aşağıdaki akış sözleşmesini getirir:
+
+- Profildeki **Uzmanlık Alanlarım**, **Uzmanlık Modülleri** ve seçili modülün **Motorlar ve Modeller** yönetimi ayrı yerlerdir.
+- 56.12 motor/model seçimi görev içinde yapılmaz. Testi geçmiş etkin yerel çalışma profili modül ayarlarında yönetilir; görev işleme sırasında otomatik kullanılır ve her çalışmanın gerçek sürümü kaydedilir.
+- Yeni görevlendirme, ilk belgeyle otomatik kaydolmuş taslak görevdir. Zorunlu wizard değildir. Belge okuma/alan çıkarma başlar; materyaller ilk adımda veya daha sonra eklenebilir. Görevlerim'e dönüş her zaman mümkündür.
+- Ses çalışma alanı bütün kayıtları ve bütün transkripti erişilebilir tutar. Öncelik kuyruğu çoklu kalite işaretlerinden üretilir; güven işareti kesin doğruluk oranı değildir.
+- Konuşmacı ayrımı opsiyonel, kayıt içi etiketli ve uzman kontrolündedir; kişi kimliği belirleme işlevi değildir.
+- Orijinal ses değişmez. Gürültü azaltma/iyileştirme gibi işlemler yalnız türetilmiş kopyaya uygulanır ve teknik izi saklanır.
+- ASR segmentleri editörün zamanlı çalışma birimleridir. Rapor dökümü okunabilir, zaman damgalı paragraflar hâlinde birleştirilir.
+- Her görevde tek ana rapor + ekler vardır. Merciye göre ilgili yayımlanmış örnek rapor iskeleti otomatik eşleştirilir; mevzuatta tek ve evrensel zorunlu şablon varmış gibi sunulmaz. Tüm sorular sırayla, gerekçeli ve kaynak bağlantılı olmalıdır.
+
+v0.5 görsel değerlendirme kaynağı: [Wireframe v0.5](56-12-wireframe-v0.5.md). v0.4 tarihsel taslak olarak korunur. Kullanıcı/uzman kabulü olmadan uygulama UI koduna başlanmaz.
