@@ -1,9 +1,9 @@
 # 56.12 İçin Örnek Kalite Planı
 
-> **Durum:** Araştırma şablonu — seçilmiş modül/pilot değildir  
-> **Güncelleme:** 13 Kasım 2026
+> **Durum:** 56.12 ilk kontrollü pilotu için araştırma/kalite taslağı; uzman onayı bekliyor  
+> **Güncelleme:** 15 Kasım 2026
 
-Bu belge, 56.12 olası uzmanlık akışında hangi kalite sorularının sorulabileceğini gösterir. İlk sürümün zorunlu kapsamı ve kabul kapıları için [56.12 Minimum Sürüm Kapsamı](56-12-minimum-surum-kapsami.md) esas alınır; aşağıdaki ileri test katmanlarının tümü MVP ön koşulu değildir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir. Ayrıntılı veri kümesi, anotasyon, ASR/diarization ölçütleri, performans ve kabul kapıları için [56.12 Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md) belgesine bakınız. Adayların koşu sırası, model/runtime karşılaştırması ve donanım ölçüm alanları [56.12 İlk Benchmark Koşu Matrisi](56-12-benchmark-kosu-matrisi.md) belgesinde tanımlanmıştır.
+Bu belge, proje sahibinin ilk teslimat odağı olarak seçtiği 56.12 kontrollü uzman pilotunda hangi kalite sorularının sorulabileceğini gösterir. İlk sürümün zorunlu kapsamı ve kabul kapıları için [56.12 Minimum Sürüm Kapsamı](56-12-minimum-surum-kapsami.md) esas alınır; aşağıdaki ileri test katmanlarının tümü MVP ön koşulu değildir. Tek kullanıcı testi, kalite eşiği veya ürün kabul kriteri belirlemek için yeterli değildir; bu taslak alan uzmanının incelemesi ve sentetik/izinli pilot kanıtıyla olgunlaştırılmalıdır. Ayrıntılı veri kümesi, anotasyon, ASR/diarization ölçütleri, performans ve kabul kapıları için [56.12 Test Planı ve Başarı Ölçütleri](56-12-test-plani-ve-basari-olcutleri.md) belgesine bakınız. Adayların koşu sırası, model/runtime karşılaştırması ve donanım ölçüm alanları [56.12 İlk Benchmark Koşu Matrisi](56-12-benchmark-kosu-matrisi.md) belgesinde tanımlanmıştır.
 
 ## İnsan referans kümesi
 
