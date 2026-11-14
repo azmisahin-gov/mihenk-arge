@@ -121,14 +121,15 @@ Bunlar gerçek kullanıcı kabulünde P0/P1 önceliğinde ele alınmalı. Özell
 Araştırma ve uygulama depoları ayrı tutulmaya devam etmeli. Araştırma deposundaki uygulama kodu/gerçek vaka dosyası eklenmemeli.
 
 Bu oturumun başında araştırma deposunda:
-- PR #1–#9: **birleştirilmişti**; bunlara ait branch isimleri eski squash-merge dalları olarak duruyordu.
-- PR #10: v0.2 ürün taslağı; **birleştirilmeden kapatılmıştı**, v0.3 ile supersede edildi.
-- PR #11: v0.3 ve ürün sözleşmesi; bu oturumda README, kapsam, yol haritası, ADR ve devir belgesiyle birlikte ana dala birleştirilmek üzere hazırlanıyor.
-- Açık araştırma issue'su görünmüyordu.
+- PR #1–#9: **birleştirilmiş**; bunlara ait branch isimleri eski squash-merge dalları olarak duruyor.
+- PR #10: v0.2 ürün taslağı; **birleştirilmeden kapatıldı**, v0.3 ile supersede edildi.
+- PR #11: v0.3 taslakları, ürün sözleşmesi, README/yol haritası/ADR ve bu devir belgesiyle birlikte **15.11.2026 tarihinde ana dala squash-merge edildi**.
+- Son doğrulamada araştırma deposunda **açık PR ve açık issue yok**.
+- Araştırma deposunun ana dalı: 3643563a63ebe4395180e1a7b8436effc8248a85.
 
-Uygulama deposunda görülen dallar: main, feat/56-12-report-question-answers, feat/56-12-transcript-review-queue ve feat/56-12-transcript-revision-history. PR #45 yeni ürün akışı netleşene kadar kapatılmış, birleştirilmemişti. Bu eski uygulama dalları bir sonraki oturumda içerik ve PR ilişkileriyle birlikte ayrıca denetlenmeli; araştırma deposu dal temizliğiyle karıştırılmamalı.
+Uygulama deposunda görülen dallar: main, feat/56-12-report-question-answers, feat/56-12-transcript-review-queue ve feat/56-12-transcript-revision-history. PR #45 yeni ürün akışı netleşene kadar kapatılmış, birleştirilmemişti. Bu eski uygulama dalları bir sonraki oturumda içerik ve PR ilişkileriyle birlikte ayrıca denetlenmeli; araştırma deposu dal temizliğiyle karıştırılmamalı. Son kontrolde uygulama deposunda açık PR görünmüyordu.
 
-**Dal temizliği sınırı:** Bu oturumda bağlı GitHub aracı branch referanslarını fiziksel olarak silme işlemi sunmuyor. PR birleştirme/kapatma ve dal karşılaştırması yapılabiliyor; ancak eski remote branch adlarının GitHub'dan tamamen silindiği iddia edilmemeli. PR #1–#9'un içerikleri ana dalda olduğundan, bu eski başlıklar kayıp çalışma anlamına gelmiyor. Fiziksel dal silme gerekiyorsa repo sahibinin GitHub Branches ekranında, PR'ların birleştirilmiş durumunu doğruladıktan sonra yapması gerekir.
+**Dal temizliği sınırı:** Araştırma deposunda 11 dal adı duruyor: main ve PR #1–#9 ile PR #11'den kalan eski çalışma dalları. Bunların PR içerikleri ana dala alınmış; açık PR/issue bulunmuyor. Bu oturumda bağlı GitHub araçları branch referansını okuma/güncelleme ve PR birleştirme/kapatmayı destekliyor, ancak fiziksel dal silme eylemi sunmuyor. Bu nedenle eski remote branch'ler silinmiş gibi gösterilmedi. Bunların GitHub Branches ekranından silinmesi repo sahibinin yapabileceği son temizliktir; silmeden önce hepsinin PR'larının merged/closed olduğu doğrulanmalıdır.
 
 ## 8. Yeni oturumda izlenecek kesin sıra
 
