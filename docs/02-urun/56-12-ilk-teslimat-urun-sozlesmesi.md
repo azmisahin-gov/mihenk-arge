@@ -1,9 +1,9 @@
 # MİHENK 56.12 — İlk Teslimat Ürün Sözleşmesi
 
 > İlk kullanılabilir teslimat: 56.12 Ses Kayıtlarının Metne Dönüştürülmesi kontrollü pilotu. Uzun vadeli ürün: modüler MİHENK bilirkişilik platformu.  
-> Güncel tasarım: [Wireframe v0.3 — ekran açıklamaları](56-12-wireframe-v0.3.md) · [SVG ekran panosu](56-12-wireframe-v0.3.svg)
+> Güncel tasarım adayı: [Wireframe v0.5 — ekran açıklamaları](56-12-wireframe-v0.5.md) · [Sistem haritası](mihenk-sistem-ve-kullanici-akisi-v1.0.md)
 
-> **Tasarım durumu:** Wireframe v0.3 çalışma taslağıdır; proje sahibi tarafından henüz kabul edilmemiştir. Bu sözleşme ilk teslimat yönünü ve iş hedefini kaydeder; son UI yerleşimi olarak yorumlanmamalıdır. Yeni oturumda kullanıcı akışı yeniden gözden geçirilmelidir.
+> **Tasarım durumu:** v0.3 ve v0.4 kabul edilmemiş tarihsel taslaklardır. v0.5 güncel değerlendirme adayıdır; kullanıcı ve 56.12 alan uzmanı kabulü beklenmektedir. Bu sözleşme ürün hedefini kaydeder; uygulama UI kodlama onayı değildir.
 
 ## Ürün hedefi
 
@@ -63,7 +63,7 @@ Derleme ve birim test başarısı tek başına pilot kabulü değildir. Her kap�
 
 ## Sistem ve kullanıcı akışı tasarım kaynağı
 
-Profil, uzmanlık alanı/modül ayrımı, kasa ve uygulama ayarları, daraltılabilir genel gezinme, Görevlerim/Genel Bakış ayrımı, ASR modül yönetimi, görev içi çoklu materyal/soru akışları, tek rapor ve hata durumları için ana tasarım referansı [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](mihenk-sistem-ve-kullanici-akisi-v1.0.md) belgesidir. Bu belge wireframe v0.4 için sistem sözleşmesidir; v0.3 kabul edilmiş değildir ve UI kodlama onayı değildir.
+Profil, uzmanlık alanı/modül ayrımı, kasa ve uygulama ayarları, daraltılabilir genel gezinme, Görevlerim/Genel Bakış ayrımı, ASR modül yönetimi, görev içi çoklu materyal/soru akışları, tek rapor ve hata durumları için ana tasarım referansı [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](mihenk-sistem-ve-kullanici-akisi-v1.0.md) belgesidir. Bu belge wireframe v0.5 için sistem ve kullanıcı akışı referansıdır; önceki taslaklar kabul edilmiş değildir ve UI kodlama onayı değildir.
 
 ### ASR ve rapor yönteminin açıklanması
 
