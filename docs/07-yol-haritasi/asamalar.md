@@ -1,13 +1,13 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** Sistem ve kullanıcı akışı v1.0 hazır; wireframe v0.4 hazırlanacak. v0.3 kabul edilmedi.  
+> **Durum:** Sistem ve kullanıcı akışı v1.0 hazır; wireframe v0.4 taslağı oluşturuldu ve değerlendirme bekliyor. v0.3 kabul edilmedi.  
 > **Güncelleme:** 15 Kasım 2026
 
-## Güncel durak — Sistem tasarımı tamamlandı; v0.4 wireframe sırada
+## Güncel durak — Wireframe v0.4 taslağı değerlendirmede
 
 İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 **kabul edilmemiştir**. Araştırma, mevzuat ve ürün sözleşmesi doğrulamasından sonra [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı. Bu belge ana gezinmeyi, profil/kasa/uzmanlık/modül ayrımını, yerel ASR sahipliğini, görevlendirme ve çoklu materyal/soru akışını, tek rapor yaklaşımını ve hata durumlarını tanımlar.
 
-**Sıradaki iş v0.4 wireframe'dir.** Ekran kataloğundaki ekranlar, dar/geniş gezinme, normal/boş/hata/çevrimdışı/kurtarma görünümleri ve ilk açılıştan rapor önizlemesine kadar uçtan uca akış çizilecektir. v0.4 kabul edilmeden uygulama UI kodlaması başlamaz.
+**Wireframe v0.4 taslağı hazırdır:** [tasarım açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve altı görsel pano. İlk kurulumdan tek rapor önizlemesine, profil/kasa/modül/ASR yönetimine, çoklu materyal/soruya ve hata/kurtarma durumlarına kadar temel ekranlar çizildi. Sıradaki iş kullanıcının panoları değerlendirmesi, gerekli revizyonların yapılması ve tasarım kabulüdür. v0.4 kabul edilmeden uygulama UI kodlaması başlamaz.
 
 Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 kullanıcı önizleme durumu vardır. Uygulama geliştirmesi sıfırdan başlamış gibi ele alınmamalı; mevcut kod korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
 
