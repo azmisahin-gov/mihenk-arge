@@ -16,7 +16,7 @@ v0.4'te sistemin çok sayıda alanını aynı anda göstermeye çalışırken ba
 
 Bu tasarımın hedefi bilirkişinin motor/altyapı yönetmesi değil; ASR'nin kontrol işaretlerine göre önce dinlenecek bölümleri hızlıca düzeltmesi, kendisinden istenen soruları cevaplaması ve tam biçimlendirilmiş tek raporu kontrol etmesidir.
 
-## 2. Beş görsel pano
+## 2. Altı görsel pano
 
 SVG'ler vektörel çizimdir; büyütülebilir ve tarayıcıda açılabilir.
 
@@ -67,6 +67,12 @@ Her görevlendirmenin kendi çalışma alanı ve kendi materyal/soru/rapor bağl
 Görev Özeti kullanıcıya sıradaki işleri gösterir: örneğin kontrol bekleyen ses parçaları, görevlendirme alanı istisnaları, yanıtsız sorular ve rapor durumu. Kullanıcıyı ayar ekranına göndermek yerine doğrudan ilgili işe götürür.
 
 Görevlerim ana menüden her zaman erişilebilir. Bir göreve girildiğinde yalnız o göreve ait sesler, transkriptler, dayanaklar, sorular ve rapor gösterilir.
+
+### 04 — Ana menünün geniş ve dar hâli
+
+[06 Daraltılabilir ana menü panosunu aç](wireframe-v0.5-06-daraltilebilir-ana-menu.svg)
+
+Sol menü daraltıldığında aynı öğeler ve aynı sıralama korunur; yalnız metin etiketleri gizlenir. Aktif öğe renk/arka planla belirgin kalır, ikon üzerinde bekleme araç ipucu açar, klavye erişimi ve erişilebilir adlar korunur. Tercih sonraki açılışta hatırlanır. Böylece Görevlerim'e dar menüden de tek tıklamayla dönülür; yeni bir gezinme hiyerarşisi öğrenmek gerekmez.
 
 ### 04 — Ana ses inceleme tezgâhı
 
@@ -161,6 +167,7 @@ Adalet Bakanlığı Bilirkişilik Daire Başkanlığının sitesinde hukuk/idare
 | Konuşmacı ayrımı var mı? | İhtiyaç ve kalite uygunsa opsiyonel gruplama vardır; uzman kontrol eder; kimlik iddiası değildir. |
 | Ses iyileştirme var mı? | Dinleme araçları ve geri alınabilir işlenmiş kopyalar tasarlanır; orijinal korunur, bütün işlemler kaydedilir. |
 | Rapor segmente göre mi yazılır? | Hayır. Segment çalışma birimidir; rapor okunabilir, zaman damgalı konuşmacı paragrafları sunar. |
+| Sol menüyü daraltınca ne olur? | Menü öğeleri kaybolmaz; aynı sıradaki ikonlar, aktif durum, araç ipucu ve klavye erişimi korunur. |
 | Tek rapor ne anlama gelir? | Tek ana rapor ve aynı pakette gerekli ekler; görev başına bir güncel rapor ve revizyon geçmişi. |
 | Resmî şablon nasıl seçilir? | Merci/türden otomatik referans şablon eşleştirme; belirsizlik varsa tek teyit. |
 
