@@ -1,60 +1,59 @@
 # MİHENK 56.12 — İlk Teslimat Ürün Sözleşmesi
 
-> İlk kullanılabilir teslimat: 56.12 Ses Kayıtlarının Metin Hâline Dönüştürülmesi kontrollü pilotu.  
-> Uzun vadeli ürün: modüler MİHENK bilirkişilik platformu.  
-> Tasarım referansı: [Wireframe v0.2](56-12-wireframe-v0.2.md) · [SVG pano](56-12-wireframe-v0.2.svg)
+> İlk kullanılabilir teslimat: 56.12 Ses Kayıtlarının Metne Dönüştürülmesi kontrollü pilotu. Uzun vadeli ürün: modüler MİHENK bilirkişilik platformu.  
+> Güncel tasarım: [Wireframe v0.3 — ekran açıklamaları](56-12-wireframe-v0.3.md) · [SVG ekran panosu](56-12-wireframe-v0.3.svg)
 
 ## Ürün hedefi
 
-Bilirkişi MİHENK'i kurar, yerel profilini bir kez tanımlar, görevlendirme belgesini ve delil materyallerini ekler. MİHENK belgeyi okuyup görevlendirme alanlarını çıkarır; ses materyallerini envanterler ve yerel olarak transkripsiyon taslağı üretir; uzman düzenlemesini ve bulgularını görev sorularına bağlar; tek ana bilirkişi raporunu hazırlar. Bilirkişi son kontrolü yapar ve UYAP Editör/e-imza/Portal üzerinden resmî imzalama ve gönderimini kendisi tamamlar.
+Bilirkişi MİHENK'i kurar, yerel kasasını açar ve bilirkişi profilini bir kez tanımlar. Görevlendirme belgesini ve materyalleri ekler. MİHENK belgeyi okuyup görev profilini çıkarır; sesleri envanterler ve yerel ASR taslağı üretir; uzman düzeltmelerini ve bulgularını görev sorularına bağlar; görev için tek ana bilirkişi raporu hazırlar. Bilirkişi son kontrolü, UYAP Editör/e-imza ve resmî Portal teslimini kendisi yapar.
 
-Bu kapsam UYAP portal otomasyonu, e-imza PIN'inin uygulamaya alınması veya otomatik teknik/hukukî kanaat üretimi değildir.
+Bu kapsam UYAP portal otomasyonu, e-imza PIN'inin alınması veya bilirkişi adına teknik/hukukî kanaat üretimi değildir.
 
 ## Kavram modeli
 
-- Bir yerel kasa bir bilirkişi profiline bağlıdır (ilk sürüm varsayımı).
+- Yerel kasa verinin şifreli saklama ve kurtarma sınırıdır.
+- Bilirkişi profili kullanıcıya ait meslekî bilgilerdir; kasanın içinde şifreli saklanır.
+- Uzmanlık alanı kullanıcının profil bilgisidir; yazılım modülü ile aynı şey değildir.
+- Uzmanlık modülü MİHENK'in sunduğu araç ve iş akışıdır. İlk aktif modül 56.12'dir.
 - Bir bilirkişinin birçok ayrı görevlendirmesi olabilir.
-- Bir görevlendirme bir belge/karar, çoklu materyal ve çoklu soru içerir.
-- Her görevlendirme için tek bir çalışma alanı ve tek bir ana rapor vardır.
-- Materyal, yanıt, bulgu veya rapor görevler arasında karışamaz.
+- Bir görevlendirme belgesi bir görev profili üretir; görev çoklu materyal ve çoklu soru içerir.
+- Her görev için ayrı çalışma alanı ve tek ana rapor vardır; görev verileri birbirine karışmaz.
 
-## Genel menü
+## Genel menü ve görev alanı
 
-1. **Genel Bakış:** sadece özet ve yaklaşan işler; görev adımları içermez.
-2. **Görevlerim:** ayrı görevlendirmelerin listesi ve yeni görevlendirme.
-3. **Bilirkişi Profilim:** bir kez girilen meslekî profil.
-4. **Ayarlar ve Kasa:** yerel güvenlik, yedek, güncelleme.
+Sol menü daraltılıp genişletilebilir. Genel menü: Genel Bakış, Görevlerim, Uzmanlık Modülleri, Ayarlar ve Kasa. Kullanıcı avatar menüsünden Bilirkişi Profilim, Uzmanlık Alanlarım, Kasa ve Güvenlik, Güncelleme ve Kilitle eylemlerini açar.
 
-Bir görev açılınca sağ içerik alanında sadece o işe ait Görev Özeti, Görevlendirme, Materyaller, Ses ve Transkript, Sorular ve Bulgular, Tek Rapor sekmeleri görünür. Görev sekmeleri genel sol menüden ayrıdır.
+Genel Bakış yalnızca iş özeti sunar. Görevlerim her ayrı görevlendirmeyi listeler. Bir görev açıldığında sağ içerikte o göreve ait Görev Özeti, Görevlendirme, Materyaller, Ses ve Transkript, Sorular ve Bulgular, Tek Rapor sekmeleri görünür.
 
-## Otomasyon kuralı
+## Görevlendirme başlangıcı ve otomasyon
 
-Görevlendirme belgesini önce MİHENK okur. Merci, dosya referansı, tarih/süre, kapsam, sorular ve materyal talimatlarını çıkarır. Kullanıcı baştan form doldurmaz; yalnızca belirsiz, çelişkili veya okunamayan alanları doğrular. Sistem hiçbir alana uydurma değer yazmaz.
+Görevlendirme belgesi ilk girdi olarak yüklenir. MİHENK metin çıkarımı/OCR adımlarını yürütür; merci, dosya referansı, tarih/süre, kapsam, sorular, materyal ve teslim koşullarını kaynak iziyle çıkarır. Kullanıcı baştan form doldurmaz; yalnız belirsiz, çelişkili veya okunamayan alanları doğrular. Belirsiz süre veya kapsam sistem tarafından uydurulmaz.
 
-Ses dosyaları görev bazında kuyruğa girer; yerel ASR yalnız makine taslağı üretir. Uzman düzeltmesi, anotasyonu ve onayı ayrı izlenir. Her görev sorusu bir uzman yanıtına ve destekleyen materyal/zaman segmentine bağlanır.
+Güvenli/tekrarlı işlemler varsayılan olarak otomatik yürür. ASR çıktısı makine taslağıdır; uzman düzeltmesi ve nihai kanaat ayrı tutulur.
 
-## Tek rapor politikası
+## Tek rapor
 
-Her görevlendirme için bir ana bilirkişi raporu oluşturulur. Bu raporda görev ve merci bilgileri, bilirkişi profili, kapsam/sınırlar, sorular, materyal envanteri, yöntem/model/sürüm, doğrulanmış bulgular, soru bazlı gerekçeli yanıtlar, sınırlılıklar ve numaralı ekler bulunur. Kullanıcıya birbirinden kopuk birden çok rapor dosyası üretilmez.
+Her görevlendirme için bir ana rapor üretilir. Rapora görev/merci bilgileri, bilirkişi profili, kapsam/sınırlar, sorular, materyal envanteri, yöntem/araç/model/sürüm, uzman tarafından doğrulanmış bulgular, soru bazlı gerekçeli yanıtlar, sınırlılıklar ve numaralı ekler alınır. Kullanıcı ayrı ayrı rapor formatları arasında seçim yapmak zorunda kalmaz; tek rapor MİHENK içinde önizlenir.
 
-Bilirkişilik Daire Başkanlığı sayfasında dört merci ailesine ait örnek raporlar listelenir. Mayıs 2025 Temel Eğitim Kaynak Kitabı ise raporların özel ve değişmez bir şablonu olmadığını, örneklerin ihtiyatla kullanılmasını belirtir. Bu nedenle MİHENK merciye göre ilgili örnek iskeleti önerir; onu zorunlu sabit forma dönüştürmez ve önceki rapordan kopyalama yapmaz.
+Bilirkişilik Temel Eğitimi Kaynak Kitabı raporlar için özel ve değişmez tek şablon bulunmadığını; örneklerin ihtiyatla kullanılması gerektiğini belirtir. MİHENK görevlendirme içeriği ve güncel rehberle uyumlu görev-özel rapor oluşturur; önceki rapordan kopyalama yapmaz.
 
 ## UYAP Editör sınırı
 
-Tek rapor dosyasının gerçek Windows UYAP Editör'de açılması, Türkçe karakter/sayfa/tablo/ek kontrolü, UDF kaydetme ve yeniden açma testleri yapılmadan çıktı biçimi "UYAP'a hazır" diye sunulmaz. Portalın ilgili evrak türünde kabul ettiği biçim ayrıca doğrulanır. E-imza ve resmî gönderim bilirkişinin işlemidir.
+Tek raporun güncel Windows UYAP Editör'de açılması, Türkçe karakter/sayfa/tablo/ek kontrolü, UDF kaydetme ve yeniden açma testi tamamlanmadan çıktı "UYAP'a hazır" olarak sunulmaz. Portal evrak türünün kabul ettiği biçim ayrıca doğrulanır. E-imza ve resmî gönderim bilirkişinin işlemi olarak kalır.
 
 ## İlk sürüm kabul kapıları
 
-1. Profil ilk açılışta bir kez oluşturulur ve rapora doğru aktarılır.
-2. Görevlendirme belgesi okunur; kaynak izli alanlar çıkarılır; yalnız istisnalar kullanıcıya sorulur.
-3. Birden çok görevlendirme birbirinden ayrı saklanır.
-4. Tek görevlendirmede birden çok ses ve soru işlenir.
-5. Kasa yeniden açıldığında görev ve ses bağlamı geri yüklenir.
-6. Yerel ASR kuyruk ve transkript düzenleme akışı çalışır.
-7. Her soru yanıtı görev içindeki dayanaklara bağlanır.
-8. Görev başına tek rapor oluşturulur; doğru merci örnek iskeleti önerilir.
-9. Tek rapor UYAP Editör'de aç/kaydet/yeniden aç kabul testini geçer.
-10. Windows MSI temiz kurulum, kasa açma, normal kapatma, güncelleme, başarısız güncelleme ve kurtarma testlerini geçer.
-11. 56.12 uzmanı sentetik/izinli görevde akışı tamamlar.
+1. Yerel kasa ve bilirkişi profili ilk açılışta kurulur; sonraki açılışta yalnız kasa açılır.
+2. Profil rapora doğru aktarılır; uzmanlık alanı ile yazılım modülü ayrıdır.
+3. Görevlendirme belgesi okunur; alanlar kaynak iziyle çıkarılır; istisnalar kullanıcıya sorulur.
+4. Birden fazla görevlendirme ayrı saklanır.
+5. Bir görevde birden fazla ses ve soru işlenir.
+6. Kasa yeniden açıldığında görev ve seçili ses bağlamı geri yüklenir.
+7. Yerel ASR kuyruğu, transkript düzeltme ve revizyon geçmişi çalışır.
+8. Her soru yanıtı aynı görevin kaynaklarına bağlanır.
+9. Görev başına tek rapor oluşturulur ve MİHENK içinde önizlenir.
+10. Tek rapor UYAP Editör'de aç/kaydet/yeniden aç kabulünü geçer.
+11. Windows MSI temiz kurulum, kasa, kapanma, güncelleme, başarısız güncelleme ve kurtarma testlerini geçer.
+12. 56.12 uzmanı sentetik/izinli görevde akışı tamamlar.
 
-Derleme/birim test başarısı tek başına pilot kabulü değildir. Her kapı kanıtla GEÇTİ/KALDI/ENGELLENDİ olarak kaydedilir.
+Derleme ve birim test başarısı tek başına pilot kabulü değildir. Her kapı kanıtla GEÇTİ/KALDI/ENGELLENDİ olarak kaydedilir.
