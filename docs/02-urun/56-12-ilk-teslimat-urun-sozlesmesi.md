@@ -3,6 +3,8 @@
 > İlk kullanılabilir teslimat: 56.12 Ses Kayıtlarının Metne Dönüştürülmesi kontrollü pilotu. Uzun vadeli ürün: modüler MİHENK bilirkişilik platformu.  
 > Güncel tasarım: [Wireframe v0.3 — ekran açıklamaları](56-12-wireframe-v0.3.md) · [SVG ekran panosu](56-12-wireframe-v0.3.svg)
 
+> **Tasarım durumu:** Wireframe v0.3 çalışma taslağıdır; proje sahibi tarafından henüz kabul edilmemiştir. Bu sözleşme ilk teslimat yönünü ve iş hedefini kaydeder; son UI yerleşimi olarak yorumlanmamalıdır. Yeni oturumda kullanıcı akışı yeniden gözden geçirilmelidir.
+
 ## Ürün hedefi
 
 Bilirkişi MİHENK'i kurar, yerel kasasını açar ve bilirkişi profilini bir kez tanımlar. Görevlendirme belgesini ve materyalleri ekler. MİHENK belgeyi okuyup görev profilini çıkarır; sesleri envanterler ve yerel ASR taslağı üretir; uzman düzeltmelerini ve bulgularını görev sorularına bağlar; görev için tek ana bilirkişi raporu hazırlar. Bilirkişi son kontrolü, UYAP Editör/e-imza ve resmî Portal teslimini kendisi yapar.
