@@ -8,6 +8,10 @@
 
 Bilirkişinin görev öncesi, görev sırasında ve görev sonunda yürüttüğü resmî olmayan hazırlık, belge düzeni, materyal takibi, teknik çalışma kaydı ve kalite kontrol işlerini daha izlenebilir hale getiren yerel öncelikli bir çalışma aracı yararlı olabilir. Bu hipotez henüz kullanıcı araştırmasıyla kanıtlanmamıştır.
 
+## İlk teslimat yönü — 15 Kasım 2026
+
+Proje sahibinin açık talimatıyla ilk kullanılabilir teslimat 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü uzman pilotudur (ADR-032). Uzun vadeli hedef farklı uzmanlık modüllerini içeren MİHENK platformudur. Bu ilk teslimat kararı genel platformun tüm uzmanlıklar için MVP kapsamını veya nihai UI tasarımını onaylamaz. Wireframe v0.3 hâlâ kullanıcı gözden geçirmesi bekleyen taslaktır.
+
 ## Kapsam
 
 Araştırma; adaylık ve başvuru, sicil/liste, görevlendirme, dosya ve materyal teslimi, tarafsızlık/uzmanlık kontrolü, inceleme, rapor, imza ve teslim, ek rapor/duruşma, materyal iadesi, ücret/gider, arşiv, saklama ve mesleki yükümlülükleri kapsar.
