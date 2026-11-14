@@ -59,3 +59,16 @@ Tek raporun güncel Windows UYAP Editör'de açılması, Türkçe karakter/sayfa
 12. 56.12 uzmanı sentetik/izinli görevde akışı tamamlar.
 
 Derleme ve birim test başarısı tek başına pilot kabulü değildir. Her kapı kanıtla GEÇTİ/KALDI/ENGELLENDİ olarak kaydedilir.
+
+
+## Sistem ve kullanıcı akışı tasarım kaynağı
+
+Profil, uzmanlık alanı/modül ayrımı, kasa ve uygulama ayarları, daraltılabilir genel gezinme, Görevlerim/Genel Bakış ayrımı, ASR modül yönetimi, görev içi çoklu materyal/soru akışları, tek rapor ve hata durumları için ana tasarım referansı [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](mihenk-sistem-ve-kullanici-akisi-v1.0.md) belgesidir. Bu belge wireframe v0.4 için sistem sözleşmesidir; v0.3 kabul edilmiş değildir ve UI kodlama onayı değildir.
+
+### ASR ve rapor yönteminin açıklanması
+
+ASR, genel uygulama ayarı değil 56.12 uzmanlık modülünün yerel altyapısıdır. Görev ekranı motoru yönetmez; motorun hazır olma, kuyruk, hata ve kullanılan sürüm bilgisini gösterir. Normal kullanıcıya her görevde motor seçtirilmez.
+
+ASR fiilen kullanılmışsa, raporun inceleme yöntemi/teknik araçlar bölümünde kullanılan motor/model adı ve sürümü kısa, anlaşılır ve gerçeğe uygun biçimde açıklanır. Tam runtime, build, parametre, checksum, materyal-run eşlemesi ve revizyon kökeni teknik işlem kaydında; denetim için gerektiğinde teknik ekte tutulur. Mevzuat m.55 inceleme yöntemi ve bilimsel/teknik dayanakları sayar; belirli bir ASR markasını açıkça zorunlu tutmaz. Model bilgisinin açıklanması, MİHENK'in denetlenebilirlik ve şeffaflık ürün politikasıdır.
+
+MİHENK raporun yapısını ve doğrulanmış içeriğini otomatik birleştirir; bilirkişinin teknik kanaatini, konuşmanın hukukî anlamını veya soru yanıtını uydurmaz. Makine taslağı, bilirkişi kontrolünden geçmeden nihai transkript olarak gösterilmez.
