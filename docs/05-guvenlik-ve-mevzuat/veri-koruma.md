@@ -1,7 +1,7 @@
 # Veri Koruma
 
 > **Durum:** HUKUKİ İNCELEME BEKLİYOR  
-> **Güncelleme:** 13 Kasım 2026
+> **Güncelleme:** 15 Kasım 2026
 
 ## Veri risk profili
 
@@ -9,7 +9,7 @@ Bilirkişilik materyalinde kimlik, iletişim, sağlık, biyometrik/genetik, ceza
 
 ## GitHub görünürlüğü
 
-MİHENK'in araştırma deposu `mihenk-arge` ve boş uygulama deposu `mihenk` public olarak doğrulanmıştır. Public depolarda:
+MİHENK'in araştırma deposu `mihenk-arge` ile prototip kodu ve release bilgileri içeren uygulama deposu `mihenk` public olarak doğrulanmıştır. Public depolarda:
 - Vaka materyali, ses/görüntü, rapor, dosya numarası, taraf/uzman kimliği veya UYAP ekran görüntüsü bulunmaz.
 - Gerçek görüşme notları yerine yalnızca yeniden kimliklendirme riski azaltılmış tematik bulgular yayımlanır.
 - Sertifika, imza anahtarı, token, parola, üretim ayarı ve gizli log commit edilmez.
