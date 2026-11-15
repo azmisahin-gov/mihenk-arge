@@ -42,7 +42,7 @@
 
 ## Sistem tasarımı v1.0 ile yanıtlanan tasarım soruları
 
-> v0.3 kabul edilmedi. Aşağıdaki 22–33 numaralı tasarım soruları [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile ürün tasarımı düzeyinde yanıtlandı. Bunlar yeni wireframe'de gösterilecek; gerçek kullanıcı/uzman ve teknik kabul testleriyle doğrulanacak.
+> v0.3/v0.4 kabul edilmedi; v0.5 15.11.2026 tarihinde proje sahibi tarafından kabul edildi. Aşağıdaki 22–33 numaralı tasarım soruları [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile ürün tasarımı düzeyinde yanıtlandı. Bunlar yeni wireframe'de gösterilecek; gerçek kullanıcı/uzman ve teknik kabul testleriyle doğrulanacak.
 
 22. **İlk açılış sırası:** Yerel kasa → bilirkişi profili → uzmanlık alanları → 56.12 modül hazırlığı → Genel Bakış. Sonraki açılışlarda yalnız kasa açılır.
 23. **Yerel profil sayısı:** İlk ürün varsayımı bir yerel kasa/bir gerçek kişi bilirkişi profilidir. Çoklu profil bu sürümün kapsamı değildir; saha ihtiyacıyla yeniden değerlendirilir.
@@ -68,3 +68,17 @@
 - UDF ve Portal evrak türü kabulü; güncel Windows UYAP Editör testi.
 - Kasa/yedek/kurtarma, otomatik kilit ve güncelleme güvenlik kabulü.
 - Bağımsız hukuk, meslekî uygulama ve veri güvenliği incelemesi.
+- Denetim paketi için kişisel veri minimizasyonu, saklama/aktarımı ve bağımsız denetçi erişim modeli.
+- ASR işaretlerinin önceliklendirme başarımının gerçek uzman örnekleminde ölçülmesi; güven işaretinin doğruluk yüzdesi gibi sunulmaması.
+- Konuşmacı diarization ve ses iyileştirme araçlarının ilk pilot için gerçekten gerekli olup olmadığı ve motor/decoder lisans/başarım koşulları.
+
+
+## 34. Wireframe kabulü sonrası açık uygulama/denetim işleri
+
+[Wireframe v0.5](../02-urun/56-12-wireframe-v0.5.md) proje sahibi tarafından kabul edilmiştir; aşağıdakiler tasarım kabulünden ayrı işlerdir:
+
+- Mevcut uygulama main ile üç feature dalının davranış/test bazında karşılaştırılması; kullanılmayan dalın ancak güvenli şekilde kapatılması.
+- Her açık uygulama issue'sunun kabul edilmiş v0.5 ekran/iş akışı ve K-01–K-12 ile eşlenmesi.
+- Bilirkişi öz kontrol paneli ve görev/rapor kaynak izinin uygulamaya alınması.
+- Bağımsız inceleme için salt okunur denetim paketi, gizlilik incelemesi ve revizyon bağı.
+- MİHENK ürün kalite dosyası ve bağımsız teknik/güvenlik/meslekî test kanıtları.
