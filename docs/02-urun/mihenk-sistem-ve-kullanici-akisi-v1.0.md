@@ -768,29 +768,21 @@ Bunlar sistem akışında tasarlanmıştır; fakat gerçek uygulama davranışı
 
 Bu doğrulamalar tamamlanmadan “56.12 kullanıma hazır”, “UYAP'a hazır”, “ASR en iyi motoru seçildi” veya “hukuken onaylı rapor” denmez.
 
-## 20. v0.4 wireframe kabul kapsamı
+## 20. Wireframe v0.5 ve uygulama kabul kapsamı
 
-Sistem tasarımı v1.0 temelinde [Wireframe v0.4](56-12-wireframe-v0.4.md) ve altı görsel pano oluşturuldu. Sistem tasarımı v1.0, v0.4 değerlendirmesi için bilgi mimarisi ve kullanıcı akışının ana kaynağıdır. Wireframe aşağıdaki aşamaları kesintisiz göstermelidir:
+Sistem haritası v1.0, ürünün bilgi mimarisi ve sorumluluk sınırlarını tanımlar. Görsel uygulama referansı [Wireframe v0.5](56-12-wireframe-v0.5.md) ve altı SVG panodur. Proje sahibi v0.5'i 15.11.2026 tarihinde kabul etmiştir. v0.3 ve v0.4 tarihsel, kabul edilmemiş taslaklardır.
 
-1. İlk açılış ve kasa oluşturma.
-2. Profil ve uzmanlık alanı.
-3. Genel Bakış / Görevlerim ayrımı.
-4. Uzmanlık modülleri kataloğu ve 56.12 yönetimi.
-5. Yerel ASR/motor yönetimi ile görev içi kuyruk ayrımı.
-6. Görevlendirme belgelerini yükleme ve otomatik okuma.
-7. Kaynaklı Görev Profili istisnalarını doğrulama.
-8. Bir görevde çoklu materyal envanteri.
-9. Ses/ASR/transkript ve uzman revizyonları.
-10. Çoklu soru ve kaynak/dayanak bağlantıları.
-11. Tek raporun tam A4 sayfa önizlemesi.
-12. Kasa, yedek, geri yükleme ve kilitleme.
-13. Uygulama ayarları, güncelleme, yardım/tanılama.
-14. Boş/hata/çevrimdışı/başarısız işlem/kurtarma ekranları.
+Kabul edilen görsel panolar:
+1. Uzmanlık alanı / modül / motor hiyerarşisi.
+2. Yeni görevlendirme otomatik kabul akışı.
+3. Görev çalışma alanı ve öncelikler.
+4. Ses inceleme tezgâhı ve tüm transkript.
+5. Tek rapor ve A4 önizleme.
+6. Daraltılabilir ana menü.
 
-Wireframe v0.3 kabul edilmiş tasarım olarak kullanılamaz. v0.4 bu sistem sözleşmesine göre yeniden çizilecek; kullanıcı kabulü olmadan uygulama arayüzü kodlanmayacaktır.
+Tasarım kabulü mevcut uygulamanın bu akışı gerçekleştirdiğini göstermez. Uygulama eşlemesi, gerçek ses/ASR/rapor testi, temiz kurulum, görev izolasyonu, offline/kurtarma ve 56.12 alan uzmanı kabulü ayrı aşamalardır.
 
----
-
+Kalite denetimi için bilirkişi öz kontrolü, bağımsız dosya/rapor incelemesi ve MİHENK ürün denetimi ayrı katmanlardır. Ayrıntılı sözleşme: [56.12 Kalite Güvencesi ve Denetim Modeli v1.0](56-12-kalite-ve-denetim-modeli-v1.0.md).
 
 ## v0.5 tasarım düzeltmeleri — 15.11.2026
 
@@ -813,3 +805,7 @@ v0.5 görsel değerlendirme kaynağı: [Wireframe v0.5](56-12-wireframe-v0.5.md)
 Proje sahibi [Wireframe v0.5](56-12-wireframe-v0.5.md) tasarımını 15.11.2026 tarihinde kabul etti. Tasarım uygulama backlog'una dönüştürülebilir; bu durum mevcut prototipteki işlevlerin tamamlandığını göstermez. Uygulama geliştirmesi mevcut kodun dosya/branch/test denetimiyle başlayacaktır.
 
 Bilirkişinin görev ve rapor öz denetimi, bağımsız dosya/rapor incelemesi ve MİHENK'in kendi ürün kalite denetimi için ayrı kanıt katmanları [Kalite Güvencesi ve Denetim Modeli v1.0](56-12-kalite-ve-denetim-modeli-v1.0.md) içinde tanımlanmıştır.
+
+## v0.5 tasarım kabulü — uygulamaya geçiş
+
+Wireframe v0.5 tasarımı proje sahibi tarafından kabul edilmiştir. Uygulama aşaması mevcut prototipin denetlenmesiyle başlayacak; main'de zaten çalışan görev/kasa/ses dalga biçimi/SEDA/transkript/rapor işlevleri yeniden yazılmayacak. Eski feature dalları ve issue'lar main ile dosya/test bazında karşılaştırılmadan silinmeyecek veya otomatik birleştirilmeyecektir. Yeni oturum için tek kaynak [Oturum Başlangıç ve Devir Noktası](../00-yonetim/yeni-oturum-baslangic-noktasi.md) belgesidir.
