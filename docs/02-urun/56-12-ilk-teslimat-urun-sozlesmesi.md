@@ -3,7 +3,7 @@
 > İlk kullanılabilir teslimat: 56.12 Ses Kayıtlarının Metne Dönüştürülmesi kontrollü pilotu. Uzun vadeli ürün: modüler MİHENK bilirkişilik platformu.  
 > Güncel tasarım adayı: [Wireframe v0.5 — ekran açıklamaları](56-12-wireframe-v0.5.md) · [Sistem haritası](mihenk-sistem-ve-kullanici-akisi-v1.0.md)
 
-> **Tasarım durumu:** v0.3 ve v0.4 kabul edilmemiş tarihsel taslaklardır. v0.5 güncel değerlendirme adayıdır; kullanıcı ve 56.12 alan uzmanı kabulü beklenmektedir. Bu sözleşme ürün hedefini kaydeder; uygulama UI kodlama onayı değildir.
+> **Tasarım durumu:** v0.3 ve v0.4 kabul edilmemiş tarihsel taslaklardır. v0.5 proje sahibi tarafından 15.11.2026 tarihinde kabul edilmiştir ve uygulama tasarım temelidir. 56.12 alan uzmanı, teknik, güvenlik ve UYAP kabul kapıları ayrıca geçilmelidir.
 
 ## Ürün hedefi
 
@@ -87,3 +87,10 @@ ASR segmentleri düzenleme ve sese saniye hassasiyetli atlama birimidir. Rapor d
 ## v0.5 rapor biçimi ilkesi
 
 Her görevlendirme için tek ana rapor ve ona bağlı ekler vardır. Merci/dosya türü görevlendirme belgesinden çıkarılır ve uygun Bakanlık örnek raporu referans iskelet olarak otomatik eşleştirilir; belirsizlik varsa bilirkişiden yalnız bu alanı doğrulaması istenir. Bu, tüm bilirkişi raporları için tek ve zorunlu bir resmî şablon bulunduğu iddiası değildir. Raporda görevlendirmenin soruları sırayla, gerekçeli ve kaynaklarıyla yanıtlanır. Gerçek UYAP Editör aç/kaydet/yeniden aç testi tamamlanmadan çıktı “UYAP'a hazır” olarak adlandırılmaz.
+
+
+## Kalite, denetim ve son kontrol
+
+56.12'de bilirkişinin kendi görev/rapor kontrolü, ikinci bilirkişi veya yetkili denetçinin bağımsız dosya incelemesi ve MİHENK ürününün kendi kalite denetimi birbirinden ayrılır. Her görev için kaynak → materyal → ses/ASR → uzman düzeltmesi → soru/yanıt → rapor revizyonu izlenebilir olmalıdır. Gerektiğinde hassas verisi kullanıcı tarafından gözden geçirilmiş salt okunur denetim paketi hazırlanır. Ürün sürümü için ayrıca test kanıtı, açık risk, bağımlılık/model sürümü ve platform kabul dosyası tutulur.
+
+Detaylı sözleşme: [56.12 Kalite Güvencesi ve Denetim Modeli v1.0](56-12-kalite-ve-denetim-modeli-v1.0.md). Bu model mevcut uygulamada tamamlanmış özellik değildir; uygulama backlog'una ve pilot kabul kapılarına dönüştürülecektir.
