@@ -1,13 +1,15 @@
 # Aşamalar ve Yol Haritası
 
-> **Durum:** 56.12 ilk teslimat yönü belirlendi; wireframe v0.3 taslağı ve ürün doğrulaması sürüyor  
+> **Durum:** Sistem haritası v1.0 hazır; Wireframe v0.5 proje sahibi tarafından 15.11.2026'da kabul edildi. Uygulama eşleme ve teknik kabul aşamasına geçilecek.  
 > **Güncelleme:** 15 Kasım 2026
 
-## Güncel durak — Ürün akışını netleştirme
+## Güncel durak — Wireframe v0.5 kabul edildi; uygulama eşleme başlıyor
 
-İlk teslimat 56.12 kontrollü uzman pilotudur. Kullanıcı arayüzü wireframe v0.3 hazırlanmıştır ancak **kullanıcı tarafından kabul edilmemiştir**. Bir sonraki oturumda araştırma deposu yeniden okunarak ekran akışı, profil/kasa/modül ayrımı, görev başlangıcı ve tek rapor deneyimi gözden geçirilecek; tasarım netleşmeden yeni UI kodu yazılmayacaktır.
+İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 ve v0.4 **kabul edilmemiş tarihsel taslaklardır**. [MİHENK Sistem Haritası v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ana bilgi mimarisidir. [Wireframe v0.5](../02-urun/56-12-wireframe-v0.5.md) proje sahibi tarafından 15.11.2026 tarihinde kabul edilmiştir. [Kalite Güvencesi ve Denetim Modeli](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md) bilirkişi öz kontrolünü, bağımsız dosya/rapor incelemesini ve MİHENK ürün denetimini ayırır.
 
-Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı vardır. Bu nedenle uygulama geliştirme başlamamış gibi ele alınmamalı; mevcut prototip korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
+**Wireframe v0.5 kabul edilmiştir:** [tasarım açıklaması](../02-urun/56-12-wireframe-v0.5.md), altı SVG pano ve [Kalite Güvencesi/Denetim Modeli](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md). v0.3/v0.4 tarihsel ve kabul edilmemiş taslaklardır. Uygulama aşaması artık tasarımın mevcut prototipte hangi ölçüde karşılandığını denetleme, eski dalları güvenli karşılaştırma ve backlog'u netleştirme ile başlayacaktır. Tasarım kabulü teknik kabul değildir.
+
+Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 kullanıcı önizleme durumu vardır. Uygulama geliştirmesi sıfırdan başlamış gibi ele alınmamalı; mevcut kod korunmalı, bilinen kullanıcı blokajları kaybolmadan takip edilmelidir.
 
 ## Aşama 0 — Proje başlangıcı ve yönetişim
 
@@ -37,6 +39,7 @@ Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı 
 - Uzmanlık modülleri ile göreve özel iş akışlarının ayrımı.
 - Otomatik yürütülecek işler, istisna yönetimi ve insan karar sınırları.
 - Rapor üretimi, kalite kapısı ve çıktı formatı kabul kriterleri.
+- **Sistem/kullanıcı akışı v1.0 tamamlandı:** gezinme, ayar sahipliği, profil, kasa, uzmanlık/modül, ASR, görev, materyal, transkript, sorular, tek rapor, güncelleme ve istisna akışları tek referansta toplandı.
 
 ## 56.12 modül dikey dilimi — İlk pilot alt akışı
 
@@ -59,7 +62,7 @@ Uygulama deposunda mevcut bir masaüstü prototipi ve 0.1.0-53 önizleme hattı 
 
 ## Aşama 5 — Uygulama geliştirme
 
-Wireframe ve ilk teslimat ürün sözleşmesi kullanıcı/uzman tarafından gözden geçirildikten sonra mevcut prototip üzerinde önceliklendirilmiş düzeltmeler yapılır. Öncelik: ilk kurulum/profil, görevlendirme belgesinin otomatik okunması, bir görevde çoklu materyal ve soru, 56.12 ses/transkript akışı, tek rapor önizlemesi, ardından UYAP Editör biçim doğrulaması. Yeni teknik özellikler bu uçtan uca akışa katkı sağlamıyorsa bekletilir.
+Sistem tasarımı ve ilk teslimat ürün sözleşmesi kullanıcı tarafından gözden geçirilip v0.5 wireframe kabul edildiğinden sonra mevcut prototip üzerinde önceliklendirilmiş düzeltmeler yapılır. Öncelik: ilk kurulum/profil, görevlendirme belgesinin otomatik okunması, bir görevde çoklu materyal ve soru, 56.12 ses/transkript akışı, tek rapor önizlemesi, ardından UYAP Editör biçim doğrulaması. Yeni teknik özellikler bu uçtan uca akışa katkı sağlamıyorsa bekletilir.
 
 ## Aşama 6 — Pilot ve doğrulama
 
@@ -71,3 +74,18 @@ Wireframe ve ilk teslimat ürün sözleşmesi kullanıcı/uzman tarafından göz
 ## Aşama 7 — Bağımsız eleştiri ve yayın hazırlığı
 
 Mevzuat, veri güvenliği, uzmanlık sınırı, lisans ve teknik tasarım bağımsız incelemeye tabi tutulur; açık kritik bulgular kapatılmadan yayın yapılmaz.
+\n\n## v0.5 tasarım kabulü ve uygulama kapısı\n\nProje sahibi v0.5 tasarımını kabul etti. Yeni oturumda önce mevcut uygulama main ve üç eski feature dalı dosya/test bazında karşılaştırılacak; açık issue'lar gerçek mevcut durumla eşlenecek. Kullanıcı onayı olmadan eski dal silinmeyecek veya güvenli değişiklikler kaybedilmeyecek. Sonra accepted UI tasarımı mevcut uygulamada aşamalı uygulanacak. Alan uzmanı ve bağımsız teknik/güvenlik denetimi pilot öncesinde ayrıca gereklidir.\n
+
+## Aşama 5A — Mevcut uygulama denetimi ve backlog eşlemesi
+
+- `mihenk` main dalını ve güncel preview/release sürümünü doğrula.
+- Üç eski feature dalını main ile dosya, commit, test ve davranış bakımından karşılaştır; henüz silme veya doğrudan merge yapma.
+- Açık issue #3 ve #29–#34'ü v0.5 ekranları ve K-01–K-12 ile eşle; yinelenen işleri birleştirmeden önce kapsamı karşılaştır.
+- Önce kullanıcı blokajlarını ve mevcut çalışan özellikleri doğrula; test/CI sonucu olmadan “çalışıyor” işareti verme.
+- Her uygulama dilimini küçük PR, test ve canlı önizleme ile doğrula.
+
+## Aşama 5B — Çift kalite/denetim kabulü
+
+- Bilirkişinin görev/rapor öz denetimi ve kaynak izlenebilirliği.
+- Gerektiğinde bağımsız ikinci uzman incelemesi için denetim paketi.
+- MİHENK ürün kalite dosyası, K-01–K-12 ve bağımsız güvenlik/UX/meslekî testleri.
