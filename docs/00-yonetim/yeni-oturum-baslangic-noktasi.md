@@ -67,7 +67,9 @@ Ayrıntı ve uygulama aşamaları: [Kalite Güvencesi ve Denetim Modeli v1.0](..
 
 - Araştırma PR'ı: [PR #12 — Wireframe v0.5](https://github.com/azmisahin-gov/mihenk-arge/pull/12).
 - PR yalnızca araştırma/ürün dokümanı ve SVG tasarımlarını içerir; uygulama kodu veya gerçek vaka verisi içermez.
-- PR merge edilmeden önce bu belgedeki durum/commit bağlantısı main'e göre güncellenecektir.
+- [PR #12](https://github.com/azmisahin-gov/mihenk-arge/pull/12) 15.11.2026 tarihinde squash merge ile `main` dalına alındı.
+- Merge commit: `3b526885beec52aeab23c0b0d56514492e4050a5`.
+- PR kapsamı yalnızca dokümantasyon ve SVG wireframe dosyalarıdır; uygulama deposuna kod aktarılmadı.
 - v0.5 tasarımı ürün sahibi tarafından kabul edildi; teknik ve meslekî testler ayrıca açık kalır.
 
 ## 6. Uygulama deposunun 15.11.2026 başlangıç fotoğrafı
