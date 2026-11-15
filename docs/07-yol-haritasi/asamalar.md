@@ -5,7 +5,7 @@
 
 ## Güncel durak — Wireframe v0.5 kabul edildi; uygulama eşleme başlıyor
 
-İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 **kabul edilmemiştir**. Araştırma, mevzuat ve ürün sözleşmesi doğrulamasından sonra [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı. Bu belge ana gezinmeyi, profil/kasa/uzmanlık/modül ayrımını, yerel ASR sahipliğini, görevlendirme ve çoklu materyal/soru akışını, tek rapor yaklaşımını ve hata durumlarını tanımlar.
+İlk teslimat 56.12 kontrollü uzman pilotudur. v0.3 ve v0.4 **kabul edilmemiş tarihsel taslaklardır**. [MİHENK Sistem Haritası v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ana bilgi mimarisidir. [Wireframe v0.5](../02-urun/56-12-wireframe-v0.5.md) proje sahibi tarafından 15.11.2026 tarihinde kabul edilmiştir. [Kalite Güvencesi ve Denetim Modeli](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md) bilirkişi öz kontrolünü, bağımsız dosya/rapor incelemesini ve MİHENK ürün denetimini ayırır.
 
 **Wireframe v0.5 kabul edilmiştir:** [tasarım açıklaması](../02-urun/56-12-wireframe-v0.5.md), altı SVG pano ve [Kalite Güvencesi/Denetim Modeli](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md). v0.3/v0.4 tarihsel ve kabul edilmemiş taslaklardır. Uygulama aşaması artık tasarımın mevcut prototipte hangi ölçüde karşılandığını denetleme, eski dalları güvenli karşılaştırma ve backlog'u netleştirme ile başlayacaktır. Tasarım kabulü teknik kabul değildir.
 
