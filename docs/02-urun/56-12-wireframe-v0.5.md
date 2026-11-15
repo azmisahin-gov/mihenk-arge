@@ -1,8 +1,8 @@
 # MİHENK — Kullanıcı Deneyimi ve Ekran Tasarımı v0.5
 
-> **Durum:** Kullanıcı geri bildirimi üzerine hazırlanmış yeni tasarım adayı. v0.4'ün yerine değerlendirilmek üzere sunulur; henüz kabul edilmedi.  
+> **Durum:** 15 Kasım 2026'da proje sahibi tarafından kabul edildi. Uygulama için temel tasarım sürümüdür; uygulama işlevlerinin tamamlandığı, alan uzmanı kabulü veya UYAP uyumluluğu anlamına gelmez.  
 > **Tarih:** 15 Kasım 2026  
-> **Sınır:** Bu doküman ve SVG panoları ürün tasarımıdır. Uygulama UI kodlama onayı, ASR motoru seçimi veya UYAP uyumluluk kabulü değildir.
+> **Sınır:** Bu doküman ve SVG panoları ürün tasarımını tanımlar. v0.5 UI uygulamasına geçiş için kabul edilmiştir; teknik/meslekî kabul, ASR motor seçimi ve UYAP uyumluluk kabulü ayrı test kapılarıdır.
 
 ## 1. Bu sürümde neyi değiştirdik?
 
@@ -189,7 +189,11 @@ Bu tasarım aşağıdaki kamuya açık kaynakları dikkate alır:
 
 SWGDE, Türkiye'de bağlayıcı hukuk kuralı değildir; ses inceleme sürecine ilişkin teknik iyi uygulama kaynağı olarak kullanılır.
 
-## 5. v0.5 kabul kontrol listesi
+## 5. Tasarım kabulü ve uygulama kabul kontrol listesi
+
+**Tasarım kararı:** Proje sahibi 15.11.2026 tarihinde v0.5'i mevcut haliyle kabul etti. Uygulama ekibi bu tasarımı başlangıç noktası kabul ederek mevcut kodu buna eşleştirebilir. Tasarım kabulü, aşağıdaki teknik/işlevsel kontrollerin geçtiği anlamına gelmez.
+
+**Kapsam notu:** Otomatik konuşmacı ayrımı, gelişmiş gürültü azaltma, spektrogram ve benzeri yardımcı ses araçları motor/codec/kalite koşullarına bağlıdır. Uygulamada test edilip doğrulanmadan çalışıyor gibi gösterilmez; ilk sürümde bazıları devre dışı veya sonraki aşama olabilir.
 
 ### Anlaşılabilirlik
 - [ ] Profildeki meslekî uzmanlık alanları, modül kataloğundan görsel ve işlevsel olarak ayrılıyor.
@@ -220,6 +224,8 @@ SWGDE, Türkiye'de bağlayıcı hukuk kuralı değildir; ses inceleme sürecine 
 - [ ] Tüm A4 sayfaları ve ekler uygulama içinde tam önizleniyor.
 - [ ] UYAP Editör aç/kaydet/yeniden aç ve gerçek çıktı kabul testleri tamamlanmadan “UYAP'a hazır” denmiyor.
 
-**Kabul durumu:** Bu liste kullanıcının ve mümkünse 56.12 alan uzmanının değerlendirmesi için hazırlanmıştır. Hiçbir kutu kullanıcı/uzman testi yapılmış gibi işaretlenmemiştir. Kullanıcı v0.5'i kabul etmeden uygulama arayüzü kodlamasına başlanmayacaktır.
+**Kabul durumu:** Görsel/ürün tasarım yönü proje sahibi tarafından kabul edilmiştir. Aşağıdaki kutular uygulama ve gerçek kullanım kabul testleridir; henüz geçilmiş sayılmaz. 56.12 alan uzmanı, UYAP Editör, bağımsız güvenlik ve E2E testleri ayrı kanıtla tamamlanmalıdır.
+
+Kalite ve denetim yaklaşımı: [56.12 Kalite Güvencesi ve Denetim Modeli v1.0](56-12-kalite-ve-denetim-modeli-v1.0.md).
 
 ---
