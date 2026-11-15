@@ -89,3 +89,8 @@ Mevzuat, veri güvenliği, uzmanlık sınırı, lisans ve teknik tasarım bağı
 - Bilirkişinin görev/rapor öz denetimi ve kaynak izlenebilirliği.
 - Gerektiğinde bağımsız ikinci uzman incelemesi için denetim paketi.
 - MİHENK ürün kalite dosyası, K-01–K-12 ve bağımsız güvenlik/UX/meslekî testleri.
+
+
+## Araştırma tasarımının main'e alınması — 15.11.2026
+
+[PR #12](https://github.com/azmisahin-gov/mihenk-arge/pull/12) squash merge commit `3b526885beec52aeab23c0b0d56514492e4050a5` ile `main` dalına birleştirildi. PR yalnızca araştırma/ürün dokümantasyonu ve SVG tasarım dosyalarını içerir; uygulama deposunda kod değişmedi. Sonraki adım mevcut uygulamanın canlı durumunu doğrulamak ve v0.5'e eşlemektir.
