@@ -1,214 +1,167 @@
 # MİHENK — Yeni Oturum Başlangıç ve Devir Noktası
 
 > **Son güncelleme:** 15 Kasım 2026  
-> **Bu belge yeni oturumda ilk okunacak belgedir.**  
-> **Ana amaç:** MİHENK'in ilk kullanılabilir 56.12 teslimatını netleştirmek; wireframe'i kullanıcıyla birlikte olgunlaştırmak; sonra mevcut uygulamayı bu tek hedefe göre ilerletmek.
+> **Yeni oturumda ilk okunacak belge:** Bu dosya  
+> **Tasarım durumu:** Wireframe v0.5 proje sahibi tarafından kabul edildi. Uygulama mevcut prototip üzerinden ilerletilecek.  
+> **İlk sonraki hedef:** Mevcut uygulamanın canlı durumunu görmek; main, eski dallar ve issue'ları denetleyip kabul edilen tasarıma göre uygulama planını çıkarmak.
 
-## 1. Şu an neredeyiz?
+## 1. Proje kaynakları
 
-Proje sahibi, yeni oturumda araştırma deposunu tekrar paylaşarak çalışmaya devam etmek istiyor. Bu belge, 14–15 Kasım 2026 oturumlarında alınan karar ve geri bildirimleri korumak için hazırlandı.
+- **Araştırma/ürün deposu:** https://github.com/azmisahin-gov/mihenk-arge
+- **Uygulama deposu:** https://github.com/azmisahin-gov/mihenk
 
-- **Araştırma deposu:** [azmisahin-gov/mihenk-arge](https://github.com/azmisahin-gov/mihenk-arge)
-- **Uygulama deposu:** [azmisahin-gov/mihenk](https://github.com/azmisahin-gov/mihenk)
-- **İlk teslimat yönü:** 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotu.
-- **Uzun vadeli ürün:** farklı uzmanlık modüllerini ortak çekirdekte sunan MİHENK platformu.
-- **Önceki wireframe v0.3:** **kullanıcı tarafından kabul edilmedi**.
-- **Sistem tasarımı:** [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) hazırlandı.
-- **Güncel wireframe:** [v0.4 taslak açıklaması](../02-urun/56-12-wireframe-v0.4.md) ve sekiz görsel pano hazırlandı; kullanıcı/uzman değerlendirmesi ve kabulü bekleniyor. UI kodlama onayı değildir.
-- **Bu oturumdaki uygulama kodu:** değiştirilmedi. Yeni MSI üretilmedi.
-- **Önizleme sürümü:** proje sahibinin son bildirdiği gerçek kurulum 0.1.0-53'tür.
+Araştırma deposunda mevzuat, ürün/sistem kararları, wireframe ve kabul kriterleri bulunur. Uygulama deposunda kaynak kodu, test, CI ve masaüstü paketleri bulunur. Gerçek bilirkişi dosyası, ses, transkript, dosya numarası veya kişisel veri hiçbir public depoya, issue'ya, PR'a, log'a veya CI artifact'ına konmaz.
 
-## 2. Proje sahibinin asıl istediği ürün
+## 2. Ürün hedefi ve kullanıcı işinin özü
 
-Teknik araçların sayısı veya model çeşitliliği amaç değildir. Amaç, bilirkişinin dosyayı aldığında MİHENK'in mümkün olan güvenli ve tekrarlı işleri otomatik yürütmesi ve bilirkişiye **tek, bütünlüklü, resmî rapor hazırlığına yönelik bir ana doküman** sunmasıdır.
+İlk kullanılabilir teslimat 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotudur. Uzun vadede ortak çekirdek ve bağımsız uzmanlık modülleriyle genişleyen MİHENK hedeflenir.
 
-Hedeflenen kullanıcı yolu:
+Bilirkişinin asıl işi motor seçmek veya uzun formlar doldurmak değildir:
+1. Görevlendirme belgesini eklemek; sistemin görev bilgilerini/sorularını otomatik çıkarması.
+2. Aynı göreve ait materyalleri eklemek; sistemin envanter ve işlem işlerini yapması.
+3. ASR'nin kontrol işaretlerine göre önce şüpheli ses bölümlerine odaklanmak; sesi dinleyip metni düzeltmek.
+4. Kendisine yöneltilen sorulara hızlıca erişip kaynaklarıyla cevaplamak.
+5. Tek, okunabilir ve görevlendiren merciye uygun raporu tüm sayfalarıyla kontrol etmek.
+6. Gerekirse çalışmasını ikinci uzmana/denetçiye kanıt iziyle sunabilmek.
 
-1. Bilirkişi MİHENK'i ilk kez açar; yerel kasasını oluşturur ve kendi meslekî profilini bir kez tanımlar.
-2. Bilirkişi profilinde ad-soyad, sicil numarası, meslekî unvan/sıfat ve uzmanlık alanları gibi raporda gerekebilecek bilgileri tutar. Profil UYAP hesabı değildir; uygulama UYAP parolası/e-imza PIN'i istemez.
-3. Kullanıcı Görevlerim alanından **Yeni görevlendirme** başlatır ve mahkeme/merci görevlendirme belgesini, ek talimatları ve varsa teslim/dizi pusulasını ekler.
-4. **Önce MİHENK belgeyi okur.** Merci, dosya referansı, süre, konu/kapsam, cevaplanacak sorular, istenen materyaller ve teslim koşullarını kaynak sayfa iziyle çıkarır. Kullanıcı baştan uzun bir form doldurmaz; yalnızca belirsiz, çelişkili veya okunamayan alanları doğrular.
-5. Her görevlendirme ayrı bir çalışma alanıdır. Aynı görevde birden çok ses kaydı, başka belge ve birden çok soru olabilir. Görevlerin materyalleri, yanıtları ve raporları birbirine karışmaz.
-6. MİHENK ses materyallerini envanterler; teknik bilgileri ve bütünlük değerlerini tutar; yerel ASR ile makine transkript taslağı üretir. Bilirkişi metni sesle karşılaştırır, düzeltir ve belirsiz kısımları işaretler.
-7. Görevlendirme soruları tek tek gelir. Bilirkişi yanıtları aynı görevin kaynak materyal ve zaman aralıklarına bağlanır.
-8. Kullanıcı **Tek raporu oluştur** dediğinde o göreve ait tüm materyal, yöntem, uzman tarafından doğrulanmış bulgu, soru-cevap ve ekler tek ana raporda birleştirilir. Raporun tamamı uygulama içinde önizlenir.
-9. Bilirkişi son kontrolü yapar. UYAP Doküman Editörü, Adalet e-İmza ve Bilirkişi Portalı üzerinden resmî imza/teslim işlemlerini kendisi tamamlar.
+MİHENK kelime, hukukî yorum veya bilirkişi kanaati uydurmaz. Nihai transkript, bulgu, yanıt, kanaat, imza ve resmî teslim bilirkişinin kontrolündedir.
 
-**Önemli sınır:** MİHENK bilirkişinin teknik kanaatini veya hukuki değerlendirmesini uydurmaz; otomatik UYAP giriş/teslim veya e-imza işlemi yapmaz. MİHENK rapor hazırlığını otomatikleştirir ve insan kararını korur.
+## 3. Kabul edilen tasarım — Wireframe v0.5
 
-## 3. Kavramları birbirine karıştırma
+**15.11.2026 tarihinde proje sahibi v0.5'i mevcut haliyle kabul etti.** Uygulama geliştirme için tasarım temelidir. Bu kabul, mevcut uygulamanın tamamlandığı, 56.12 bilirkişi kabulü, bağımsız güvenlik incelemesi veya UYAP uyumluluğu anlamına gelmez.
 
-| Kavram | Anlamı |
-|---|---|
-| Yerel kasa | Profil ve görev verilerini koruyan şifreli yerel veri alanı |
-| Bilirkişi profili | Kullanıcının meslekî kimlik bilgileri; bir kez tanımlanır |
-| Uzmanlık alanı | Bilirkişinin profilinde beyan ettiği temel/alt uzmanlık |
-| Uzmanlık modülü | MİHENK'in o uzmanlık için sunduğu yazılım iş akışı/araçları |
-| Görevlendirme | Mahkeme/merci tarafından verilen tek iş |
-| Görev Profili | Belge ve talimatlardan çıkarılan o göreve özel kapsam, sorular, süre, materyal ve teslim koşulları |
-| Materyal | Aynı göreve teslim edilen bir veya çok ses/dosya |
-| Görev sorusu | Aynı görevlendirmede cevaplanması istenen bir veya çok soru |
-| Tek rapor | Bir görevlendirmenin tüm bulgu ve yanıtlarını içeren tek ana rapor |
+- [Wireframe v0.5 açıklama ve uygulama kabul listesi](../02-urun/56-12-wireframe-v0.5.md)
+- [01 Modül ve motor hiyerarşisi](../02-urun/wireframe-v0.5-01-modul-ve-motor-hiyerarsisi.svg)
+- [02 Yeni görevlendirme akışı](../02-urun/wireframe-v0.5-02-yeni-gorevlendirme-akisi.svg)
+- [03 Görev çalışma alanı](../02-urun/wireframe-v0.5-03-gorev-calisma-alani.svg)
+- [04 Ana ses inceleme tezgâhı](../02-urun/wireframe-v0.5-04-ana-ses-inceleme-tezgahi.svg)
+- [05 Tek rapor ve A4 önizleme](../02-urun/wireframe-v0.5-05-tek-rapor-a4.svg)
+- [06 Daraltılabilir ana menü](../02-urun/wireframe-v0.5-06-daraltilebilir-ana-menu.svg)
+- [56.12 Kalite Güvencesi ve Denetim Modeli](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md)
 
-İlk teslimatta kullanılabilir uzmanlık modülü 56.12'dir. Kullanıcının profilinde birden çok uzmanlık alanı bulunması, bütün modüllerin yazılımda hazır olduğu anlamına gelmez.
+v0.3 ve v0.4 kabul edilmemiş tarihsel taslaklardır; v0.5'in yerine kullanılmamalıdır.
 
-İlk sürüm varsayımı olarak bir yerel kasa/bir bilirkişi profili düşünülmektedir; çoklu yerel kullanıcı desteği henüz kesin tasarım değildir.
+### Kesin ürün davranışları
 
-## 4. Wireframe v0.3 geri bildirimi ve v0.4 taslağının durumu
+- **Uzmanlık Alanlarım** profil bilgisidir; **Uzmanlık Modülleri** yazılım iş akışlarıdır; **56.12 → Motorlar ve Modeller** yerel ASR/yardımcı işlem ayarlarının yeridir.
+- Motor görev başına seçilmez. Test edilmiş etkin yerel çalışma profili otomatik kullanılır; gerçek motor/model/sürüm ve parametreler işlem kaydında tutulur.
+- Yeni görevlendirme katı wizard değildir. İlk belge eklenince otomatik kaydedilen görev taslağı oluşur. Görevlendirme okuma/çıkarım başlar; materyal o anda veya sonradan eklenir; Görevlerim'e dönüş her zaman mümkündür.
+- Ses ekranı bütün kayıtları ve bütün transkripti erişilebilir tutar. Öncelik kuyruğu yalnızca önce kontrol edilmesi önerilen bölümleri öne çıkarır; model güven işareti doğruluk yüzdesi değildir.
+- Konuşmacı ayrımı isteğe bağlıdır; kayıt içi “Konuşmacı A/B” etiketi üretir, kişi kimliği belirlemez. Otomatik diarization ilk pilot için zorunlu kabul edilmemiştir.
+- Ses iyileştirme araçları orijinal dosyayı değiştirmez; türetilmiş kopyada ve geri alınabilir işlem kaydıyla yürütülür. Gelişmiş denoise/spectrogram gibi araçlar test edilmeden çalışıyor gösterilmez.
+- ASR segmentleri düzenleme ve zaman içinde gezinme birimleridir. Nihai rapor dökümü konuşmacı sıralı, zaman damgalı okunabilir paragraflardır.
+- Her görevde tek ana rapor ve aynı pakette ekler vardır. Merciye uygun referans iskeleti otomatik eşleştirilir; tek ve evrensel zorunlu resmî şablon iddiası yoktur. UYAP Editör aç/kaydet/yeniden aç testi geçmeden “UYAP'a hazır” denmez.
+- Serbest metin üreten LLM/NLP nihai kelime kaynağı değildir. VAD, sınırlı noktalama ve diarization gibi yardımcılar ancak test edilip modülde etkinleştirildiğinde kullanılabilir.
 
-Wireframe v0.3, önceki taslaklardan daha iyi bulunmuş ancak kullanıcı tarafından kabul edilmemiştir. İlk kez kullanan bilirkişinin başlangıcı, sol menü, profil/kasa/ayar ayrımı, dashboard/görev listesi ayrımı, otomatik belge okuma, çoklu materyal/soru ve tek rapor deneyimi yeniden ele alınmalıdır. v0.3 nihai tasarım olarak savunulmamalıdır.
+## 4. Kalite ve denetim modeli
 
-Bu nedenle sistem haritası v1.0 hazırlandı ve ona dayanarak v0.4 için aşağıdaki sekiz görsel pano üretildi:
+Aşağıdaki katmanlar birbirinin yerine geçmez:
 
-1. [01 — Kurulum ve ana gezinme](../02-urun/wireframe-v0.4-01-kurulum-ve-ana-gezinme.svg)
-2. [02 — Gezinme, modül ve ayarlar](../02-urun/wireframe-v0.4-02-goz-atma-modul-ve-ayarlar.svg)
-3. [03 — Görevlendirme ve materyal kabulü](../02-urun/wireframe-v0.4-03-gorevlendirme-ve-materyaller.svg)
-4. [04 — Ses inceleme, bulgu ve tek rapor](../02-urun/wireframe-v0.4-04-inceleme-ve-tek-rapor.svg)
-5. [05 — Dayanak, güvenlik ve istisna durumları](../02-urun/wireframe-v0.4-05-dayanak-ve-isletim-durumlari.svg)
-6. [06 — Yaşam döngüsü ve kurtarma](../02-urun/wireframe-v0.4-06-yasam-dongusu-ve-kurtarma.svg)
-7. [07 — Gezinme, profil ve materyal ayrıntıları](../02-urun/wireframe-v0.4-07-gezinme-profil-materyal-guvenlik.svg)
-8. [08 — Uygulama ayarları ve güncellemeler](../02-urun/wireframe-v0.4-08-uygulama-ayarlari-ve-guncellemeler.svg)
+1. **Bilirkişinin kendi kontrolü:** görev kapsamı, materyal, tüm ses kayıtları, transkript kontrol durumu, soru/yanıt/dayanak bağlantıları ve raporun bütün A4 sayfaları.
+2. **Bağımsız dosya/rapor incelemesi:** gerektiğinde ikinci bilirkişi/denetçi için kullanıcı tarafından gözden geçirilmiş salt okunur denetim paketi; ana kayıt ve rapor değişmeden kalır.
+3. **MİHENK ürün denetimi:** K-01–K-12 kanıtları, yazılım/model sürümü, testler, güvenlik, kullanılabilirlik, UYAP çıktı kabulü ve açık risklerden oluşan sürüm bazlı ürün kalite dosyası.
 
-Ayrıntılı ekran kataloğu, ekran eşlemesi, davranış sözleşmesi ve kabul listesi: [56.12 Kullanıcı Deneyimi ve Ekran Tasarımı v0.4](../02-urun/56-12-wireframe-v0.4.md).
+Ayrıntı ve uygulama aşamaları: [Kalite Güvencesi ve Denetim Modeli v1.0](../02-urun/56-12-kalite-ve-denetim-modeli-v1.0.md).
 
-### v0.4'te özellikle korunacak kararlar
+## 5. Araştırma deposu — birleştirme ve son durum
 
-- İlk kurulum ekranlarında ana menü gösterilmez; kasa ve profil tamamlanınca uygulama kabuğu açılır.
-- Sonraki açılışta kullanıcı yalnızca kasasını açar.
-- Genel Bakış dashboard, Görevlerim tam listedir.
-- Profil/uzmanlık alanı, yazılım modülü, kasa ve uygulama ayarları birbirinden ayrıdır.
-- ASR ayarları 56.12 modül yönetimindedir; görev içinde yalnız kuyruk/işlem durumu gösterilir.
-- Görevlendirme belgesini önce MİHENK okur; kullanıcı yalnız belirsiz/çelişkili alanları çözer.
-- Bir görevde birden çok materyal ve soru olabilir.
-- Her görev tek ana rapor üretir; tam rapor A4 sayfalarıyla önizlenir.
-- ASR kullanıldıysa kullanılan motor/model adı ve sürümü yöntem bölümünde gerçeğe uygun açıklanır; tam teknik çalışma izi teknik kayıtta/uygun ekte tutulur.
-- Boş, hata, çevrimdışı ve kurtarma durumları wireframe kapsamındadır.
+- Araştırma PR'ı: [PR #12 — Wireframe v0.5](https://github.com/azmisahin-gov/mihenk-arge/pull/12).
+- PR yalnızca araştırma/ürün dokümanı ve SVG tasarımlarını içerir; uygulama kodu veya gerçek vaka verisi içermez.
+- PR merge edilmeden önce bu belgedeki durum/commit bağlantısı main'e göre güncellenecektir.
+- v0.5 tasarımı ürün sahibi tarafından kabul edildi; teknik ve meslekî testler ayrıca açık kalır.
 
-**Durum:** v0.4 bir değerlendirme taslağıdır. Kullanıcı/uzman kabulü alınmamıştır. Tasarım kabul edilmeden uygulama arayüzü kodlaması başlatılmayacaktır.
+## 6. Uygulama deposunun 15.11.2026 başlangıç fotoğrafı
 
-## 5. Araştırma deposundaki güncel yön ve kaynak belgeler
+### Main dalında görülen yetenekler
 
-Önce aşağıdaki belgeler yeniden açılıp birbirleriyle karşılaştırılmalı:
+Uygulama main dalındaki README ve kaynak dosyaları üzerinden yapılan ilk incelemede şu prototip yetenekleri belgeleniyor:
 
-1. [Bu oturum devam belgesi](yeni-oturum-baslangic-noktasi.md)
-2. [Karar kaydı](../08-karar-ve-acik-konular/karar-kaydi.md) — ADR-032–038
-3. [56.12 ilk teslimat ürün sözleşmesi](../02-urun/56-12-ilk-teslimat-urun-sozlesmesi.md)
-4. [MİHENK Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) — yeni sistem tasarımı ve v0.4 ekran kataloğu
-5. [56.12 wireframe v0.3](../02-urun/56-12-wireframe-v0.3.md)
-6. [Görevlendirme belgesi ve Görev Profili](../02-urun/gorevlendirme-belgesi-ve-gorev-profili.md)
-7. [Alan modeli](../04-mimari/alan-modeli.md)
-8. [Bütünleşik uzmanlık modülü mimarisi](../04-mimari/butunlesik-uzmanlik-modul-mimarisi.md)
-9. [56.12 minimum sürüm kapsamı ve 12 kabul kapısı](../03-uzmanlik-modulleri/ilk-pilot/56-12-minimum-surum-kapsami.md)
-10. [56.12 test planı ve senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-plani-ve-basari-olcutleri.md) ve [test senaryoları](../03-uzmanlik-modulleri/ilk-pilot/56-12-test-senaryolari.md)
-11. [Resmî UYAP/görevlendirme akışı](../01-arastirma/uyap-is-akisi.md)
-12. [Otomasyon matrisi](../02-urun/otomasyon-matrisi.md)
-13. [Yol haritası](../07-yol-haritasi/asamalar.md)
-14. [Açık sorular](../08-karar-ve-acik-konular/acik-sorular.md) ve [risk kaydı](../08-karar-ve-acik-konular/risk-kaydi.md)
+- Görev/atama alanı, görev bazlı çalışma ve ses materyali kuyruğu.
+- AES-256-GCM şifreli yerel kasa; 240 MiB'ye kadar akışlı ses içe alma ve SHA-256.
+- Şifreli kopyanın bağımsız read-back hash kontrolü; Symphonia decoder tabanlı teknik metadata.
+- Şifreli kaynaktan üretilen gerçek waveform; çözümleme hatasında temsili waveform gösterilmemesi.
+- Yerel SEDA v0.1 ASR kurulumu ve akışlı transkripsiyon; model kurulduktan sonra ağsız ses işleme.
+- Ham ASR taslağı ve uzman düzeltmesi ayrımı; segment zamanları ve revizyon geçmişi.
+- Manuel anonim konuşmacı etiketleri ve kanal bilgisinin ayrı tutulması; otomatik diarization yok.
+- Şifreli kasa yedeği/geri yükleme.
+- Görev sorularına ayrı yanıtlar ve transkript segmentlerine dayanak bağlantısı; DOCX/ODT taslakları ve bazı QA kontrolleri.
 
-### Rapor konusunda önemli araştırma notu
+Bu yetenek listesi README'de belgelenen durumdur; 56.12 pilot kabulünün geçtiği anlamına gelmez. Bir sonraki oturumda bunlar temiz checkout'ta test/uygulama çalıştırmasıyla doğrulanmalıdır. Kullanıcının daha önce bildirdiği preview 0.1.0-53'tür; o sürümün bugün en güncel release olduğu varsayılmamalı, güncel main ve release/preview yeniden doğrulanmalıdır.
 
-16.06.2025 tarihli konsolide Bilirkişilik Yönetmeliği m.55, raporda inceleme yöntemi ile bilimsel ve teknik dayanakların bulunmasını ister. 06.04.2026 tarihli Adalet Bakanlığı rehberi raporun somut nedenlere dayalı, denetlenebilir, anlaşılır ve gereksiz ayrıntıdan uzak olmasını; soruların tek tek cevaplanmasını vurgular. Resmî rapor şablonları merci/yargı türüne göre ayrı aileler hâlinde yayımlanır; MİHENK tek bir sabit şablonu her göreve zorlamaz.
+### Eski uygulama dalları — henüz silinmedi
 
-ASR gerçekten kullanılmışsa, MİHENK ürün politikası olarak motor/model adı ve sürümünü inceleme yöntemi/teknik araçlar bölümünde kısa ve anlaşılır biçimde açıklar. Tam runtime/build/parametre/checksum ve kayıt bazındaki model eşlemesi teknik işlem kaydında, gerektiğinde teknik ekte tutulur. Yönetmelik belirli bir ASR marka/model adını açıkça zorunlu kılmaz; bu açıklama MİHENK'in denetlenebilirlik ve şeffaflık önerisidir. Makine çıktısı bilirkişi kontrolü olmadan nihai transkript gibi gösterilmez.
+15.11.2026 tarihli Git karşılaştırması, her dalın main ile farkını gösteriyor. Hiçbir dal bu oturumda merge veya delete edilmedi:
 
-Kaynaklar:
-- [16.06.2025 konsolide Bilirkişilik Yönetmeliği](https://rayp.adalet.gov.tr/resimler/494/dosya/bilirkisilik-yonetmeligi16-06-20254-49-pm.pdf)
-- [Bilirkişilerin Uyacağı Rehber İlkeler ve Bilirkişi Raporlarında Bulunması Gereken Standartlar — 06.04.2026](https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260406170009026Bilirkişilerin%20Uyacağı%20Rehber%20İlkeler%20ve%20Bilirkişi%20Raporlarında%20Bulunması%20Gereken%20Standartlar.pdf)
-- [Bilirkişi Rapor Şablonları — Bilirkişilik Daire Başkanlığı](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisi-rapor-sablonlari14032022105509)
-- [Bilirkişiler İçin Kontrol Listesi](https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisiler-icin-kontrol-listesi14032022105444)
-- [SWGDE Best Practices for Forensic Audio](https://www.swgde.org/documents/published-complete-listing/08-a-001-swgde-best-practices-for-forensic-audio/)
+| Dal | Main'e göre durum | Değiştirdiği başlıca dosyalar | İlk değerlendirme |
+|---|---:|---|---|
+| **feat/56-12-report-question-answers** | 16 ahead / 4 behind; diverged | src/App.tsx, src/domain/assignment.ts, src/domain/report.ts, stiller, testler | Soru-yanıt ve rapor özelliklerini main'deki mevcut işlevlerle karşılaştır; doğrudan merge etme |
+| **feat/56-12-transcript-review-queue** | 6 ahead / 0 behind | src/App.tsx, src/domain/transcript.ts, stiller, testler | Main'e göre daha yakın; inceleme kuyruğunun main'de eksik kalan kısmı varsa seçici taşı |
+| **feat/56-12-transcript-revision-history** | 33 ahead / 5 behind; diverged | src/App.tsx, src-tauri/src/asr.rs, audio/transcript/vault, testler | ASR/transkript sürümlemesi ve mevcut main değişiklikleriyle çakışma riski yüksek; ayrıntılı commit/diff incelemesi olmadan merge etme |
 
-## 6. Mevcut masaüstü uygulaması: kullanıcıdan gelen gerçek bulgular
+Uygulama deposunda açık PR aramasında sonuç bulunmadı. Bu üç dalı **henüz silme**. Önce her daldaki commit ve testleri main ile karşılaştır; korunmaya değer değişiklikleri yeni, temiz bir çalışma dalına seçici taşı; doğrula; ancak sonra eski dal için kapatma/silme kararı ver.
 
-Proje sahibi MSI'ı manuel indirerek geliştirme önizlemesini takip ediyor:
-- Kullanıcı 0.1.0-47 sürümünü denemiş ve ekran görüntüleri ile sorun bildirmişti.
-- 0.1.0-51'den 52'ye otomatik güncelleme başarılı olmuştu.
-- Kullanıcı sonrasında 53'e güncellendiğini bildirdi.
-- X düğmesiyle normal kapatma hâlâ çalışmıyor; bazen Windows Görev Yöneticisi/sonlandırma gerekmiş.
-- Daha önce “Güncelleme kurulamadı” mesajı görülmüş; sonraki güncelleme başarılı olmuş olsa da hata nedeni kanıtlanmış değil.
-- Kasa açılışında kayıtlı ses listede görünse bile seçili/oynatmaya hazır olmayabiliyor; süre 00:00 kalabiliyor.
-- Dayanak segmenti seçicisi dar alanda bozuluyor; metin dikeyleşiyor/yatay kaydırma oluşuyor.
-- UI uzun ve tek sayfaya yayılan bir yapı gibi görünüyor; kullanıcı iş adımlarının ne işe yaradığını kolayca anlayamıyor.
+### Açık uygulama issue'ları
 
-Bunlar gerçek kullanıcı kabulünde P0/P1 önceliğinde ele alınmalı. Özellikle uygulamanın güvenli kapanması ve kayıtlı görev/ses bağlamının geri yüklenmesi, görsel ince ayarlardan önce gelmeli. Bu oturumda uygulama deposunda kod değiştirilmedi.
+15.11.2026 tarihli açık issue aramasında şu yedi kayıt bulundu:
 
-## 7. Güncel depo ve dal durumu — 15.11.2026 canlı kontrolü
+- [#3 — 56.12 ilk pilot kabul kriterleri](https://github.com/azmisahin-gov/mihenk/issues/3): ana pilot kabul/epic kaydı. Body'de “uygulamada henüz ASR motoru yok” gibi eski ifadeler var; main README SEDA entegrasyonunu belgeliyor. Tüm checklist yeniden kanıtla eşlenmeli.
+- [#29 — Yerel ASR ve devam ettirilebilir kuyruk](https://github.com/azmisahin-gov/mihenk/issues/29): body main'de ASR bulunmadığını söylüyor; bu tarihsel. SEDA bağlantısı var, ancak idempotent iş defteri/kaldığı yerden devam, benchmark, provenance ve uzman kabulü ayrıca doğrulanmalı.
+- [#30 — Materyal kabulü ve bütünlük](https://github.com/azmisahin-gov/mihenk/issues/30): body read-back hash ve decoder metadata'yı eksik gösteriyor; main README bu özelliklerin uygulandığını söylüyor. Gerçek kod/test ile doğrula ve issue body/checklist'ini güncelle.
+- [#31 — Zaman bağlantılı transkript ve revizyon geçmişi](https://github.com/azmisahin-gov/mihenk/issues/31): body özelliklerin eksik olduğunu söylüyor; main README ham ASR/uzman ayrımı ve revizyon geçmişini belgeliyor. Tam kabul senaryosunu çalıştır.
+- [#32 — Tek uygulama ses çalışma alanı](https://github.com/azmisahin-gov/mihenk/issues/32): body eski tek ekran/temsili waveform durumunu anlatıyor; main README artık görev alanı ve gerçek waveform bildiriyor. Kabul edilen v0.5 ile UI karşılaştırması yap ve açık eksikleri tespit et.
+- [#33 — Soru bağlantılı rapor ve QA](https://github.com/azmisahin-gov/mihenk/issues/33): main README DOCX/ODT soru-yanıt/dayanak ve QA kontrolleri olduğunu bildiriyor; gerçek rapor şablonu, A4 önizleme, PDF/Office biçim kontrolü ve denetim paketi hâlâ doğrulanmalı.
+- [#34 — Çevrimdışı, görev yalıtımı ve çökme/geri yükleme E2E](https://github.com/azmisahin-gov/mihenk/issues/34): kapsamlı E2E, offline/ağ gözlemi, görev sızıntısı ve zorla sonlandırma/kurtarma kabulü için ana açık paket.
 
-Araştırma ve uygulama depoları ayrı tutulur. Araştırma deposuna uygulama kodu veya gerçek vaka dosyası eklenmez.
+Bu issue'ların updated_at tarihleri 14 Kasım 2026; main kodunda #24/#28/#35/#36 sonrasında değişiklikler bulunduğundan gövde/checkbox'lar bayat olabilir. İlk uygulama oturumunun işi issue'ları otomatik kapatmak değil, her kabul maddesini kanıta göre yeniden sınıflandırmaktır.
 
-### Araştırma deposu: mihenk-arge
+### Önceki kullanıcı tarafından bildirilen uygulama blokajları
 
-- Yetkili dal: main.
-- Son canlı dal kontrolünde **yalnızca main** kaldığı doğrulandı.
-- PR #1–#9 ve #11 birleştirilmiştir; PR #10 v0.2 taslağı birleştirilmeden kapatılmıştır.
-- Açık PR: 0; açık issue: 0.
-- Son doğrulanan main commit: e5461e8 (15.11.2026 oturum kontrolü).
+- Pencerenin X kapatma davranışı düzgün kapanmıyor.
+- Kasa yeniden açıldığında listede görünen bir ses seçili/oynatılabilir şekilde geri gelmiyor ve 00:00 gösterebiliyor.
+- Dayanak/segment seçicisi dar alanda kullanımı bozuyor.
+- Bir updater hatası görülmüştü; nedeni henüz kanıtlanmadı.
 
-Bu nedenle eski araştırma dallarının silinmesi işi tamamlanmış görünüyor; yeni oturumda yine canlı GitHub durumu esas alınmalıdır.
+Bunların bugün main'de sürüp sürmediği canlı uygulama çalıştırmasıyla teyit edilecek. Issue yoksa tekrar üretilebilir testle yeni issue açılacak; çözüldüyse kanıtla kapatılacak.
 
-### Uygulama deposu: mihenk
+## 7. Yeni oturumda yapılacak iş sırası
 
-Son canlı kontrolde dört dal vardı:
-- main
-- feat/56-12-report-question-answers
-- feat/56-12-transcript-review-queue
-- feat/56-12-transcript-revision-history
+**A — Önce canlı mevcut sürümü gör**
+1. Araştırma PR #12'nin main'e birleştiğini ve güncel commit'i doğrula.
+2. Uygulama main dalını ve Releases/preview durumunu yeniden oku.
+3. Temiz checkout'ta test/build komutlarını çalıştır: **npm ci**, **npm test**, **npm run check**, **npm run build**; Tauri/Rust test ve build'ini hedef OS'lerde doğrula.
+4. Mevcut uygulamayı başlat ve hiçbir kod değişikliği yapmadan görev açma, ses içe alma, oynatma, waveform, SEDA/transkript, soru/yanıt ve rapor çıktısını göster. Gerçek vaka kullanma; sentetik/test materyaliyle çalış.
+5. Kullanıcının elindeki 0.1.0-53 preview ile güncel main/preview davranışını farklarıyla kaydet. Sürüm etiketi doğrulanmadan “en son” denmez.
 
-İçerik karşılaştırması:
-- Soru-cevap/dayanak işinin güncel uygulama dilimi PR #42 ile main'e birleştirildi. Eski feat/56-12-report-question-answers dalı 16 commit önde ve 4 commit geride, yani ayrışmış eski bir geliştirme hattıdır; silinmemeli, PR #41 birleştirilmeden kapatılmıştır.
-- Ham ASR metni ve transkript revizyon geçmişinin temel uygulama dilimi PR #40 ile main'e birleştirildi. Eski feat/56-12-transcript-revision-history dalı 33 commit önde ve 5 commit geride, yani ayrışmıştır; silinmemeli, PR #39 birleştirilmeden kapatılmıştır.
-- feat/56-12-transcript-review-queue main'den 6 commit önde ve 0 commit geridedir. PR #45 birleştirilmeden kapatılmıştır; dört filtreli transkript inceleme kuyruğu main'e alınmamıştır. Bu özellik v0.4 tasarım/backlog değerlendirmesine taşınmalıdır.
+**B — Sonra dalları ve issue'ları temizle**
+1. Üç eski dalı commit/diff/test bazında tek tek incele; main'e göre değişiklikleri dosya dosya ayır.
+2. Çalışan veya eksik işi tamamlayan değişiklikleri gerekiyorsa yeni temiz feature dalına seçici taşı.
+3. Her seçici taşıma sonrasında testleri çalıştır ve v0.5 ekran/akış maddelerine eşle.
+4. Yinelenen issue'ları birleştir; yanlış/eski “yapılmadı” metinlerini düzelt; yalnız kanıtla tamamlanan maddeleri işaretle.
+5. Eski dalları ancak kurtarılması gereken commit kalmadığı ve ilgili değişikliklerin main'e taşındığı doğrulandıktan sonra temizle.
 
-Uygulama deposunda açık PR: 0. Son kontrol sırasında açık issue'lar #29–#34 ve #3 idi. Bunların bir kısmında eski “mevcut durum” metni sonradan birleştirilen PR'ları yansıtmamaktadır; issue'lar kapanmış sayılmamalı, tamamlanan dilimler ve kalan kabul maddeleri güncellenmelidir.
+**C — v0.5'i gerçek uygulamaya dönüştür**
+1. Tasarım → mevcut ekran/kod → eksik özellik → issue/PR → test kanıtı matrisini çıkar.
+2. Öncelik: gerçek görev listesi ve otomatik görevlendirme kabulü; çoklu materyal; ses inceleme tezgâhı; uzman düzeltme ve kontrol kuyruğu; çoklu soru/dayanak; tek A4 rapor.
+3. ASR/yardımcı motor yönetimini 56.12 modül ayarlarına bağla; kullanıcıya görev başına model seçimi yaptırma. SEDA mevcut prototipte bir adaydır; nihai motor seçimi benchmark'a bağlıdır.
+4. Denetim modelini aşamalı uygula: önce bilirkişi öz kontrolü ve işlem/rapor izi; sonra gizlilik kontrolü olan salt okunur denetim paketi; ürün kalite dosyası CI/QA'da ayrı tutulur.
+5. Her dilimi çalışan uygulamada göster; arayüz görüntüsü tek başına yeterli değildir, akış gerçekten çalışmalıdır.
 
-**Dal yönetimi sınırı:** Uygulama deposundaki üç eski özellik dalı main ile karşılaştırılmadan silinmemelidir. Bu oturumda dal silme/birleştirme yapılmadı. Araştırma deposu main dışında dal içermemektedir.
+## 8. Güvenlik ve kabul sınırları
 
-## 8. Yeni oturumda izlenecek kesin sıra
+- Public GitHub/CI'da yalnız sentetik veya lisansı/izni doğrulanmış veri kullan.
+- Gerçek vaka sesi/transkripti/raporu GitHub'a yüklenmez.
+- ASR confidence gerçek doğruluk yüzdesi gibi sunulmaz; belirsiz ses tahminle doldurulmaz.
+- Hash sesin özgünlüğünü/manipüle edilmediğini tek başına kanıtlamaz.
+- Gerçek ASR başarımı izinli insan referans veri setinde WER/CER ve kritik hata örnekleriyle ölçülür; SEDA, Whisper veya başka model test edilmeden kazanan ilan edilmez.
+- Otomatik diarization, gelişmiş denoise, source separation ve spektrogram araçları teknik/lisans testinden geçmeden zorunlu ilk pilot kapsamına sokulmaz.
+- UYAP Portal otomasyonu, e-imza anahtarı/PIN yönetimi ve bilirkişi adına resmî teslim kapsam dışıdır.
+- CI/derleme yeşil olması uzman, hukuk, güvenlik veya UYAP kabulü anlamına gelmez.
+- K-01–K-12 kanıtı ve gerekli uzman/güvenlik değerlendirmesi tamamlanmadan 56.12 “pilot kullanıma hazır” ilan edilmez.
 
-**Aşama A — Depo ve kaynak doğrulaması**
-1. Araştırma deposunun main dalını ve uygulama deposunun main/dal/PR/issue durumunu canlı GitHub'dan kontrol et.
-2. Bu devir belgesini, sistem tasarımı v1.0'ı, karar kaydını ve ürün sözleşmesini güncel repo içeriğiyle karşılaştır.
-3. Araştırma ve uygulama depolarını ayrı tut; eski uygulama dallarını karşılaştırmadan silme.
+## 9. Yeni oturum için kopyalanabilir başlangıç talimatı
 
-**Aşama B — v0.4 tasarım değerlendirmesi ve kabulü**
-1. [Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0](../02-urun/mihenk-sistem-ve-kullanici-akisi-v1.0.md) ile [Wireframe v0.4](../02-urun/56-12-wireframe-v0.4.md) belgelerini birlikte incele.
-2. Sekiz SVG panosunu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran, karışık terim, gereksiz adım veya görünmeyen durumları işaretle.
-3. Profil/kasa/modül/ASR sahipliği, görev içi akışlar, dayanak seçici, tek rapor ve A4 önizlemesini kontrol et.
-4. Boş/hata/çevrimdışı/kurtarma ekranlarının normal akışla tutarlı olduğunu doğrula.
-5. Gerekli revizyonları v0.4'e işle; kullanıcı ve gerektiğinde alan uzmanı kabulü olmadan uygulama UI koduna geçme.
-
-**Aşama C — Onay sonrası mevcut uygulamaya bağla**
-1. Onaylanan ekranları gereksinimlere ve uygulama backlog'una eşle.
-2. Önce P0 kullanıcı blokajlarını ele al: X ile güvenli kapanma, kayıtlı sesin seçili/oynatılabilir geri yüklenmesi, dayanak seçicisi düzeni, güncelleme hatasının tanılanması.
-3. Profil/kasa/modül ve görev oluşturma ayrımını mevcut kod üzerinde uygula; gerekçesiz yeniden yazım yapma.
-4. Sentetik görevlendirme belgesiyle otomatik çıkarım ve istisnaları test et.
-5. Çoklu ses/materyal, yerel ASR kuyruğu, transkript/revizyon, çoklu soru/dayanak ve tek raporu uçtan uca bağla.
-6. Güncel Windows UYAP Editör'de aç/kaydet/yeniden aç ve ilgili Portal evrak türünü doğrula.
-7. Temiz kurulum, güvenli kapanma, kasa yedek/geri yükleme, güncelleme/geri alma ve E2E testlerini tamamla.
-8. 56.12 uzmanıyla izinli/sentetik kontrollü pilot yap.
-
-## 9. Öncelik verilmeyecek işler
-
-Kullanıcı hedefiyle doğrudan bağlantı kurulmadan yeni ASR model ekleme, gelişmiş diarization, konuşmacı kimliklendirme, ses manipülasyon analizi (56.11 kapsamı), vektör arama/LLM ile kanaat yazma, genel uzmanlık modüllerini birden açma veya görsel cilalama önceliklendirilmemeli.
-
-SEDA mevcut uygulamada entegre ilk yerel ASR denemesidir; “en iyi motor” olarak kesin seçilmemiştir. En az iki adayın aynı izinli insan referanslı Türkçe veriyle karşılaştırılması araştırma kararıdır. Kullanıcı tek bir program deneyimi ister; alt motorlar MİHENK tarafından yönetilir.
-
-## 10. Oturuma yeniden başlamak için kullanıcı mesajı
-
-Yeni oturumda kullanıcı araştırma reposunu verdiğinde şu şekilde başlanmalı:
-
-> Önce docs/00-yonetim/yeni-oturum-baslangic-noktasi.md dosyasını ve bağlantılı karar/ürün belgelerini güncel repo içeriğiyle doğrula. Sistem Haritası v1.0 ve Wireframe v0.4 taslağını birlikte incele. Sekiz görsel panoyu ilk kez kullanan bilirkişinin gözünden değerlendir; eksik ekran ve akışları düzelt. Kullanıcı/uzman kabulü olmadan uygulama UI koduna geçme.
+> MİHENK projesine devam ediyoruz. Önce mihenk-arge deposundaki docs/00-yonetim/yeni-oturum-baslangic-noktasi.md ve bağlantılı v0.5/kalite-denetim belgelerini oku; PR #12'nin main'e birleştiğini ve merge commit'ini doğrula. Wireframe v0.5 proje sahibi tarafından kabul edilmiştir. Sonra mihenk uygulama deposunun main dalını ve güncel preview sürümünü oku; kod değiştirmeden uygulamayı temiz ortamda build edip çalıştır ve mevcut canlı işlevleri sentetik verilerle göster. Özellikle mevcut main'de zaten bulunan görev, şifreli materyal, gerçek waveform, SEDA yerel ASR, transkript revizyonu ve soru/rapor işlevlerini yeniden yazma. Üç eski feature dalını (report-question-answers, transcript-review-queue, transcript-revision-history) main ile commit/diff/test bazında karşılaştır; hiçbir dalı erken silme veya doğrudan merge etme. Açık #3, #29–#34 issue'larının bayat gövdelerini koddaki gerçekle karşılaştırıp kanıtla güncelle. Önce mevcut çalışan sürümü göster, sonra v0.5'e göre fark/backlog matrisi çıkar ve küçük testli PR'larla ilerle. Bilirkişi öz kontrolü, bağımsız denetim paketi ve MİHENK ürün kalite dosyasını ayrı katmanlarda uygula. Gerçek vaka verisini GitHub/CI'ya koyma.
 
 ---
 
-**Kapanış ölçütü:** Yeni oturum başladığında ilk iş tekrar “MİHENK ne yapacak?” sorusunu sıfırdan sormak değil; bu belgede kayıtlı hedefi doğrulamak, wireframe'i iyileştirmek ve kalan açık kararları kapatmaktır.
-
-
-## Güncel tasarım durumu — 15.11.2026
-
-- Kullanıcının v0.4 geri bildirimi: alan hiyerarşisi, yeni görev sonrası navigasyon, materyalin ne zaman eklendiği, 04 ses inceleme çalışma alanının derinliği, konuşmacı ayrımı, dinleme/iyileştirme araçları ve tek raporun gerçek biçimi daha net gösterilmeli.
-- Bu geri bildirime göre [Wireframe v0.5](../02-urun/56-12-wireframe-v0.5.md) ve beş SVG pano oluşturuldu.
-- v0.5'te yeni görev katı wizard değildir; ilk belgeden itibaren otomatik kaydedilen ve materyal eklemeyi sonradan da destekleyen görev kabul akışıdır.
-- Ses ekranı bütün kayıt ve metni gösterir; kontrol önceliği ASR işaretleriyle belirlenir. Konuşmacı ayrımı isteğe bağlıdır; ses iyileştirme orijinali değiştirmeyen kopyada yürür.
-- Tek rapor merci türüne göre örnek iskeletle eşleştirilir; rapor tek ana belge ve eklerdir. Segmentler nihai raporda tek tek satır yapılmaz; zamanlı, konuşmacı sıralı okunabilir paragraflar sunulur.
-- v0.5 henüz kullanıcı/alan uzmanı tarafından kabul edilmemiştir. Uygulama UI kodlaması başlamaz; araştırma reposunda yalnızca ürün dokümanı ve wireframe çalışması vardır.
+**Kritik çalışma ilkesi:** Kullanıcı v0.5 tasarımını kabul etti. Bundan sonra amaç yeniden tasarım yapmak değil, mevcut çalışan uygulamayı kaybetmeden kabul edilmiş akışa bağlamak; eksik olanı kanıtla tamamlamak ve bilirkişinin gerçek işini canlı masaüstü uygulamada göstermektir.
