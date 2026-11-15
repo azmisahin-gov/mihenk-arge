@@ -1,13 +1,13 @@
 # MİHENK — Sistem Haritası ve Uçtan Uca Kullanıcı Akışı v1.0
 
-> **Durum:** Ürün/sistem tasarım temeli tamamlandı; wireframe v0.4 taslağı üretildi. Henüz görsel tasarım kabulü veya UI geliştirme onayı değildir.  
+> **Durum:** Sistem mimarisi referansı v1.0. Görsel/ürün tasarımı olarak Wireframe v0.5, proje sahibi tarafından 15.11.2026'da kabul edilmiştir; uygulama ve pilot kabul testleri sürer.  
 > **Tarih:** 15 Kasım 2026  
 > **İlk teslimat:** 56.12 — Ses Kayıtlarının Metne Dönüştürülmesi kontrollü bilirkişi pilotu  
 > **Uzun vadeli hedef:** Ortak çekirdek ve birbirinden ayrılmış uzmanlık modülleriyle MİHENK platformu.
 
 ## 0. Bu belgenin rolü
 
-Bu belge, MİHENK'in yalnızca ekranlarını değil, kullanıcının gördüğü işlevler ile arka planda çalışan sistemlerin tamamının sorumluluk sınırlarını tanımlar. Wireframe v0.4 ve sonraki ekran kataloğu için ana ürün/sistem referansıdır.
+Bu belge, MİHENK'in yalnızca ekranlarını değil, kullanıcının gördüğü işlevler ile arka planda çalışan sistemlerin tamamının sorumluluk sınırlarını tanımlar. Wireframe v0.5 ve uygulama eşlemesi için ana ürün/sistem referansıdır.
 
 Bu belge:
 - Bilirkişinin yapmaya çalıştığı işi, MİHENK'in otomatik yaptığı işleri ve bilirkişinin karar vermesi gereken noktaları ayırır.
@@ -806,3 +806,10 @@ Kullanıcı değerlendirmesinde v0.4'ün bazı alt alanları ve görevler arası
 - Her görevde tek ana rapor + ekler vardır. Merciye göre ilgili yayımlanmış örnek rapor iskeleti otomatik eşleştirilir; mevzuatta tek ve evrensel zorunlu şablon varmış gibi sunulmaz. Tüm sorular sırayla, gerekçeli ve kaynak bağlantılı olmalıdır.
 
 v0.5 görsel değerlendirme kaynağı: [Wireframe v0.5](56-12-wireframe-v0.5.md). v0.4 tarihsel taslak olarak korunur. Kullanıcı/uzman kabulü olmadan uygulama UI koduna başlanmaz.
+
+
+## v0.5 kabulü ve kalite/denetim eki
+
+Proje sahibi [Wireframe v0.5](56-12-wireframe-v0.5.md) tasarımını 15.11.2026 tarihinde kabul etti. Tasarım uygulama backlog'una dönüştürülebilir; bu durum mevcut prototipteki işlevlerin tamamlandığını göstermez. Uygulama geliştirmesi mevcut kodun dosya/branch/test denetimiyle başlayacaktır.
+
+Bilirkişinin görev ve rapor öz denetimi, bağımsız dosya/rapor incelemesi ve MİHENK'in kendi ürün kalite denetimi için ayrı kanıt katmanları [Kalite Güvencesi ve Denetim Modeli v1.0](56-12-kalite-ve-denetim-modeli-v1.0.md) içinde tanımlanmıştır.
